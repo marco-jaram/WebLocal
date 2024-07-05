@@ -1,0 +1,187 @@
+---
+import Menu from "../components/Menu.astro";
+import Footer from "../components/Footer.astro";
+import Elevador from "../components/Elevador.astro";
+interface Props {
+    title: string;
+    description: string;
+    keywords: string;
+}
+const { title, description, keywords } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <title>Web Local- {title}</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <link rel="icon" type="image/ico" href="/img/favicon-weblocal.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
+            rel="stylesheet"
+        />
+
+        <script
+            src="https://kit.fontawesome.com/fa227621e8.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <Menu />
+        <main>
+            <slot />
+        </main>
+        <Elevador />
+        <Footer />
+        <script src="../scripts/menu.js"></script>
+    </body>
+</html>
+<style is:global>
+    :root {
+        --color-primario: #11b28e;
+        --color-claro1: #efefef;
+        --color-claro2: #f9f8ed;
+        --color-oscuro1: #5a5a5a;
+        --color-oscuro2: #1b1b1b;
+        --tipo-primario: "Playfair Display", serif;
+        --tipo-secundario: "Roboto", sans-serif;
+    }
+
+    /*GLOBALES*/
+
+    body {
+        background-color: white !important;
+    }
+
+    .mt-s {
+        margin-top: 50px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    #botonArriba {
+        color: var(--color-primario);
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        font-size: 30px;
+        transform: scale(0);
+    }
+
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    * {
+        margin: 0px;
+    }
+
+    .contenedor {
+        max-width: 768px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-style: 1.7rem;
+    }
+
+    p {
+        font-family: var(--tipo-secundario);
+        font-weight: 400;
+        font-size: 1.6rem;
+        letter-spacing: 0.03rem;
+        line-height: 3.5rem;
+
+        color: var(--color-oscuro1);
+    }
+
+    li {
+        font-size: 1.8rem;
+    }
+
+    /*fin de globales*/
+
+    /*UTILIDADES*/
+
+    .type-serif {
+        font-family: "Source Serif Pro", serif;
+    }
+
+    .type-sinserif {
+        font-family: "Source Sans Pro", sans-serif;
+    }
+
+    .btn {
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: transparent;
+        padding: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        background-color: var(--color-primario);
+        color: var(--color-primario);
+        cursor: pointer;
+    }
+
+    /*fin de utilidades*/
+
+    /*FIN de barra de navegacion*/
+
+    /***Header hero******/
+
+    .titulos {
+        padding-bottom: 350px;
+        padding-top: 60px;
+    }
+
+    .titulo-principal h1 {
+        margin: 40px 0px 20px 0px;
+        color: var(--color-oscuro2);
+        margin: 0;
+        text-align: center;
+        font-family: var(--tipo-primario);
+    }
+
+    .titulo-principal span {
+        font-size: 1.8rem;
+    }
+</style>

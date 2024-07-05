@@ -1,0 +1,48 @@
+<div class="hero-inicio">
+    <div class="titulo-principal">
+        <h1>
+            Webs para negocios
+            <br />
+            <span>con palabras que</span>
+            <span id="tinytype" class="tinytype"></span>
+        </h1>
+    </div>
+</div>
+
+<script src="../scripts/type.js"></script>
+
+<style>
+    .hero-inicio {
+        background-image: url(/img/header-weblocal-bg.webp);
+        background-position-x: -440px;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40vh;
+    }
+    .titulo-principal{
+        padding-top: 20px;
+    }
+    @media (min-width: 768px) {
+        .hero-inicio {
+            background-image: url(/img/header-weblocal-bg.webp);
+            background-position-x: 0px;
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            height: 50vh;
+        }
+        .hero-inicio {
+            padding-bottom: 350px;
+            padding-top: 50px;
+        }
+        .titulo-principal h1 span {
+            font-size: 2.5rem;
+        }
+        .titulo-principal{
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+</style>
