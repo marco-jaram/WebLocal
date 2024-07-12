@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroeInicio from "../components/HeroeInicio.astro";
+import HeroeInicio from "../components/Hero.astro";
+import Formulario from "../components/Formulario.astro";
+import Servicios from "../components/Servicios.astro";
+import Portafolio from "../components/Portafolio.astro";
+import Acercade from "../components/Acercade.astro";
+import Recursos from "../components/Recursos.astro";
+
+
 ---
 
 <Layout
@@ -16,9 +23,10 @@ import HeroeInicio from "../components/HeroeInicio.astro";
             <div class="sabias-titulo">
                 <h3>¿Sabías que?...</h3>
                 <p class="">
-                    Más del 70% de los mexicanos buscan información en internet
+                    Más del 78% de los mexicanos buscan información en internet
                     todos los días para adquirir bienes o servicios. Y solo el
-                    77.2% de los negocios locales tiene un sitio web propio.
+                    10% de los negocios locales tiene un sitio web propio. Los
+                    negocios sin web pierden hasta el 25% de ventas.
                 </p>
             </div>
             <img
@@ -96,7 +104,6 @@ import HeroeInicio from "../components/HeroeInicio.astro";
         </div>
     </section>
 
-    <!--fin copy en tu web?-->
 
     <!--inica sin confinaza-->
     <section class="mt-s contenedor contenedor-confianza">
@@ -136,168 +143,15 @@ import HeroeInicio from "../components/HeroeInicio.astro";
     </section>
     <!--fin sin confinaza-->
 
-    <!--Portafolio-->
-    <section class="mt-s">
-        <div id="portafolio" class="portafolio contenedor">
-            <h2 class="titulo-portafolio">Trabajos realizados</h2>
-            <div class="portafolio-grid">
-                <div class="portafolio__card">
-                    <h3 class="portafolio__titulos">Desarrollador</h3>
-                    <img
-                        src="/img/img-portafolio-desarrollador-3-min-min.png"
-                        alt=""
-                    />
-                    <p>Sitio de desarrollador web</p>
-                </div>
-                <div class="portafolio__card">
-                    <h3 class="portafolio__titulos">La vida es</h3>
-                    <img src="/img/img-portafolio-nancy-3-min-min.png" alt="" />
-                    <p>Sitio de danza terapia</p>
-                </div>
-                <div class="portafolio__card">
-                    <h3 class="portafolio__titulos">Aff</h3>
-                    <img src="/img/img-portafolio-aff-3-min-min.png" alt="" />
-                    <p>Sitio de la asociación filosófica</p>
-                </div>
-                <div class="portafolio__card">
-                    <h3 class="portafolio__titulos">Pizza TJ</h3>
-                    <img
-                        src="/img/img-portafolio-pizzatj-3-min-min.png"
-                        alt=""
-                    />
-                    <p>Sitio de una pizzería</p>
-                </div>
-            </div>
-            <a id="portafolio-vermas" href="portafolio.html">Ver más</a>
-        </div>
-    </section>
-    <!--FIN  de Portafolio-->
-    <!--inicia regalo conoce tru propuesta de valor-->
-
-    <div class="sobre-apps" id="recursos">
-        <h2 class="titulo-apps">Aplicaciones web</h2>
-    </div>
-    <div class="contenido-propuesta contenedor">
-        <div class="contenido-apps">
-            <div class="cards">
-                <a href="/apps-weblocal/landing-propuesta-de-valor.html">
-                    <div class="card card1">
-                        <div class="container">
-                            <img
-                                src="/img/card-propuesta.png"
-                                alt="propuesta de valor"
-                            />
-                        </div>
-                        <div class="details">
-                            <h3>Propuesta de valor</h3>
-                            <p>¡Escribe una propuesta de valor chingona!</p>
-                            <p>
-                                Aplicación gratuita para obtener la propuesta de
-                                valor de tu producto o servicio.
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="/apps-weblocal/landing-canvas.html">
-                    <div class="card card2">
-                        <div class="container">
-                            <img
-                                src="/img/card-canvas.png"
-                                alt="Plan de negocios canvas"
-                            />
-                        </div>
-                        <div class="details">
-                            <br />
-                            <h3>Plan de negocios</h3>
-                            <p>¡Arma tu plan de negocios fácil!</p><br /><br />
-                            <p>
-                                Aplicacion gratuita para elaborar plan de
-                                negocios canvas
-                            </p>
-                            <p>
-                                Solo contestas unas preguntas clave y la
-                                aplicación te genera un diseño de la propuesta
-                                de valor con tres variaciones
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!--final regalo conoce tru propuesta de valor-->
-    <!--Servicios-era el main-->
-    <div id="servicios" class="contenedor">
-        <div class="contenedor-servicios">
-            <h1 id="servicios-titulo">Servicios</h1>
-            <div class="servicios">
-                <div class="contenido-servicios">
-                    <i class="fas fa-pencil-ruler"></i>
-                    <h2 class="servicios-titulo">Diseño web</h2>
-                    <p>
-                        Tu sitio web personalizado. Según el uso y la propuesta
-                        de valor de tu producto o servicio. Con estructura
-                        enfocada al usuario. ¿Cómo se hace? Escuchando y
-                        preguntando todo.
-                    </p>
-                </div>
-                <div class="contenido-servicios">
-                    <i class="fas fa-pencil-alt"></i>
-                    <h2 class="servicios-titulo">Copywriting</h2>
-                    <p>
-                        Engancha con las palabras más potentes para la página de
-                        inicio, sobre mí, servicios y contacto. ¿Cómo se logra?
-                        Con investigación, análisis y un poco de imaginación.
-                    </p>
-                </div>
-            </div>
-            <a class="btn boton-servicios" href="servicios.html"
-                >Ver características</a
-            >
-        </div>
-        <div></div>
-
-        <!--inicia acerca-->
-        <section id="acercade" class="contenedor">
-            <div class="mt-s acerca">
-                <div class="acerca-contenido">
-                    <div class="acerca-texto">
-                        <h2>Acerca de</h2>
-                        <p>
-                            Weblocal nace para resolver el problema de la falta
-                            de presencia digital de los negocios locales. Surge
-                            porque existe la necesidad de transmitir con
-                            palabras claras el mensaje de la propuesta de valor
-                            de su servicio o producto. Lo que hacemos es un
-                            trabajo de investigación, y algo de inspiración. Con
-                            una investigación de base es seguro conseguir que
-                            los visitantes de tu sitio web recuerden con
-                            claridad tu mensaje y propuesta.
-                        </p>
-
-                        <a class="btn boton-acercade" href="acercade.html"
-                            >Saber más</a
-                        >
-                    </div>
-                    <img src="/img/manos480.png" alt="acerca-weblocal" />
-                </div>
-            </div>
-        </section>
-        <!--fin acerca-->
-
-        <!--Solicita auditoria-->
-        <section class="mt-s contenedor-contacto">
-            <div class="contacto-grid contenedor">
-                <div class="contacto-texto">
-                    <h2>Contacto</h2>
-                    <p>Pide una cotización o pregunta por cualquier detalle</p>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <style>
+   
+    <Portafolio/>
+    <Servicios />
+    <Acercade />
+    <Recursos/>
+    <Formulario />
+  
+</Layout>
+  <style>
         /*Sabias que*/
 
         .sabias-titulo h3 {
@@ -574,10 +428,8 @@ import HeroeInicio from "../components/HeroeInicio.astro";
         /* FIN de  SERVICIOS */
 
         @media (min-width: 768px) {
-           
             .sabias-titulo h3 {
                 margin: 0px;
-               
             }
             .sabias {
                 display: grid;
@@ -666,6 +518,4 @@ import HeroeInicio from "../components/HeroeInicio.astro";
                 background-color: var(--color-claro2);
             }
         }
-        
     </style>
-</Layout>

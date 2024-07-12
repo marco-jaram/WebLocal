@@ -1,6 +1,7 @@
 ---
 import HeroNormal from "../components/Hero.astro"
 import Layout from "../layouts/Layout.astro"
+import Formulario from "../components/Formulario.astro"
 ---
 <Layout
   title="Servicios"
@@ -10,5 +11,18 @@ import Layout from "../layouts/Layout.astro"
 
 <HeroNormal texto1="Contacto" texto2="" />
 
+ <!--Solicita auditoria-->
+ <main class="contactoht contenedor">
+  <h2>Contáctame</h2>
+ <br>
+ <br>
+<p>Si quieres que trabajemos juntos, si tienes algún proyecto entre manos o simplemente quieres hacerme alguna pregunta,</p>
+<p>puedes hacerlo rellenando el formulario o enviarme un correo a hola@weblocalmx.com
+</p>
+<br><br>
+   <!-- incia formulario jotfrom -->
+    <Formulario/>
+   <!-- termina formulario jotfrom -->
+</main>
 
 </Layout>
