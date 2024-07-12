@@ -10,7 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@paypal/paypal-js": "^8.1.0",
-    "astro": "^4.11.5"
+    "astro": "^4.11.5",
+    "glob": "^11.0.0",
+    "jsdom": "^24.1.0",
+    "postcss-cli": "^11.0.0"
   }
 }
