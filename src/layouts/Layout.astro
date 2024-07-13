@@ -34,193 +34,194 @@ const { title, description, keywords } = Astro.props;
     </head>
     <body>
         <Menu />
-      
-            <slot />
-       
-        
+
+        <slot />
+
         <Footer />
-        <Elevador />
-        <script src="../scripts/menu.js"></script>
-    <script src="../scripts/footer-anio.js"></script>
-    <script src="../scripts/elevador.js"></script>
+        <Elevador>
+            <script src="../scripts/elevador.js"></script>
+            <Elevador />
+
+            <script src="../scripts/menu.js"></script>
+            <script src="../scripts/footer-anio.js"></script>
+        </Elevador>
     </body>
-</html>
 
-<style is:global>
-    :root {
-        --color-primario: #11b28e;
-        --color-claro1: #efefef;
-        --color-claro2: #f9f8ed;
-        --color-oscuro1: #5a5a5a;
-        --color-oscuro2: #1b1b1b;
-        --tipo-primario: "Playfair Display", serif;
-        --tipo-secundario: "Roboto", sans-serif;
-    }
+    <style is:global>
+        :root {
+            --color-primario: #11b28e;
+            --color-claro1: #efefef;
+            --color-claro2: #f9f8ed;
+            --color-oscuro1: #5a5a5a;
+            --color-oscuro2: #1b1b1b;
+            --tipo-primario: "Playfair Display", serif;
+            --tipo-secundario: "Roboto", sans-serif;
+        }
 
-    /*GLOBALES*/
+        /*GLOBALES*/
 
-    body {
-        background-color: white !important;
-    }
+        body {
+            background-color: white !important;
+        }
 
-    .mt-s {
-        margin-top: 50px;
-    }
+        .mt-s {
+            margin-top: 50px;
+        }
 
-    html {
-        scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    #botonArriba {
-        color: var(--color-primario);
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        font-size: 45px;
-        transform: scale(0);
-    }
+        #botonArriba {
+            color: var(--color-primario);
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            font-size: 45px;
+            transform: scale(0);
+        }
 
-    html {
-        box-sizing: border-box;
-    }
+        html {
+            box-sizing: border-box;
+        }
 
-    *,
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
-    a {
-    text-decoration: none;
-}
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        a {
+            text-decoration: none;
+        }
 
-    img {
-        max-width: 100%;
-    }
+        img {
+            max-width: 100%;
+        }
 
-    * {
-        margin: 0px;
-    }
+        * {
+            margin: 0px;
+        }
 
-    .contenedor {
-        max-width: 768px;
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    html {
-        font-size: 62.5%;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h2 {
-        font-size: 2.8rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-    h4 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-style: 1.7rem;
-    }
-
-    p {
-        font-family: var(--tipo-secundario);
-        font-weight: 400;
-        font-size: 1.6rem;
-        letter-spacing: 0.03rem;
-        line-height: 3.5rem;
-
-        color: var(--color-oscuro1);
-    }
-
-    li {
-        font-size: 1.8rem;
-    }
-
-    /*fin de globales*/
-
-    /*UTILIDADES*/
-
-    .type-serif {
-        font-family: "Source Serif Pro", serif;
-    }
-
-    .type-sinserif {
-        font-family: "Source Sans Pro", sans-serif;
-    }
-
-    .btn {
-        border-radius: 5px;
-        border-width: 1px;
-        border-color: transparent;
-        padding: 10px;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        background-color: var(--color-primario);
-        color: var(--color-claro1);
-        cursor: pointer;
-    }
-
-    /*fin de utilidades*/
-
-    /*FIN de barra de navegacion*/
-
-    /***Header hero******/
-
-    .titulos {
-        padding-bottom: 350px;
-        padding-top: 60px;
-    }
-
-    .titulo-principal h1 {
-        margin: 40px 0px 20px 0px;
-        color: var(--color-oscuro2);
-        margin: 0;
-        text-align: center;
-        font-family: var(--tipo-primario);
-    }
-
-    .titulo-principal span {
-        font-size: 1.8rem;
-    }
-    @media (min-width: 768px) {
         .contenedor {
-            max-width: 1200px;
+            max-width: 768px;
+            width: 95%;
             margin: 0 auto;
-            width: 90%;
         }
+
+        html {
+            font-size: 62.5%;
+        }
+
         h1 {
-            font-size: 3.8rem;
+            font-size: 3rem;
         }
+
         h2 {
-            font-size: 3.4rem;
+            font-size: 2.8rem;
         }
+
         h3 {
-            font-size: 3.4rem;
+            font-size: 2rem;
         }
+
         h4 {
-            font-size: 2.6rem;
+            font-size: 1.8rem;
         }
-        
-    }
-    @media (min-width: 1024px) {
-    p {
-        font-size: 2rem;
-        letter-spacing: .03rem;
-        line-height: 4rem;
-    }
-    .portafolio-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-</style>
+
+        h3 {
+            font-style: 1.7rem;
+        }
+
+        p {
+            font-family: var(--tipo-secundario);
+            font-weight: 400;
+            font-size: 1.6rem;
+            letter-spacing: 0.03rem;
+            line-height: 3.5rem;
+
+            color: var(--color-oscuro1);
+        }
+
+        li {
+            font-size: 1.8rem;
+        }
+
+        /*fin de globales*/
+
+        /*UTILIDADES*/
+
+        .type-serif {
+            font-family: "Source Serif Pro", serif;
+        }
+
+        .type-sinserif {
+            font-family: "Source Sans Pro", sans-serif;
+        }
+
+        .btn {
+            border-radius: 5px;
+            border-width: 1px;
+            border-color: transparent;
+            padding: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            background-color: var(--color-primario);
+            color: var(--color-claro1);
+            cursor: pointer;
+        }
+
+        /*fin de utilidades*/
+
+        /*FIN de barra de navegacion*/
+
+        /***Header hero******/
+
+        .titulos {
+            padding-bottom: 350px;
+            padding-top: 60px;
+        }
+
+        .titulo-principal h1 {
+            margin: 40px 0px 20px 0px;
+            color: var(--color-oscuro2);
+            margin: 0;
+            text-align: center;
+            font-family: var(--tipo-primario);
+        }
+
+        .titulo-principal span {
+            font-size: 1.8rem;
+        }
+        @media (min-width: 768px) {
+            .contenedor {
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 90%;
+            }
+            h1 {
+                font-size: 3.8rem;
+            }
+            h2 {
+                font-size: 3.4rem;
+            }
+            h3 {
+                font-size: 3.4rem;
+            }
+            h4 {
+                font-size: 2.6rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            p {
+                font-size: 2rem;
+                letter-spacing: 0.03rem;
+                line-height: 4rem;
+            }
+            .portafolio-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 2rem;
+            }
+        }
+    </style>
+</html>
