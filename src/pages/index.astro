@@ -1,20 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import HeroeInicio from "../components/Hero.astro";
-import Formulario from "../components/Formulario.astro";
-import Servicios from "../components/Servicios.astro";
-import Portafolio from "../components/Portafolio.astro";
-import Acercade from "../components/Acercade.astro";
-
+import Formulario from "../components/secciones/Contacto.astro";
+import Servicios from "../components/secciones/Servicios.astro";
+import Portafolio from "../components/secciones/Portafolio.astro";
+import Acercade from "../components/secciones/Acercade.astro";
+import Division from "../components/DivisionSeccion.astro";
 ---
 
 <Layout
-    title="Mi título"
-    description="Esta es una descripción"
-    keywords="palabras, clave, ejemplo"
+    title="Weblocal- inicio"
+    description="creacion de textos para sitios webs"
+    keywords="redaccion de textos web, copywriter, creacion de sitios webs"
 >
     <HeroeInicio />
-
+    <Division titulo="¿Sabías que?..." id="" />
     <!--seccion sabias que-->
     <section class="contenedor">
         <div class="sabias mt-s">
@@ -40,14 +40,12 @@ import Acercade from "../components/Acercade.astro";
     <div class="lanza mt-s">
         <div class="contenedor-lanza contenedor">
             <h2 class="lanzatuweb">
-                Crea tu web personalizada y seduce a tu cliente ideal, como el
-                destino atrae al viajero.
-            </h2>
-
+                Crea textos web que cautiven a tu cliente ideal </h2>
             <a class="boton-lanza" href="contacto.html">Solicita cotización</a>
         </div>
     </div>
     <!--Lo que proyectas-->
+    <Division titulo="Lo que proyectas con tu sitio web" id="" />
     <section class="contenedor contenedor-como-haces">
         <div class="mt-s como-haces">
             <h3>Lo que proyectas con tu sitio web</h3>
@@ -97,11 +95,14 @@ import Acercade from "../components/Acercade.astro";
                     textos meticulosamente elaborados, difícilmente transmitirá
                     tu mensaje y persuadirá a tu cliente ideal. Es un error
                     garrafal redactar los contenidos mientras se monta la web en
-                    el servidor. <strong>El mensaje </strong>de tu servicio o producto es crucial
-                    y  <strong> no debe ser dejado al azar</strong>. La investigación y el análisis
-                    deben preceder a todo lo demás. Es seleccionar las palabras
-                    con precisión, guiando al lector hacia la acción deseada. Es
-                    el  <strong>arte de crear textos comerciales poderosos </strong>y <span>efectivos</span> .
+                    el servidor. <strong>El mensaje </strong>de tu servicio o
+                    producto es crucial y <strong>
+                        no debe ser dejado al azar</strong
+                    >. La investigación y el análisis deben preceder a todo lo
+                    demás. Es seleccionar las palabras con precisión, guiando al
+                    lector hacia la acción deseada. Es el <strong
+                        >arte de crear textos comerciales poderosos
+                    </strong>y <span>efectivos</span> .
                 </p>
             </div>
         </div>
@@ -112,26 +113,34 @@ import Acercade from "../components/Acercade.astro";
         <div class="confianza">
             <h3>Sin confianza, no hay venta</h3>
             <p>
-                Cuando confiamos en un producto o servicio, es porque esperamos que cumpla nuestras expectativas. Un mensaje confuso genera dudas. Recuerda, la confianza es clave para cerrar ventas.
-
+                Cuando confiamos en un producto o servicio, es porque esperamos
+                que cumpla nuestras expectativas. Un mensaje confuso genera
+                dudas. Recuerda, la confianza es clave para cerrar ventas.
             </p>
             <h4 class="titulo-confianza">
                 ¿Cómo asegurar que tu sitio web inspire confianza?
             </h4>
             <ul class="lista-confianza">
-                <li>Utiliza textos que clarifiquen la propuesta de valor de tu producto o servicio.</li>
-                <li>Sé transparente sobre lo que ofreces y cómo beneficiará a tus clientes.
+                <li>
+                    Utiliza textos que clarifiquen la propuesta de valor de tu
+                    producto o servicio.
                 </li>
                 <li>
-                    Destaca testimonios o casos de éxito que respalden la calidad y eficacia de tu oferta.
-
+                    Sé transparente sobre lo que ofreces y cómo beneficiará a
+                    tus clientes.
+                </li>
+                <li>
+                    Destaca testimonios o casos de éxito que respalden la
+                    calidad y eficacia de tu oferta.
                 </li>
             </ul>
-            <p>La propuesta de valor no consiste en una verborrea que exagere las cualidades de un producto o servicio.</p>
+            <p>
+                La propuesta de valor no consiste en una verborrea que exagere
+                las cualidades de un producto o servicio.
+            </p>
             <p id="definicion-propuesta">
-               <strong>Def.</strong>  Una <strong>propuesta de valor</strong> es <strong
-                    >un mensaje
-                </strong>
+                <strong>Def.</strong> Una <strong>propuesta de valor</strong> es
+                <strong>un mensaje </strong>
                 escrito de manera clara y breve que <strong
                     >transmite el beneficio principal</strong
                 > de tu producto o servicio. El beneficio que aporta a tus clientes
@@ -144,11 +153,13 @@ import Acercade from "../components/Acercade.astro";
         </div>
     </section>
     <!--fin sin confinaza-->
-
+    <Division titulo="Portafolio" id="portafolio" />
     <Portafolio />
+    <Division titulo="Servicios" id="servicios" />
     <Servicios />
+    <Division titulo="Acerca de Weblocal" id="acercade" />
     <Acercade />
-   
+    <Division titulo="Contacto" id="contacto" />
     <Formulario />
 </Layout>
 <style>
@@ -167,12 +178,13 @@ import Acercade from "../components/Acercade.astro";
     }
 
     .lanza {
-        background-color: var(--color-primario);
+        /* background-color: var(--color-primario); */
         padding: 10px;
     }
 
     .lanzatuweb {
-        color: var(--color-claro2);
+        /* color: var(--color-claro2); */
+        color: var(--color-oscuro1);
         padding: 30px;
         font-family: var(--tipo-secundario);
     }
@@ -213,7 +225,7 @@ import Acercade from "../components/Acercade.astro";
     }
 
     .semuybien h3 span {
-        color: rgba(255, 0, 0, 0.74);
+        color: #c45d5d;
     }
 
     /*FIN de Se muy bien*/
@@ -232,9 +244,9 @@ import Acercade from "../components/Acercade.astro";
     .copyweb-titulo span {
         color: rgba(173, 32, 32, 0.726);
     }
-.copyweb span{
-    color: rgba(173,32,32,0.726);
-}
+    .copyweb span {
+        color: rgba(173, 32, 32, 0.726);
+    }
     /*FIN de Copy en  tu web?*/
 
     /*Si no hay confianza*/

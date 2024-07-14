@@ -1,0 +1,33 @@
+
+---
+const {titulo, id}= Astro.props;
+---
+
+
+<div id={id} class="division-seccion">
+    <div class="contenido-division contenedor">
+    <h2>{titulo}</h2> 
+    </div>
+</div>
+<style>
+    .division-seccion{
+        /* background-color: #a54950; */
+        /* background-color: #C45D5D; */
+        /* background-color: #387566; */
+        background-color: black;
+        margin: 30px 0px;
+    }
+    h2 {
+        font-size: 3.5rem;
+        text-align: center;
+        color: white;
+        padding: 30px;
+    }
+    @media (min-width: 768px) {
+h2{
+    font-size: 4rem;
+}
+
+
+    }
+</style>
