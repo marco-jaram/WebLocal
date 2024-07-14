@@ -1,0 +1,101 @@
+   <!--seccion sabias que-->
+   <section class="contenedor">
+    <div class="sabias mt-s">
+        <div class="sabias-titulo">
+            <h3>¿Sabías que?...</h3>
+            <p class="parrafo-sabias">
+                Más del 78% de los mexicanos se sumergen diariamente en el
+                vasto océano del internet para adquirir bienes o servicios.
+                ¡Y aún así, solo el 10% de los negocios locales ha logrado
+                contruir su presencia en la redl! Los comerciantes se
+                condenan a perder hasta el 25% de sus ventas.
+            </p>
+        </div>
+        <img
+            src="/img/personas-celular.webp"
+            alt="foto de personas navegando "
+        />
+    </div>
+</section>
+<!--fin de sabias que-->
+
+<!--Lanza tu web-->
+<div class="lanza mt-s">
+    <div class="contenedor-lanza contenedor">
+        <h2 class="lanzatuweb">
+            Crea textos web que cautiven a tu cliente ideal </h2>
+        <a class="boton-lanza" href="#contacto.html">Solicita cotización</a>
+    </div>
+</div>
+
+<style>
+    /*Sabias que*/
+
+    .sabias-titulo h3 {
+        color: var(--color-primario);
+    }
+
+.sabias img {
+    margin: 0px;
+    padding: 0px;
+}
+.parrafo-sabias{
+    padding: 20px 0px;
+}
+    /*FIN de Sabias que*/
+
+    /*Lanza tu web*/
+
+    .contenedor-lanza {
+        text-align: center;
+    }
+
+    .lanza {
+        /* background-color: var(--color-primario); */
+        padding: 0px;
+        margin-top: 0px;
+    }
+
+    .lanzatuweb {
+        /* color: var(--color-claro2); */
+        color: var(--color-oscuro1);
+        padding: 30px;
+        font-family: var(--tipo-secundario);
+        font-size: 2.5rem;
+    }
+
+    .boton-lanza {
+        display: block;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.5rem;
+        background-color: var(--color-primario);
+
+        color: white;
+        cursor: pointer;
+    }
+    @media (min-width: 768px) {
+        .sabias-titulo h3 {
+            margin: 0px;
+        }
+        .sabias {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
+        }
+        .boton-lanza {
+            display: inline-block;
+        }
+        .lanza {
+        /* background-color: var(--color-primario); */
+        padding: 20px;
+        margin-top: 10px;
+    }
+        
+
+    }
+    /*FIN de Lanza tu web*/
+</style>

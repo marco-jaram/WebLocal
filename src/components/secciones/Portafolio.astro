@@ -5,25 +5,25 @@
             <div class="portafolio__card">
                 <h3 class="portafolio__titulos">Aplicación web de servicio de redacción</h3>
                 <img src="/img/img-portafolio-escribeweb1.webp" alt="">
-                <p>Sitio personal de desarrollador web tipo portafolio</p>
+                <!-- <p>Sitio personal de desarrollador web tipo portafolio</p> -->
                 <a class="portafolio-ver-sitio" href="https://marco-jaram.com/" target="blank">Ver sitio</a>
             </div>
             <div class="portafolio__card">
                 <h3 class="portafolio__titulos">La vida es medicina</h3>
                 <img src="/img/img-portafolio-nancy-4.webp" alt="">
-                <p>Sitio que ofrece servicio de danza terapia</p>
+                <!-- <p>Sitio que ofrece servicio de danza terapia</p> -->
                 <a class="portafolio-ver-sitio" href="https://lavidaesmedicina.com" target="blank">Ver demo</a>
             </div>
             <div class="portafolio__card">
                 <h3 class="portafolio__titulos">AFF</h3>
                 <img src="/img/img-portafolio-aff-web-4.webp" alt="">
-                <p>Trabajo para la Asociacion filosofica de la frontera</p>
+                <!-- <p>Trabajo para la Asociacion filosofica de la frontera</p> -->
                 <a class="portafolio-ver-sitio" href="https://aff-ac.org/" target="blank">Ver sitio</a>
             </div>
             <div class="portafolio__card">
                 <h3 class="portafolio__titulos">Pizza TJ</h3>
                 <img src="/img/img-portafolio-pizzatj-3.webp" alt="">
-                <p>Sitio para pizzería con menu visual de productos</p>
+                <!-- <p>Sitio para pizzería con menu visual de productos</p> -->
                 <a class="portafolio-ver-sitio" href="https://pizzatj-proyecto-tailwind.netlify.app/" target="blank">Ver demo</a>
             </div>
   
@@ -33,3 +33,61 @@
   
     </div>
   </section>
+  <style>
+/*Portafolio*/
+
+.portafolio-grid {
+        display: grid;
+    }
+
+    .portafolio__card {
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .portafolio__card p {
+        line-height: 2.5rem;
+    }
+
+    .titulo-portafolio {
+        color: var(--color-primario);
+        padding-bottom: 15px;
+        font-family: var(--tipo-secundario);
+    }
+
+    .portafolio__titulos {
+        text-align: center;
+        color: var(--color-oscuro1);
+        font-size: 1.8rem; font-weight: 400;
+        font-family: var(--tipo-secundario);
+    }
+
+    #portafolio-vermas {
+        text-decoration: none;
+        font-size: 1.8rem;
+        background-color: var(--color-primario);
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .portafolio-ver-sitio {
+        text-decoration: none;
+        font-size: 2rem;
+        color: var(--color-primario);
+    }
+
+    /*FIN de Portafolio*/
+    @media (min-width: 768px) {
+       
+       /*portafolio*/
+       .portafolio-grid {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           column-gap: 2rem;
+       }
+    }
+
+  </style>

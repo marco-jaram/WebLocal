@@ -6,6 +6,11 @@ import Servicios from "../components/secciones/Servicios.astro";
 import Portafolio from "../components/secciones/Portafolio.astro";
 import Acercade from "../components/secciones/Acercade.astro";
 import Division from "../components/DivisionSeccion.astro";
+import LoQueProyectas from "../components/secciones/LoQueProyectas.astro";
+import SabiasPorQue from "../components/secciones/SabiasPorQue.astro"
+import TextosEfectivos from "../components/secciones/TextosEfectivos.astro";
+import SinConfianza from "../components/secciones/SinConfianza.astro";
+
 ---
 
 <Layout
@@ -14,320 +19,34 @@ import Division from "../components/DivisionSeccion.astro";
     keywords="redaccion de textos web, copywriter, creacion de sitios webs"
 >
     <HeroeInicio />
-    <Division titulo="¿Sabías que?..." id="" />
-    <!--seccion sabias que-->
-    <section class="contenedor">
-        <div class="sabias mt-s">
-            <div class="sabias-titulo">
-                <h3>¿Sabías que?...</h3>
-                <p class="">
-                    Más del 78% de los mexicanos se sumergen diariamente en el
-                    vasto océano del internet para adquirir bienes o servicios.
-                    ¡Y aún así, solo el 10% de los negocios locales ha logrado
-                    contruir su presencia en la redl! Los comerciantes se
-                    condenan a perder hasta el 25% de sus ventas.
-                </p>
-            </div>
-            <img
-                src="/img/personas-celular.webp"
-                alt="foto de personas navegando "
-            />
-        </div>
-    </section>
-    <!--fin de sabias que-->
-
-    <!--Lanza tu web-->
-    <div class="lanza mt-s">
-        <div class="contenedor-lanza contenedor">
-            <h2 class="lanzatuweb">
-                Crea textos web que cautiven a tu cliente ideal </h2>
-            <a class="boton-lanza" href="contacto.html">Solicita cotización</a>
-        </div>
-    </div>
-    <!--Lo que proyectas-->
-    <Division titulo="Lo que proyectas con tu sitio web" id="" />
-    <section class="contenedor contenedor-como-haces">
-        <div class="mt-s como-haces">
-            <h3>Lo que proyectas con tu sitio web</h3>
-            <div class="como-haces-grid">
-                <img
-                    src="/img/macetaylap.webp"
-                    alt="foto de celular en la mesa "
-                />
-                <p>
-                    ¿Has intentado crear tu propia presencia digital?¿Fue como
-                    trazar un sendero en un bosque sin mapas, o como pintar un
-                    cuadro sin pinceles? ¿Como intentar cortarte el cabello tu
-                    mismo sin saber? Recuerda que cada detalle en tu presencia
-                    en línea refleja tu habilidad y compromiso. Los demás
-                    juzgarán: "Como haces una cosa, haces todas las cosas."
-                </p>
-            </div>
-        </div>
-        <div class="semuybien mt-s">
-            <h3>
-                Sé muy bien <span>por qué</span> los negocios pequeños no están en
-                internet...
-            </h3>
-            <ul>
-                <li>No tienen el tiempo necesario para dedicarse a ello</li>
-                <li>Carecen del presupuesto suficiente</li>
-                <li>
-                    Faltan los conocimientos necesarios para construir y
-                    mantener su propia presencia web.
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!--fin dLo que proyectas-->
-
-    <!--incia copy en tu web?-->
-    <section class="mt-s">
-        <div class="contenedor contenedor-copy">
-            <h2 class="copyweb-titulo">
-                ¿<span>Textos efectivos</span> en tu web?
-            </h2>
-            <div class="copyweb">
-                <img src="/img/maquina-verde1-min.webp" alt="" />
-                <p id="copy-txt">
-                    Por más espectacular que sea tu sitio web, si carece de
-                    textos meticulosamente elaborados, difícilmente transmitirá
-                    tu mensaje y persuadirá a tu cliente ideal. Es un error
-                    garrafal redactar los contenidos mientras se monta la web en
-                    el servidor. <strong>El mensaje </strong>de tu servicio o
-                    producto es crucial y <strong>
-                        no debe ser dejado al azar</strong
-                    >. La investigación y el análisis deben preceder a todo lo
-                    demás. Es seleccionar las palabras con precisión, guiando al
-                    lector hacia la acción deseada. Es el <strong
-                        >arte de crear textos comerciales poderosos
-                    </strong>y <span>efectivos</span> .
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!--inica sin confinaza-->
-    <section class="mt-s contenedor contenedor-confianza">
-        <div class="confianza">
-            <h3>Sin confianza, no hay venta</h3>
-            <p>
-                Cuando confiamos en un producto o servicio, es porque esperamos
-                que cumpla nuestras expectativas. Un mensaje confuso genera
-                dudas. Recuerda, la confianza es clave para cerrar ventas.
-            </p>
-            <h4 class="titulo-confianza">
-                ¿Cómo asegurar que tu sitio web inspire confianza?
-            </h4>
-            <ul class="lista-confianza">
-                <li>
-                    Utiliza textos que clarifiquen la propuesta de valor de tu
-                    producto o servicio.
-                </li>
-                <li>
-                    Sé transparente sobre lo que ofreces y cómo beneficiará a
-                    tus clientes.
-                </li>
-                <li>
-                    Destaca testimonios o casos de éxito que respalden la
-                    calidad y eficacia de tu oferta.
-                </li>
-            </ul>
-            <p>
-                La propuesta de valor no consiste en una verborrea que exagere
-                las cualidades de un producto o servicio.
-            </p>
-            <p id="definicion-propuesta">
-                <strong>Def.</strong> Una <strong>propuesta de valor</strong> es
-                <strong>un mensaje </strong>
-                escrito de manera clara y breve que <strong
-                    >transmite el beneficio principal</strong
-                > de tu producto o servicio. El beneficio que aporta a tus clientes
-                <strong>resolviendo un problema</strong>.
-            </p>
-            <p>
-                Así consigues que tu cliente ideal tenga claro cómo te
-                diferencias de la competencia
-            </p>
-        </div>
-    </section>
-    <!--fin sin confinaza-->
+  
+    <SabiasPorQue />
+    <LoQueProyectas />
+    <TextosEfectivos/>
+    <SinConfianza />
+    <!--Potafolio-->
     <Division titulo="Portafolio" id="portafolio" />
     <Portafolio />
+    <!-- Servicos -->
     <Division titulo="Servicios" id="servicios" />
     <Servicios />
+    <!-- Acerca de -->
     <Division titulo="Acerca de Weblocal" id="acercade" />
     <Acercade />
+    <!-- Contacto -->
     <Division titulo="Contacto" id="contacto" />
     <Formulario />
 </Layout>
 <style>
-    /*Sabias que*/
+    
 
-    .sabias-titulo h3 {
-        color: var(--color-primario);
-    }
+    
 
-    /*FIN de Sabias que*/
+    
 
-    /*Lanza tu web*/
-
-    .contenedor-lanza {
-        text-align: center;
-    }
-
-    .lanza {
-        /* background-color: var(--color-primario); */
-        padding: 10px;
-    }
-
-    .lanzatuweb {
-        /* color: var(--color-claro2); */
-        color: var(--color-oscuro1);
-        padding: 30px;
-        font-family: var(--tipo-secundario);
-    }
-
-    .boton-lanza {
-        display: block;
-        text-decoration: none;
-        border-radius: 5px;
-        margin: 10px;
-        padding: 10px;
-        font-size: 1.5rem;
-        background-color: var(--color-claro1);
-        color: var(--color-primario);
-        cursor: pointer;
-    }
-
-    /*FIN de Lanza tu web*/
-
-    /*Lo que proyectas*/
-
-    .como-haces h3 {
-        color: var(--color-primario);
-        padding-bottom: 10px;
-        text-align: center;
-    }
-
-    /*FIN Lo que proyectas*/
-
-    /*Se muy bien*/
-
-    .semuybien h3 {
-        color: var(--color-primario);
-    }
-
-    .semuybien li {
-        color: var(--color-oscuro1);
-        font-family: var(--tipo-secundario);
-    }
-
-    .semuybien h3 span {
-        color: #c45d5d;
-    }
-
-    /*FIN de Se muy bien*/
-
-    /*Copy en  tu web?*/
-
-    .copyweb-titulo {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-
-    .servicios-titulo {
-        color: var(--color-oscuro1);
-    }
-
-    .copyweb-titulo span {
-        color: rgba(173, 32, 32, 0.726);
-    }
-    .copyweb span {
-        color: rgba(173, 32, 32, 0.726);
-    }
-    /*FIN de Copy en  tu web?*/
-
-    /*Si no hay confianza*/
-
-    .contenedor-confianza {
-        background-color: var(--color-claro2);
-    }
-
-    .confianza {
-        padding: 20px 20px;
-        color: var(--color-primario);
-    }
-
-    .titulo-confianza {
-        color: var(--color-oscuro2);
-        font-family: var(--tipo-secundario);
-        padding-top: 20px;
-    }
-
-    .lista-confianza li {
-        font-family: var(--tipo-secundario);
-        font-weight: 400;
-        font-size: 1.6rem;
-        letter-spacing: 0.03rem;
-        line-height: 2.5rem;
-        color: var(--color-oscuro1);
-    }
-
-    #definicion-propuesta {
-        padding-top: 20px;
-    }
-
-    /*FIN de Si no hay confianza*/
-
-    /*Portafolio*/
-
-    .portafolio-grid {
-        display: grid;
-    }
-
-    .portafolio__card {
-        display: grid;
-        flex-direction: column;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    .portafolio__card p {
-        line-height: 2.5rem;
-    }
-
-    .titulo-portafolio {
-        color: var(--color-primario);
-        padding-bottom: 15px;
-        font-family: var(--tipo-secundario);
-    }
-
-    .portafolio__titulos {
-        text-align: center;
-        color: var(--color-oscuro1);
-        font-size: 3rem;
-        font-family: var(--tipo-secundario);
-    }
-
-    #portafolio-vermas {
-        text-decoration: none;
-        font-size: 1.8rem;
-        background-color: var(--color-primario);
-        padding: 10px;
-        border-radius: 5px;
-        color: white;
-    }
-
-    .portafolio-ver-sitio {
-        text-decoration: none;
-        font-size: 2rem;
-        color: var(--color-primario);
-    }
-
-    /*FIN de Portafolio*/
-
+   
+    
+    
     /*Propuesta*/
 
     .sobre-apps {
@@ -408,30 +127,7 @@ import Division from "../components/DivisionSeccion.astro";
     }
 
     @media (min-width: 768px) {
-        .sabias-titulo h3 {
-            margin: 0px;
-        }
-        .sabias {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            -moz-column-gap: 2rem;
-            column-gap: 2rem;
-        }
-        .boton-lanza {
-            display: inline-block;
-        }
-        .contenedor-como-haces {
-            margin-top: 50px;
-        }
-        .como-haces-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            -moz-column-gap: 2rem;
-            column-gap: 2rem;
-        }
-        .semuybien {
-            margin-top: 80px;
-        }
+       
         /*portafolio*/
         .portafolio-grid {
             display: grid;
@@ -448,17 +144,7 @@ import Division from "../components/DivisionSeccion.astro";
         .contenido-propuesta {
             padding-top: 50px;
         }
-        /*Copy en tu web?*/
-        .copyweb {
-            display: grid;
-            grid-template-columns: repeat(2, 20% 80%);
-            -moz-column-gap: 2rem;
-            column-gap: 2rem;
-        }
-        .contenedor-copy {
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
+        
         /*SERVICIOS*/
         .tecomprendo-grid div {
             margin-top: 0px;
