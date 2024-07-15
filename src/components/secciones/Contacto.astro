@@ -40,23 +40,17 @@
 </section>
 
 <script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('myForm') as HTMLFormElement;
-    const messageDiv = document.getElementById('message') as HTMLDivElement;
-
-    form.addEventListener('submit', (event) => {
+    document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        const formData = new FormData(form);
-
+        const formData = new FormData(this);
         fetch('https://formsubmit.co/marco.jaramillocast@gmail.com', {
             method: 'POST',
             body: formData,
         })
         .then(response => {
             if (response.ok) {
-                messageDiv.style.display = 'block';
-                form.reset(); // Opcional: limpiar el formulario después de enviar
+                document.getElementById('message').style.display = 'block';
+                document.getElementById('myForm').reset(); // Opcional: limpiar el formulario después de enviar
             } else {
                 alert('Hubo un problema al enviar el formulario.');
             }
@@ -65,8 +59,6 @@
             alert('Hubo un error: ' + error.message);
         });
     });
-});
-
 </script>
 
     <style>
