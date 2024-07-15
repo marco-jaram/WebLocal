@@ -1,4 +1,5 @@
-<section class="contenedor-contacto">
+
+        <section class="contenedor-contacto">
     <div class="contacto-grid contenedor">
         <img
             src="https://images.unsplash.com/photo-1528329140527-75853b1e1650?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -6,27 +7,30 @@
         />
         <div class="contacto-form">
             </a></p>
-            <form name="contact" netlify>
+            <form name="contact" netlify="netlify">
                 <div class="contenido-form">
                     <div class="datos-form">
+                        <label for="name" >Nombre</label>
                         <input
                             type="text"
                             name="name"
                             class="form-control"
-                            placeholder="Nombre"
+                            placeholder="Ejemplo: Juan"
                             required
                         />
+                        <label for="email" >Correo</label>
                         <input
                             type="email"
                             name="email"
                             class="form-control"
-                            placeholder="Correo favorito"
+                            placeholder="Ejemplo juan@gmail.com"
                             required
                         />
                     </div>
+                    <label for="message">Mensaje</label>
                     <div class="mensaje-form">
                         <textarea
-                            placeholder="Escribe tu mensaje"
+                            placeholder="Hola.."
                             class="form-control"
                             name="message"
                             rows="10"
@@ -40,8 +44,15 @@
         </div>
     </div>
 </section>
+  
+
 
 <style>
+    label{
+        font-size: 1.9rem;
+       padding-top: 10px;
+    }
+  
     .contacto-form{
         max-width: 500px;
     }
