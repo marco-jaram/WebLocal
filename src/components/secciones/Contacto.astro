@@ -1,81 +1,151 @@
 <section class="contenedor-contacto">
     <div class="contacto-grid contenedor">
-        <div class="contacto-texto">
-            <h1></h1>
-            <form id="myForm" target="_blank"  method="POST">
+        <img
+            src="https://images.unsplash.com/photo-1528329140527-75853b1e1650?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="imagen de contacto"
+        />
+        <div class="contacto-form">
+            </a></p>
+            <form
+                id="myForm"
+                target="_blank"
+                action="https://formsubmit.co/714946c49d220c177180aa9becf73281"
+                method="POST"
+            >
                 <div class="contenido-form">
                     <div class="datos-form">
                         <input
                             type="text"
                             name="name"
                             class="form-control"
-                            placeholder="Full Name"
+                            placeholder="Nombre"
                             required
                         />
                         <input
                             type="email"
                             name="email"
                             class="form-control"
-                            placeholder="Email Address"
+                            placeholder="Correo favorito"
                             required
                         />
                     </div>
                     <div class="mensaje-form">
                         <textarea
-                            placeholder="Your Message"
+                            placeholder="Escribe tu mensaje"
                             class="form-control"
                             name="message"
                             rows="10"
-                            required
-                        ></textarea>
+                            required></textarea>
                     </div>
                     <button type="submit" class="boton-contacto">Enviar</button>
                 </div>
             </form>
-            <div id="message" style="display:none; color: green; margin-top: 20px;">
-                ¡Mensaje enviado, gracias :)!
-            </div>
+                       <p>También puedes enviarme un <a href="https://wa.me/6643111577" target="_blank">WhatsApp<i class="fa fa-whatsapp" aria-hidden="true"></i>
+
         </div>
     </div>
 </section>
 
-<script>
-   document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('myForm') as HTMLFormElement;
-    const messageDiv = document.getElementById('message') as HTMLDivElement;
+<style>
+    .contacto-form{
+        max-width: 500px;
+    }
+     .contacto-form p{
+        color: #5f5a5a;
+     }
+       .contacto-form p a{
+color: #5f5a5a;
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
+    }
+    .contacto-form p i{
+color: var(--color-primario);
+margin-left: 10px;
+font-size: 2.5rem;
 
-        const formData = new FormData(form);
 
-        fetch('https://formsubmit.co/714946c49d220c177180aa9becf73281', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => {
-            if (response.ok) {
-                messageDiv.style.display = 'block';
-                form.reset(); // Opcional: limpiar el formulario después de enviar
-            } else {
-                alert('Hubo un problema al enviar el formulario.');
-            }
-        })
-        .catch(error => {
-            alert('Hubo un error: ' + error.message);
-        });
-    });
-});
+    }
+    .datos-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-</script>
+    .contacto-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+img{
+    max-width: 500px;
+}
 
-    <style>
-        .datos-form {
-            display: flex;
-            flex-direction: column;
+    /* Estilos para los inputs de texto y email */
+.datos-form .form-control,
+.mensaje-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    font-size: 1.8rem;
+    background-color: #fff; 
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+/* Estilos para el área de texto */
+.mensaje-form .form-control {
+    resize: vertical; 
+}
+
+/* Estilos para el botón de envío */
+.boton-contacto {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px; 
+    background-color: var(--color-primario); 
+    color: #fff; 
+    font-size: 1.8rem; 
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s; 
+margin-top: 10px;
+}
+
+/* Efecto hover para los inputs y textarea */
+.datos-form .form-control:hover,
+.mensaje-form .form-control:hover {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
+}
+
+/* Efecto hover y focus para los inputs y textarea */
+.datos-form .form-control:focus,
+.mensaje-form .form-control:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
+    outline: none; 
+}
+
+/* Efecto hover para el botón de envío */
+.boton-contacto:hover {
+    background-color: #1e700e; 
+    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
+}
+.form-control{
+    margin-top: 5px;
+    font-family: var(--tipo-secundario); 
+}
+.boton-contacto{
+display: block;
+margin: 10px auto;
+
+}
+
+
+    @media (min-width: 768px) {
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
         }
-
-        .contenido-form {
-        }
-    </style>
-
+    }
+</style>
