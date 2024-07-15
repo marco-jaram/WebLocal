@@ -1,12 +1,8 @@
 <section class="contenedor-contacto">
     <div class="contacto-grid contenedor">
-        <div  class="contacto-texto">
+        <div class="contacto-texto">
             <h1></h1>
-            <form
-                target="_blank"
-                action="https://formsubmit.co/marco.jaramillocast@gmail.com"
-                method="POST"
-            >
+            <form id="myForm" target="_blank"  method="POST">
                 <div class="contenido-form">
                     <div class="datos-form">
                         <input
@@ -16,7 +12,6 @@
                             placeholder="Full Name"
                             required
                         />
-
                         <input
                             type="email"
                             name="email"
@@ -25,22 +20,54 @@
                             required
                         />
                     </div>
-
                     <div class="mensaje-form">
                         <textarea
                             placeholder="Your Message"
                             class="form-control"
                             name="message"
                             rows="10"
-                            required></textarea>
+                            required
+                        ></textarea>
                     </div>
-                    <button type="submit" class="boton-contacto"
-                        >Enviar</button
-                    >
+                    <button type="submit" class="boton-contacto">Enviar</button>
                 </div>
             </form>
+            <div id="message" style="display:none; color: green; margin-top: 20px;">
+                ¡Mensaje enviado, gracias :)!
+            </div>
         </div>
     </div>
+</section>
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('myForm') as HTMLFormElement;
+    const messageDiv = document.getElementById('message') as HTMLDivElement;
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch('https://formsubmit.co/marco.jaramillocast@gmail.com', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                messageDiv.style.display = 'block';
+                form.reset(); // Opcional: limpiar el formulario después de enviar
+            } else {
+                alert('Hubo un problema al enviar el formulario.');
+            }
+        })
+        .catch(error => {
+            alert('Hubo un error: ' + error.message);
+        });
+    });
+});
+
+</script>
 
     <style>
         .datos-form {
@@ -51,4 +78,4 @@
         .contenido-form {
         }
     </style>
-</section>
+
