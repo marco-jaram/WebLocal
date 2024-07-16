@@ -1,6 +1,6 @@
 <div id="servicios" class="contenedor">
     
-    <h3>Problemas que tiene solución...</h3>
+    <h3 class="subtitulo-servicios">Problemas que tiene solución...</h3>
     <section class="mt-s tecomprendo">
         <div class="tecomprendo-grid">
             <img src="/img/solucion.webp" alt="" />
@@ -43,7 +43,7 @@
                 <div class="servicios-card-incono">
                     <i class="fas fa-concierge-bell"></i>
 
-                    <h4>Sitio Web</h4>
+                    <h4>Sitio Web <br> informativo </h4>
                 </div>
                 <p>
                     Tus servicios al alcence las 24/7. Vende tus servicios a
@@ -169,10 +169,10 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
 
-                    <h4>Landing Page</h4>
+                    <h4>Landing Page <br> Página de ventas</h4>
                 </div>
                 <p>
-                    Regala algo a cambio de suscripcion. Vende resaltando los
+                    Regala algo a cambio de suscripción. Vende resaltando los
                     beneficios. Incrementa prospectos.
                 </p>
                 <details>
@@ -348,7 +348,17 @@
         .tecomprendo-grid div p strong {
             color: rgba(24, 24, 23, 0.794);
         }
-
+        .caracteristicas-servicios {
+            background-color: var(--color-claro2);
+            padding: 10px;
+        }
+        @media (min-width: 764px) {
+            .caracteristicas-servicios {
+            background-color: var(--color-claro2);
+            padding: 100px;
+        }
+        }
+    
         .caracteristicas-servicios h2 {
             color: rgba(24, 24, 23, 0.794);
         }
@@ -422,7 +432,13 @@
             text-align: center;
             background-color: var(--color-primario);
             padding: 20px;
-            margin-top: 50px;
+            margin-top: 30px;
+        }
+        @media (min-width: 768px) {
+            .servicio-titloh2 {
+            padding: 20px;
+            margin-top: 0px;
+        }
         }
         .servicio-titloh2 h2 {
             color: white;
