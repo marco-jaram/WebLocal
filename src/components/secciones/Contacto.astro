@@ -1,150 +1,61 @@
-
-        <section class="contenedor-contacto">
+<section class="contenedor-contacto">
     <div class="contacto-grid contenedor">
-        <img
-            src="https://images.unsplash.com/photo-1528329140527-75853b1e1650?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="imagen de contacto"
-        />
-        <div class="contacto-form">
-            </a></p>
-            <form name="contact" netlify="netlify">
-                <div class="contenido-form">
-                    <div class="datos-form">
-                        <label for="name" >Nombre</label>
-                        <input
-                            type="text"
-                            name="name"
-                            class="form-control"
-                            placeholder="Ejemplo: Juan"
-                            required
-                        />
-                        <label for="email" >Correo</label>
-                        <input
-                            type="email"
-                            name="email"
-                            class="form-control"
-                            placeholder="Ejemplo juan@gmail.com"
-                            required
-                        />
-                    </div>
-                    <label for="message">Mensaje</label>
-                    <div class="mensaje-form">
-                        <textarea
-                            placeholder="Hola.."
-                            class="form-control"
-                            name="message"
-                            rows="10"
-                            required></textarea>
-                    </div>
-                    <button type="submit" class="boton-contacto">Enviar</button>
-                </div>
-            </form>
-                       <p>También puedes enviarme un <a href="https://wa.me/6643111577" target="_blank">WhatsApp<i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <div class="imagen-contacto">
+            <img
+                src="https://images.unsplash.com/photo-1528329140527-75853b1e1650?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="imagen de contacto"
+            />
+        </div>
 
+        <div class="fomrulario-contacto">
+            <div class="contacto-parrafos">
+                <p>
+                    Enviarme<a href="https://wa.me/6643111577" target="_blank">
+                        un correo<i class="fa fa-envelope-o" aria-hidden="true"
+                        ></i>
+                    </a>
+                </p>
+                <p>
+                    o un <a href="https://wa.me/6643111577" target="_blank"
+                        >WhatsApp<i class="fa fa-whatsapp" aria-hidden="true"
+                        ></i>
+                    </a>
+                </p>
+            </div>
         </div>
     </div>
 </section>
-  
-
 
 <style>
-    label{
-        font-size: 1.9rem;
-       padding-top: 10px;
+    img {
+        width: 100%;
     }
   
-    .contacto-form{
-        max-width: 500px;
-    }
-     .contacto-form p{
-        color: #5f5a5a;
-     }
-       .contacto-form p a{
-color: #5f5a5a;
-
-    }
-    .contacto-form p i{
-color: var(--color-primario);
-margin-left: 10px;
-font-size: 2.5rem;
-
-
-    }
-    .datos-form {
+    
+    .contacto-parrafos {
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .contacto-grid {
-        display: flex;
-        justify-content: center;
         align-items: center;
+        padding: 150px 0px;
+        color: gray;
     }
-img{
-    max-width: 500px;
-}
 
-    /* Estilos para los inputs de texto y email */
-.datos-form .form-control,
-.mensaje-form .form-control {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    font-size: 1.8rem;
-    background-color: #fff; 
-    transition: border-color 0.3s, box-shadow 0.3s; 
-}
+    .contacto-parrafos p {
+        text-align: center;
+        margin: 0;
+        font-size: 2.5rem;
+        color: gray;
+    }
+    .contacto-parrafos p a {
+        color: gray;
+    }
 
-/* Estilos para el área de texto */
-.mensaje-form .form-control {
-    resize: vertical; 
-}
-
-/* Estilos para el botón de envío */
-.boton-contacto {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px; 
-    background-color: var(--color-primario); 
-    color: #fff; 
-    font-size: 1.8rem; 
-    cursor: pointer; 
-    transition: background-color 0.3s, box-shadow 0.3s; 
-margin-top: 10px;
-}
-
-/* Efecto hover para los inputs y textarea */
-.datos-form .form-control:hover,
-.mensaje-form .form-control:hover {
-    border-color: var(--color-primario);
-    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
-}
-
-/* Efecto hover y focus para los inputs y textarea */
-.datos-form .form-control:focus,
-.mensaje-form .form-control:focus {
-    border-color: var(--color-primario);
-    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
-    outline: none; 
-}
-
-/* Efecto hover para el botón de envío */
-.boton-contacto:hover {
-    background-color: #1e700e; 
-    box-shadow: 0 0 5px rgba(0, 255, 42, 0.5); 
-}
-.form-control{
-    margin-top: 5px;
-    font-family: var(--tipo-secundario); 
-}
-.boton-contacto{
-display: block;
-margin: 10px auto;
-
-}
-
+    .fa {
+        color: rgb(66, 179, 141);
+        font-size: 3rem;
+        margin-left: 10px;
+    }
 
     @media (min-width: 768px) {
         .contacto-grid {
@@ -152,6 +63,19 @@ margin: 10px auto;
             grid-template-columns: repeat(2, 1fr);
             -moz-column-gap: 2rem;
             column-gap: 2rem;
+        }
+        .fomrulario-contacto {
+            display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .fomrulario-contacto p {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .contacto-parrafos {
+            padding: 0px;
         }
     }
 </style>
