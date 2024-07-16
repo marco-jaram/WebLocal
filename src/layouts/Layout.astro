@@ -14,28 +14,65 @@ const { title, description, keywords } = Astro.props;
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-       
+
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <title>Web Local- {title}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
         <link rel="icon" type="image/ico" href="/img/favicon-weblocal.ico" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
             rel="stylesheet"
         />
-<script  src="https://kit.fontawesome.com/fa227621e8.js" crossorigin="anonymous"></script>
-   
- <!-- SEO -->
- <meta property="og:title" content="Impulsa tu Negocio Local con Textos Web Efectivos | Weblocal" />
- <meta property="og:description" content="Más del 78% de los mexicanos navega diariamente por Internet buscando bienes y servicios, pero solo el 10% de los negocios locales tiene presencia en línea. En Weblocal, te ayudamos a cerrar esta brecha digital con textos efectivos y una presencia web personalizada que atrae a tu cliente ideal. Descubre cómo podemos incrementar tus ventas hasta en un 25% mediante la creación de contenido que inspira confianza y destaca tu propuesta de valor. ¡Contáctanos y empieza a transformar tu negocio hoy mismo!" />
- <meta property="og:image" content="/img/imagen-trabajando-en-textos-web.webp" />
- <meta property="og:url" content="{url}" />
- <meta property="og:type" content="website" />
- 
- <!-- SEO FIN -->
+        <script
+            src="https://kit.fontawesome.com/fa227621e8.js"
+            crossorigin="anonymous"></script>
 
-</head>
+        <!-- SEO -->
+        <meta property="og:title" content="Desarrollo Web y Textos Web Efectivos  para Negocios en Tijuana">
+        <meta property="og:description" content="Potenciamos tu presencia digital con sitios web atractivos y textos que convierten. ¡Destaca en línea hoy!">
+        <meta property="og:image" content="/img/imagen-trabajando-en-textos-web.webp">
+        <meta property="og:url" content="https://www.weblocalmx.com">
+        <meta property="og:type" content="website">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Weblocal MX: Diseño Web y Textos Efectivos para Negocios en Tijuana">
+        <meta name="twitter:description" content="Potenciamos tu presencia digital con sitios web atractivos y textos que convierten. ¡Destaca en línea hoy!">
+        <meta name="twitter:image" content="/img/imagen-trabajando-en-textos-web.webp">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://www.weblocalmx.com">
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Weblocal MX",
+              "description": "Desarrollo web y redacción persuasiva en Tijuana.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tijuana",
+                "addressRegion": "Baja California",
+                "addressCountry": "MX"
+              },
+              "url": "https://www.weblocalmx.com",
+              "telephone": "+52-664-311-1577",
+              "image": "/img/imagen-trabajando-en-textos-web.webp",
+              
+              "serviceType": [
+                "Diseño Web",
+                "Desarrollo Web",
+                "Redacción de textos web",
+                "SEO tecnico"
+              ]
+            }
+        </script>
+        
+
+        <!-- SEO FIN -->
+    </head>
     <body>
         <Menu />
 
