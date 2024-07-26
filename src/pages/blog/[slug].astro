@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../posts/*.md');
+  return posts.map(post => ({
+    params: { slug: post.file.split('/').pop().split('.').shift() },
+    props: { post },
+  }));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title={frontmatter.title}
+description="Servicios de desarrollo web y redacción persuasiva que impulsan tu negocio en Tijuana."
+keywords="redaccion de textos web, copywriter, creacion de sitios webs"
+>
+  <article class="max-w-7xl mx-auto mt-8 text-gray-500">
+    <h1 class="text-3xl font-bold mb-4 m-3">{frontmatter.title}</h1>
+    <div class="prose prose-invert m-3">
+      <Content />
+    </div>
+  </article>
+</Layout>
