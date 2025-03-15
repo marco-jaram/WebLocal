@@ -1,0 +1,37 @@
+{
+  "name": "weblocal",
+  "version": "1.0.0",
+  "description": "Proyecto Astro WebLocal",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marco-jaram/WebLocal.git"
+  },
+  "keywords": [
+    "astro",
+    "jamstack",
+    "website"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marco-jaram/WebLocal/issues"
+  },
+  "homepage": "https://github.com/marco-jaram/WebLocal#readme",
+  "dependencies": {
+    "astro": "^5.5.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/tailwind": "^5.1.0",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
+  }
+}
