@@ -2,6 +2,8 @@
 import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
 import Elevador from "../components/Elevador.astro";
+import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+
 interface Props {
     title: string;
     description: string;
@@ -13,6 +15,8 @@ const { title, description, keywords } = Astro.props;
 <!doctype html>
 <html lang="es">
     <head>
+    <GoogleAnalytics />   
+
 <!-- Meta Pixel Code -->
 <script is:inline>
     !function(f,b,e,v,n,t,s)
@@ -32,16 +36,6 @@ const { title, description, keywords } = Astro.props;
     <!-- End Meta Pixel Code -->
 
 
-
-
-
-
-
-
-
-
-
-
         <!-- Google Tag Manager -->
 <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -49,6 +43,20 @@ const { title, description, keywords } = Astro.props;
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MNNNGFX4');</script>
     <!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <meta charset="UTF-8" />
 
         <meta name="description" content={description} />
