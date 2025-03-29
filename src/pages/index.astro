@@ -1,51 +1,166 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import HeroeInicio from "../components/Hero.astro";
+
 import Formulario from "../components/secciones/Contacto.astro";
-import Servicios from "../components/secciones/Servicios.astro";
-import Portafolio from "../components/secciones/Portafolio.astro";
-import Acercade from "../components/secciones/Acercade.astro";
+
 import Division from "../components/DivisionSeccion.astro";
-import LoQueProyectas from "../components/secciones/LoQueProyectas.astro";
-import SabiasPorQue from "../components/secciones/SabiasPorQue.astro"
-import TextosEfectivos from "../components/secciones/TextosEfectivos.astro";
-import SinConfianza from "../components/secciones/SinConfianza.astro";
+import HeroHome from "../components/HeroHome.astro";
 
 ---
 
 <Layout
     title="inicio"
-    description="Servicios de desarrollo web y redacción persuasiva que impulsan tu negocio en Tijuana."
-    keywords="redaccion de textos web, copywriter, creacion de sitios webs"
+    description="Servicios de desarrollo web y reservas y copy para negocios en Tijuana."
+    keywords="reservas, copy, desarrollo web, tijuana"
 >
-    <HeroeInicio />
+   <HeroHome />
+ 
+    <section class="seccion">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">Tu negocio necesita más que "estar en internet"</h2>
+            <p class="seccion-subtitulo">Transformo tu presencia digital en una herramienta que trabaja por ti las 24/7</p>
+        </div>
+    </section>
+
+    <!-- Servicios section -->
+    <section class="seccion" id="servicios">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">¿Qué solución estás buscando?</h2>
+            
+            <div class="servicios-grid">
+                <!-- Servicio 1 -->
+                <div class="servicio-card">
+                    <h3 class="servicio-titulo">
+                        <i class="fas fa-calendar-check"></i>
+                        Sistema de reservas online
+                    </h3>
+                    <p class="servicio-descripcion">
+                        Olvídate de coordinar citas por WhatsApp. Automatiza tus reservas mientras duermes y enfócate en lo que mejor sabes hacer.
+                    </p>
+                    <div class="botones">
+                        <a href="reservas" class="boton-primario">Conocer más</a>
+                       
+                    </div>
+                </div>
+                
+                <!-- Servicio 2 -->
+                <div class="servicio-card">
+                    <h3 class="servicio-titulo">
+                        <i class="fas fa-pen-fancy"></i>
+                        Copy que conecta
+                    </h3>
+                    <p class="servicio-descripcion">
+                        Palabras que enganchan y convierten visitantes en clientes. Mensajes claros que resuelven la duda de "¿por qué elegirte a ti?".
+                    </p>
+                    <div class="botones">
+                        <a href="copy" class="boton-primario">Conocer más</a>
+                       
+                    </div>
+                </div>
+                
+                <!-- Servicio 3 -->
+                <div class="servicio-card">
+                    <h3 class="servicio-titulo">
+                        <i class="fas fa-users-cog"></i>
+                        Gestión de clientes
+                    </h3>
+                    <p class="servicio-descripcion">
+                        Mantén el contacto con tus clientes sin esfuerzo. Envía correos automatizados y construye una relación que genere ventas recurrentes.
+                    </p>
+                    <div class="botones">
+                        <a href="gestion-clientes" class="boton-primario">Conocer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador -->
+    <div class="separador"></div>
+
+    <!-- Testimonios section -->
+    <section class="testimonios">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">Resultados que puedes esperar</h2>
+            
+            <div class="testimonios-grid">
+                <!-- Testimonio 1 -->
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">
+                        Antes perdía horas coordinando citas... ahora mi agenda se llena automáticamente mientras duermo.
+                    </p>
+                    <p class="testimonio-autor">– María L., Psicóloga</p>
+                </div>
+                
+                <!-- Testimonio 2 -->
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">
+                        Mi web pasó de ser un gasto a convertirse en mi mejor vendedor. El mensaje ahora conecta con mis clientes ideales.
+                    </p>
+                    <p class="testimonio-autor">– Carlos M., Estudio de Yoga</p>
+                </div>
+                
+                <!-- Testimonio 3 -->
+                <div class="testimonio-card">
+                    <p class="testimonio-texto">
+                        Finalmente, un sistema digital que entiendo y puedo gestionar sin ser experto en tecnología.
+                    </p>
+                    <p class="testimonio-autor">– Adriana R., Consultora</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sabías que section -->
+    <section class="seccion">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">¿Sabías que...?</h2>
+            
+            <div class="sabias-que">
+                <div>
+                    <p class="sabias-que-texto">
+                        El 78% de los mexicanos busca servicios en internet, pero solo el 21% de los negocios locales tiene presencia digital efectiva. Esta brecha digital cuesta a muchos empresarios hasta un 25% de sus ventas potenciales.
+                    </p>
+                    <h3>No estás solo en esta lucha.</h3>
+                </div>
+                <img src="/img/personas-celular.webp" alt="Personas usando dispositivos móviles">
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos section -->
+    <section class="seccion">
+        <div class="contenedor">
+            <h2 class="seccion-titulo">¿Por qué trabajar conmigo?</h2>
+            
+            <div class="porque-elegirnos">
+                <ul>
+                    <li><strong>Entiendo tu negocio, no solo la tecnología</strong>: Soluciones prácticas, no tecnicismos.</li>
+                    <li><strong>Resolución rápida</strong>: Si hay un problema, actúo sin dejarte esperando.</li>
+                    <li><strong>Transparencia total</strong>: Te diré exactamente qué necesitas, incluso si no gano dinero con ello.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA final -->
+    <section class="cta-final">
+        <div class="contenedor">
+            <h2>¿Tu web actual está espantando clientes?</h2>
+            <p>Agenda una revisión gratuita (15 min) y te diré 1 cosa que puedes mejorar YA para aumentar tus conversiones.</p>
+            <a href="#" class="boton-primario">Agendar revisión gratuita</a>
+        </div>
+    </section>
+
   
-    <SabiasPorQue />
-    <LoQueProyectas />
-    <TextosEfectivos/>
-    <SinConfianza />
-    <!--Potafolio-->
-    <Division titulo="Portafolio" id="portafolio" />
-    <Portafolio />
-    <!-- Servicos -->
-    <Division titulo="Servicios" id="servicios" />
-    <Servicios />
-    <!-- Acerca de -->
-    <Division titulo="Acerca de Weblocal" id="acercade" />
-    <Acercade />
+
+  <!-- FIN NUEVO -->
+   
     <!-- Contacto -->
     <Division titulo="Contacto" id="contacto" />
     <Formulario />
 </Layout>
-<style>
-    
-
-    
-
-    
-
-   
-    
+<style> 
     
     /*Propuesta*/
 
@@ -184,4 +299,222 @@ import SinConfianza from "../components/secciones/SinConfianza.astro";
             background-color: var(--color-claro2);
         }
     }
+
+    /* ESTILOS EXCLUSIVOS PARA HOME */
+    /* Estilos exclusivos para la nueva página de inicio */
+
+/* Secciones principales */
+.seccion {
+    padding: 40px 0;
+}
+
+.seccion-titulo {
+    text-align: center;
+    color: var(--color-primario);
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.seccion-subtitulo {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* Servicios */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.servicio-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+}
+
+.servicio-titulo {
+    font-size: 2.4rem;
+    color: var(--color-oscuro2);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.servicio-titulo i {
+    color: var(--color-primario);
+    margin-right: 10px;
+    font-size: 2.8rem;
+}
+
+.servicio-descripcion {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.boton-primario {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.boton-primario:hover {
+    background-color: #0e9a7c;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background-color: rgba(17, 178, 143, 0.1);
+}
+
+/* Testimonios */
+.testimonios {
+    background-color: var(--color-claro2);
+    padding: 50px 0;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.testimonio-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testimonio-texto {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.testimonio-texto::before {
+    content: '"';
+    font-size: 5rem;
+    color: rgba(17, 178, 143, 0.2);
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    z-index: -1;
+}
+
+.testimonio-autor {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-oscuro2);
+}
+
+/* Sabias que */
+.sabias-que {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.sabias-que-texto {
+    font-size: 1.8rem;
+}
+
+/* Por qué elegirnos */
+.porque-elegirnos ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.porque-elegirnos li {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.porque-elegirnos li::before {
+    content: "✓";
+    color: var(--color-primario);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* CTA final */
+.cta-final {
+    background-color: var(--color-claro2);
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-final h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.cta-final p {
+    font-size: 1.8rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Separador */
+.separador {
+    height: 2px;
+    background-color: var(--color-primario);
+    margin: 40px 0;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .servicios-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonios-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sabias-que {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
 </style>

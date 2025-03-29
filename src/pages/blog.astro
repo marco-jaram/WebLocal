@@ -1,15 +1,30 @@
 ---
 import Layout from "../layouts/LayoutBlog.astro";
-
 // Obtener todos los posts
 const allPosts = await Astro.glob("../posts/*.md");
-
 // Ordenar los posts por fecha, del más reciente al más antiguo
 const sortedPosts = allPosts.sort(
     (a, b) =>
         new Date(b.frontmatter.date).valueOf() -
-        new Date(a.frontmatter.date).valueOf(),
+        new Date(a.frontmatter.date).valueOf()
 );
+
+// Función tipada para extraer el slug
+function getSlug(file: string): string {
+    const fileName = file.split("/").pop() || "";
+    return fileName.split(".")[0] || "";
+}
+
+// Definición de tipo para un post
+interface Post {
+    file: string;
+    frontmatter: {
+        title: string;
+        description: string;
+        date: string;
+        [key: string]: any;
+    };
+}
 ---
 
 <Layout 
@@ -17,39 +32,98 @@ title="inicio"
 description="Servicios de desarrollo web y redacción persuasiva que impulsan tu negocio en Tijuana."
 keywords="redaccion de textos web, copywriter, creacion de sitios webs"
 >
-    <main class="max-w-7xl mx-auto px-4 py-8">
-      
-            <h1 class="text-3xl font-bold mb-8 text-gray-500">Todos los Posts</h1>
-            <ul class="space-y-8">
-                {
-                    sortedPosts.map((post) => (
-                        <li class=" p-6 rounded-lg shadow-md">
-                            <article>
-                                <h2 class=" text-4xl font-semibold mb-2">
-                                    <a
-                                        href={`/blog/${post.file.split("/").pop().split(".").shift()}`}
-                                        class="text-green-700 hover:underline"
-                                    >
-                                        {post.frontmatter.title}
-                                    </a>
-                                </h2>
-                                <p class="text-gray-500 mb-4">
-                                    {post.frontmatter.description}
-                                </p>
-                                <div class="flex justify-between items-center text-sm text-gray-500">
-                                    
-                                    <a
-                                        href={`/blog/${post.file.split("/").pop().split(".").shift()}`}
-                                        class="text-green-700 text-2xl hover:underline"
-                                    >
-                                        Leer más →
-                                    </a>
-                                </div>
-                            </article>
+    <main class="main">
+        <div class="contenedor">
+            <h1>Todos las publicaciones</h1>
+            <ul>
+                {sortedPosts.map((post: any) => {
+                    const slug = getSlug(post.file);
+                    return (
+                        <li class="blog-list-item">
+                            <h2 class="blog-title">
+                                <a 
+                                    href={`/blog/${slug}`}
+                                    class="text-green-700 hover:underline"
+                                >
+                                    {post.frontmatter.title}
+                                </a>
+                            </h2>
+                            <p class="text-gray-500 mb-4 blog-excerpt">
+                                {post.frontmatter.description}
+                            </p>
+                            <a 
+                                href={`/blog/${slug}`}
+                                class="text-green-700 text-2xl hover:underline blog-read-more"
+                            >
+                                Leer más →
+                            </a>
                         </li>
-                    ))
-                }
+                    );
+                })}
             </ul>
-        
+        </div>
     </main>
 </Layout>
+
+<style>
+    .contenedor{
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    h1{
+        color: #047857;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+    }   
+.blog-list-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.blog-title {
+    
+    margin-bottom: 1rem;
+}
+
+.blog-excerpt {
+  
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.blog-read-more {
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.blog-read-more:hover {
+    transform: translateX(5px);
+}
+
+/* Estilos para mantener tu esquema de colores existente */
+.text-green-700 {
+    color: #047857;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.text-gray-500 {
+    color: #6b7280;
+}
+
+.text-2xl {
+   
+    line-height: 2rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+</style>

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const targetElement = document.getElementById('tinytype');
-    const textsToType = ['conectan', 'enganchan'];
+    const textsToType = ['enganchan', 'sí funcionan'];
     const typeSpeed = 100; // Speed in milliseconds between each character
     const deleteSpeed = 50; // Speed in milliseconds between each character deletion
     const delayBetweenTexts = 1000; // Delay in milliseconds before starting to type the next text

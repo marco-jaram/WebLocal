@@ -1,8 +1,8 @@
 ---
-import Menu from "../components/MenuBlog.astro";
+import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
 import Elevador from "../components/Elevador.astro";
-import MenuBlog from "../components/MenuBlog.astro";
+
 interface Props {
     title: string;
     description: string;
@@ -104,14 +104,14 @@ const { title, description, keywords } = Astro.props;
         <!-- SEO FIN -->
     </head>
     <body>
-        <MenuBlog/>
+        <Menu />
 
         <slot />
 
         <Footer />
         <Elevador />
 
-        <script src="../scripts/menu.js"></script>
+       
         <script src="../scripts/footer-anio.js"></script>
         <script src="../scripts/elevador.js"></script>
     </body>

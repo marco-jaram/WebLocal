@@ -1,0 +1,141 @@
+<div class="hero">
+    <div class="contenedor">
+        <div class="titulares">
+            <h1>
+                <span class="highlight">Soluciones digitales </span> que
+
+                <br />
+                <span id="tinytype" class="tinytype"></span><span class="dot"
+                    >.</span
+                >
+            </h1>
+            <h2>
+                Desarrollo web, <br /> sistemas de reservas <br /> y copy que genera
+                clientes
+            </h2>
+        </div>
+        <div class="circles">
+            <div class="circle large"></div>
+            <div class="circle small"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../scripts/type.js"></script>
+<style>
+    .hero {
+        padding: 20px;
+        min-height: calc(40vh - 60px); /* Restamos la altura del menú */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 60px; /* Añadimos un margen superior igual a la altura del menú */
+    }
+
+    h1 {
+        font-size: 3.2rem;
+        margin-bottom: 100px;
+        line-height: 1.2;
+        position: relative;
+        z-index: 2;
+    }
+    .titulares h2 {
+        line-height: 1.2;
+        position: relative;
+        z-index: 2;
+        color: rgb(58, 54, 54);
+    }
+    .highlight {
+        color: var(--color-primario);
+        font-weight: bold;
+    }
+
+    .dot {
+        color: var(--color-primario);
+    }
+
+    .read-more {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+        z-index: 2;
+    }
+
+    .circles {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        z-index: 1;
+    }
+
+    .circle {
+        background-color: #11b28f3f;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    .circle.large {
+        width: 200px;
+        height: 200px;
+        bottom: 0;
+        right: 0;
+    }
+
+    .circle.small {
+        width: 100px;
+        height: 100px;
+        bottom: 150px;
+        right: 150px;
+    }
+
+    body::before {
+        content: "";
+        position: fixed; /* Cambiado de absolute a fixed */
+        top: 60px; /* Comienza después del menú */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(#000 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.1;
+        z-index: -1;
+    }
+    @media (min-width: 768px) {
+        .hero {
+            padding: 20px;
+            min-height: calc(80vh - 60px); /* Restamos la altura del menú */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px; /* Añadimos un margen superior igual a la altura del menú */
+        }
+        .titulares {
+            margin-bottom: 300px;
+        }
+        h1 {
+            font-size: 6.2rem;
+            /* margin-bottom: 300px; */
+            line-height: 1.2;
+            position: relative;
+            z-index: 2;
+        }
+        .circle.large {
+            width: 400px;
+            height: 400px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .circle.small {
+            width: 400px;
+            height: 400px;
+            bottom: 150px;
+            right: 150px;
+        }
+    }
+</style>

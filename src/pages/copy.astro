@@ -1,0 +1,178 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CopyMain from "../components/secciones/Copymain.astro";
+import Formulario from "../components/secciones/Contacto.astro";
+import CtaVideollamada from "../components/secciones/CtaVideollamada.astro";
+
+import Division from "../components/DivisionSeccion.astro";
+import LoQueProyectas from "../components/secciones/LoQueProyectas.astro";
+
+import TextosEfectivos from "../components/secciones/TextosEfectivos.astro";
+import SinConfianza from "../components/secciones/SinConfianza.astro";
+
+---
+
+<Layout
+    title="inicio"
+    description="Servicios de desarrollo web y redacción persuasiva que impulsan tu negocio en Tijuana."
+    keywords="redaccion de textos web, copywriter, creacion de sitios webs"
+>
+   
+    <LoQueProyectas />
+    <TextosEfectivos/>
+    <CtaVideollamada />
+    <SinConfianza />
+    <CopyMain />
+    <CtaVideollamada />
+    <!-- Contacto -->
+    <Division titulo="Contacto" id="contacto" />
+    <Formulario />
+</Layout>
+<style>
+    
+
+    
+
+    
+
+   
+    
+    
+    /*Propuesta*/
+
+    .sobre-apps {
+        background-color: #11b28e;
+        padding: 30px;
+        font-size: 1.3em;
+        margin-top: 50px;
+    }
+
+    .titulo-apps {
+        padding: 30px;
+        color: white;
+        text-align: center;
+    }
+
+    .card {
+        margin-top: 50px;
+        background-color: var(--color-primario);
+        border-radius: 5px;
+        box-shadow: 0 0 30px rgba(68, 85, 65, 0.281);
+        transition: all 400ms ease;
+    }
+
+    .card:hover {
+        transform: translateY(-3%);
+    }
+
+    .cards a {
+        text-decoration: none;
+    }
+
+    .container {
+        position: relative;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .container:after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5px 5px 0 0;
+        opacity: 0.5;
+    }
+
+    .card1 > .container:after {
+        background-color: var(--color-claro1);
+    }
+
+    .card2 > .container:after {
+        background-color: var(--color-claro1);
+    }
+
+    .details {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .details > h3 {
+        color: var(--color-claro1);
+    }
+
+    .details > p {
+        color: var(--color-claro1);
+        font-size: 15px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+
+    @media (min-width: 768px) {
+       
+        /*portafolio*/
+        .portafolio-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            column-gap: 2rem;
+        }
+        /*Propuesta*/
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            padding: 20px;
+            grid-gap: 40px;
+        }
+        .contenido-propuesta {
+            padding-top: 50px;
+        }
+        
+        /*SERVICIOS*/
+        .tecomprendo-grid div {
+            margin-top: 0px;
+        }
+        .contenedor-servicios {
+            margin-top: 80px;
+            margin-bottom: 90px;
+        }
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
+        }
+        .boton-servicios {
+            display: inline-block;
+            margin: 20px;
+        }
+        .acerca {
+            padding: 50px 0px;
+        }
+        .acerca-contenido {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            -moz-column-gap: 2rem;
+            column-gap: 2rem;
+            margin: 30px 0px;
+            padding: 0px;
+        }
+        .acerca-texto h2 {
+            margin-top: 0px;
+        }
+        .boton-acercade {
+            display: inline-block;
+        }
+        .contenedor-auditoria {
+            background-color: var(--color-claro2);
+        }
+    }
+</style>

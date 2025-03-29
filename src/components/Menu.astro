@@ -1,113 +1,118 @@
 <header class="header">
-    <nav>
-        <div>
-            <div class="barra-navegacion contenedor">
-                <a class="logo " href="/"><img class="logo-icon" src="/img/Logo_WEbLoc.webp" alt="Logo de weblocalmx ">
-                    <span class="logo-txt">Weblocalmx</span>
-                </a>
-
-                <!--menu para desktop-->
-                <div class="menu-desktop">
-                    <a href="/">Inicio</a>
-                    <a href="#acercade">Acerca</a>
+    <nav class="navegacion contenedor">
+        <a class="logo" href="/">
+            <img class="logo-icon" src="/img/Logo_WEbLoc.webp" alt="Logo de weblocalmx">
+            <span class="logo-txt">Weblocalmx</span>
+        </a>
+        
+        <!-- Botón hamburguesa (visible solo en móvil) -->
+        <button class="ham" id="ham" aria-label="Menú">&#9776;</button>
+        
+        <!-- Menú único adaptable -->
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="#acercade">Acerca</a></li>
+                <li class="submenu-container">
                     <a href="#servicios">Servicios</a>
-                    <a href="#recursos">Recursos</a>
-                    <a href="#portafolio">Portafolio</a>
-                    <a href="/blog">Blog</a>
-                    <a href="#contacto">Contacto</a>
-                    
-
-                </div>
-                <span class="ham" id="ham">&#9776;</span>
-
-            </div>
-            <!--menu oculto para movil-->
-            <div class="menu-movil" id="menu_wrapper">
-                <div class="menu lista-navegacion">
-                    <ul>
-                        <li>
-                            <a href="/">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#acercade">Acerca</a>
-                        </li>
-                        <li>
-                            <a href="#servicios">Servicios</a>
-                        </li>
-                        <li><a href="#recursos">Recursos</a></li>
-                        <li>
-                            <a href="#portafolio">Portafolio</a>
-                        </li>
-                        <li>
-                            <a href="/blog">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#contacto">Contacto</a>
-                        </li>
-                        
-
+                    <ul class="submenu">
+                        <li><a href="/reservas">- Sitema de reservas</a></li>
+                        <li><a href="/copy">- Copy/ textos para comercio</a></li>
+                        <li><a href="/gestion-clientes">- Gestion de clientes</a></li>
                     </ul>
-                </div>
-            </div>
+                </li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </div>
     </nav>
-
-   
-
 </header>
-<script src="../scripts/menu.js"></script>
-<style is:global>
-    /*Barra de navegacion*/
+<script>
+ document.addEventListener('DOMContentLoaded', function(): void {
+    // Asegurar que ningún submenú esté abierto al cargar la página
+    const todosSubmenuContainers = document.querySelectorAll('.submenu-container');
+    todosSubmenuContainers.forEach((container) => {
+        container.classList.remove('activo');
+    });
+    const ham: HTMLElement | null = document.getElementById('ham');
+    const menu: HTMLElement | null = document.getElementById('menu');
+    const serviciosLink: HTMLElement | null = document.querySelector('.submenu-container > a');
+    const submenuContainer: HTMLElement | null = document.querySelector('.submenu-container');
+    
+    // Toggle menú hamburguesa
+    if (ham && menu) {
+        ham.addEventListener('click', function(): void {
+            menu.classList.toggle('activo');
+        });
+    }
+    
+    // Manejar el submenú de Servicios para móvil
+    if (serviciosLink && submenuContainer) {
+        serviciosLink.addEventListener('click', function(e: Event): void {
+            // Solo activar en vista móvil
+            if (window.innerWidth <= 768) {
+                e.preventDefault(); // Prevenir navegación
+                
+                // Cerrar otros submenús si existen
+                const otrosSubmenus = document.querySelectorAll('.submenu-container.activo');
+                otrosSubmenus.forEach((item) => {
+                    if (item !== submenuContainer) {
+                        item.classList.remove('activo');
+                    }
+                });
+                
+                // Toggle solo el submenú actual
+                submenuContainer.classList.toggle('activo');
+            }
+        });
+    }
+    
+    // Cerrar menú al hacer clic en un enlace (excepto en el enlace de servicios en móvil)
+    const enlaces: NodeListOf<Element> = document.querySelectorAll('.menu a:not(.submenu-container > a)');
+    enlaces.forEach((enlace: Element) => {
+        enlace.addEventListener('click', function(): void {
+            if (window.innerWidth <= 768 && menu) {
+                menu.classList.remove('activo');
+                // Si hay submenu abierto, cerrarlo
+                if (submenuContainer && submenuContainer.classList.contains('activo')) {
+                    submenuContainer.classList.remove('activo');
+                }
+            }
+        });
+    });
+    
+    // Ajustar cuando cambia el tamaño de la ventana
+    window.addEventListener('resize', function(): void {
+        if (window.innerWidth > 768) {
+            // Reset para vista desktop
+            if (menu) menu.classList.remove('activo');
+            if (submenuContainer) submenuContainer.classList.remove('activo');
+        }
+    });
+});
+</script>
 
-.menu-desktop {
-    display: none;
+<style>
+  /* Estilos generales */
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.ham {
-    font-size: 2.5rem;
-    color: var(--color-primario);
+.header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.barra-navegacion {
+.navegacion {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    padding-top: 5px;
     align-items: center;
-}
-
-/*listanavegacion*/
-
-.lista-navegacion {
-    background-color: var(--color-primario);
-    width: 100%;
-    position: absolute;
-    -webkit-padding-start: 0px;
-    padding-inline-start: 0px;
-    height: 0px;
-    opacity: 0;
-    transition: all 0.3s;
-    z-index: 999;
-}
-
-.crece .menu {
-    height: 100vh;
-    opacity: 1;
-}
-
-.lista-navegacion li {
-    list-style: none;
-    text-align: center;
-    padding: 20px;
-}
-
-.lista-navegacion li a {
-    text-decoration: none;
-    color: white;
-}
-
-.lista-navegacion ul {
-    padding-left: 0px;
+    padding: 1rem 0;
 }
 
 .logo {
@@ -117,74 +122,123 @@
 }
 
 .logo-icon {
-    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .logo-txt {
-    color: var(--color-primario);
-    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 2rem;
 }
 
-.boton-hamburguesa {
-    border: none;
-    padding: 10px;
-    font-size: 2rem;
-    background-color: transparent;
-    color: var(--color-primario);
+/* Menú principal */
+.menu {
+    transition: all 0.3s ease;
 }
-@media (min-width: 768px) {
-    .ham{
-        display: none;
-    }
-    .menu-desktop {
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
     display: block;
+    transition: all 0.3s ease;
 }
+
+.menu a:hover {
+    color: #0078d7;
 }
-@media (min-width: 768px) {
-    .contenedor {
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 90%;
-    }
-    h1 {
-        font-size: 3.8rem;
-    }
-    h2 {
-        font-size: 3.4rem;
-    }
-    h3 {
-        font-size: 3rem;
-    }
-    h4 {
-        font-size: 2.6rem;
-    }
-    .barra-navegacion {
-        align-items: center;
-    }
-    .lista-navegacion {
-        display: none;
-    }
-    .menu-desktop {
-        display: inline-flex;
-    }
-    .logo-icon {
-        width: 50px;
-    }
-    .logo-txt {
-        font-size: 2rem;
-    }
-    .menu-desktop a {
-        color: var(--color-oscuro2);
-        text-decoration: none;
-        margin: 10px;
-        font-size: 1.6rem;
-    }
-    .menu-desktop a:hover {
-        color: var(--color-primario);
-    }
+
+/* Submenu de Servicios */
+.submenu-container {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.submenu-container:hover .submenu {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Botón hamburguesa (solo visible en móvil) */
+.ham {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1b8d2e3d;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
     .ham {
+        display: block;
+    }
+    
+    .menu {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    .menu.activo {
+        max-height: 500px;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+    }
+    
+    .submenu {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+        width: 100%;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .submenu-container:hover .submenu {
         display: none;
     }
-   
+    
+    .submenu-container.activo .submenu {
+        display: block;
+    }
+    
+    /* Asegurar que los submenús estén ocultos por defecto en móvil */
+    .menu .submenu {
+        display: none;
+    }
 }
 </style>

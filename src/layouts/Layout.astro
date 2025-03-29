@@ -15,6 +15,7 @@ const { title, description, keywords } = Astro.props;
 <!doctype html>
 <html lang="es">
     <head>
+        <meta charset="UTF-8">
     <GoogleAnalytics />   
 
 <!-- Meta Pixel Code -->
@@ -44,20 +45,6 @@ const { title, description, keywords } = Astro.props;
     })(window,document,'script','dataLayer','GTM-MNNNGFX4');</script>
     <!-- End Google Tag Manager -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <meta charset="UTF-8" />
 
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -158,7 +145,7 @@ const { title, description, keywords } = Astro.props;
         <Footer />
         <Elevador />
 
-        <script src="../scripts/menu.js"></script>
+        
         <script src="../scripts/footer-anio.js"></script>
         <script src="../scripts/elevador.js"></script>
     </body>
@@ -179,6 +166,7 @@ const { title, description, keywords } = Astro.props;
 
     body {
         background-color: white !important;
+       
     }
 
     .mt-s {
