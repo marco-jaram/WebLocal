@@ -1,0 +1,207 @@
+<section class="section-light">
+    <div class="container">
+        <h2 class="section-title">Sistema de reservas para emprendedores digitales</h2>
+        
+        <div class="pricing-container">
+            <!-- Paquete completo -->
+            <div class="pricing-card">
+                <div class="package-name">Paquete Completo</div>
+                <div class="price">$400 USD</div>
+                <p class="price-description">El paquete integral para comenzar desde cero</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Sitio web completo</strong> personalizado para tu negocio</li>
+                    <li><strong>Página de reservas integrada</strong> con tu marca</li>
+                    <li><strong>Textos persuasivos (copywriting)</strong> enfocados a vender</li>
+                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
+                    <li><strong>Recordatorios automáticos</strong> para reducir cancelaciones</li>
+                    <li><strong>Implementación completa</strong> en 20 días</li>
+                    <li><strong>Soporte técnico</strong> por 6 meses</li>
+                </ul>
+                
+                <a href="#contacto" class="btn">Solicitar información</a>
+            </div>
+            
+            <!-- Paquete intermedio -->
+            <div class="pricing-card">
+                <div class="package-name">Paquete Intermedio</div>
+                <div class="price">$270 USD</div>
+                <p class="price-description">Para quienes ya tienen sitio web</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Página de reservas</strong> integrada a tu sitio existente</li>
+                    <li><strong>Textos persuasivos (copywriting)</strong> optimizados para conversión</li>
+                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
+                    <li><strong>Recordatorios automáticos</strong> para reducir cancelaciones</li>
+                    <li><strong>Implementación</strong> en 14 días</li>
+                    <li><strong>Soporte técnico</strong> por 4 meses</li>
+                </ul>
+                
+                <a href="#contacto" class="btn">Solicitar información</a>
+            </div>
+            
+            <!-- Paquete básico -->
+            <div class="pricing-card">
+                <div class="package-name">Paquete Básico</div>
+                <div class="price">$170 USD</div>
+                <p class="price-description">Solo sistema de reservas</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Página de reservas</strong> integrada y configurada</li>
+                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
+                    <li><strong>Recordatorios básicos</strong> para clientes</li>
+                    <li><strong>Implementación</strong> en 7 días</li>
+                    <li><strong>Soporte técnico</strong> por 2 meses</li>
+                </ul>
+                
+                <a href="#contacto" class="btn">Solicitar información</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Sections */
+    .section-light {
+        background-color: var(--color-claro2);
+        padding: 4rem 0;
+    }
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+    .section-title:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background-color: var(--color-primario);
+        margin: 1rem auto;
+    }
+    
+    /* Pricing Container */
+    .pricing-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 0 auto;
+    }
+    
+    /* Pricing */
+    .pricing-card {
+        background: white;
+        border-radius: 8px;
+        padding: 2.5rem;
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .package-name {
+        font-weight: bold;
+        font-size: 2rem;
+        color: var(--color-primario);
+        margin-bottom: 1rem;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+        font-family: var(--tipo-primario);
+        color: var(--color-primario);
+        margin: 0.8rem 0;
+    }
+    
+    .price-description {
+        color: var(--color-oscuro1);
+        margin-bottom: 2rem;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Lists */
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        min-height: 320px;
+    }
+    
+    .feature-list li {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid var(--color-claro1);
+        position: relative;
+        padding-left: 2rem;
+    }
+    
+    .feature-list li:before {
+        content: '✓';
+        color: var(--color-primario);
+        position: absolute;
+        left: 0;
+    }
+    
+    /* Buttons */
+    .btn {
+        display: inline-block;
+        background-color: var(--color-primario);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        font-weight: 500;
+        margin: 1rem 0;
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(17, 178, 142, 0.3);
+    }
+    
+    /* Responsive */
+    @media (max-width: 1100px) {
+        .pricing-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .pricing-card {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list {
+            min-height: auto;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .section-title {
+            font-size: 1.5rem;
+        }
+        
+        .pricing-card {
+            padding: 2rem 1rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+        }
+    }
+</style>

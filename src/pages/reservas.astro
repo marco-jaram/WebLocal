@@ -1,5 +1,6 @@
 
 ---
+import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -74,32 +75,13 @@ import Layout from "../layouts/Layout.astro";
         </ul>
         
         <div class="text-center">
-            <p class="highlight-text">Un sistema de reservas es la diferencia entre ser encontrado o ser olvidado.</p>
+            <p class="highlight-text">Un sistema de reservas con copywriting efectivo (redacción comercial) es la diferencia entre ser encontrado o ser olvidado.</p>
         </div>
     </div>
 </section>
 
 <!-- Package Section -->
-<section class="section-light">
-    <div class="container">
-        <h2 class="section-title">Sistema de reservas para emprendedores digitales</h2>
-        
-        <div class="pricing-card">
-            <div class="price">$350 USD</div>
-            <p class="price-description">Diseñado desde los primeros pasos</p>
-            
-            <ul class="feature-list">
-                <li><strong>Interfaz ultra-simplificada</strong> que cualquiera puede manejar</li>
-                <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
-                <li><strong>Recordatorios automáticos</strong> para reducir cancelaciones</li>
-                <li><strong>Implementación completa</strong> en 20 días</li>
-                <li><strong>Soporte técnico</strong> por 6 meses</li>
-            </ul>
-            
-            <a href="#contacto" class="btn">Solicitar información</a>
-        </div>
-    </div>
-</section>
+<ReservasPrecios />
 
 <!-- Process Section -->
 <section class="section-dark">
@@ -193,14 +175,14 @@ import Layout from "../layouts/Layout.astro";
 --color-oscuro1: #5a5a5a;
 --color-oscuro2: #1b1b1b;
 --tipo-primario: 'Playfair Display', serif;
---tipo-secundario: 'Roboto', sans-serif;
+
 }
 
 body {
-font-family: var(--tipo-secundario);
+
 color: var(--color-oscuro2);
-line-height: 1.6;
-margin: 0;
+
+
 background-color: white;
 }
 

@@ -1,10 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-import Formulario from "../components/secciones/Contacto.astro";
-
-import Division from "../components/DivisionSeccion.astro";
 import HeroHome from "../components/HeroHome.astro";
+import Contacto from "../components/secciones/Contacto.astro";
 
 ---
 
@@ -21,7 +18,23 @@ import HeroHome from "../components/HeroHome.astro";
             <p class="seccion-subtitulo">Transformo tu presencia digital en una herramienta que trabaja por ti las 24/7</p>
         </div>
     </section>
-
+    
+  <!-- Sabías que section -->
+  <section class="seccion">
+    <div class="contenedor">
+        <h2 class="seccion-titulo">¿Sabías que...?</h2>
+        
+        <div class="sabias-que">
+            <div>
+                <p class="sabias-que-texto">
+                    El 78% de los mexicanos busca servicios en internet, pero solo el 21% de los negocios locales tiene presencia digital efectiva. Esta brecha digital cuesta a muchos empresarios hasta un 25% de sus ventas potenciales.
+                </p>
+                <h3>No estás solo en esta lucha.</h3>
+            </div>
+            <img src="/img/personas-celular.webp" alt="Personas usando dispositivos móviles">
+        </div>
+    </div>
+</section>
     <!-- Servicios section -->
     <section class="seccion" id="servicios">
         <div class="contenedor">
@@ -75,6 +88,20 @@ import HeroHome from "../components/HeroHome.astro";
         </div>
     </section>
 
+   <!-- Por qué elegirnos section -->
+   <section class="seccion">
+    <div class="contenedor">
+        <h2 class="seccion-titulo">¿Por qué trabajar conmigo?</h2>
+        
+        <div class="porque-elegirnos">
+            <ul>
+                <li><strong>Entiendo tu negocio, no solo la tecnología</strong>: Soluciones prácticas, no tecnicismos.</li>
+                <li><strong>Resolución rápida</strong>: Si hay un problema, actúo sin dejarte esperando.</li>
+                <li><strong>Transparencia total</strong>: Te diré exactamente qué necesitas, incluso si no gano dinero con ello.</li>
+            </ul>
+        </div>
+    </div>
+</section>
     <!-- Separador -->
     <div class="separador"></div>
 
@@ -111,38 +138,6 @@ import HeroHome from "../components/HeroHome.astro";
         </div>
     </section>
 
-    <!-- Sabías que section -->
-    <section class="seccion">
-        <div class="contenedor">
-            <h2 class="seccion-titulo">¿Sabías que...?</h2>
-            
-            <div class="sabias-que">
-                <div>
-                    <p class="sabias-que-texto">
-                        El 78% de los mexicanos busca servicios en internet, pero solo el 21% de los negocios locales tiene presencia digital efectiva. Esta brecha digital cuesta a muchos empresarios hasta un 25% de sus ventas potenciales.
-                    </p>
-                    <h3>No estás solo en esta lucha.</h3>
-                </div>
-                <img src="/img/personas-celular.webp" alt="Personas usando dispositivos móviles">
-            </div>
-        </div>
-    </section>
-
-    <!-- Por qué elegirnos section -->
-    <section class="seccion">
-        <div class="contenedor">
-            <h2 class="seccion-titulo">¿Por qué trabajar conmigo?</h2>
-            
-            <div class="porque-elegirnos">
-                <ul>
-                    <li><strong>Entiendo tu negocio, no solo la tecnología</strong>: Soluciones prácticas, no tecnicismos.</li>
-                    <li><strong>Resolución rápida</strong>: Si hay un problema, actúo sin dejarte esperando.</li>
-                    <li><strong>Transparencia total</strong>: Te diré exactamente qué necesitas, incluso si no gano dinero con ello.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA final -->
     <section class="cta-final">
         <div class="contenedor">
@@ -156,48 +151,17 @@ import HeroHome from "../components/HeroHome.astro";
 
   <!-- FIN NUEVO -->
    
-    <!-- Contacto -->
-    <Division titulo="Contacto" id="contacto" />
-    <Formulario />
+<div class="separador-contacto"></div>
+    <Contacto />
+    <div class="separador-contacto"></div>
 </Layout>
 <style> 
+.separador-contacto{
+    margin: 30px 0;
+}
     
-    /*Propuesta*/
-
-    .sobre-apps {
-        background-color: #11b28e;
-        padding: 30px;
-        font-size: 1.3em;
-        margin-top: 50px;
-    }
-
-    .titulo-apps {
-        padding: 30px;
-        color: white;
-        text-align: center;
-    }
-
-    .card {
-        margin-top: 50px;
-        background-color: var(--color-primario);
-        border-radius: 5px;
-        box-shadow: 0 0 30px rgba(68, 85, 65, 0.281);
-        transition: all 400ms ease;
-    }
-
-    .card:hover {
-        transform: translateY(-3%);
-    }
-
-    .cards a {
-        text-decoration: none;
-    }
-
-    .container {
-        position: relative;
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    }
-
+   
+  
     img {
         width: 100%;
         display: block;
