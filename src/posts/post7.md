@@ -1,5 +1,5 @@
 ---
-title:  Landing Pages. Capturando Clientes Potenciales
+title: Landing Pages. Capturando Clientes Potenciales
 date: 2024-08-10
 description: Una landing page es una página web diseñada específicamente para capturar la información de los visitantes mediante un formulario, convirtiéndolos en clientes potenciales (leads). 
 ---

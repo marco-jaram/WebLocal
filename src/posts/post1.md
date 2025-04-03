@@ -1,6 +1,6 @@
 ---
 title:  Puntos de dolor. La clave para conectar con tus clientes
-
+date: 2024-01-10
 description: "Atacar los puntos de dolor en tu publicidad y mensajes de sitio web no es aprovecharse del sufrimiento del cliente, sino mostrar que tienes la solución a sus problemas. "
 ---
 
