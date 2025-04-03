@@ -5,9 +5,12 @@ description: "En lugar de centrarse en anuncios masivos y descuentos genéricos,
 ---
 
 
-# Lo malo de las plantillas: adaptarse a ellas, no a tu público
+
 
 Las plantillas parecen una solución fácil y atractiva para crear un sitio web, pero presentan un gran problema: tú tienes que adaptarte a ellas. Si tu sitio web está dirigido a tu público objetivo, la web debería ser agradable y funcional para ellos, no solo estéticamente agradable.
+
+![plantilla fea](https://images.unsplash.com/photo-1503925802536-c9451dcd87b5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
 
 Entonces, ¿por qué enfocarse en gustos muy personales? Si el objetivo es enviar un mensaje que funcione, ¿por qué dedicar tanto empeño y tiempo a lo dinámico y superficial? Cuando ves una plantilla y piensas "¡Wow! ¡Qué bonita!", te dejas llevar por su apariencia sin considerar su contenido y funcionalidad.
 
@@ -36,3 +39,4 @@ Un sitio web debe centrarse en:
 Elegir una plantilla solo para después cambiarla y destruir su estructura original es contraproducente. En lugar de hacerlo, invierte tiempo en crear un diseño que refleje verdaderamente tu mensaje y que sea flexible para adaptarse a tus contenidos específicos.
 
 Las plantillas pueden parecer una solución rápida y atractiva, pero a menudo resultan en una pérdida de autenticidad y funcionalidad. Enfócate en diseñar un sitio que se adapte a tu público objetivo y que transmita tu mensaje de manera clara y efectiva.
+

@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+import FormularioBlog from '../../components/FormularioBlog.astro';
 export async function getStaticPaths() {
   const posts = await Astro.glob('../../posts/*.md');
   return posts.map(post => ({
@@ -22,6 +22,8 @@ keywords="redaccion de textos web, copywriter, creacion de sitios webs"
       <Content />
     </div>
   </article>
+  <FormularioBlog /> 
+
 </Layout>
 
 <style>
@@ -31,7 +33,7 @@ keywords="redaccion de textos web, copywriter, creacion de sitios webs"
 .article {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem 1.5rem;
+    padding: 4rem 1.5rem;
   
     color: #333;
 }

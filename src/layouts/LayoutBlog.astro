@@ -3,6 +3,7 @@ import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
 import Elevador from "../components/Elevador.astro";
 
+
 interface Props {
     title: string;
     description: string;
@@ -107,6 +108,7 @@ const { title, description, keywords } = Astro.props;
         <Menu />
 
         <slot />
+       
 
         <Footer />
         <Elevador />

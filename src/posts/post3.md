@@ -3,9 +3,11 @@ title: El problema del "Plantillero" en el desarrollo web
 date: 2024-07-20
 description: "Un desarrollo web serio y real es imposible de realizar en una hora, incluso en un día. ¿Por qué? Porque simplemente para entender el negocio y levantar sus requerimientos, por muy simples que sean, una hora apenas es suficiente para comenzar."
 ---
-# El problema del "Plantillero" en el desarrollo web
+
 
 El "plantillero" ve una oportunidad para vender algo rápido y sin mucho esfuerzo. Ofrece sitios web baratos, digamos a 50 dólares, que según dicen, elabora en 30 minutos. Así, su cobro por hora es de 100 dólares. Sin embargo, un desarrollo serio y real es imposible de realizar en una hora, incluso en un día. ¿Por qué? Porque simplemente para entender el negocio y levantar sus requerimientos, por muy simples que sean, una hora apenas es suficiente para comenzar.
+
+![plantillero web](https://images.unsplash.com/photo-1624969862644-791f3dc98927?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 Un sitio web bien hecho requiere:
 
@@ -34,3 +36,4 @@ Los problemas pueden enunciarse así:
 Es cierto que nunca hay una solución cien por ciento certera. Hay que intentar de diferentes maneras y mejorar continuamente. Decir que tu producto es el mejor no aporta nada; debes demostrarlo. El destino de tu producto es ser consumido por alguien, y debe solucionar un problema. Si no lo logra, el cliente no volverá y difundirá malas críticas.
 
 Esto es exactamente lo que hace el "plantillero": vende algo, pero no soluciona efectivamente el problema. Vende la falsa idea de que el desarrollo web se puede hacer en una hora, lo cual es engañoso y caro. Un servicio bien hecho vale más que solo 10 dólares por hora, y requiere dedicación y comprensión del negocio del cliente.
+
