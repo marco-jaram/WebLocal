@@ -66,15 +66,15 @@ const { title, description, keywords } = Astro.props;
         <!-- SEO -->
         <meta
             property="og:title"
-            content="Desarrollo web,sistemas de reservas y copy que genera clientes para negocios en Tijuana"
+            content="Desarrollo web,sistemas de reservas y copywriting que genera clientes para negocios en Tijuana"
         />
         <meta
             property="og:description"
-            content="Desarrollo web,sistemas de reservas y copy que genera clientes . ¡Destaca en línea hoy!"
+            content="Desarrollo web,sistemas de reservas y copywriting que genera clientes . ¡Destaca en línea hoy!"
         />
         <meta
             property="og:image"
-            content="https://weblocalmx.com/img/img-redes.webp"
+            content="https://weblocalmx.com/img/weblocal-redes.webp"
         />
         <meta property="og:url" content="https://www.weblocalmx.com" />
         <meta property="og:type" content="website" />
@@ -82,54 +82,51 @@ const { title, description, keywords } = Astro.props;
         <meta name="twitter:card" content="summary_large_image" />
         <meta
             name="twitter:title"
-            content="Weblocal MX: Desarrollo web,sistemas de reservas y copy que genera clientes  para negocios en Tijuana"
+            content="Weblocal MX: Desarrollo web,sistemas de reservas y copywriting que genera clientes  para negocios en Tijuana"
         />
         <meta
             name="twitter:description"
-            content="Desarrollo web,sistemas de reservas y copy que genera clientes . ¡Destaca en línea hoy!"
+            content="Desarrollo web,sistemas de reservas y copywriting que genera clientes . ¡Destaca en línea hoy!"
         />
         <meta
             name="twitter:image"
-            content="https://weblocalmx.com/img/img-redes.webp"
+            content="https://weblocalmx.com/img/weblocal-redes.webp"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.weblocalmx.com" />
         <script type="application/ld+json">
             {
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "Weblocal MX",
-                "description": "Desarrollo web,sistemas de reservas y copy que genera clientes. Impulsa tu negocio en Tijuana.",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Tijuana",
-                    "addressRegion": "Baja California",
-                    "addressCountry": "MX"
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",  // Más adecuado para servicios en línea
+              "name": "Weblocal MX",
+              "description": "Desarrollo web, sistemas de reservas y copywriting que genera clientes. Impulsa tu negocio en México.",
+              "url": "https://www.weblocalmx.com",
+              "telephone": "+52-664-311-1577",
+              "image": "https://weblocalmx.com/img/weblocal-redes.webp",
+              "areaServed": "MX",  // Indicas que sirves a todo México
+              "availableChannel": {
+                "@type": "ServiceChannel",
+                "serviceUrl": "https://www.weblocalmx.com/contacto"  // URL de contacto
+              },
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "name": "Desarrollo Web",
+                  "description": "Servicio de desarrollo web a medida para negocios en México."
                 },
-                "url": "https://www.weblocalmx.com",
-                "telephone": "+52-664-311-1577",
-                "image": "https://weblocalmx.com/img/img-redes.webp",
-
-                "makesOffer": [
-                    
-                    {
-                        "@type": "Offer",
-                        "name": "Desarrollo Web",
-                        "description": "Servicio de desarrollo web a medida"
-                    },
-                    {
-                        "@type": "Offer",
-                        "name": "sistemas de reservas ",
-                        "description": "Desarrollo web,sistemas de reservas y copy que genera clientes."
-                    },
-                    {
-                        "@type": "Offer",
-                        "name": "Copywriting",
-                        "description": "Creamos textos comerciales poderosos y efectivos"
-                    }
-                ]
+                {
+                  "@type": "Offer",
+                  "name": "Sistemas de reservas",
+                  "description": "Desarrollo de sistemas de reservas personalizados para empresas."
+                },
+                {
+                  "@type": "Offer",
+                  "name": "Copywriting",
+                  "description": "Creamos textos comerciales poderosos y efectivos para aumentar ventas."
+                }
+              ]
             }
-        </script>
+            </script>
 
         <!-- SEO FIN -->
     </head>
