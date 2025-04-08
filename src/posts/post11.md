@@ -2,12 +2,15 @@
 title: Cómo Dockerizar WordPress para Desarrollo Local --> Una Guía Práctica
 date: 2025-10-02
 description: "En el mundo del desarrollo web, WordPress sigue siendo una de las plataformas más populares para crear sitios. Sin embargo, cuando se trata de desarrollar y experimentar con un sitio WordPress, hacerlo directamente en el servidor de producción puede ser arriesgado y lento. La solución: crear un entorno de desarrollo local con Docker."
+keywords: ["Docker para WordPress", "entorno desarrollo local", "docker-compose", "contenedores", "desarrollo web", "aislamiento de entornos", "MySQL", "phpMyAdmin", "flujo de trabajo eficiente", "configuración WordPress"]
 ---
 
 
 En el mundo del desarrollo web, WordPress sigue siendo una de las plataformas más populares para crear sitios. Sin embargo, cuando se trata de desarrollar y experimentar con un sitio WordPress, hacerlo directamente en el servidor de producción puede ser arriesgado y lento. La solución: crear un entorno de desarrollo local con Docker.
 
-![docker y wordpress](https://www.arsys.es/blog/wp-content/uploads/2021/10/featured-wp-docker.jpg)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WLSjG3djoV8?si=w6AbTjcNc2Sft4RB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 ## ¿Por qué no desarrollar WordPress directamente en línea?
 
@@ -20,6 +23,7 @@ Desarrollar un sitio WordPress directamente en un hosting presenta varios proble
 La mejor práctica es desarrollar localmente, y cuando todo esté perfecto, subirlo a producción. Aquí es donde Docker entra en juego.
 
 ## ¿Qué es Docker y por qué usarlo para WordPress?
+![docker y wordpress](https://www.arsys.es/blog/wp-content/uploads/2021/10/featured-wp-docker.jpg)
 
 Docker es una plataforma que permite crear, ejecutar y gestionar contenedores. Un contenedor es como una máquina virtual ligera que encapsula todo lo necesario para que una aplicación funcione, incluidas las dependencias y la configuración.
 

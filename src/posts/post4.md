@@ -2,6 +2,7 @@
 title:  La importancia de una página principal clara
 date: 2024-07-20
 description: "Para retener a estos visitantes y convertir su interés inicial en acciones concretas, debes describir claramente los pasos que deben seguir."
+keywords: ["página principal efectiva", "claridad web", "experiencia de usuario", "retención de visitantes", "primera impresión digital", "navegación intuitiva", "guía de usuario", "conversión de visitantes", "diseño web estratégico", "mensaje claro"]
 ---
 
 

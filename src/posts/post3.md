@@ -2,12 +2,15 @@
 title: El problema del "Plantillero" en el desarrollo web
 date: 2024-07-20
 description: "Un desarrollo web serio y real es imposible de realizar en una hora, incluso en un día. ¿Por qué? Porque simplemente para entender el negocio y levantar sus requerimientos, por muy simples que sean, una hora apenas es suficiente para comenzar."
+keywords: ["desarrollo web profesional", "problema del plantillero", "sitios web comerciales", "comprensión del negocio", "requerimientos web", "fraude en diseño web", "soluciones digitales efectivas", "presencia digital", "sitios web personalizados", "valor del desarrollo web"]
 ---
 
 
 El "plantillero" ve una oportunidad para vender algo rápido y sin mucho esfuerzo. Ofrece sitios web baratos, digamos a 50 dólares, que según dicen, elabora en 30 minutos. Así, su cobro por hora es de 100 dólares. Sin embargo, un desarrollo serio y real es imposible de realizar en una hora, incluso en un día. ¿Por qué? Porque simplemente para entender el negocio y levantar sus requerimientos, por muy simples que sean, una hora apenas es suficiente para comenzar.
 
-![plantillero web](https://images.unsplash.com/photo-1624969862644-791f3dc98927?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p9g3acuFTNw?si=zbASxk1DuWQlQ6mX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 Un sitio web bien hecho requiere:
 
@@ -16,6 +19,8 @@ Un sitio web bien hecho requiere:
 - **Personalización y adecuación**: Cada negocio tiene sus particularidades y necesidades específicas.
 
 El problema no es el uso de plantillas en sí. El problema es el "plantillero" que no se preocupa por el negocio del cliente. Un sitio web hecho en 30 minutos carece de los elementos más importantes. El cliente quiere un sitio web porque quiere crecer su negocio, no para presumir que tiene uno. La finalidad es transmitir el mensaje correcto a quienes pueden comprarle un producto o servicio. Al final, lo que busca es presencia digital para vender.
+
+![plantillero web](https://images.unsplash.com/photo-1624969862644-791f3dc98927?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 No estoy en contra del uso de plantillas; yo mismo las uso con frecuencia. El problema es el fraude que se comete cuando se entrega un trabajo que no cumple con las expectativas comerciales del cliente. Si el cliente solicita un sitio con fines comerciales, y el "plantillero" solo busca ganar dinero rápido, eso es un fraude.
 

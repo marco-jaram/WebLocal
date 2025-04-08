@@ -2,13 +2,16 @@
 title:  Puntos de dolor. La clave para conectar con tus clientes
 date: 2024-01-10
 description: "Atacar los puntos de dolor en tu publicidad y mensajes de sitio web no es aprovecharse del sufrimiento del cliente, sino mostrar que tienes la solución a sus problemas. "
+keywords: ["puntos de dolor", "conexión emocional", "solución de problemas", "publicidad efectiva", "mensajes persuasivos", "relevancia y urgencia en copywritin", "posicionamiento de marca", "psicología del cliente", "estrategia de marketing", "diferenciación de producto"]
 ---
 
 
 
 Un producto o servicio está diseñado para solucionar un problema, y ese problema es precisamente lo que genera "puntos de dolor" para el cliente. Los puntos de dolor son las dificultades o inconvenientes que hacen que el cliente sufra.
 
-![Imagen sobre punto de dolor](https://images.unsplash.com/photo-1534343133720-0c20dba3a360?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0bTgHdTz7oE?si=uJDEGPUyOvapC9yB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 
 Algunos consideran agresivo abordar los puntos de dolor en la publicidad, viéndolo como aprovecharse del sufrimiento del cliente. Sin embargo, el objetivo de un producto es solucionar precisamente esos problemas que afectan al cliente. Otra cuestión sería si el producto o servicio fuese un fraude. El enfoque negativo es pensar que se está explotando un sentimiento del cliente.
@@ -19,6 +22,7 @@ Ahora, veamos las enormes ventajas de conocer muy bien los puntos de dolor y uti
 <br>
 
 ## La eficacia de atacar los puntos de dolor:
+![Imagen sobre punto de dolor](https://images.unsplash.com/photo-1534343133720-0c20dba3a360?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 1. **Conexión emocional**:
     - Abordar los puntos de dolor permite conectar emocionalmente con el cliente.

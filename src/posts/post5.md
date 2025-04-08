@@ -2,14 +2,20 @@
 title: Un sitio web no es un tríptico o un boletín de ventas
 date: 2024-07-20
 description: "Imagina que un sitio web es como una tienda física. Un tríptico sería como un cartel publicitario en la ventana: proporciona información básica y atrae la atención, pero no permite la interacción. "
+keywords: ["sitio web interactivo", "contenido digital", "experiencia del usuario", "copywriting para web", "María Veloso", "conversión de visitantes", "redacción persuasiva", "diferencias medio digital", "relación con visitantes", "llamados a la acción"]
 ---
 
 
 En el mundo digital es crucial comprender que un sitio web no es simplemente un tríptico digital o un boletín de ventas. Esta es una lección fundamental que María Veloso destaca en su libro *Web Copy That Sells*. En lugar de ver tu sitio web como una versión en línea de material impreso, debes enfocarte en las oportunidades únicas que ofrece el medio digital para conectar con tu audiencia de una manera más profunda y dinámica.
 
-![poster](https://images.unsplash.com/photo-1508161773455-3ada8ed2bbec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yr6qhgp-rFk?si=xsDjkNjUOV32mhrd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
 
 Los trípticos y boletines de ventas están diseñados para ser leídos pasivamente. Se entregan en mano o por correo, y su alcance está limitado por su formato físico. Por el contrario, un sitio web es interactivo y permite a los visitantes explorar contenido a su propio ritmo, buscar información específica y participar activamente con el contenido a través de comentarios, formularios y redes sociales. Veloso enfatiza que el contenido web debe estar diseñado para involucrar a los visitantes y guiarles a través de un recorrido que responda a sus necesidades y deseos específicos.
+
+![poster](https://images.unsplash.com/photo-1508161773455-3ada8ed2bbec?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
 > "Your website is not a digital brochure or sales letter. It is a medium through which you can build a relationship with your visitors, guiding them step-by-step to a decision point."  
 > — *María Veloso, Web Copy That Sells*

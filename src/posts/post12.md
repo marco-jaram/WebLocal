@@ -2,13 +2,16 @@
 title: Dominio vs Hosting --> Diferencias clave para tu sitio web
 date: 2025-10-06
 description: "Cuando se trata de crear un sitio web, hay dos componentes fundamentales que a menudo se confunden pero que son completamente diferentes: el dominio y el hosting. Entender la diferencia entre ambos es esencial para gestionar correctamente tu presencia en línea y tomar decisiones informadas sobre tu sitio web."
+keywords: ["dominio web", "hosting", "alojamiento web", "diferencias dominio y hosting", "servidores DNS", "gestión de sitios web", "comprar dominio", "servicios de hosting", "presencia online", "extensiones de dominio"]
 ---
 
 
 
 Cuando se trata de crear un sitio web, hay dos componentes fundamentales que a menudo se confunden pero que son completamente diferentes: el dominio y el hosting. Entender la diferencia entre ambos es esencial para gestionar correctamente tu presencia en línea y tomar decisiones informadas sobre tu sitio web.
 
-![dominio y hosting](https://blog.hostingplus.cl/wp-content/uploads/2019/09/diferencia-hosting-dominio-wallpaper.png)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I7fs6PvFY0U?si=ChyFq0Z7GQCwyiza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 ## ¿Qué es un dominio?
 
@@ -24,6 +27,8 @@ Un dominio es el nombre único que identifica a tu sitio web en internet. Es la 
 Es importante destacar que, aunque relacionados, diferentes extensiones de dominio (.com, .net, .org, .mx, etc.) se consideran dominios distintos. Por ejemplo, "ejemplo.com" y "ejemplo.net" pueden pertenecer a propietarios diferentes y llevar a sitios web completamente distintos.
 
 ## ¿Qué es el hosting?
+
+![dominio y hosting](https://blog.hostingplus.cl/wp-content/uploads/2019/09/diferencia-hosting-dominio-wallpaper.png)
 
 El hosting, o alojamiento web, es el servicio que proporciona el espacio en servidores donde se almacenan todos los archivos, imágenes, bases de datos y otros elementos que componen tu sitio web.
 
