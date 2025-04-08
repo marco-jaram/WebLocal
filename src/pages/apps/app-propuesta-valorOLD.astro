@@ -1,0 +1,956 @@
+---
+// landing-servicios.astro - Ejemplo de uso del layout
+import Layout from "../../layouts/LayoutLanding.astro";
+---
+
+<Layout
+    title="Servicios Web | WeblocalMX"
+    description="aplicacion de propeusta de valor"
+    keywords="aplicacion de propeusta de valor"
+>
+   
+
+    <!-- Aquí va todo el contenido de tu landing page existente -->
+    <div class="barra">
+        <div class="logo contenedor"><i>Weblocalmx</i></div>
+        <button id="cerrar-sesion" class="cerrar-sesion" style="display: none;">Cerrar Sesión</button>
+    </div>
+    
+    <!-- Login Section -->
+    <section id="login-section" class="login-container contenedor">
+        <div class="login-form">
+            <h2>Acceso a la Herramienta de Propuesta de Valor</h2>
+            <p>Ingresa la contraseña para acceder a la aplicación.</p>
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingresa la contraseña">
+                <button id="login-button">Iniciar Sesión</button>
+            </div>
+            <p id="login-error" class="error-message"></p>
+        </div>
+    </section>
+
+    <!-- Main App (hidden until login) -->
+    <section id="app-content" class="titulo-principal contenedor" style="display: none;">
+        <h1>Aplicación web para obtener la Propuesta de valor de producto o servicio</h1>
+        
+        <p>La propuesta de valor pertenece al lienzo "canvas" del Plan de Negocios, 
+            una herramienta fundamental para comunicar el valor único de tu producto o servicio.</p>
+        <p>Por comodidad utiliza una pantalla de laptop o desktop</p>
+        
+       
+
+        <p><strong>Instrucciones:</strong></p>
+        <ol>
+            <li>Contesta cuestionario</li>
+            <li>Si ya tienes un json con tus respuestas dale en "Cargar JSON"</li>
+            <li>Dale al botón "Generar propuestas" para ver los resultados</li>
+            <li>Guarda tus resultados con el botón "Guardar como JOSN"</li>
+        </ol>
+        <p>Si deseas ver el ejemplo solo dale a "Generar respuestas" sin escribir nada</p>
+
+        <p class="advertencia"><strong>Advertencia:</strong> Dale su tiempo a cada pregunta porque es probable que este cuestionario te haga replantear algunos puntos que ya tenías resueltos.</p>
+
+        <form id="formulario">
+            <div class="seccion-form">
+                <h3>1. Nombre del producto o servicio que quieres vender:</h3>
+
+                <p><strong>Ejemplo:</strong> Servicio de Fotografías de Boda → "Bodas De Película" o Curso de nutrición → "Dietas de éxito"</p>
+
+                <div class="input-group">
+                    <label for="respuesta-nombre-servicio1">Nombre 1:</label>
+                    <input type="text" id="respuesta-nombre-servicio1" placeholder="Bodas De Película">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-nombre-servicio2">Nombre 2:</label>
+                    <input type="text" id="respuesta-nombre-servicio2" placeholder="Memorias Eternas">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-nombre-servicio3">Nombre 3:</label>
+                    <input type="text" id="respuesta-nombre-servicio3" placeholder="Fotografía Emocional para Bodas">
+                </div>
+            </div>
+
+            <div class="seccion-form">
+                <h3>2. ¿Quién es tu cliente potencial?</h3>
+                <p>¿A quién va dirigido tu producto o servicio? Puede ser un perfil específico de personas o un sector</p>
+                
+                <p><strong>Ejemplo:</strong> Para un servicio de fotografías de boda: "Personas que están planeando una boda" o "Parejas comprometidas"</p>
+
+                <div class="input-group">
+                    <label for="respuesta-cliente-potencial1">Cliente 1:</label>
+                    <input type="text" id="respuesta-cliente-potencial1" placeholder="Personas que están planeando una boda">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-cliente-potencial2">Cliente 2:</label>
+                    <input type="text" id="respuesta-cliente-potencial2" placeholder="Parejas comprometidas">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-cliente-potencial3">Cliente 3:</label>
+                    <input type="text" id="respuesta-cliente-potencial3" placeholder="Personas que se van a casar">
+                </div>
+            </div>
+
+            <div class="seccion-form">
+                <h3>3. Lista los principales puntos de dolor que resuelve tu servicio o producto</h3>
+                <p>Escribe todo lo que tu cliente quiere mejorar. Esos problemas que no le dejan dormir por la noche. Redacta los puntos de dolor con el lenguaje de tu cliente.</p>
+                
+                <p><strong>Ejemplo:</strong> Para fotografías de boda: "No tener un reportaje fotográfico de calidad que capture todos los momentos especiales"</p>
+
+                <div class="input-group">
+                    <label for="respuesta-puntos-dolor1">Dolor 1:</label>
+                    <input type="text" id="respuesta-puntos-dolor1" placeholder="No tener reportaje fotográfico de calidad después de la boda">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-puntos-dolor2">Dolor 2:</label>
+                    <input type="text" id="respuesta-puntos-dolor2" placeholder="El reportaje no muestra todos los momentos importantes de la boda">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-puntos-dolor3">Dolor 3:</label>
+                    <input type="text" id="respuesta-puntos-dolor3" placeholder="Fotógrafo poco profesional que incomode a los invitados">
+                </div>
+            </div>
+
+            <div class="seccion-form">
+                <h3>4. Haz un listado con los beneficios que tu producto o servicio aporta a tu cliente</h3>
+                <p>Utiliza la fórmula "verbo" + "algo" (Aumentar tranquilidad, reducir estrés). No confundas características con beneficios.</p>
+                
+                <p><strong>Ejemplo:</strong> Para fotografías de boda: "Aumentar la tranquilidad en el día de tu boda" o "Conservar los recuerdos para siempre"</p>
+
+                <div class="input-group">
+                    <label for="respuesta-beneficios1">Beneficio 1:</label>
+                    <input type="text" id="respuesta-beneficios1" placeholder="Estar más tranquilo el día de tu boda">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-beneficios2">Beneficio 2:</label>
+                    <input type="text" id="respuesta-beneficios2" placeholder="Conservar recuerdos de alta calidad para toda la vida">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-beneficios3">Beneficio 3:</label>
+                    <input type="text" id="respuesta-beneficios3" placeholder="Compartir momentos especiales con los que no pudieron asistir">
+                </div>
+            </div>
+
+            <div class="seccion-form">
+                <h3>5. Anota las cosas que te hacen diferente respecto a la competencia</h3>
+                <p>Puede ser diferente por modo de dar el servicio, características del servicio, o beneficio adicional (evita competir solo por precio).</p>
+                
+                <p><strong>Ejemplo:</strong> Para un servicio de diseño web: "Implementación de copywriting" o "Atención personalizada 24/7"</p>
+
+                <div class="input-group">
+                    <label for="respuesta-diferencial1">Diferencia 1:</label>
+                    <input type="text" id="respuesta-diferencial1" placeholder="Fotografía documental sin poses forzadas">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-diferencial2">Diferencia 2:</label>
+                    <input type="text" id="respuesta-diferencial2" placeholder="Álbum digital interactivo incluido">
+                </div>
+                <div class="input-group">
+                    <label for="respuesta-diferencial3">Diferencia 3:</label>
+                    <input type="text" id="respuesta-diferencial3" placeholder="Entrega de primeras imágenes en 24 horas">
+                </div>
+            </div>
+
+            <button id="generar-propuestas" type="submit" class="boton-primario">GENERAR PROPUESTAS</button>
+            <div id="mensaje-carga" class="mensaje-carga"></div>
+        </form>
+
+        <div id="resultado-section" class="resultado-section">
+            <h2>Resultados de tu Propuesta de Valor</h2>
+            
+            <div class="contenido-imprimir">
+                <div class="formula-seccion">
+                    <h3>FÓRMULA A: Propuesta basada en problemas y beneficios</h3>
+                    <p class="formula-template">Ayudo a <span class="destacado">(POTENCIAL CLIENTE)</span> a resolver <span class="destacado">(PUNTO DE DOLOR)</span> a través de <span class="destacado">(SERVICIO/PRODUCTO)</span> para conseguir <span class="destacado">(BENEFICIO)</span>.</p>
+
+                    <div class="resultados">
+                        <h4>Variante 1</h4>
+                        <p class="resultado-formula">Ayudo a <span id="cliente-potencial1" class="resultado-valor">_________</span> a resolver <span id="problema-dolor1" class="resultado-valor">_________</span> a través de <span id="servicio-producto1" class="resultado-valor">_________</span> para conseguir <span id="beneficio1" class="resultado-valor">_________</span>.</p>
+                    </div>
+                    
+                    <div class="resultados">
+                        <h4>Variante 2</h4>
+                        <p class="resultado-formula">Ayudo a <span id="cliente-potencial2" class="resultado-valor">_________</span> a resolver <span id="problema-dolor2" class="resultado-valor">_________</span> a través de <span id="servicio-producto2" class="resultado-valor">_________</span> para conseguir <span id="beneficio2" class="resultado-valor">_________</span>.</p>
+                    </div>
+                    
+                    <div class="resultados">
+                        <h4>Variante 3</h4>
+                        <p class="resultado-formula">Ayudo a <span id="cliente-potencial3" class="resultado-valor">_________</span> a resolver <span id="problema-dolor3" class="resultado-valor">_________</span> a través de <span id="servicio-producto3" class="resultado-valor">_________</span> para conseguir <span id="beneficio3" class="resultado-valor">_________</span>.</p>
+                    </div>
+                </div>
+                
+                <div class="formula-seccion">
+                    <h3>FÓRMULA B: Propuesta a manera de título</h3>
+                    <p class="formula-template"><span class="destacado">(Producto/servicio)</span> para <span class="destacado">(nicho/cliente potencial)</span> con <span class="destacado">(valor diferencial)</span></p>
+                    
+                    <div class="resultados">
+                        <h4>Variante 1</h4>
+                        <p class="resultado-formula"><span id="servicio-producto4" class="resultado-valor">_________</span> para <span id="cliente-potencial4" class="resultado-valor">_________</span> con <span id="valor-diferencial1" class="resultado-valor">_________</span></p>
+                    </div>
+                    
+                    <div class="resultados">
+                        <h4>Variante 2</h4>
+                        <p class="resultado-formula"><span id="servicio-producto5" class="resultado-valor">_________</span> para <span id="cliente-potencial5" class="resultado-valor">_________</span> con <span id="valor-diferencial2" class="resultado-valor">_________</span></p>
+                    </div>
+                    
+                    <div class="resultados">
+                        <h4>Variante 3</h4>
+                        <p class="resultado-formula"><span id="servicio-producto6" class="resultado-valor">_________</span> para <span id="cliente-potencial6" class="resultado-valor">_________</span> con <span id="valor-diferencial3" class="resultado-valor">_________</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="descargar-json" class="boton-primario">DESCARGAR JSON</button>
+            <button id="editar-respuestas" class="boton-secundario">EDITAR RESPUESTAS</button>
+        </div>
+        <div class="opciones-botones">
+            <!-- <button id="cargar-ejemplo" class="boton-secundario">Cargar ejemplo</button> -->
+            <!-- <button id="limpiar-formulario" class="boton-secundario">Limpiar formulario</button> -->
+            <button id="guardar-json" class="boton-secundario">Guardar como JSON</button>
+            <label for="cargar-json" class="boton-secundario upload-label">Cargar JSON
+                <input type="file" id="cargar-json" accept=".json">
+            </label>
+        </div>
+    </section>
+
+   
+    
+
+</Layout>
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Referencias a elementos del DOM
+    const loginSection = document.getElementById('login-section');
+    const appContent = document.getElementById('app-content');
+    const loginButton = document.getElementById('login-button');
+    const passwordInput = document.getElementById('password');
+    const loginError = document.getElementById('login-error');
+    const cerrarSesionBtn = document.getElementById('cerrar-sesion');
+    
+    const formulario = document.getElementById('formulario');
+    const resultadoSection = document.getElementById('resultado-section');
+    const mensajeCarga = document.getElementById('mensaje-carga');
+    const guardarJsonBtn = document.getElementById('guardar-json');
+    const cargarJsonInput = document.getElementById('cargar-json');
+    const descargarJsonBtn = document.getElementById('descargar-json');
+    const editarRespuestasBtn = document.getElementById('editar-respuestas');
+    
+    // Contraseña correcta
+    const PASSWORD_CORRECTO = 'propuesta2025@';
+    
+    // Campos del formulario 
+    const camposFormulario = [
+        'respuesta-nombre-servicio1', 'respuesta-nombre-servicio2', 'respuesta-nombre-servicio3',
+        'respuesta-cliente-potencial1', 'respuesta-cliente-potencial2', 'respuesta-cliente-potencial3',
+        'respuesta-puntos-dolor1', 'respuesta-puntos-dolor2', 'respuesta-puntos-dolor3',
+        'respuesta-beneficios1', 'respuesta-beneficios2', 'respuesta-beneficios3',
+        'respuesta-diferencial1', 'respuesta-diferencial2', 'respuesta-diferencial3'
+    ];
+    
+    // Ejemplo precargado
+    const ejemploDatos = {
+        'respuesta-nombre-servicio1': 'Bodas De Película',
+        'respuesta-nombre-servicio2': 'Memorias Eternas',
+        'respuesta-nombre-servicio3': 'Fotografía Emocional para Bodas',
+        'respuesta-cliente-potencial1': 'Personas que están planeando una boda',
+        'respuesta-cliente-potencial2': 'Parejas comprometidas',
+        'respuesta-cliente-potencial3': 'Personas que se van a casar',
+        'respuesta-puntos-dolor1': 'No tener reportaje fotográfico de calidad después de la boda',
+        'respuesta-puntos-dolor2': 'El reportaje no muestra todos los momentos importantes de la boda',
+        'respuesta-puntos-dolor3': 'Fotógrafo poco profesional que incomode a los invitados',
+        'respuesta-beneficios1': 'Estar más tranquilo el día de tu boda',
+        'respuesta-beneficios2': 'Conservar recuerdos de alta calidad para toda la vida',
+        'respuesta-beneficios3': 'Compartir momentos especiales con los que no pudieron asistir',
+        'respuesta-diferencial1': 'Fotografía documental sin poses forzadas',
+        'respuesta-diferencial2': 'Álbum digital interactivo incluido',
+        'respuesta-diferencial3': 'Entrega de primeras imágenes en 24 horas'
+    };
+    
+    // Definición de funciones
+    
+    // Función para generar propuestas
+    function generarPropuestas() {
+        if (mensajeCarga) {
+            mensajeCarga.textContent = 'Generando propuestas...';
+        }
+        
+        // Recopilar todos los datos del formulario
+        const datos = {};
+        camposFormulario.forEach(campo => {
+            const elemento = document.getElementById(campo);
+            if (elemento) {
+                // Usar el valor del campo o su placeholder si está vacío
+                datos[campo] = elemento.value || elemento.placeholder;
+            }
+        });
+        
+        // Verificar si todos los campos están vacíos y no tienen placeholder
+        const todoVacio = Object.values(datos).every(valor => !valor);
+        
+        // Si todo está vacío, cargar los datos de ejemplo
+        if (todoVacio) {
+            for (let campo in ejemploDatos) {
+                datos[campo] = ejemploDatos[campo];
+            }
+        }
+        
+        // Actualizar los valores en la página
+        // Fórmula A
+        for (let i = 1; i <= 3; i++) {
+            const clienteElement = document.getElementById(`cliente-potencial${i}`);
+            const dolorElement = document.getElementById(`problema-dolor${i}`);
+            const servicioElement = document.getElementById(`servicio-producto${i}`);
+            const beneficioElement = document.getElementById(`beneficio${i}`);
+            
+            if (clienteElement) {
+                clienteElement.textContent = datos[`respuesta-cliente-potencial${i}`] || '_________';
+            }
+            if (dolorElement) {
+                dolorElement.textContent = datos[`respuesta-puntos-dolor${i}`] || '_________';
+            }
+            if (servicioElement) {
+                servicioElement.textContent = datos[`respuesta-nombre-servicio${i}`] || '_________';
+            }
+            if (beneficioElement) {
+                beneficioElement.textContent = datos[`respuesta-beneficios${i}`] || '_________';
+            }
+        }
+        
+        // Fórmula B
+        for (let i = 1; i <= 3; i++) {
+            const j = i + 3; // Para los IDs servicio-producto4, servicio-producto5, etc.
+            const servicioElement = document.getElementById(`servicio-producto${j}`);
+            const clienteElement = document.getElementById(`cliente-potencial${j}`);
+            const diferencialElement = document.getElementById(`valor-diferencial${i}`);
+            
+            if (servicioElement) {
+                servicioElement.textContent = datos[`respuesta-nombre-servicio${i}`] || '_________';
+            }
+            if (clienteElement) {
+                clienteElement.textContent = datos[`respuesta-cliente-potencial${i}`] || '_________';
+            }
+            if (diferencialElement) {
+                diferencialElement.textContent = datos[`respuesta-diferencial${i}`] || '_________';
+            }
+        }
+        
+        // Mostrar resultados
+        setTimeout(() => {
+            if (formulario && resultadoSection) {
+                formulario.style.display = 'none';
+                resultadoSection.style.display = 'block';
+            }
+            if (mensajeCarga) {
+                mensajeCarga.textContent = '';
+            }
+            window.scrollTo(0, 0);
+        }, 500);
+        
+        // Guardar datos en localStorage para persistencia
+        localStorage.setItem('propuestaValorDatos', JSON.stringify(datos));
+    }
+    
+    // Función para cargar datos guardados
+    function cargarDatosGuardados() {
+        const datosGuardados = localStorage.getItem('propuestaValorDatos');
+        if (datosGuardados) {
+            try {
+                const datos = JSON.parse(datosGuardados);
+                
+                // Rellenar formulario con datos guardados
+                for (let campo in datos) {
+                    const elemento = document.getElementById(campo);
+                    if (elemento) {
+                        elemento.value = datos[campo];
+                    }
+                }
+            } catch (error) {
+                console.error('Error al cargar datos guardados:', error);
+            }
+        }
+    }
+    
+    // Función auxiliar para descargar JSON
+    function descargarJSON(datos) {
+        const datosJSON = JSON.stringify(datos, null, 2);
+        const blob = new Blob([datosJSON], {type: 'application/json'});
+        const url = URL.createObjectURL(blob);
+        
+        // Crear link para descargar
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'propuesta-valor-' + new Date().toISOString().slice(0, 10) + '.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    
+    // Event Listeners
+    
+    // Función de login
+    if (loginButton) {
+        loginButton.addEventListener('click', function() {
+            const password = passwordInput.value;
+            if (password === PASSWORD_CORRECTO) {
+                loginSection.style.display = 'none';
+                appContent.style.display = 'block';
+                if (cerrarSesionBtn) {
+                    cerrarSesionBtn.style.display = 'block';
+                }
+                // Guardar en localStorage solo un flag de sesión (no la contraseña)
+                localStorage.setItem('sesionActiva', 'true');
+            } else {
+                loginError.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
+                loginError.style.display = 'block';
+                passwordInput.value = '';
+                setTimeout(() => {
+                    loginError.style.display = 'none';
+                }, 3000);
+            }
+        });
+    }
+    
+    // Enter en el campo de contraseña
+    if (passwordInput) {
+        passwordInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                loginButton.click();
+            }
+        });
+    }
+    
+    // Función para cerrar sesión
+    if (cerrarSesionBtn) {
+        cerrarSesionBtn.addEventListener('click', function() {
+            localStorage.removeItem('sesionActiva');
+            if (loginSection && appContent) {
+                appContent.style.display = 'none';
+                loginSection.style.display = 'flex';
+                cerrarSesionBtn.style.display = 'none';
+                passwordInput.value = '';
+            }
+        });
+    }
+    
+    // Formulario de propuesta de valor
+    if (formulario) {
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+            generarPropuestas();
+        });
+    }
+    
+    // Guardar como JSON desde formulario
+    if (guardarJsonBtn) {
+        guardarJsonBtn.addEventListener('click', function() {
+            // Recopilar datos del formulario
+            const datos = {};
+            camposFormulario.forEach(campo => {
+                const elemento = document.getElementById(campo);
+                if (elemento) {
+                    datos[campo] = elemento.value || elemento.placeholder;
+                }
+            });
+            
+            // Crear archivo JSON para descargar
+            descargarJSON(datos);
+            
+            // Mostrar mensaje de confirmación
+            const mensajeConfirmacion = document.createElement('div');
+            mensajeConfirmacion.textContent = 'Archivo JSON guardado correctamente';
+            mensajeConfirmacion.style.color = '#11b28e';
+            mensajeConfirmacion.style.fontWeight = 'bold';
+            mensajeConfirmacion.style.padding = '10px';
+            mensajeConfirmacion.style.textAlign = 'center';
+            appContent.appendChild(mensajeConfirmacion);
+            
+            setTimeout(() => {
+                appContent.removeChild(mensajeConfirmacion);
+            }, 2000);
+        });
+    }
+    
+    // Descargar JSON desde resultados
+    if (descargarJsonBtn) {
+        descargarJsonBtn.addEventListener('click', function() {
+            // Recopilar datos del formulario (que están ocultos pero siguen existiendo)
+            const datos = {};
+            camposFormulario.forEach(campo => {
+                const elemento = document.getElementById(campo);
+                if (elemento) {
+                    datos[campo] = elemento.value || elemento.placeholder;
+                }
+            });
+            
+            // Crear archivo JSON para descargar
+            descargarJSON(datos);
+            
+            // Mostrar mensaje de confirmación
+            const mensajeConfirmacion = document.createElement('div');
+            mensajeConfirmacion.textContent = 'Archivo JSON descargado correctamente';
+            mensajeConfirmacion.style.color = '#11b28e';
+            mensajeConfirmacion.style.fontWeight = 'bold';
+            mensajeConfirmacion.style.padding = '10px';
+            mensajeConfirmacion.style.textAlign = 'center';
+            resultadoSection.appendChild(mensajeConfirmacion);
+            
+            setTimeout(() => {
+                resultadoSection.removeChild(mensajeConfirmacion);
+            }, 2000);
+        });
+    }
+    
+    // Cargar desde JSON
+    if (cargarJsonInput) {
+        cargarJsonInput.addEventListener('change', function(event) {
+            const archivo = event.target.files[0];
+            if (archivo) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const datos = JSON.parse(e.target.result);
+                        
+                        // Rellenar formulario con datos del JSON
+                        for (let campo in datos) {
+                            const elemento = document.getElementById(campo);
+                            if (elemento) {
+                                elemento.value = datos[campo];
+                            }
+                        }
+                        
+                        // Mostrar mensaje de confirmación
+                        const mensajeConfirmacion = document.createElement('div');
+                        mensajeConfirmacion.textContent = 'Archivo JSON cargado correctamente';
+                        mensajeConfirmacion.style.color = '#11b28e';
+                        mensajeConfirmacion.style.fontWeight = 'bold';
+                        mensajeConfirmacion.style.padding = '10px';
+                        mensajeConfirmacion.style.textAlign = 'center';
+                        appContent.appendChild(mensajeConfirmacion);
+                        
+                        setTimeout(() => {
+                            appContent.removeChild(mensajeConfirmacion);
+                        }, 2000);
+                    } catch (error) {
+                        const mensajeError = document.createElement('div');
+                        mensajeError.textContent = 'Error al cargar el archivo: formato inválido';
+                        mensajeError.style.color = '#e74c3c';
+                        mensajeError.style.fontWeight = 'bold';
+                        mensajeError.style.padding = '10px';
+                        mensajeError.style.textAlign = 'center';
+                        appContent.appendChild(mensajeError);
+                        
+                        setTimeout(() => {
+                            appContent.removeChild(mensajeError);
+                        }, 3000);
+                    }
+                };
+                reader.readAsText(archivo);
+            }
+        });
+    }
+    
+    // Editar respuestas
+    if (editarRespuestasBtn) {
+        editarRespuestasBtn.addEventListener('click', function() {
+            if (resultadoSection && formulario) {
+                resultadoSection.style.display = 'none';
+                formulario.style.display = 'block';
+            }
+        });
+    }
+    
+    // Inicialización
+    
+    // Comprobar si hay una sesión activa al cargar la página
+    if (localStorage.getItem('sesionActiva') === 'true') {
+        if (loginSection && appContent) {
+            loginSection.style.display = 'none';
+            appContent.style.display = 'block';
+            if (cerrarSesionBtn) {
+                cerrarSesionBtn.style.display = 'block';
+            }
+        }
+    }
+    
+    // Cargar datos guardados al iniciar
+    cargarDatosGuardados();
+});
+</script>
+
+<style>
+    /* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.contenedor {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Barra superior */
+.barra {
+    background-color: #162a30;
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cerrar-sesion {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cerrar-sesion:hover {
+    background-color: white;
+    color: #162a30;
+}
+
+/* Sección de login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    background-color: #f5f9fa;
+}
+
+.login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.login-form h2 {
+    color: #11b28e;
+    margin-bottom: 20px;
+}
+
+.login-form p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.login-form .input-group {
+    margin-bottom: 25px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.login-form input[type="password"]:focus {
+    border-color: #11b28e;
+    box-shadow: 0 0 0 3px rgba(17, 178, 142, 0.2);
+    outline: none;
+}
+
+.login-form button {
+    background-color: #11b28e;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.login-form button:hover {
+    background-color: #0e9678;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(17, 178, 142, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #fde8e8;
+}
+
+/* Sección principal */
+.titulo-principal {
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+.titulo-principal p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #11b28e;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #162a30;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: #11b28e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #162a30;
+    margin: 15px 0;
+}
+
+.destacado {
+    color: #11b28e;
+    font-weight: bold;
+}
+
+/* Instrucciones */
+ol {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+ol li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.advertencia {
+    background-color: #fff8e1;
+    padding: 15px;
+    border-left: 4px solid #ffb300;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Botones */
+.opciones-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+button, .upload-label {
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.boton-primario {
+    background-color: #11b28e;
+    color: white;
+    padding: 12px 24px;
+    display: block;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+.boton-primario:hover {
+    background-color: #0e9678;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(17, 178, 142, 0.3);
+}
+
+.boton-secundario {
+    background-color: #e0f2f1;
+    color: #11b28e;
+    padding: 10px 15px;
+    border: 1px solid #11b28e;
+    font-weight: normal;
+}
+
+.boton-secundario:hover {
+    background-color: #11b28e;
+    color: white;
+}
+
+.upload-label {
+    display: inline-block;
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Formulario */
+.seccion-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.input-group {
+    margin: 15px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #11b28e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(17, 178, 142, 0.2);
+}
+
+/* Resultados */
+.resultado-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.formula-seccion {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.formula-template {
+    background-color: #f1f8f8;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.resultados {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border-left: 3px solid #11b28e;
+}
+
+.resultado-formula {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.resultado-valor {
+    color: #11b28e;
+    font-weight: bold;
+    border-bottom: 1px dashed #11b28e;
+    padding: 0 5px;
+}
+
+.mensaje-carga {
+    color: #11b28e;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.contenido-imprimir {
+    padding: 30px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .opciones-botones {
+        flex-direction: column;
+    }
+    
+    .boton-secundario, .upload-label {
+        width: 100%;
+    }
+    
+    .resultados {
+        padding: 15px;
+    }
+    
+    .resultado-formula {
+        font-size: 1rem;
+    }
+}
+</style>
