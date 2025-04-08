@@ -1,37 +1,26 @@
 ---
-import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
+// landing-servicios.astro - Ejemplo de uso del layout
+import ReservasPrecios from "../../components/secciones/ReservasPrecios.astro";
+import Layout from "../../layouts/LayoutLanding.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="es">
+<Layout
+title="Servicios Web | WeblocalMX"
+description="Desarrollo web, sistemas de reservas y copywrtiting que genera clientes"
+keywords="sistema reservas yoga, agenda online instructores yoga, plataforma videollamada yoga, citas virtuales yoga, reserva clases yoga online, programación sesiones yoga virtual, calendario digital instructores yoga, gestión citas yoga online, software reservas maestros yoga, plataforma yoga videollamadas, yoga remoto, agenda virtual clases yoga, sistema citas instructores yoga, reserva sesiones yoga online, videollamadas yoga, gestión horarios yoguis online, plataforma reservas yoga virtual, calendario automático instructores yoga, software gestión clases yoga online, sistema sesiones yoga por videollamada, reserva horarios maestros yoga, agenda digital yoga virtual, plataforma citas yoguis, programación automática clases yoga, videollamadas instructores yoga, gestión tiempo yoguis, sistema online yoga remoto, reserva yoga virtual, calendario clases yoga videollamada, software yoga reservas online, clases privadas yoga online, yoga personalizado videollamada, meditación guiada virtual, sistema reservas bienestar online"
+>
+<Fragment slot="meta">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://weblocalmx.com/">
+    <meta property="og:title" content="Sistema de reservas online por video llamada para instructor de yoga">
+    <meta property="og:description" content="Desarrollo web, sistemas de reservas y copywriting que genera clientes">
+    <meta property="og:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</Fragment>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- para redes -->
-         <!-- Open Graph / Facebook -->
-         <meta property="og:type" content="website">
-         <meta property="og:url" content="https://weblocalmx.com/">
-         <meta property="og:title" content="WebLocalMX">
-         <meta property="og:description" content="Sistema de reservas, clases online y gestión eficiente para profesores particulares">
-         <meta property="og:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
-         <meta property="og:image:width" content="1200">
-         <meta property="og:image:height" content="630">
-         
-         <!-- Twitter / WhatsApp -->
-         <meta property="twitter:card" content="summary_large_image">
-         <meta property="twitter:url" content="https://weblocalmx.com/">
-         <meta property="twitter:title" content="WebLocalMX">
-         <meta property="twitter:description" content="Sistema de reservas, clases online y gestión eficiente para profesores particulares">
-         <meta property="twitter:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
-     <!-- fin para resde -->
-    <title>Sistema de Reservas para Profesores - Weblocalmx</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-  
-</head>
 
-<body>
+    <!-- Aquí va todo el contenido de tu landing page existente -->
     <header>
         <div class="container">
             <div class="header-inner">
@@ -43,124 +32,90 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Sistema de reservas en línea para tus clases particulares y tutorías</h1>
-                <p class="hero-highlight">Con generación automática de enlaces para videollamadas y recordatorios personalizados</p>
-                <p>Deja de perder tiempo organizando horarios y agendas. Automatiza tus reservas para dedicarte a lo que realmente importa: la enseñanza y tus alumnos.</p>
+                <h1>Sistema de reservas en línea para tus clases de yoga por videollamada</h1>
+                <p class="hero-highlight">
+                    Incluye generación automática de enlaces para tus clases
+                    online vía Zoom o Meet
+                </p>
+                <p>
+                    Olvídate de agendas, pagos y recordatorios. Con nuestro
+                    sistema de reservas, podrás dedicar tu energía a lo que
+                    realmente importa: transformar vidas a través del yoga.
+                </p>
                 <div class="mt-4">
-                    <a href="/tidycal-reserva" class="btn btn-lg btn-primary">Comienza ahora</a>
-                    <a href="/tidycal-reserva" class="btn btn-lg btn-secondary ml-3">Descubre cómo</a>
+                    <a href="/tidycal-reserva" class="btn btn-lg btn-primary"
+                    >Comienza ahora</a
+                    >
+                    <a href="/tidycal-reserva" class="btn btn-lg btn-secondary"
+                    >Descubre cómo</a
+                    >
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">Sistema de reservas para profesores que los alumnos adoran</h2>
-            <img src="/img/proceso-reserva.webp" alt="sistema de reservas">
-            <p class="section-subtitle">Una solución completa que transforma tu labor docente y mejora la experiencia de tus alumnos.</p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">✓</div>
-                    <h3>Simplifica tu docencia</h3>
-                    <p>Gestiona todas tus clases desde un sistema intuitivo donde tus alumnos reservan y pagan automáticamente.</p>
-                    <div class="checklist">
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Integración con tu web o redes sociales</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Compatible con todos tus dispositivos</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Configuración en minutos, no horas</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>Menos tecnología, más enseñanza</h3>
-                    <p>Olvídate de coordinar videollamadas. Enlaces automáticos para Zoom o Meet generados al instante.</p>
-                    <div class="checklist">
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Videollamadas sin complicaciones</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Recordatorios automáticos por email</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Ajuste automático de zonas horarias</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Cobra por adelantado</h3>
-                    <p>Elimina cancelaciones de última hora y asegura tus ingresos con pagos automáticos integrados.</p>
-                    <div class="checklist">
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Integración con Stripe y PayPal</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Opciones de pago flexibles</span>
-                        </div>
-                        <div class="checklist-item">
-                            <span class="checklist-icon">✓</span>
-                            <span>Políticas de cancelación configurables</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <section class="steps">
         <div class="container">
+            <img src="/img/proceso-reserva.webp" alt="sitema de reservas">
             <div class="text-center mb-5">
-                <h2 class="section-title">Transforma tu enseñanza en 4 pasos</h2>
-                <p class="section-subtitle">Implementación sencilla y sin complicaciones para que puedas empezar a disfrutar de los beneficios de inmediato.</p>
+                <h2 class="section-title">
+                    Implementación fácil en 4 pasos
+                </h2>
+                <p class="section-subtitle">
+                    Te acompañamos en todo el proceso para que la
+                    transformación digital de tu estudio sea fluida y sin
+                    obstáculos.
+                </p>
             </div>
 
             <div class="steps-container">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>Configuramos tu sistema</h3>
-                        <p>Nuestro equipo personaliza la plataforma según tus necesidades específicas. Definimos horarios, tipos de clases, materias, precios y toda la información necesaria.</p>
+                        <h3>Configuramos tu plataforma</h3>
+                        <p>
+                            Nosotros nos encargamos de toda la configuración
+                            técnica. Definimos tus clases, horarios, precios
+                            y toda la información necesaria para tu estudio.
+                        </p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Integramos con tus herramientas</h3>
-                        <p>Conectamos el sistema con tus videollamadas (Zoom, Meet), pasarelas de pago y sitio web. Todo funciona automáticamente sin que tengas que hacer nada.</p>
+                        <h3>Personalizamos tu experiencia</h3>
+                        <p>
+                            Adaptamos el sistema a tus necesidades
+                            específicas: clases presenciales, virtuales o
+                            híbridas, tipos de pases, opciones especiales
+                            para eventos o retiros.
+                        </p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>Te capacitamos personalmente</h3>
-                        <p>En una sesión one-to-one te enseñamos a usar todas las funciones del sistema para que puedas manejarlo con total confianza.</p>
+                        <h3>Te capacitamos a ti y a tu equipo</h3>
+                        <p>
+                            Mediante sesiones personalizadas, te enseñamos a
+                            usar todas las funciones del sistema para que
+                            puedas aprovecharlo al máximo.
+                        </p>
                     </div>
                 </div>
 
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>¡Comienza a ahorrar tiempo!</h3>
-                        <p>Empieza a recibir reservas automáticas mientras te concentras en lo importante: enseñar y preparar tus mejores clases. Soporte técnico incluido por 6 meses.</p>
+                        <h3>Te brindamos soporte continuo</h3>
+                        <p>
+                            No te dejamos solo. Durante 6 meses estaremos a
+                            tu disposición para resolver cualquier duda o
+                            ajuste que necesites mientras te familiarizas
+                            con el sistema.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -170,34 +125,144 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     <section class="testimonials">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-title">Profesores que ya transformaron su docencia</h2>
-                <p class="section-subtitle">Escucha las experiencias de profesionales como tú que ya no pueden imaginar sus clases sin un sistema de reservas.</p>
+                <h2 class="section-title">
+                    La experiencia de otros instructores
+                </h2>
+                <p class="section-subtitle">
+                    Descubre cómo otros maestros de yoga han transformado
+                    sus estudios con nuestro sistema de reservas.
+                </p>
             </div>
 
             <div class="testimonial-cards">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Al principio pensé que sería complicado de usar, pero resultó ser exactamente lo contrario. Mis alumnos pueden reservar a cualquier hora, incluso de madrugada, y yo solo tengo que revisar mi agenda por la mañana. Las cancelaciones se redujeron drásticamente y mi horario está siempre organizado."
+                        "Antes pasaba horas cada semana respondiendo
+                        mensajes para confirmar asistencias y gestionando
+                        los pagos. Ahora todo es automático y puedo dedicar
+                        ese tiempo a preparar mejor mis clases y a mi propia
+                        práctica. La asistencia a mis clases ha aumentado
+                        significativamente porque a mis alumnos les resulta
+                        más fácil reservar."
                     </div>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-avatar">CR</div>
                         <div class="testimonial-info">
-                            <h4>Miguel Rodríguez</h4>
-                            <p>Profesor de Matemáticas, 35 años</p>
+                            <h4>Claudia Rodríguez</h4>
+                            <p>
+                                Instructora de Vinyasa, Centro Urbano Yoga
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Tenía 3-4 cancelaciones semanales que me dejaban huecos imposibles de llenar. El sistema de pago anticipado lo cambió todo. Además, recuperé al menos 5 horas semanales que antes dedicaba a organizar horarios y enviar recordatorios. Ahora tengo más tiempo para preparar clases de calidad."
+                        "Lo que más valoro es la flexibilidad para gestionar
+                        diferentes tipos de clases y paquetes. Tengo clases
+                        regulares, workshops especiales y retiros, y el
+                        sistema maneja todo perfectamente. Además, mis
+                        alumnos aprecian poder ver el espacio disponible en
+                        cada clase y realizar sus pagos de forma segura. ¡Ha
+                        sido una inversión que realmente transformó mi
+                        negocio!"
                     </div>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">CM</div>
+                        <div class="testimonial-avatar">MG</div>
                         <div class="testimonial-info">
-                            <h4>Carolina Méndez</h4>
-                            <p>Profesora de idiomas, 29 años</p>
+                            <h4>Miguel González</h4>
+                            <p>Fundador, Espacio Yoga Integral</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    Beneficios para tu estudio de yoga
+                </h2>
+                <p class="section-subtitle">
+                    Más allá de la simple gestión de reservas, nuestro
+                    sistema transforma completamente la manera en que
+                    administras tu estudio.
+                </p>
+            </div>
+
+            <div class="benefit-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌐</div>
+                    <div class="benefit-content">
+                        <h3>Clases virtuales simplificadas</h3>
+                        <p>
+                            Elige tu plataforma preferida (Zoom o Meet) y el
+                            sistema genera automáticamente enlaces únicos
+                            para cada clase online, enviándolos a ti y a tus
+                            alumnos.
+                        </p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⏰</div>
+                    <div class="benefit-content">
+                        <h3>Ahorra más de 10 horas semanales</h3>
+                        <p>
+                            Tiempo que antes dedicabas a gestionar reservas,
+                            confirmaciones y pagos ahora disponible para tu
+                            crecimiento personal y profesional.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">👥</div>
+                    <div class="benefit-content">
+                        <h3>Aumenta la asistencia a tus clases</h3>
+                        <p>
+                            Las reservas online y los recordatorios
+                            automáticos reducen significativamente las
+                            ausencias y aumentan el compromiso de tus
+                            alumnos.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📊</div>
+                    <div class="benefit-content">
+                        <h3>Análisis de asistencia y preferencias</h3>
+                        <p>
+                            Datos valiosos sobre qué clases son más
+                            populares, horarios de mayor asistencia y
+                            patrones de consumo para optimizar tu oferta.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">💸</div>
+                    <div class="benefit-content">
+                        <h3>Mejora tu flujo de efectivo</h3>
+                        <p>
+                            Cobros anticipados por clases y paquetes,
+                            reducción de cancelaciones de última hora y
+                            menor dependencia de efectivo físico.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧠</div>
+                    <div class="benefit-content">
+                        <h3>Reduce tu estrés y ansiedad</h3>
+                        <p>
+                            Elimina la incertidumbre sobre la asistencia y
+                            los ingresos, permitiéndote estar más presente y
+                            centrado en tus enseñanzas.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -206,76 +271,26 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
     <section class="pricing">
         <div class="container text-center">
-            <h2 class="section-title">Inversión única, beneficios permanentes</h2>
-            <p class="section-subtitle">Sin cuotas mensuales ni sorpresas. Un solo pago para transformar tu docencia para siempre.</p>
+            <h2 class="section-title">Una inversión en paz mental</h2>
+            <p class="section-subtitle">
+                Sin cuotas mensuales ni costos ocultos. Un solo pago para
+                transformar tu estudio para siempre.
+            </p>
         </div>
     </section>
-    
     <ReservasPrecios />
-    
-    <section>
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title bene">Beneficios para tu práctica docente</h2>
-                <p class="section-subtitle">Las ventajas van mucho más allá de simplemente gestionar citas.</p>
-            </div>
-
-            <div class="benefit-list">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔗</div>
-                    <div class="benefit-content">
-                        <h3>Videollamadas sin complicaciones</h3>
-                        <p>Enlaces automáticos para Zoom o Meet. Tú eliges la plataforma, el sistema genera y envía los enlaces tanto a ti como a tus alumnos.</p>
-                    </div>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">⏰</div>
-                    <div class="benefit-content">
-                        <h3>Recupera al menos 7 horas semanales</h3>
-                        <p>Elimina la coordinación manual de horarios, envío de recordatorios y seguimiento de pagos. Tiempo que puedes dedicar a preparar mejores clases o a ti mismo.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">💼</div>
-                    <div class="benefit-content">
-                        <h3>Profesionaliza tu imagen</h3>
-                        <p>Tus alumnos perciben mayor seriedad y compromiso cuando cuentas con un sistema eficiente de reservas y pagos automáticos.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">💰</div>
-                    <div class="benefit-content">
-                        <h3>Aumenta tus ingresos</h3>
-                        <p>Menos cancelaciones, más eficiencia y la posibilidad de atender a más alumnos se traducen directamente en mayor rentabilidad.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">🧠</div>
-                    <div class="benefit-content">
-                        <h3>Reduce tu carga mental</h3>
-                        <p>Elimina la preocupación constante por la gestión administrativa y concéntrate completamente en preparar y dar clases de calidad.</p>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <div class="benefit-icon">🌎</div>
-                    <div class="benefit-content">
-                        <h3>Expande tu alcance geográfico</h3>
-                        <p>Enseña a alumnos de cualquier parte del mundo con ajuste automático de zonas horarias y videoclases integradas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="cta">
         <div class="container">
-            <h2>Tu tiempo es demasiado valioso</h2>
-            <p>Cada minuto que pasas gestionando agendas es un minuto que no puedes dedicar a enseñar o a preparar mejores clases. Automatiza lo administrativo y concéntrate en lo que realmente importa.</p>
-            <a href="/tidycal-reserva" class="btn btn-lg btn-dark">Comienza tu transformación digital</a>
+            <h2>Energía enfocada en lo que importa</h2>
+            <p>
+                Como instructor de yoga, tu energía debe destinarse a guiar,
+                inspirar y transformar. Deja que la tecnología se encargue
+                de lo administrativo mientras tú te enfocas en lo realmente
+                importante.
+            </p>
+            <a href="/tidycal-reserva" class="btn btn-lg btn-dark"
+                >Comienza tu transformación ahora</a
+            >
         </div>
     </section>
 
@@ -284,7 +299,11 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
             <div class="footer-content">
                 <div>
                     <div class="footer-logo">Weblocalmx</div>
-                    <p class="footer-description">Especialistas en sistemas digitales para profesores y educadores independientes que quieren optimizar su tiempo y mejorar su presencia online.</p>
+                    <p class="footer-description">
+                        Especialistas en sistemas digitales para
+                        profesionales independientes que quieren optimizar
+                        su tiempo y mejorar su presencia online.
+                    </p>
                     <div class="footer-social">
                         <a href="https://www.youtube.com/@WeblocalMX"><span>YT</span></a>
                       
@@ -315,10 +334,12 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
                 <div>
                     <h3 class="footer-title">Contacto</h3>
-                    
+                   
                     <div class="footer-contact">
                         <div class="footer-contact-icon">📍</div>
-                        <div class="footer-contact-text">Tijuana, B.C., México</div>
+                        <div class="footer-contact-text">
+                            Tijuana, B.C., México
+                        </div>
                     </div>
                 </div>
             </div>
@@ -328,35 +349,49 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
             </div>
         </div>
     </footer>
-</body>
-
-</html>
-
+</Layout>
 <style>
-     
+    /* Variables y estilos generales */
     :root {
-    --color-primario: #11b28e;
+        --color-primario: #11b28e;
     --color-claro1: #efefef;
     --color-claro2: #f9f8ed;
     --color-oscuro1: #5a5a5a;
     --color-oscuro2: #1b1b1b;
-    --primary: #546a7b;       /* Azul grisáceo medio */
---primary-dark: #3d4c5c;  /* Azul grisáceo oscuro */
---primary-light: #7d8e9e; /* Azul grisáceo claro */
---accent: #a5a58d;        /* Verde grisáceo suave */
---accent-dark: #889176;   /* Verde grisáceo medio */
---dark: #2f3238;          /* Gris carbón oscuro */
---dark-light: #4d5057;    /* Gris carbón medio */
---white: #ffffff;         /* Blanco puro */
---light-gray: #f7f7f7;    /* Gris casi blanco */
---gray: #a2a2a2;          /* Gris medio neutral */
---success: #6b8f71;       /* Verde grisáceo suave */
---warning: #d4b483;       /* Beige dorado suave */
-        --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08), 0 5px 12px rgba(0, 0, 0, 0.1);
-        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        --primary: #4c8d91;
+        /* Verde-azulado serenidad */
+        --primary-dark: #3a6b6f;
+        /* Verde-azulado oscuro */
+        --primary-light: #a0cfca;
+        /* Verde-azulado claro */
+        --accent: #de8f6e;
+        /* Naranja terracota */
+        --accent-dark: #c76a4a;
+        /* Naranja terracota oscuro */
+        --accent-light: #f5d2c5;
+        /* Naranja terracota claro */
+        --dark: #2e3233;
+        /* Negro-verdoso */
+        --dark-light: #4e5556;
+        /* Negro-verdoso claro */
+        --white: #ffffff;
+        --cream: #fcf9f4;
+        /* Crema color papel */
+        --gray: #9797a6;
+        --success: #7bba9e;
+        /* Verde menta */
+        --warning: #e2c88a;
+        /* Amarillo cálido */
+        --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+            sans-serif;
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04),
+            0 1px 2px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05),
+            0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08),
+            0 5px 12px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
         --radius-sm: 0.25rem;
         --radius-md: 0.5rem;
         --radius-lg: 1rem;
@@ -374,7 +409,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         font-family: var(--font-family);
         color: var(--dark);
         line-height: 1.5;
-        background-color: #fff;
+        background-color: var(--cream);
         overflow-x: hidden;
     }
 
@@ -424,14 +459,18 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
     .hero {
         padding: 6rem 0;
-        background: linear-gradient(120deg, var(--primary-dark), var(--primary));
+        background: linear-gradient(
+            120deg,
+            var(--primary-dark),
+            var(--primary)
+        );
         color: var(--white);
         position: relative;
         overflow: hidden;
     }
 
     .hero::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
@@ -443,9 +482,9 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         border-width: 0px;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: url("https://elearningindustry.com/wp-content/uploads/2020/03/how-to-effectively-conduct-classes-online-1.png");
         /* background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"); */
-        opacity: 0.2;
+        background-image: url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        opacity: 0.5;
     }
 
     .hero-content {
@@ -542,7 +581,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     }
 
     .section-title::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -10px;
         left: 0;
@@ -556,7 +595,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         font-size: 1.25rem;
         color: var(--gray);
         margin-bottom: 4rem;
-        
+        max-width: 700px;
     }
 
     .features-grid {
@@ -587,7 +626,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         justify-content: center;
         border-radius: var(--radius-full);
         margin-bottom: 1.5rem;
-        color: var(--white);
+        color: var(--primary-dark);
         font-size: 1.5rem;
     }
 
@@ -620,7 +659,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
     .testimonials {
         padding: 8rem 0;
-        background-color: var(--light-gray);
+        background-color: var(--white);
     }
 
     .testimonial-cards {
@@ -631,7 +670,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     }
 
     .testimonial-card {
-        background-color: var(--white);
+        background-color: var(--cream);
         border-radius: var(--radius-lg);
         padding: 2.5rem;
         box-shadow: var(--shadow-md);
@@ -651,7 +690,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         top: -2rem;
         left: -1rem;
         color: var(--primary-light);
-        opacity: 0.1;
+        opacity: 0.3;
     }
 
     .testimonial-author {
@@ -669,7 +708,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--white);
+        color: var(--primary-dark);
         font-weight: 700;
         font-size: 1.25rem;
     }
@@ -700,7 +739,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     }
 
     .pricing-card::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
@@ -735,7 +774,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         align-items: center;
         margin-bottom: 1.25rem;
         padding-bottom: 1.25rem;
-        border-bottom: 1px solid var(--light-gray);
+        border-bottom: 1px solid var(--cream);
     }
 
     .price-feature:last-child {
@@ -764,7 +803,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     }
 
     .guarantee {
-        background-color: var(--light-gray);
+        background-color: var(--cream);
         border-radius: var(--radius-md);
         padding: 1.5rem;
         margin-top: 2.5rem;
@@ -819,7 +858,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
     .steps {
         padding: 8rem 0;
-        background-color: var(--light-gray);
+        background-color: var(--cream);
     }
 
     .steps-container {
@@ -838,13 +877,13 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     }
 
     .step::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 70px;
         left: 36px;
         width: 2px;
         height: calc(100% + 2.5rem);
-        background-color: var(--light-gray);
+        background-color: var(--cream);
         z-index: 0;
     }
 
@@ -909,7 +948,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         align-items: center;
         justify-content: center;
         margin-right: 1.5rem;
-        color: var(--white);
+        color: var(--primary-dark);
         font-size: 1.25rem;
         flex-shrink: 0;
     }
@@ -1087,7 +1126,6 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        
     }
 
     @media (max-width: 576px) {
@@ -1147,8 +1185,5 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
     .mt-5 {
         margin-top: 2.5rem;
-    }
-    .bene{
-        padding-top: 20px;
     }
 </style>

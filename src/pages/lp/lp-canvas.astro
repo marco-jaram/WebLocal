@@ -1,0 +1,1042 @@
+---
+// landing-servicios.astro - Ejemplo de uso del layout
+import Layout from "../../layouts/LayoutLanding.astro";
+---
+
+<Layout
+    title="Canvas App - Modelo de Negocios en una página"
+    description="Aplicación web para crear modelo de negocios canvas. Todo en una página"
+    keywords="desarrollo web, diseño web, landing page, seo, weblocalMX"
+>
+    <Fragment slot="meta">
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Canvas App - Modelo de Negocios en una página" />
+        <meta property="og:description" content="Aplicación web para crear modelo de negocios canvas. Todo en una página" />
+        <meta
+            property="og:image"
+            content="https://wenlocalmx.com/img/lp/canvas/canvas-redes.png"
+        />
+       
+    </Fragment>
+
+    <!-- Aquí va todo el contenido de tu landing page existente -->
+      <!-- Nav Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="https://weblocalmx.com/">
+                    <i class="fas fa-chart-pie"></i> 
+                    <span>Weblocalmx APPs</span>
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                
+                <li><a href="#acceso" class="btn-nav">Acceder Gratis</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="tag">Herramienta de Negocios</span>
+                <h1>¡Arma tu plan de negocios canvas con gráfico automático!</h1>
+                <p class="hero-description">Simplifica la planificación de tu negocio con nuestra herramienta gratuita</p>
+                <a href="#acceso" class="btn-primary">Comenzar ahora <i class="fas fa-arrow-right"></i></a>
+                
+                <div class="quote-box">
+                    <p class="quote"><i class="fas fa-quote-left"></i> Un modelo de negocio describe las bases sobre las que una empresa crea, proporciona y capta valor. <i class="fas fa-quote-right"></i></p>
+                    <cite>— Alexander Osterwalder</cite>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="../img/lp/canvas/canvas-model-grafica.png" alt="Modelo Canvas">
+                <div class="image-overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Gratuito & Simple</span>
+                <h2>Aplicación gratuita para elaborar plan de negocios canvas</h2>
+                <p class="section-description">Solo contestas unas preguntas clave y la aplicación te genera el gráfico (canvas) tal como lo indica el estándar.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Rápido</h3>
+                    <p>Completa tu modelo de negocio en minutos, no en días</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Intuitivo</h3>
+                    <p>Interfaz amigable y sencilla de usar</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h3>Exportable</h3>
+                    <p>Descarga tu canvas para usarlo donde quieras</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Ilimitado</h3>
+                    <p>Crea todos los modelos que necesites, sin restricciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Ventajas</span>
+                <h2>¿Para qué sirve?</h2>
+                <p class="section-description">Descubre cómo nuestra aplicación puede transformar tu idea en un modelo de negocio sólido</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-column">
+                    <h3><i class="fas fa-check-circle"></i> Para tener:</h3>
+                    <ul>
+                        <li>Una visión global de lo básico de tu negocio</li>
+                        <li>Más seguridad en lo que vas a implementar</li>
+                        <li>Lo básico en una sola hoja</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-column">
+                    <h3><i class="fas fa-lightbulb"></i> Para saber:</h3>
+                    <ul>
+                        <li>Si lo que quieres hacer te va a dar los ingresos que necesitas</li>
+                        <li>Si estás descuidando algo importante</li>
+                        <li>Lo básico que tienes que atender</li>
+                        <li>Cuánto te va a costar tu negocio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About App Section -->
+    <section id="aplicacion" class="about-app">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Características</span>
+                <h2>Sobre la aplicación:</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="../img/lp/canvas/canvas-libro.png" alt="Libro de Canvas">
+                </div>
+                
+                <div class="about-content">
+                    <ul class="about-list">
+                        <li>
+                            <span class="list-icon"><i class="fas fa-book"></i></span>
+                            <div>
+                                <strong>Metodología probada</strong>
+                                <p>Basada en el libro "Generación de modelos de negocios" de Yves Pigneur y Alexander Osterwalder</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fas fa-question-circle"></i></span>
+                            <div>
+                                <strong>Cuestionario ameno</strong>
+                                <p>Con preguntas clave para definir cada aspecto de tu modelo</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fas fa-th-large"></i></span>
+                            <div>
+                                <strong>Visualización completa</strong>
+                                <p>Te arroja cuadro con todas las secciones del modelo Canvas</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fas fa-tasks"></i></span>
+                            <div>
+                                <strong>Estructura modular</strong>
+                                <p>Nueve preguntas correspondientes a cada módulo del canvas</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="list-icon"><i class="fas fa-download"></i></span>
+                            <div>
+                                <strong>Portabilidad</strong>
+                                <p>Descargable en formato JSON para uso posterior</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="acceso" class="access">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-tag">Empieza Ya</span>
+                <h2>¿Cómo acceder a la aplicación?</h2>
+            </div>
+            
+            <div class="access-form-container">
+                <div class="access-card">
+                    <h3>Accede y arma tu plan de negocios canvas</h3>
+                    <p>Completa el formulario para obtener acceso inmediato:</p>
+                    
+                    <iframe data-skip-lazy="" src="https://espanolunoauno.ipzmarketing.com/f/8ui2dGMXgGA" frameborder="0" scrolling="no" width="100%" class="ipz-iframe"></iframe>
+<script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Vista previa</span>
+                <h2>Screenshots:</h2>
+                <p class="section-description">Conoce la interfaz de nuestra aplicación antes de comenzar</p>
+            </div>
+            
+            <div class="screenshots-slider">
+                <div class="screenshot">
+                    <img src="../img/lp/canvas/screenshot-canvas.png" alt="Screenshot 1">
+                </div>
+                <div class="screenshot">
+                    <img src="../img/lp/canvas/screenshot-canvas2.png" alt="Screenshot 2">
+                </div>
+                <div class="screenshot">
+                    <img src="../img/lp/canvas/screenshot-canvas3.png" alt="Screenshot 3">
+                </div>
+                <div class="screenshot">
+                    <img src="../img/lp/canvas/screenshot-canvas4.png" alt="Screenshot 4">
+                </div>
+            </div>
+            
+            <div class="dots-container">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>¿Listo para llevar tu idea al siguiente nivel?</h2>
+            <p>Comienza a construir tu modelo de negocio ahora mismo, gratis y sin complicaciones.</p>
+            <a href="#acceso" class="btn-primary">Comenzar ahora <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    
+
+   
+</Layout>
+ <!-- JavaScript -->
+    <script is:inline>
+     // Simple toggle for mobile menu
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+    });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<style>
+    /* Base Styles */
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #3b82f6;
+    --primary-lighter: #93c5fd;
+    --primary-lightest: #eff6ff;
+    --secondary: #1d4ed8;
+    --secondary-dark: #1d4ed8;
+    --secondary-light: #93c5fd;
+    --secondary-lighter: #eff6ff;
+    --dark: #111827;
+    --dark-medium: #1f2937;
+    --gray: #6b7280;
+    --gray-light: #9ca3af;
+    --gray-lighter: #e5e7eb;
+    --light: #f9fafb;
+    --white: #ffffff;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --border-radius: 8px;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --transition: all 0.3s ease;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%; /* 10px = 1rem */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+p {
+    margin-bottom: 1.6rem;
+    color: var(--dark-medium);
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.2rem 2.4rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary i {
+    margin-left: 1rem;
+}
+
+.btn-nav {
+    display: inline-block;
+    background-color: var(--primary-light);
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1.4rem 2.4rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.btn-submit:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-submit i {
+    margin-left: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 1.5rem 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 1rem;
+    font-size: 2.4rem;
+}
+
+.menu-toggle {
+    display: block;
+    font-size: 2.4rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.nav-menu li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    transition: var(--transition);
+}
+
+.nav-menu li a:hover {
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    padding: 12rem 0 6rem;
+    background: linear-gradient(180deg, var(--primary-lightest) 0%, var(--white) 100%);
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 60rem;
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--primary-lighter);
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.hero h1 {
+    margin-bottom: 2rem;
+    color: var(--dark);
+}
+
+.hero-description {
+    font-size: 1.8rem;
+    color: var(--gray);
+    margin-bottom: 3rem;
+}
+
+.quote-box {
+    background-color: var(--white);
+    border-left: 4px solid var(--primary);
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: left;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--dark-medium);
+    margin-bottom: 1rem;
+}
+
+.quote i {
+    color: var(--primary);
+    font-size: 1.4rem;
+}
+
+cite {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--gray);
+    display: block;
+    text-align: right;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-image img {
+    width: 100%;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(37, 99, 235, 0.1),
+        rgba(37, 99, 235, 0.05)
+    );
+}
+
+/* Section headers */
+.section-header {
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto 5rem;
+}
+
+.section-header.light h2,
+.section-header.light p {
+    color: var(--white);
+}
+
+.section-tag {
+    display: inline-block;
+    background-color: var(--primary-lighter);
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.section-header h2 {
+    margin-bottom: 1.6rem;
+}
+
+.section-description {
+    font-size: 1.8rem;
+    color: var(--gray);
+}
+
+/* Features Section */
+.features {
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.feature-icon {
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 2rem;
+    background-color: var(--primary-lightest);
+    border-radius: 50%;
+}
+
+.feature-icon i {
+    font-size: 3.2rem;
+    color: var(--primary);
+}
+
+.feature-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+    color: var(--dark);
+}
+
+.feature-card p {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 8rem 0;
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefits::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.benefits .container {
+    position: relative;
+    z-index: 2;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4rem;
+}
+
+.benefit-column {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+}
+
+.benefit-column h3 {
+    color: var(--white);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-column h3 i {
+    margin-right: 1rem;
+    color: var(--secondary-light);
+}
+
+.benefit-column ul {
+    padding-left: 1rem;
+}
+
+.benefit-column ul li {
+    color: var(--white);
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.benefit-column ul li:before {
+    content: "→";
+    color: var(--secondary-lighter);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* About App Section */
+.about-app {
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-image img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    max-width: 100%;
+}
+
+.about-list li {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.list-icon {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-lightest);
+    border-radius: 50%;
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.list-icon i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.about-list li div {
+    flex: 1;
+}
+
+.about-list li strong {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.about-list li p {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+/* Access Section */
+.access {
+    padding: 8rem 0;
+    background-color: var(--secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.access::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+}
+
+.access .container {
+    position: relative;
+    z-index: 2;
+}
+
+.access-form-container {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.access-card {
+    background-color: var(--white);
+    padding: 4rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.access-card h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
+
+.access-card p {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--gray);
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    border: 1px solid var(--gray-lighter);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+}
+
+.recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+/* Screenshots Section */
+.screenshots {
+    padding: 8rem 0;
+    background-color: var(--white);
+}
+
+.screenshots-slider {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.screenshot {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.screenshot:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--gray-lighter);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dot.active {
+    background-color: var(--primary);
+}
+
+/* CTA Section */
+.cta {
+    padding: 8rem 0;
+    background-color: var(--primary-lightest);
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+}
+
+.cta p {
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+    color: var(--gray);
+    font-size: 1.8rem;
+}
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4.8rem;
+    }
+    
+    h2 {
+        font-size: 3.6rem;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        box-shadow: none;
+        gap: 3rem;
+    }
+    
+    .hero-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .hero-content {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .hero-image {
+        flex: 1;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .screenshots-slider {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 4rem;
+    }
+    
+    .hero {
+        padding: 15rem 0 10rem;
+    }
+    
+    .hero h1 {
+        font-size: 5.6rem;
+    }
+}
+</style>

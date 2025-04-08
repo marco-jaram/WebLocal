@@ -1,40 +1,26 @@
+---
+// landing-servicios.astro - Ejemplo de uso del layout
+import Layout from "../../layouts/LayoutLanding.astro";
+import ReservasPrecios from "../../components/secciones/ReservasPrecios.astro";
 
 ---
-import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
 
+<Layout
+    title="Servicios Web | WeblocalMX"
+    description="Desarrollo web, sistemas de reservas y copywrtiting que genera clientes"
+    keywords="terapia psicológica online, sistema reservas psicólogos, diseño web psicoterapeutas, copywriting salud mental, agenda digital terapia, consultas psicología remota, sesiones online psicólogos, web profesional terapeutas, automatización citas psicológicas, redacción persuasiva terapia, presencia digital psicólogos, software gestión pacientes, páginas web psicoterapia, contenido que genera pacientes, calendario consultas online, psicólogos online, sitio web para psicólogos, página web terapia psicológica, diseño web para psicólogos, web profesional psicoterapia, presencia digital psicólogos, portfolio psicólogo online, web responsiva terapia, posicionamiento SEO psicólogos, landing page psicólogos, agenda online terapia psicológica, sistema de citas psicólogos, reserva sesiones terapia online, calendario psicoterapia digital, programación consultas psicología, gestión citas terapeutas, software reservas psicólogos, automatización agenda terapia, recordatorios citas psicológicas, disponibilidad online psicólogos"
+>
+    <Fragment slot="meta">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://weblocalmx.com/">
+        <meta property="og:title" content="Sistema de reservas online por video llamada para psicologos">
+        <meta property="og:description" content="Desarrollo web, sistemas de reservas y copywriting que genera clientes">
+        <meta property="og:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+    </Fragment>
 
----
-
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- para redes -->
-         <!-- Open Graph / Facebook -->
-         <meta property="og:type" content="website">
-         <meta property="og:url" content="https://weblocalmx.com/">
-         <meta property="og:title" content="WebLocalMX">
-         <meta property="og:description" content="Desarrollo web, sistemas de reservas y copy que genera clientes">
-         <meta property="og:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
-         <meta property="og:image:width" content="1200">
-         <meta property="og:image:height" content="630">
-         
-         <!-- Twitter / WhatsApp -->
-         <meta property="twitter:card" content="summary_large_image">
-         <meta property="twitter:url" content="https://weblocalmx.com/">
-         <meta property="twitter:title" content="WebLocalMX">
-         <meta property="twitter:description" content="Desarrollo web, sistemas de reservas y copy que genera clientes">
-         <meta property="twitter:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
-     <!-- fin para resde -->
-    <title>Sistema de Reservas para Terapeutas - Weblocalmx</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-  
-</head>
-
-<body>
+    <!-- Aquí va todo el contenido de tu landing page existente -->
     <header>
         <div class="container">
             <div class="header-inner">
@@ -305,63 +291,7 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <>
-                    <div class="footer-logo">Weblocalmx</div>
-                    <p class="footer-description">Especialistas en sistemas digitales para profesionales independientes
-                        que quieren optimizar su tiempo y mejorar su presencia online.</p>
-                   
-                        <div class="footer-social">
-                            <a href="https://www.youtube.com/@WeblocalMX"><span>YT</span></a>
-                          
-                            <a href="https://www.facebook.com/weblocalmx/"><span>FB</span></a>
-                        </div>
-                    
-                </div>
-
-                <div>
-                    <h3 class="footer-title">Enlaces</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Características</a></li>
-                        <li><a href="#">Precios</a></li>
-                        <li><a href="#">Testimonios</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer-title">Servicios</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Sistema de Reservas</a></li>
-                        <li><a href="#">Desarrollo Web</a></li>
-                        <li><a href="#">Consultoría Digital</a></li>
-                        <li><a href="#">Soporte Técnico</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="footer-title">Contacto</h3>
-                    
-                    <div class="footer-contact">
-                        <div class="footer-contact-icon">📍</div>
-                        <div class="footer-contact-text">Tijuana, B.C., México</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2025 Weblocalmx. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-</body>
-
-</html>
-
-
+</Layout>
 
 <style>
      
@@ -1182,4 +1112,4 @@ import ReservasPrecios from "../components/secciones/ReservasPrecios.astro";
     .bene{
         padding-top: 20px;
     }
-</style>
+</style> 
