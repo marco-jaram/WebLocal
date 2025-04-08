@@ -1,4 +1,9 @@
 ---
+import GoogleAnalytics from '../components/analytics-scripts/GoogleAnalytics.astro';
+import PixelFaceBook from '../components/analytics-scripts/PixelFaceBook.astro';
+import TManager from '../components/analytics-scripts/TManager.astro';
+import TManagerBody from '../components/analytics-scripts/TManagerBody.astro';
+
 // Layout.astro - Layout limpio para landing pages
 interface Props {
     title: string;
@@ -17,6 +22,12 @@ const {
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+<GoogleAnalytics />
+<PixelFaceBook />
+<TManager />
+
+
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{title}</title>
         
@@ -36,6 +47,7 @@ const {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
+        <TManagerBody />
         <!-- Contenido principal -->
         <slot />
         

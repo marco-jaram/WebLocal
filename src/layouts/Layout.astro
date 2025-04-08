@@ -2,7 +2,10 @@
 import Menu from "../components/Menu.astro";
 import Footer from "../components/Footer.astro";
 import Elevador from "../components/Elevador.astro";
-import GoogleAnalytics from "../components/GoogleAnalytics.astro";
+import GoogleAnalytics from "../components/analytics-scripts/GoogleAnalytics.astro";
+import PixelFaceBook from "../components/analytics-scripts/PixelFaceBook.astro";
+import TManager from "../components/analytics-scripts/TManager.astro";
+import TManagerBody from "../components/analytics-scripts/TManagerBody.astro";
 
 interface Props {
     title: string;
@@ -15,36 +18,12 @@ const { title, description, keywords } = Astro.props;
 <!doctype html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-    <GoogleAnalytics />   
+        <meta charset="UTF-8" />
+        <GoogleAnalytics />
 
-<!-- Meta Pixel Code -->
-<script is:inline>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '508126970345684');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=508126970345684&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
+        <PixelFaceBook />
 
-
-        <!-- Google Tag Manager -->
-<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MNNNGFX4');</script>
-    <!-- End Google Tag Manager -->
-
+        <TManager />
 
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
@@ -96,45 +75,42 @@ const { title, description, keywords } = Astro.props;
         <link rel="canonical" href="https://www.weblocalmx.com" />
         <script type="application/ld+json">
             {
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",  // Más adecuado para servicios en línea
-              "name": "Weblocal MX",
-              "description": "Desarrollo web, sistemas de reservas y copywriting que genera clientes. Impulsa tu negocio en México.",
-              "url": "https://www.weblocalmx.com",
-              "telephone": "+52-664-311-1577",
-              "image": "https://weblocalmx.com/img/weblocal-redes.webp",
-              "areaServed": "MX",  // Indicas que sirves a todo México
-              "availableChannel": {
-                "@type": "ServiceChannel",
-                "serviceUrl": "https://www.weblocalmx.com/contacto"  // URL de contacto
-              },
-              "makesOffer": [
-                {
-                  "@type": "Offer",
-                  "name": "Desarrollo Web",
-                  "description": "Servicio de desarrollo web a medida para negocios en México."
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService", // Más adecuado para servicios en línea
+                "name": "Weblocal MX",
+                "description": "Desarrollo web, sistemas de reservas y copywriting que genera clientes. Impulsa tu negocio en México.",
+                "url": "https://www.weblocalmx.com",
+                "telephone": "+52-664-311-1577",
+                "image": "https://weblocalmx.com/img/weblocal-redes.webp",
+                "areaServed": "MX", // Indicas que sirves a todo México
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "serviceUrl": "https://www.weblocalmx.com/contacto" // URL de contacto
                 },
-                {
-                  "@type": "Offer",
-                  "name": "Sistemas de reservas",
-                  "description": "Desarrollo de sistemas de reservas personalizados para empresas."
-                },
-                {
-                  "@type": "Offer",
-                  "name": "Copywriting",
-                  "description": "Creamos textos comerciales poderosos y efectivos para aumentar ventas."
-                }
-              ]
+                "makesOffer": [
+                    {
+                        "@type": "Offer",
+                        "name": "Desarrollo Web",
+                        "description": "Servicio de desarrollo web a medida para negocios en México."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Sistemas de reservas",
+                        "description": "Desarrollo de sistemas de reservas personalizados para empresas."
+                    },
+                    {
+                        "@type": "Offer",
+                        "name": "Copywriting",
+                        "description": "Creamos textos comerciales poderosos y efectivos para aumentar ventas."
+                    }
+                ]
             }
-            </script>
+        </script>
 
         <!-- SEO FIN -->
     </head>
     <body>
-        <!-- Google Tag Manager (noscript) -->
-<noscript ><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNNNGFX4"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+        <TManagerBody />
         <Menu />
 
         <slot />
@@ -142,7 +118,6 @@ const { title, description, keywords } = Astro.props;
         <Footer />
         <Elevador />
 
-        
         <script src="../scripts/footer-anio.js"></script>
         <script src="../scripts/elevador.js"></script>
     </body>
@@ -163,7 +138,6 @@ const { title, description, keywords } = Astro.props;
 
     body {
         background-color: white !important;
-       
     }
 
     .mt-s {
@@ -325,9 +299,7 @@ const { title, description, keywords } = Astro.props;
             column-gap: 2rem;
         }
     }
-    h1{
-        
-    color: #047857; 
-
+    h1 {
+        color: #047857;
     }
 </style>
