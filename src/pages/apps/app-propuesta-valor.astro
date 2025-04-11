@@ -8,1061 +8,1492 @@ import Layout from "../../layouts/LayoutLanding.astro";
     description="aplicacion de propuesta de valor"
     keywords="aplicacion de propuesta de valor"
 >
-   
-
     <!-- Aquí va todo el contenido de tu landing page existente -->
     <div class="mihtml">
-    <!-- Barra de navegación mejorada -->
-    <div class="barra">
-        <div class="contenedor barra-contenido">
-            <div class="logo"><i class="fas fa-chart-line"></i> Weblocalmx</div>
-            <div class="acciones-barra">
-                <button id="cerrar-sesion" class="cerrar-sesion" style="display: none;">
-                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Login Section Mejorado -->
-    <section id="login-section" class="login-container contenedor">
-        <div class="login-card">
-            <div class="login-header">
-                <i class="fas fa-lock login-icon"></i>
-                <h2>¡Bienvenido/a !</h2>
-            </div>
-            <div class="login-body">
-                <p>Ingresa tu contraseña para acceder a la herramienta de propuestas de valor.</p>
-                <div class="input-group">
-                    <label for="password">Contraseña</label>
-                    <div class="password-input-wrapper">
-                        <input type="password" id="password" placeholder="Ingresa la contraseña">
-                        <button id="toggle-password" class="toggle-password" type="button">
-                            <i class="fas fa-eye"></i>
-                        </button>
-                    </div>
-                    <button id="login-button" class="btn-primary btn-login">
-                        <i class="fas fa-arrow-right"></i> Iniciar Sesión
+        <!-- Barra de navegación mejorada -->
+        <div class="barra">
+            <div class="contenedor barra-contenido">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i> Weblocalmx
+                </div>
+                <div class="acciones-barra">
+                    <button
+                        id="cerrar-sesion"
+                        class="cerrar-sesion"
+                        style="display: none;"
+                    >
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
                     </button>
                 </div>
-                <div id="login-error" class="error-message"></div>
             </div>
         </div>
-    </section>
-    
-    <!-- Main App (hidden until login) -->
-    <main id="app-content" class="app-container contenedor" style="display: none;">
-        <header class="app-header">
-            <div class="app-header-content">
-                <h1>Genera tu Propuesta de Valor</h1>
-                <p class="app-subtitle">La propuesta de valor es el componente central del lienzo "canvas" que comunica el valor único de tu producto o servicio.</p>
-            </div>
-        </header>
-        
-        <div class="app-instructions">
-            <div class="instruction-card">
-                <div class="instruction-header">
-                    <i class="fas fa-info-circle"></i>
-                    <h3>Cómo utilizar esta herramienta</h3>
+
+        <!-- Login Section Mejorado -->
+        <section id="login-section" class="login-container contenedor">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fas fa-lock login-icon"></i>
+                    <h2>¡Bienvenido/a !</h2>
                 </div>
-                <div class="instruction-body">
-                    <ol class="steps-list">
-                        <li><span class="step-number">1</span> <span class="step-text">Completa el cuestionario con información de tu negocio</span></li>
-                        <li><span class="step-number">2</span> <span class="step-text">Si ya tienes un archivo con tus respuestas, cárgalo con "Cargar JSON"</span></li>
-                        <li><span class="step-number">3</span> <span class="step-text">Haz clic en "Generar propuestas" para ver los resultados</span></li>
-                        <li><span class="step-number">4</span> <span class="step-text">Guarda tus resultados con el botón "Guardar como JSON"</span></li>
-                    </ol>
-                    <div class="tip-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <p>Para ver el ejemplo sólo haz clic en "Generar propuestas" (en la parte de abajo) sin completar ningún campo.</p>
-                    </div>
-                    <div class="alert-box">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <p>Dale su tiempo a cada pregunta. Este cuestionario te ayudará a replantear aspectos importantes de tu negocio.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <form id="formulario" class="form-propuesta">
-            <!-- Sección 1: Nombre del servicio -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">1</span>
-                    <h3>Nombre del producto o servicio que quieres vender</h3>
-                </div>
-                <div class="section-body">
-                    <p class="section-description">El nombre es crucial para transmitir la esencia de tu oferta y atraer a tu público objetivo.</p>
-                    
-                    <div class="example-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <p><strong>Ejemplo:</strong> Servicio de Fotografías de Boda → "Bodas De Película" o Curso de nutrición → "Dietas de éxito"</p>
-                        </div>
-                    </div>
-    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-nombre-servicio1">
-                                <i class="fas fa-tag"></i> Nombre 1
-                            </label>
-                            <input type="text" id="respuesta-nombre-servicio1" placeholder="Bodas De Película">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-nombre-servicio2">
-                                <i class="fas fa-tag"></i> Nombre 2
-                            </label>
-                            <input type="text" id="respuesta-nombre-servicio2" placeholder="Memorias Eternas">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-nombre-servicio3">
-                                <i class="fas fa-tag"></i> Nombre 3
-                            </label>
-                            <input type="text" id="respuesta-nombre-servicio3" placeholder="Fotografía Emocional para Bodas">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sección 2: Cliente potencial -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">2</span>
-                    <h3>¿Quién es tu cliente potencial?</h3>
-                </div>
-                <div class="section-body">
-                    <p class="section-description">Define con precisión a quién va dirigido tu producto o servicio. Puede ser un perfil específico o un sector.</p>
-                    
-                    <div class="example-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <p><strong>Ejemplo:</strong> Para fotografía de bodas: "Personas que están planeando una boda" o "Parejas comprometidas"</p>
-                        </div>
-                    </div>
-    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-cliente-potencial1">
-                                <i class="fas fa-user"></i> Cliente 1
-                            </label>
-                            <input type="text" id="respuesta-cliente-potencial1" placeholder="Personas que están planeando una boda">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-cliente-potencial2">
-                                <i class="fas fa-user"></i> Cliente 2
-                            </label>
-                            <input type="text" id="respuesta-cliente-potencial2" placeholder="Parejas comprometidas">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-cliente-potencial3">
-                                <i class="fas fa-user"></i> Cliente 3
-                            </label>
-                            <input type="text" id="respuesta-cliente-potencial3" placeholder="Personas que se van a casar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sección 3: Puntos de dolor -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">3</span>
-                    <h3>Puntos de dolor que resuelve tu servicio o producto</h3>
-                </div>
-                <div class="section-body">
-                    <p class="section-description">Identifica los problemas específicos que tu cliente quiere solucionar. Usa su propio lenguaje.</p>
-                    
-                    <div class="example-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <p><strong>Ejemplo:</strong> Para fotografías de boda: "No tener un reportaje fotográfico de calidad que capture todos los momentos especiales"</p>
-                        </div>
-                    </div>
-    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-puntos-dolor1">
-                                <i class="fas fa-heartbeat"></i> Dolor 1
-                            </label>
-                            <input type="text" id="respuesta-puntos-dolor1" placeholder="No tener reportaje fotográfico de calidad después de la boda">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-puntos-dolor2">
-                                <i class="fas fa-heartbeat"></i> Dolor 2
-                            </label>
-                            <input type="text" id="respuesta-puntos-dolor2" placeholder="El reportaje no muestra todos los momentos importantes de la boda">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-puntos-dolor3">
-                                <i class="fas fa-heartbeat"></i> Dolor 3
-                            </label>
-                            <input type="text" id="respuesta-puntos-dolor3" placeholder="Fotógrafo poco profesional que incomode a los invitados">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sección 4: Beneficios -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">4</span>
-                    <h3>Beneficios que tu producto o servicio aporta</h3>
-                </div>
-                <div class="section-body">
-                    <p class="section-description">Utiliza la fórmula "verbo + algo" (Aumentar tranquilidad, reducir estrés). No confundas características con beneficios.</p>
-                    
-                    <div class="example-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <p><strong>Ejemplo:</strong> Para fotografías de boda: "Aumentar la tranquilidad en el día de tu boda" o "Conservar los recuerdos para siempre"</p>
-                        </div>
-                    </div>
-    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-beneficios1">
-                                <i class="fas fa-star"></i> Beneficio 1
-                            </label>
-                            <input type="text" id="respuesta-beneficios1" placeholder="Estar más tranquilo el día de tu boda">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-beneficios2">
-                                <i class="fas fa-star"></i> Beneficio 2
-                            </label>
-                            <input type="text" id="respuesta-beneficios2" placeholder="Conservar recuerdos de alta calidad para toda la vida">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-beneficios3">
-                                <i class="fas fa-star"></i> Beneficio 3
-                            </label>
-                            <input type="text" id="respuesta-beneficios3" placeholder="Compartir momentos especiales con los que no pudieron asistir">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Sección 5: Diferenciación -->
-            <div class="form-section">
-                <div class="section-header">
-                    <span class="section-number">5</span>
-                    <h3>¿Qué te hace diferente respecto a la competencia?</h3>
-                </div>
-                <div class="section-body">
-                    <p class="section-description">Identifica las características diferenciadoras de tu servicio. Evita competir únicamente por precio.</p>
-                    
-                    <div class="example-box">
-                        <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <p><strong>Ejemplo:</strong> Para un servicio de diseño web: "Implementación de copywriting" o "Atención personalizada 24/7"</p>
-                        </div>
-                    </div>
-    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-diferencial1">
-                                <i class="fas fa-check-circle"></i> Diferencia 1
-                            </label>
-                            <input type="text" id="respuesta-diferencial1" placeholder="Fotografía documental sin poses forzadas">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-diferencial2">
-                                <i class="fas fa-check-circle"></i> Diferencia 2
-                            </label>
-                            <input type="text" id="respuesta-diferencial2" placeholder="Álbum digital interactivo incluido">
-                        </div>
-                    </div>
-                    
-                    <div class="input-row">
-                        <div class="input-group">
-                            <label for="respuesta-diferencial3">
-                                <i class="fas fa-check-circle"></i> Diferencia 3
-                            </label>
-                            <input type="text" id="respuesta-diferencial3" placeholder="Entrega de primeras imágenes en 24 horas">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="form-actions">
-                <button id="generar-propuestas" type="submit" class="btn-primary">
-                    <i class="fas fa-magic"></i> Generar Propuestas
-                </button>
-                <div id="mensaje-carga" class="mensaje-carga">
-                    <div class="spinner"></div>
-                    <span class="mensaje-carga-texto"></span>
-                </div>
-            </div>
-        </form>
-    
-        <!-- Resultados -->
-        <section id="resultado-section" class="resultado-section">
-            <div class="resultado-header">
-                <i class="fas fa-clipboard-check"></i>
-                <h2>Tu Propuesta de Valor</h2>
-                <p class="resultado-subtitle">Estas propuestas te ayudarán a comunicar el valor único de tu producto o servicio</p>
-            </div>
-            
-          
-            <!-- Sección de resultados modificada para mostrar propuestas en filas -->
-            <div class="contenido-imprimir">
-                <!-- Fórmula A -->
-                <div class="formula-seccion">
-                    <div class="formula-header">
-                        <span class="formula-badge">A</span>
-                        <h3>Propuesta basada en problemas y beneficios</h3>
-                    </div>
-                    <p class="formula-template">
-                        Ayudo a <span class="destacado">(POTENCIAL CLIENTE)</span> a resolver <span class="destacado">(PUNTO DE DOLOR)</span> a través de <span class="destacado">(SERVICIO/PRODUCTO)</span> para conseguir <span class="destacado">(BENEFICIO)</span>.
+                <div class="login-body">
+                    <p>
+                        Ingresa tu contraseña para acceder a la herramienta de
+                        propuestas de valor.
                     </p>
-            
-                    <div class="resultados-wrapper">
-                        <!-- Cada resultado ahora ocupa una fila completa -->
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">1</span>
-                                <h4>Variante 1</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    Ayudo a <span id="cliente-potencial1" class="resultado-valor">_________</span> a resolver <span id="problema-dolor1" class="resultado-valor">_________</span> a través de <span id="servicio-producto1" class="resultado-valor">_________</span> para conseguir <span id="beneficio1" class="resultado-valor">_________</span>.
-                                </p>
-                            </div>
+                    <div class="input-group">
+                        <label for="password">Contraseña</label>
+                        <div class="password-input-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Ingresa la contraseña"
+                            />
+                            <button
+                                id="toggle-password"
+                                class="toggle-password"
+                                type="button"
+                            >
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
-                        
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">2</span>
-                                <h4>Variante 2</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    Ayudo a <span id="cliente-potencial2" class="resultado-valor">_________</span> a resolver <span id="problema-dolor2" class="resultado-valor">_________</span> a través de <span id="servicio-producto2" class="resultado-valor">_________</span> para conseguir <span id="beneficio2" class="resultado-valor">_________</span>.
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">3</span>
-                                <h4>Variante 3</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    Ayudo a <span id="cliente-potencial3" class="resultado-valor">_________</span> a resolver <span id="problema-dolor3" class="resultado-valor">_________</span> a través de <span id="servicio-producto3" class="resultado-valor">_________</span> para conseguir <span id="beneficio3" class="resultado-valor">_________</span>.
-                                </p>
-                            </div>
-                        </div>
+                        <button id="login-button" class="btn-primary btn-login">
+                            <i class="fas fa-arrow-right"></i> Iniciar Sesión
+                        </button>
                     </div>
+                    <div id="login-error" class="error-message"></div>
                 </div>
-                
-                <!-- Fórmula B -->
-                <div class="formula-seccion">
-                    <div class="formula-header">
-                        <span class="formula-badge">B</span>
-                        <h3>Propuesta a manera de título</h3>
-                    </div>
-                    <p class="formula-template">
-                        <span class="destacado">(Producto/servicio)</span> para <span class="destacado">(nicho/cliente potencial)</span> con <span class="destacado">(valor diferencial)</span>
-                    </p>
-                    
-                    <div class="resultados-wrapper">
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">1</span>
-                                <h4>Variante 1</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    <span id="servicio-producto4" class="resultado-valor">_________</span> para <span id="cliente-potencial4" class="resultado-valor">_________</span> con <span id="valor-diferencial1" class="resultado-valor">_________</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">2</span>
-                                <h4>Variante 2</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    <span id="servicio-producto5" class="resultado-valor">_________</span> para <span id="cliente-potencial5" class="resultado-valor">_________</span> con <span id="valor-diferencial2" class="resultado-valor">_________</span>
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <div class="resultado-card">
-                            <div class="resultado-card-header">
-                                <span class="variante-badge">3</span>
-                                <h4>Variante 3</h4>
-                            </div>
-                            <div class="resultado-card-body">
-                                <p class="resultado-formula">
-                                    <span id="servicio-producto6" class="resultado-valor">_________</span> para <span id="cliente-potencial6" class="resultado-valor">_________</span> con <span id="valor-diferencial3" class="resultado-valor">_________</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            ```
-            
-            <div class="resultado-actions">
-                <button id="descargar-json" class="btn-primary">
-                    <i class="fas fa-download"></i> Descargar JSON
-                </button>
-                <button id="editar-respuestas" class="btn-secondary">
-                    <i class="fas fa-edit"></i> Editar Respuestas
-                </button>
-                <button id="imprimir-resultados" class="btn-secondary">
-                    <i class="fas fa-print"></i> Imprimir Resultados
-                </button>
             </div>
         </section>
-        
-        <div class="opciones-flotantes">
-            <div class="opciones-botones">
-                <button id="guardar-json" class="btn-secondary">
-                    <i class="fas fa-save"></i> Guardar como JSON
-                </button>
-                <label for="cargar-json" class="btn-secondary upload-label">
-                    <i class="fas fa-upload"></i> Cargar JSON
-                    <input type="file" id="cargar-json" accept=".json">
-                </label>
-            </div>
-        </div>
-        
-        <!-- Modal de éxito -->
-        <div id="modal-exito" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="fas fa-check-circle modal-icon success"></i>
-                    <h3 id="modal-titulo">Operación exitosa</h3>
-                    <button class="cerrar-modal"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="modal-body">
-                    <p id="modal-mensaje">La acción se ha completado con éxito.</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn-primary cerrar-modal">Aceptar</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal de error -->
-        <div id="modal-error" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <i class="fas fa-exclamation-circle modal-icon error"></i>
-                    <h3>Ha ocurrido un error</h3>
-                    <button class="cerrar-modal"><i class="fas fa-times"></i></button>
-                </div>
-                <div class="modal-body">
-                    <p id="modal-error-mensaje">Ha ocurrido un error al procesar tu solicitud.</p>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn-primary cerrar-modal">Entendido</button>
-                </div>
-            </div>
-        </div>
-    </main>
-    
-</div>
 
-   
-    
+        <!-- Main App (hidden until login) -->
+        <main
+            id="app-content"
+            class="app-container contenedor"
+            style="display: none;"
+        >
+            <header class="app-header">
+                <div class="app-header-content">
+                    <h1>Genera tu Propuesta de Valor</h1>
+                    <p class="app-subtitle">
+                        La propuesta de valor es el componente central del
+                        lienzo "canvas" que comunica el valor único de tu
+                        producto o servicio.
+                    </p>
+                </div>
+            </header>
 
+            <div class="app-instructions">
+                <div class="instruction-card">
+                    <div class="instruction-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Cómo utilizar esta herramienta</h3>
+                    </div>
+                    <div class="instruction-body">
+                        <ol class="steps-list">
+                            <li>
+                                <span class="step-number">1</span>
+                                <span class="step-text"
+                                    >Completa el cuestionario con información de
+                                    tu negocio</span>
+                            </li>
+                            <li>
+                                <span class="step-number">2</span>
+                                <span class="step-text"
+                                    >Si ya tienes un archivo con tus respuestas,
+                                    cárgalo con "Cargar JSON"</span>
+                            </li>
+                            <li>
+                                <span class="step-number">3</span>
+                                <span class="step-text"
+                                    >Haz clic en "Generar propuestas" para ver
+                                    los resultados</span>
+                            </li>
+                            <li>
+                                <span class="step-number">4</span>
+                                <span class="step-text"
+                                    >Guarda tus resultados con el botón "Guardar
+                                    como JSON"</span>
+                            </li>
+                        </ol>
+                        <div class="tip-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>
+                                Para ver el ejemplo sólo haz clic en "Generar
+                                propuestas" (en la parte de abajo) sin completar
+                                ningún campo.
+                            </p>
+                        </div>
+                        <div class="alert-box">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>
+                                Dale su tiempo a cada pregunta. Este
+                                cuestionario te ayudará a replantear aspectos
+                                importantes de tu negocio.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="formulario" class="form-propuesta">
+                <!-- Sección 1: Nombre del servicio -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">1</span>
+                        <h3>
+                            Nombre del producto o servicio que quieres vender
+                        </h3>
+                    </div>
+                    <div class="section-body">
+                        <p class="section-description">
+                            El nombre es crucial para transmitir la esencia de
+                            tu oferta y atraer a tu público objetivo.
+                        </p>
+
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <p>
+                                    <strong>Ejemplo:</strong> Servicio de Fotografías
+                                    de Boda → "Bodas De Película" o Curso de nutrición
+                                    → "Dietas de éxito"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-nombre-servicio1">
+                                    <i class="fas fa-tag"></i> Nombre 1
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-nombre-servicio1"
+                                    placeholder="Bodas De Película"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-nombre-servicio2">
+                                    <i class="fas fa-tag"></i> Nombre 2
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-nombre-servicio2"
+                                    placeholder="Memorias Eternas"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-nombre-servicio3">
+                                    <i class="fas fa-tag"></i> Nombre 3
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-nombre-servicio3"
+                                    placeholder="Fotografía Emocional para Bodas"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 2: Cliente potencial -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">2</span>
+                        <h3>¿Quién es tu cliente potencial?</h3>
+                    </div>
+                    <div class="section-body">
+                        <p class="section-description">
+                            Define con precisión a quién va dirigido tu producto
+                            o servicio. Puede ser un perfil específico o un
+                            sector.
+                        </p>
+
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <p>
+                                    <strong>Ejemplo:</strong> Para fotografía de
+                                    bodas: "Personas que están planeando una boda"
+                                    o "Parejas comprometidas"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-cliente-potencial1">
+                                    <i class="fas fa-user"></i> Cliente 1
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-cliente-potencial1"
+                                    placeholder="Personas que están planeando una boda"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-cliente-potencial2">
+                                    <i class="fas fa-user"></i> Cliente 2
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-cliente-potencial2"
+                                    placeholder="Parejas comprometidas"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-cliente-potencial3">
+                                    <i class="fas fa-user"></i> Cliente 3
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-cliente-potencial3"
+                                    placeholder="Personas que se van a casar"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 3: Puntos de dolor -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">3</span>
+                        <h3>
+                            Puntos de dolor que resuelve tu servicio o producto
+                        </h3>
+                    </div>
+                    <div class="section-body">
+                        <p class="section-description">
+                            Identifica los problemas específicos que tu cliente
+                            quiere solucionar. Usa su propio lenguaje.
+                        </p>
+
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <p>
+                                    <strong>Ejemplo:</strong> Para fotografías de
+                                    boda: "No tener un reportaje fotográfico de calidad
+                                    que capture todos los momentos especiales"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-puntos-dolor1">
+                                    <i class="fas fa-heartbeat"></i> Dolor 1
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-puntos-dolor1"
+                                    placeholder="No tener reportaje fotográfico de calidad después de la boda"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-puntos-dolor2">
+                                    <i class="fas fa-heartbeat"></i> Dolor 2
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-puntos-dolor2"
+                                    placeholder="El reportaje no muestra todos los momentos importantes de la boda"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-puntos-dolor3">
+                                    <i class="fas fa-heartbeat"></i> Dolor 3
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-puntos-dolor3"
+                                    placeholder="Fotógrafo poco profesional que incomode a los invitados"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 4: Beneficios -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">4</span>
+                        <h3>Beneficios que tu producto o servicio aporta</h3>
+                    </div>
+                    <div class="section-body">
+                        <p class="section-description">
+                            Utiliza la fórmula "verbo + algo" (Aumentar
+                            tranquilidad, reducir estrés). No confundas
+                            características con beneficios.
+                        </p>
+
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <p>
+                                    <strong>Ejemplo:</strong> Para fotografías de
+                                    boda: "Aumentar la tranquilidad en el día de
+                                    tu boda" o "Conservar los recuerdos para siempre"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-beneficios1">
+                                    <i class="fas fa-star"></i> Beneficio 1
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-beneficios1"
+                                    placeholder="Estar más tranquilo el día de tu boda"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-beneficios2">
+                                    <i class="fas fa-star"></i> Beneficio 2
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-beneficios2"
+                                    placeholder="Conservar recuerdos de alta calidad para toda la vida"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-beneficios3">
+                                    <i class="fas fa-star"></i> Beneficio 3
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-beneficios3"
+                                    placeholder="Compartir momentos especiales con los que no pudieron asistir"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección 5: Diferenciación -->
+                <div class="form-section">
+                    <div class="section-header">
+                        <span class="section-number">5</span>
+                        <h3>
+                            ¿Qué te hace diferente respecto a la competencia?
+                        </h3>
+                    </div>
+                    <div class="section-body">
+                        <p class="section-description">
+                            Identifica las características diferenciadoras de tu
+                            servicio. Evita competir únicamente por precio.
+                        </p>
+
+                        <div class="example-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <p>
+                                    <strong>Ejemplo:</strong> Para un servicio de
+                                    diseño web: "Implementación de copywriting" o
+                                    "Atención personalizada 24/7"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-diferencial1">
+                                    <i class="fas fa-check-circle"></i> Diferencia
+                                    1
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-diferencial1"
+                                    placeholder="Fotografía documental sin poses forzadas"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-diferencial2">
+                                    <i class="fas fa-check-circle"></i> Diferencia
+                                    2
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-diferencial2"
+                                    placeholder="Álbum digital interactivo incluido"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label for="respuesta-diferencial3">
+                                    <i class="fas fa-check-circle"></i> Diferencia
+                                    3
+                                </label>
+                                <input
+                                    type="text"
+                                    id="respuesta-diferencial3"
+                                    placeholder="Entrega de primeras imágenes en 24 horas"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button
+                        id="generar-propuestas"
+                        type="submit"
+                        class="btn-primary"
+                    >
+                        <i class="fas fa-magic"></i> Generar Propuestas
+                    </button>
+                    <div id="mensaje-carga" class="mensaje-carga">
+                        <div class="spinner"></div>
+                        <span class="mensaje-carga-texto"></span>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Resultados -->
+            <section id="resultado-section" class="resultado-section">
+                <div class="resultado-header">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h2>Tu Propuesta de Valor</h2>
+                    <p class="resultado-subtitle">
+                        Estas propuestas te ayudarán a comunicar el valor único
+                        de tu producto o servicio
+                    </p>
+                </div>
+
+                <!-- Sección de resultados modificada para mostrar propuestas en filas -->
+                <div class="contenido-imprimir">
+                    <!-- Fórmula A -->
+                    <div class="formula-seccion">
+                        <div class="formula-header">
+                            <span class="formula-badge">A</span>
+                            <h3>Propuesta basada en problemas y beneficios</h3>
+                        </div>
+                        <p class="formula-template">
+                            Ayudo a <span class="destacado"
+                                >(POTENCIAL CLIENTE)</span
+                            > a resolver <span class="destacado"
+                                >(PUNTO DE DOLOR)</span
+                            > a través de <span class="destacado"
+                                >(SERVICIO/PRODUCTO)</span
+                            > para conseguir <span class="destacado"
+                                >(BENEFICIO)</span
+                            >.
+                        </p>
+
+                        <div class="resultados-wrapper">
+                            <!-- Cada resultado ahora ocupa una fila completa -->
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">1</span>
+                                    <h4>Variante 1</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        Ayudo a <span
+                                            id="cliente-potencial1"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a resolver <span
+                                            id="problema-dolor1"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a través de <span
+                                            id="servicio-producto1"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para conseguir <span
+                                            id="beneficio1"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">2</span>
+                                    <h4>Variante 2</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        Ayudo a <span
+                                            id="cliente-potencial2"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a resolver <span
+                                            id="problema-dolor2"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a través de <span
+                                            id="servicio-producto2"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para conseguir <span
+                                            id="beneficio2"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">3</span>
+                                    <h4>Variante 3</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        Ayudo a <span
+                                            id="cliente-potencial3"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a resolver <span
+                                            id="problema-dolor3"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > a través de <span
+                                            id="servicio-producto3"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para conseguir <span
+                                            id="beneficio3"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fórmula B -->
+                    <div class="formula-seccion">
+                        <div class="formula-header">
+                            <span class="formula-badge">B</span>
+                            <h3>Propuesta a manera de título</h3>
+                        </div>
+                        <p class="formula-template">
+                            <span class="destacado">(Producto/servicio)</span> para
+                            <span class="destacado"
+                                >(nicho/cliente potencial)</span
+                            > con <span class="destacado"
+                                >(valor diferencial)</span
+                            >
+                        </p>
+
+                        <div class="resultados-wrapper">
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">1</span>
+                                    <h4>Variante 1</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        <span
+                                            id="servicio-producto4"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para <span
+                                            id="cliente-potencial4"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > con <span
+                                            id="valor-diferencial1"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">2</span>
+                                    <h4>Variante 2</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        <span
+                                            id="servicio-producto5"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para <span
+                                            id="cliente-potencial5"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > con <span
+                                            id="valor-diferencial2"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="resultado-card">
+                                <div class="resultado-card-header">
+                                    <span class="variante-badge">3</span>
+                                    <h4>Variante 3</h4>
+                                </div>
+                                <div class="resultado-card-body">
+                                    <p class="resultado-formula">
+                                        <span
+                                            id="servicio-producto6"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > para <span
+                                            id="cliente-potencial6"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        > con <span
+                                            id="valor-diferencial3"
+                                            class="resultado-valor"
+                                            >_________</span
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                ```
+
+                <div class="resultado-actions">
+                    <button id="descargar-json" class="btn-primary">
+                        <i class="fas fa-download"></i> Descargar JSON
+                    </button>
+                    <button id="editar-respuestas" class="btn-secondary">
+                        <i class="fas fa-edit"></i> Editar Respuestas
+                    </button>
+                    <button id="imprimir-resultados" class="btn-secondary">
+                        <i class="fas fa-print"></i> Imprimir Resultados
+                    </button>
+                </div>
+            </section>
+
+            <div class="opciones-flotantes">
+                <div class="opciones-botones">
+                    <button id="guardar-json" class="btn-secondary">
+                        <i class="fas fa-save"></i> Guardar como JSON
+                    </button>
+                    <label for="cargar-json" class="btn-secondary upload-label">
+                        <i class="fas fa-upload"></i> Cargar JSON
+                        <input type="file" id="cargar-json" accept=".json" />
+                    </label>
+                </div>
+            </div>
+
+            <!-- Modal de éxito -->
+            <div id="modal-exito" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <i class="fas fa-check-circle modal-icon success"></i>
+                        <h3 id="modal-titulo">Operación exitosa</h3>
+                        <button class="cerrar-modal"
+                            ><i class="fas fa-times"></i></button
+                        >
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-mensaje">
+                            La acción se ha completado con éxito.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-primary cerrar-modal">Aceptar</button
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de error -->
+            <div id="modal-error" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <i class="fas fa-exclamation-circle modal-icon error"
+                        ></i>
+                        <h3>Ha ocurrido un error</h3>
+                        <button class="cerrar-modal"
+                            ><i class="fas fa-times"></i></button
+                        >
+                    </div>
+                    <div class="modal-body">
+                        <p id="modal-error-mensaje">
+                            Ha ocurrido un error al procesar tu solicitud.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-primary cerrar-modal"
+                            >Entendido</button
+                        >
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 </Layout>
 
-
 <script is:inline>
-  
-// ========== CONFIGURACIÓN Y CONSTANTES ==========
-const CONFIG = {
-    PASSWORD_CORRECTO: 'propuesta2025@',
-    AUTO_SAVE_INTERVAL: 30000, // 30 segundos
-};
+    // ========== CONFIGURACIÓN Y CONSTANTES ==========
+    const CONFIG = {
+        PASSWORD_CORRECTO: "propuesta2025@",
+        AUTO_SAVE_INTERVAL: 30000, // 30 segundos
+    };
 
-// ========== SELECCIÓN DE ELEMENTOS DOM ==========
-const DOM = {
-    // Elementos de login
-    loginSection: document.getElementById('login-section'),
-    appContent: document.getElementById('app-content'),
-    loginButton: document.getElementById('login-button'),
-    passwordInput: document.getElementById('password'),
-    togglePassword: document.getElementById('toggle-password'),
-    loginError: document.getElementById('login-error'),
-    cerrarSesionBtn: document.getElementById('cerrar-sesion'),
-    
-    // Elementos del formulario
-    formulario: document.getElementById('formulario'),
-    resultadoSection: document.getElementById('resultado-section'),
-    mensajeCarga: document.getElementById('mensaje-carga'),
-    mensajeCargaTexto: document.querySelector('.mensaje-carga-texto'),
-    
-    // Botones y acciones
-    generarPropuestasBtn: document.getElementById('generar-propuestas'),
-    guardarJsonBtn: document.getElementById('guardar-json'),
-    cargarJsonInput: document.getElementById('cargar-json'),
-    descargarJsonBtn: document.getElementById('descargar-json'),
-    editarRespuestasBtn: document.getElementById('editar-respuestas'),
-    imprimirResultadosBtn: document.getElementById('imprimir-resultados'),
-    
-    // Modales
-    modalExito: document.getElementById('modal-exito'),
-    modalError: document.getElementById('modal-error'),
-    modalTitulo: document.getElementById('modal-titulo'),
-    modalMensaje: document.getElementById('modal-mensaje'),
-    modalErrorMensaje: document.getElementById('modal-error-mensaje'),
-    cerrarModalBtns: document.querySelectorAll('.cerrar-modal'),
-};
+    // ========== SELECCIÓN DE ELEMENTOS DOM ==========
+    const DOM = {
+        // Elementos de login
+        loginSection: document.getElementById("login-section"),
+        appContent: document.getElementById("app-content"),
+        loginButton: document.getElementById("login-button"),
+        passwordInput: document.getElementById("password"),
+        togglePassword: document.getElementById("toggle-password"),
+        loginError: document.getElementById("login-error"),
+        cerrarSesionBtn: document.getElementById("cerrar-sesion"),
 
-// Campos del formulario agrupados por secciones
-const CAMPOS_FORMULARIO = {
-    nombres: [
-        'respuesta-nombre-servicio1', 
-        'respuesta-nombre-servicio2', 
-        'respuesta-nombre-servicio3'
-    ],
-    clientes: [
-        'respuesta-cliente-potencial1', 
-        'respuesta-cliente-potencial2', 
-        'respuesta-cliente-potencial3'
-    ],
-    dolores: [
-        'respuesta-puntos-dolor1', 
-        'respuesta-puntos-dolor2', 
-        'respuesta-puntos-dolor3'
-    ],
-    beneficios: [
-        'respuesta-beneficios1', 
-        'respuesta-beneficios2', 
-        'respuesta-beneficios3'
-    ],
-    diferenciales: [
-        'respuesta-diferencial1', 
-        'respuesta-diferencial2', 
-        'respuesta-diferencial3'
-    ]
-};
+        // Elementos del formulario
+        formulario: document.getElementById("formulario"),
+        resultadoSection: document.getElementById("resultado-section"),
+        mensajeCarga: document.getElementById("mensaje-carga"),
+        mensajeCargaTexto: document.querySelector(".mensaje-carga-texto"),
 
-// Todos los campos en un solo array
-const TODOS_CAMPOS = [
-    ...CAMPOS_FORMULARIO.nombres,
-    ...CAMPOS_FORMULARIO.clientes,
-    ...CAMPOS_FORMULARIO.dolores,
-    ...CAMPOS_FORMULARIO.beneficios,
-    ...CAMPOS_FORMULARIO.diferenciales
-];
+        // Botones y acciones
+        generarPropuestasBtn: document.getElementById("generar-propuestas"),
+        guardarJsonBtn: document.getElementById("guardar-json"),
+        cargarJsonInput: document.getElementById("cargar-json"),
+        descargarJsonBtn: document.getElementById("descargar-json"),
+        editarRespuestasBtn: document.getElementById("editar-respuestas"),
+        imprimirResultadosBtn: document.getElementById("imprimir-resultados"),
 
-// Datos de ejemplo predefinidos
-const EJEMPLO_DATOS = {
-    'respuesta-nombre-servicio1': 'Bodas De Película',
-    'respuesta-nombre-servicio2': 'Memorias Eternas',
-    'respuesta-nombre-servicio3': 'Fotografía Emocional para Bodas',
-    'respuesta-cliente-potencial1': 'Personas que están planeando una boda',
-    'respuesta-cliente-potencial2': 'Parejas comprometidas',
-    'respuesta-cliente-potencial3': 'Personas que se van a casar',
-    'respuesta-puntos-dolor1': 'No tener reportaje fotográfico de calidad después de la boda',
-    'respuesta-puntos-dolor2': 'El reportaje no muestra todos los momentos importantes de la boda',
-    'respuesta-puntos-dolor3': 'Fotógrafo poco profesional que incomode a los invitados',
-    'respuesta-beneficios1': 'Estar más tranquilo el día de tu boda',
-    'respuesta-beneficios2': 'Conservar recuerdos de alta calidad para toda la vida',
-    'respuesta-beneficios3': 'Compartir momentos especiales con los que no pudieron asistir',
-    'respuesta-diferencial1': 'Fotografía documental sin poses forzadas',
-    'respuesta-diferencial2': 'Álbum digital interactivo incluido',
-    'respuesta-diferencial3': 'Entrega de primeras imágenes en 24 horas'
-};
+        // Modales
+        modalExito: document.getElementById("modal-exito"),
+        modalError: document.getElementById("modal-error"),
+        modalTitulo: document.getElementById("modal-titulo"),
+        modalMensaje: document.getElementById("modal-mensaje"),
+        modalErrorMensaje: document.getElementById("modal-error-mensaje"),
+        cerrarModalBtns: document.querySelectorAll(".cerrar-modal"),
+    };
 
-// ========== CLASES DE APLICACIÓN ==========
+    // Campos del formulario agrupados por secciones
+    const CAMPOS_FORMULARIO = {
+        nombres: [
+            "respuesta-nombre-servicio1",
+            "respuesta-nombre-servicio2",
+            "respuesta-nombre-servicio3",
+        ],
+        clientes: [
+            "respuesta-cliente-potencial1",
+            "respuesta-cliente-potencial2",
+            "respuesta-cliente-potencial3",
+        ],
+        dolores: [
+            "respuesta-puntos-dolor1",
+            "respuesta-puntos-dolor2",
+            "respuesta-puntos-dolor3",
+        ],
+        beneficios: [
+            "respuesta-beneficios1",
+            "respuesta-beneficios2",
+            "respuesta-beneficios3",
+        ],
+        diferenciales: [
+            "respuesta-diferencial1",
+            "respuesta-diferencial2",
+            "respuesta-diferencial3",
+        ],
+    };
 
-/**
- * Clase de autenticación que maneja el login y cierre de sesión
- */
-class Auth {
-    constructor() {
-        this._sesionActiva = localStorage.getItem('sesionActiva') === 'true';
-        this._initEventListeners();
-        this._checkActiveSession();
-    }
-    
+    // Todos los campos en un solo array
+    const TODOS_CAMPOS = [
+        ...CAMPOS_FORMULARIO.nombres,
+        ...CAMPOS_FORMULARIO.clientes,
+        ...CAMPOS_FORMULARIO.dolores,
+        ...CAMPOS_FORMULARIO.beneficios,
+        ...CAMPOS_FORMULARIO.diferenciales,
+    ];
+
+    // Datos de ejemplo predefinidos
+    const EJEMPLO_DATOS = {
+        "respuesta-nombre-servicio1": "Bodas De Película",
+        "respuesta-nombre-servicio2": "Memorias Eternas",
+        "respuesta-nombre-servicio3": "Fotografía Emocional para Bodas",
+        "respuesta-cliente-potencial1": "Personas que están planeando una boda",
+        "respuesta-cliente-potencial2": "Parejas comprometidas",
+        "respuesta-cliente-potencial3": "Personas que se van a casar",
+        "respuesta-puntos-dolor1":
+            "No tener reportaje fotográfico de calidad después de la boda",
+        "respuesta-puntos-dolor2":
+            "El reportaje no muestra todos los momentos importantes de la boda",
+        "respuesta-puntos-dolor3":
+            "Fotógrafo poco profesional que incomode a los invitados",
+        "respuesta-beneficios1": "Estar más tranquilo el día de tu boda",
+        "respuesta-beneficios2":
+            "Conservar recuerdos de alta calidad para toda la vida",
+        "respuesta-beneficios3":
+            "Compartir momentos especiales con los que no pudieron asistir",
+        "respuesta-diferencial1": "Fotografía documental sin poses forzadas",
+        "respuesta-diferencial2": "Álbum digital interactivo incluido",
+        "respuesta-diferencial3": "Entrega de primeras imágenes en 24 horas",
+    };
+
+    // ========== CLASES DE APLICACIÓN ==========
+
     /**
-     * Inicializa los event listeners relacionados con la autenticación
+     * Clase de autenticación que maneja el login y cierre de sesión
      */
-    _initEventListeners() {
-        // Botón de login
-        if (DOM.loginButton) {
-            DOM.loginButton.addEventListener('click', () => this._handleLogin());
+    class Auth {
+        constructor() {
+            this._sesionActiva =
+                localStorage.getItem("sesionActiva") === "true";
+            this._initEventListeners();
+            this._checkActiveSession();
         }
-        
-        // Enter en el campo de contraseña
-        if (DOM.passwordInput) {
-            DOM.passwordInput.addEventListener('keyup', (event) => {
-                if (event.key === 'Enter') {
-                    this._handleLogin();
+
+        /**
+         * Inicializa los event listeners relacionados con la autenticación
+         */
+        _initEventListeners() {
+            // Botón de login
+            if (DOM.loginButton) {
+                DOM.loginButton.addEventListener("click", () =>
+                    this._handleLogin(),
+                );
+            }
+
+            // Enter en el campo de contraseña
+            if (DOM.passwordInput) {
+                DOM.passwordInput.addEventListener("keyup", (event) => {
+                    if (event.key === "Enter") {
+                        this._handleLogin();
+                    }
+                });
+            }
+
+            // Toggle para mostrar/ocultar contraseña
+            if (DOM.togglePassword) {
+                DOM.togglePassword.addEventListener("click", () =>
+                    this._togglePasswordVisibility(),
+                );
+            }
+
+            // Botón de cerrar sesión
+            if (DOM.cerrarSesionBtn) {
+                DOM.cerrarSesionBtn.addEventListener("click", () =>
+                    this._handleLogout(),
+                );
+            }
+        }
+
+        /**
+         * Maneja el intento de inicio de sesión
+         */
+        _handleLogin() {
+            const password = DOM.passwordInput.value;
+
+            if (password === CONFIG.PASSWORD_CORRECTO) {
+                this._iniciarSesion();
+            } else {
+                this._mostrarErrorLogin(
+                    "Contraseña incorrecta. Inténtalo de nuevo.",
+                );
+            }
+        }
+
+        /**
+         * Muestra mensaje de error en el formulario de login
+         * @param {string} mensaje - Mensaje de error a mostrar
+         */
+        _mostrarErrorLogin(mensaje) {
+            if (DOM.loginError) {
+                DOM.loginError.textContent = mensaje;
+                DOM.loginError.classList.add("visible");
+                DOM.passwordInput.value = "";
+                DOM.passwordInput.focus();
+
+                setTimeout(() => {
+                    DOM.loginError.classList.remove("visible");
+                }, 3000);
+            }
+        }
+
+        /**
+         * Alterna la visibilidad del campo de contraseña
+         */
+        _togglePasswordVisibility() {
+            const type =
+                DOM.passwordInput.type === "password" ? "text" : "password";
+            DOM.passwordInput.type = type;
+
+            // Cambiar el icono
+            const icon = DOM.togglePassword.querySelector("i");
+            if (type === "text") {
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+            } else {
+                icon.classList.remove("fa-eye-slash");
+                icon.classList.add("fa-eye");
+            }
+        }
+
+        /**
+         * Inicia la sesión y muestra la aplicación
+         */
+        _iniciarSesion() {
+            this._sesionActiva = true;
+            localStorage.setItem("sesionActiva", "true");
+
+            if (DOM.loginSection && DOM.appContent) {
+                DOM.loginSection.style.display = "none";
+                DOM.appContent.style.display = "block";
+
+                if (DOM.cerrarSesionBtn) {
+                    DOM.cerrarSesionBtn.style.display = "block";
+                }
+            }
+
+            // Aplicar animación de entrada
+            DOM.appContent.classList.add("fade-in");
+        }
+
+        /**
+         * Maneja el cierre de sesión
+         */
+        _handleLogout() {
+            this._sesionActiva = false;
+            localStorage.removeItem("sesionActiva");
+
+            if (DOM.loginSection && DOM.appContent) {
+                DOM.appContent.style.display = "none";
+                DOM.loginSection.style.display = "flex";
+                DOM.cerrarSesionBtn.style.display = "none";
+                DOM.passwordInput.value = "";
+            }
+        }
+
+        /**
+         * Verifica si hay una sesión activa al cargar la página
+         */
+        _checkActiveSession() {
+            if (this._sesionActiva) {
+                this._iniciarSesion();
+            }
+        }
+
+        /**
+         * Devuelve si la sesión está activa
+         */
+        get isActive() {
+            return this._sesionActiva;
+        }
+    }
+
+    /**
+     * Clase para gestionar el formulario y sus datos
+     */
+    class FormularioManager {
+        constructor() {
+            this._datos = {};
+            this._autoSaveTimeout = null;
+            this._initEventListeners();
+            this._cargarDatosGuardados();
+        }
+
+        /**
+         * Inicializa los event listeners relacionados con el formulario
+         */
+        _initEventListeners() {
+            // Envío del formulario
+            if (DOM.formulario) {
+                DOM.formulario.addEventListener("submit", (event) => {
+                    event.preventDefault();
+                    this.generarPropuestas();
+                });
+            }
+
+            // Botón de guardar JSON
+            if (DOM.guardarJsonBtn) {
+                DOM.guardarJsonBtn.addEventListener("click", () =>
+                    this.guardarJSON(),
+                );
+            }
+
+            // Botón de descargar JSON desde resultados
+            if (DOM.descargarJsonBtn) {
+                DOM.descargarJsonBtn.addEventListener("click", () =>
+                    this.descargarJSON(),
+                );
+            }
+
+            // Cargar desde archivo JSON
+            if (DOM.cargarJsonInput) {
+                DOM.cargarJsonInput.addEventListener("change", (event) =>
+                    this._cargarDesdeArchivo(event),
+                );
+            }
+
+            // Editar respuestas
+            if (DOM.editarRespuestasBtn) {
+                DOM.editarRespuestasBtn.addEventListener("click", () =>
+                    this._mostrarFormulario(),
+                );
+            }
+
+            // Imprimir resultados
+            if (DOM.imprimirResultadosBtn) {
+                DOM.imprimirResultadosBtn.addEventListener("click", () =>
+                    this._imprimirResultados(),
+                );
+            }
+
+            // Auto-guardar al cambiar cualquier campo
+            TODOS_CAMPOS.forEach((campo) => {
+                const elemento = document.getElementById(campo);
+                if (elemento) {
+                    elemento.addEventListener("input", () =>
+                        this._programarAutoguardado(),
+                    );
                 }
             });
         }
-        
-        // Toggle para mostrar/ocultar contraseña
-        if (DOM.togglePassword) {
-            DOM.togglePassword.addEventListener('click', () => this._togglePasswordVisibility());
-        }
-        
-        // Botón de cerrar sesión
-        if (DOM.cerrarSesionBtn) {
-            DOM.cerrarSesionBtn.addEventListener('click', () => this._handleLogout());
-        }
-    }
-    
-    /**
-     * Maneja el intento de inicio de sesión
-     */
-    _handleLogin() {
-        const password = DOM.passwordInput.value;
-        
-        if (password === CONFIG.PASSWORD_CORRECTO) {
-            this._iniciarSesion();
-        } else {
-            this._mostrarErrorLogin('Contraseña incorrecta. Inténtalo de nuevo.');
-        }
-    }
-    
-    /**
-     * Muestra mensaje de error en el formulario de login
-     * @param {string} mensaje - Mensaje de error a mostrar
-     */
-    _mostrarErrorLogin(mensaje) {
-        if (DOM.loginError) {
-            DOM.loginError.textContent = mensaje;
-            DOM.loginError.classList.add('visible');
-            DOM.passwordInput.value = '';
-            DOM.passwordInput.focus();
-            
-            setTimeout(() => {
-                DOM.loginError.classList.remove('visible');
-            }, 3000);
-        }
-    }
-    
-    /**
-     * Alterna la visibilidad del campo de contraseña
-     */
-    _togglePasswordVisibility() {
-        const type = DOM.passwordInput.type === 'password' ? 'text' : 'password';
-        DOM.passwordInput.type = type;
-        
-        // Cambiar el icono
-        const icon = DOM.togglePassword.querySelector('i');
-        if (type === 'text') {
-            icon.classList.remove('fa-eye');
-            icon.classList.add('fa-eye-slash');
-        } else {
-            icon.classList.remove('fa-eye-slash');
-            icon.classList.add('fa-eye');
-        }
-    }
-    
-    /**
-     * Inicia la sesión y muestra la aplicación
-     */
-    _iniciarSesion() {
-        this._sesionActiva = true;
-        localStorage.setItem('sesionActiva', 'true');
-        
-        if (DOM.loginSection && DOM.appContent) {
-            DOM.loginSection.style.display = 'none';
-            DOM.appContent.style.display = 'block';
-            
-            if (DOM.cerrarSesionBtn) {
-                DOM.cerrarSesionBtn.style.display = 'block';
+
+        /**
+         * Programa el autoguardado después de un tiempo de inactividad
+         */
+        _programarAutoguardado() {
+            // Limpiar timeout anterior si existe
+            if (this._autoSaveTimeout) {
+                clearTimeout(this._autoSaveTimeout);
             }
+
+            // Establecer nuevo timeout
+            this._autoSaveTimeout = setTimeout(() => {
+                this._guardarDatosLocalmente();
+                // Mostrar notificación sutil
+                this._mostrarNotificacion(
+                    "Progreso guardado automáticamente",
+                    "success",
+                    2000,
+                );
+            }, CONFIG.AUTO_SAVE_INTERVAL);
         }
-        
-        // Aplicar animación de entrada
-        DOM.appContent.classList.add('fade-in');
-    }
-    
-    /**
-     * Maneja el cierre de sesión
-     */
-    _handleLogout() {
-        this._sesionActiva = false;
-        localStorage.removeItem('sesionActiva');
-        
-        if (DOM.loginSection && DOM.appContent) {
-            DOM.appContent.style.display = 'none';
-            DOM.loginSection.style.display = 'flex';
-            DOM.cerrarSesionBtn.style.display = 'none';
-            DOM.passwordInput.value = '';
+
+        /**
+         * Recupera datos del formulario y los retorna como objeto
+         */
+         _recopilarDatosFormulario() {
+    const datos = {};
+
+    TODOS_CAMPOS.forEach((campo) => {
+        const elemento = document.getElementById(campo);
+        if (elemento) {
+            // Solo tomar el valor del campo, sin recurrir al placeholder
+            datos[campo] = elemento.value;
         }
-    }
-    
-    /**
-     * Verifica si hay una sesión activa al cargar la página
-     */
-    _checkActiveSession() {
-        if (this._sesionActiva) {
-            this._iniciarSesion();
-        }
-    }
-    
-    /**
-     * Devuelve si la sesión está activa
-     */
-    get isActive() {
-        return this._sesionActiva;
-    }
+    });
+
+    return datos;
 }
 
-/**
- * Clase para gestionar el formulario y sus datos
- */
-class FormularioManager {
-    constructor() {
-        this._datos = {};
-        this._autoSaveTimeout = null;
-        this._initEventListeners();
-        this._cargarDatosGuardados();
-    }
-    
-    /**
-     * Inicializa los event listeners relacionados con el formulario
-     */
-    _initEventListeners() {
-        // Envío del formulario
-        if (DOM.formulario) {
-            DOM.formulario.addEventListener('submit', (event) => {
-                event.preventDefault();
-                this.generarPropuestas();
-            });
-        }
-        
-        // Botón de guardar JSON
-        if (DOM.guardarJsonBtn) {
-            DOM.guardarJsonBtn.addEventListener('click', () => this.guardarJSON());
-        }
-        
-        // Botón de descargar JSON desde resultados
-        if (DOM.descargarJsonBtn) {
-            DOM.descargarJsonBtn.addEventListener('click', () => this.descargarJSON());
-        }
-        
-        // Cargar desde archivo JSON
-        if (DOM.cargarJsonInput) {
-            DOM.cargarJsonInput.addEventListener('change', (event) => this._cargarDesdeArchivo(event));
-        }
-        
-        // Editar respuestas
-        if (DOM.editarRespuestasBtn) {
-            DOM.editarRespuestasBtn.addEventListener('click', () => this._mostrarFormulario());
-        }
-        
-        // Imprimir resultados
-        if (DOM.imprimirResultadosBtn) {
-            DOM.imprimirResultadosBtn.addEventListener('click', () => this._imprimirResultados());
-        }
-        
-        // Auto-guardar al cambiar cualquier campo
-        TODOS_CAMPOS.forEach(campo => {
-            const elemento = document.getElementById(campo);
-            if (elemento) {
-                elemento.addEventListener('input', () => this._programarAutoguardado());
-            }
-        });
-    }
-    
-    /**
-     * Programa el autoguardado después de un tiempo de inactividad
-     */
-    _programarAutoguardado() {
-        // Limpiar timeout anterior si existe
-        if (this._autoSaveTimeout) {
-            clearTimeout(this._autoSaveTimeout);
-        }
-        
-        // Establecer nuevo timeout
-        this._autoSaveTimeout = setTimeout(() => {
-            this._guardarDatosLocalmente();
-            // Mostrar notificación sutil
-            this._mostrarNotificacion('Progreso guardado automáticamente', 'success', 2000);
-        }, CONFIG.AUTO_SAVE_INTERVAL);
-    }
-    
-    /**
-     * Recupera datos del formulario y los retorna como objeto
-     */
-    _recopilarDatosFormulario() {
-        const datos = {};
-        
-        TODOS_CAMPOS.forEach(campo => {
-            const elemento = document.getElementById(campo);
-            if (elemento) {
-                // Usar el valor del campo o su placeholder si está vacío
-                datos[campo] = elemento.value || elemento.placeholder;
-            }
-        });
-        
-        return datos;
-    }
-    
-    /**
-     * Carga datos guardados del localStorage
-     */
-    _cargarDatosGuardados() {
-        const datosGuardados = localStorage.getItem('propuestaValorDatos');
-        
-        if (datosGuardados) {
-            try {
-                const datos = JSON.parse(datosGuardados);
-                this._datos = datos;
-                
-                // Rellenar formulario con datos guardados
-                for (let campo in datos) {
-                    const elemento = document.getElementById(campo);
-                    if (elemento) {
-                        elemento.value = datos[campo];
-                    }
-                }
-            } catch (error) {
-                console.error('Error al cargar datos guardados:', error);
-                this._mostrarModal('error', 'Error al cargar datos', 'No se pudieron cargar los datos guardados correctamente.');
-            }
-        }
-    }
-    
-    /**
-     * Guarda los datos actuales en localStorage
-     */
-    _guardarDatosLocalmente() {
-        const datos = this._recopilarDatosFormulario();
-        this._datos = datos;
-        localStorage.setItem('propuestaValorDatos', JSON.stringify(datos));
-    }
-    
-    /**
-     * Genera las propuestas de valor basadas en los datos del formulario
-     */
-    generarPropuestas() {
-        // Mostrar indicador de carga
-        if (DOM.mensajeCarga) {
-            DOM.mensajeCarga.classList.add('visible');
-            DOM.mensajeCargaTexto.textContent = 'Generando propuestas...';
-        }
-        
-        // Recopilar datos del formulario
-        const datos = this._recopilarDatosFormulario();
-        this._datos = datos;
-        
-        // Verificar si todos los campos están vacíos y no tienen placeholder
-        const todoVacio = Object.values(datos).every(valor => !valor);
-        
-        // Si todo está vacío, cargar los datos de ejemplo
-        if (todoVacio) {
-            for (let campo in EJEMPLO_DATOS) {
-                datos[campo] = EJEMPLO_DATOS[campo];
-            }
-        }
-        
-        // Guardar datos
-        this._guardarDatosLocalmente();
-        
-        // Actualizar los valores en la página (simulando un corto proceso)
-        setTimeout(() => {
-            this._actualizarResultados(datos);
-            this._mostrarResultados();
-            
-            // Ocultar indicador de carga
-            if (DOM.mensajeCarga) {
-                DOM.mensajeCarga.classList.remove('visible');
-            }
-        }, 800);
-    }
-    
-    /**
-     * Actualiza los elementos de resultado con los valores correspondientes
-     * @param {Object} datos - Datos para mostrar en los resultados
-     */
-    _actualizarResultados(datos) {
-        // Fórmula A
-        for (let i = 1; i <= 3; i++) {
-            this._actualizarElementoResultado(`cliente-potencial${i}`, datos[`respuesta-cliente-potencial${i}`]);
-            this._actualizarElementoResultado(`problema-dolor${i}`, datos[`respuesta-puntos-dolor${i}`]);
-            this._actualizarElementoResultado(`servicio-producto${i}`, datos[`respuesta-nombre-servicio${i}`]);
-            this._actualizarElementoResultado(`beneficio${i}`, datos[`respuesta-beneficios${i}`]);
-        }
-        
-        // Fórmula B
-        for (let i = 1; i <= 3; i++) {
-            const j = i + 3; // Para los IDs servicio-producto4, servicio-producto5, etc.
-            this._actualizarElementoResultado(`servicio-producto${j}`, datos[`respuesta-nombre-servicio${i}`]);
-            this._actualizarElementoResultado(`cliente-potencial${j}`, datos[`respuesta-cliente-potencial${i}`]);
-            this._actualizarElementoResultado(`valor-diferencial${i}`, datos[`respuesta-diferencial${i}`]);
-        }
-    }
-    
-    /**
-     * Actualiza un elemento de resultado específico
-     * @param {string} id - ID del elemento a actualizar
-     * @param {string} valor - Valor a mostrar
-     */
-    _actualizarElementoResultado(id, valor) {
-        const elemento = document.getElementById(id);
-        if (elemento) {
-            elemento.textContent = valor || '_________';
-            
-            // Añadir animación de entrada
-            elemento.classList.remove('fadeIn');
-            void elemento.offsetWidth; // Truco para reiniciar la animación
-            elemento.classList.add('fadeIn');
-        }
-    }
-    
-    /**
-     * Muestra la sección de resultados y oculta el formulario
-     */
-    _mostrarResultados() {
-        if (DOM.formulario && DOM.resultadoSection) {
-            // Aplicar animaciones
-            DOM.formulario.classList.add('fadeOut');
-            
-            setTimeout(() => {
-                DOM.formulario.style.display = 'none';
-                DOM.resultadoSection.style.display = 'block';
-                DOM.resultadoSection.classList.add('fadeIn');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }, 300);
-        }
-    }
-    
-    /**
-     * Muestra el formulario y oculta la sección de resultados
-     */
-    _mostrarFormulario() {
-        if (DOM.resultadoSection && DOM.formulario) {
-            // Aplicar animaciones
-            DOM.resultadoSection.classList.add('fadeOut');
-            
-            setTimeout(() => {
-                DOM.resultadoSection.style.display = 'none';
-                DOM.formulario.style.display = 'block';
-                DOM.formulario.classList.remove('fadeOut');
-                DOM.formulario.classList.add('fadeIn');
-            }, 300);
-        }
-    }
-    
-    /**
-     * Descarga un archivo JSON con los datos actuales
-     */
-    descargarJSON() {
-        this._downloadJSONFile(this._datos);
-        this._mostrarModal('exito', 'Archivo descargado', 'El archivo JSON se ha descargado correctamente');
-    }
-    
-    /**
-     * Guarda los datos actuales como JSON
-     */
-    guardarJSON() {
-        // Actualizar datos con valores actuales
-        const datos = this._recopilarDatosFormulario();
-        this._datos = datos;
-        this._guardarDatosLocalmente();
-        
-        // Descargar archivo
-        this._downloadJSONFile(datos);
-        this._mostrarNotificacion('Archivo JSON guardado correctamente', 'success');
-    }
-    
-    /**
-     * Función auxiliar para descargar un archivo JSON
-     * @param {Object} datos - Datos a convertir en JSON y descargar
-     */
-    _downloadJSONFile(datos) {
-        const datosJSON = JSON.stringify(datos, null, 2);
-        const blob = new Blob([datosJSON], {type: 'application/json'});
-        const url = URL.createObjectURL(blob);
-        
-        // Crear link para descargar
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'propuesta-valor-' + new Date().toISOString().slice(0, 10) + '.json';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-    
-    /**
-     * Carga datos desde un archivo JSON
-     * @param {Event} event - Evento de cambio en el input file
-     */
-    _cargarDesdeArchivo(event) {
-        const archivo = event.target.files[0];
-        
-        if (archivo) {
-            const reader = new FileReader();
-            
-            reader.onload = (e) => {
+        /**
+         * Carga datos guardados del localStorage
+         */
+        _cargarDatosGuardados() {
+            const datosGuardados = localStorage.getItem("propuestaValorDatos");
+
+            if (datosGuardados) {
                 try {
-                    const datos = JSON.parse(e.target.result);
-                    
-                    // Rellenar formulario con datos del JSON
+                    const datos = JSON.parse(datosGuardados);
+                    this._datos = datos;
+
+                    // Rellenar formulario con datos guardados
                     for (let campo in datos) {
                         const elemento = document.getElementById(campo);
                         if (elemento) {
                             elemento.value = datos[campo];
                         }
                     }
-                    
-                    // Guardar datos
-                    this._datos = datos;
-                    this._guardarDatosLocalmente();
-                    
-                    this._mostrarModal('exito', 'Archivo cargado', 'El archivo JSON se ha cargado correctamente');
                 } catch (error) {
-                    this._mostrarModal('error', 'Error al cargar', 'El archivo seleccionado no tiene un formato JSON válido');
+                    console.error("Error al cargar datos guardados:", error);
+                    this._mostrarModal(
+                        "error",
+                        "Error al cargar datos",
+                        "No se pudieron cargar los datos guardados correctamente.",
+                    );
                 }
-            };
-            
-            reader.readAsText(archivo);
+            }
+        }
+
+        /**
+         * Guarda los datos actuales en localStorage
+         */
+        _guardarDatosLocalmente() {
+            const datos = this._recopilarDatosFormulario();
+            this._datos = datos;
+            localStorage.setItem("propuestaValorDatos", JSON.stringify(datos));
+        }
+
+        /**
+         * Genera las propuestas de valor basadas en los datos del formulario
+         */
+         generarPropuestas() {
+    // Mostrar indicador de carga
+    if (DOM.mensajeCarga) {
+        DOM.mensajeCarga.classList.add("visible");
+        DOM.mensajeCargaTexto.textContent = "Generando propuestas...";
+    }
+
+    // Creamos un objeto para almacenar los datos
+    const datos = {};
+    
+    // Obtenemos directamente los valores de cada campo
+    TODOS_CAMPOS.forEach(campo => {
+        const elemento = document.getElementById(campo);
+        if (elemento) {
+            datos[campo] = elemento.value;
+            console.log(`Campo ${campo}: "${elemento.value}"`);
+        }
+    });
+    
+    // Verificamos si todos los campos están vacíos
+    const todoVacio = TODOS_CAMPOS.every(campo => {
+        const elemento = document.getElementById(campo);
+        return !elemento || !elemento.value || elemento.value.trim() === '';
+    });
+    
+    // Si todo está vacío, usamos los datos de ejemplo
+    if (todoVacio) {
+        for (let campo in EJEMPLO_DATOS) {
+            datos[campo] = EJEMPLO_DATOS[campo];
         }
     }
     
-    /**
-     * Imprime la sección de resultados
-     */
-    _imprimirResultados() {
-        const contenidoImprimir = document.querySelector('.contenido-imprimir').innerHTML;
-        const ventanaImpresion = window.open('', '_blank');
+    // Guardar datos en localStorage para futura referencia
+    localStorage.setItem("propuestaValorDatos", JSON.stringify(datos));
+    this._datos = datos;
+    
+    setTimeout(() => {
+        // Aquí actualizamos DIRECTAMENTE los elementos del resultado
+        // Fórmula A
+        for (let i = 1; i <= 3; i++) {
+            document.getElementById(`cliente-potencial${i}`).textContent = 
+                datos[`respuesta-cliente-potencial${i}`] || "_________";
+                
+            document.getElementById(`problema-dolor${i}`).textContent = 
+                datos[`respuesta-puntos-dolor${i}`] || "_________";
+                
+            document.getElementById(`servicio-producto${i}`).textContent = 
+                datos[`respuesta-nombre-servicio${i}`] || "_________";
+                
+            document.getElementById(`beneficio${i}`).textContent = 
+                datos[`respuesta-beneficios${i}`] || "_________";
+        }
         
-        ventanaImpresion.document.write(`
+        // Fórmula B
+        for (let i = 1; i <= 3; i++) {
+            const j = i + 3;
+            document.getElementById(`servicio-producto${j}`).textContent = 
+                datos[`respuesta-nombre-servicio${i}`] || "_________";
+                
+            document.getElementById(`cliente-potencial${j}`).textContent = 
+                datos[`respuesta-cliente-potencial${i}`] || "_________";
+                
+            document.getElementById(`valor-diferencial${i}`).textContent = 
+                datos[`respuesta-diferencial${i}`] || "_________";
+        }
+        
+        // Mostramos la sección de resultados
+        DOM.formulario.style.display = "none";
+        DOM.resultadoSection.style.display = "block";
+        
+        // Nos aseguramos de hacer scroll hacia arriba
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Ocultar indicador de carga
+        if (DOM.mensajeCarga) {
+            DOM.mensajeCarga.classList.remove("visible");
+        }
+    }, 800);
+}
+
+        /**
+         * Actualiza los elementos de resultado con los valores correspondientes
+         * @param {Object} datos - Datos para mostrar en los resultados
+         */
+         _actualizarResultados(datos) {
+    console.log("Actualizando resultados con:", datos);
+    
+    // Fórmula A
+    for (let i = 1; i <= 3; i++) {
+        // Limpiar contenido anterior
+        const clienteElement = document.getElementById(`cliente-potencial${i}`);
+        const problemaElement = document.getElementById(`problema-dolor${i}`);
+        const servicioElement = document.getElementById(`servicio-producto${i}`);
+        const beneficioElement = document.getElementById(`beneficio${i}`);
+        
+        if (clienteElement) clienteElement.textContent = '';
+        if (problemaElement) problemaElement.textContent = '';
+        if (servicioElement) servicioElement.textContent = '';
+        if (beneficioElement) beneficioElement.textContent = '';
+        
+        // Actualizar con nuevos valores
+        this._actualizarElementoResultado(
+            `cliente-potencial${i}`,
+            datos[`respuesta-cliente-potencial${i}`]
+        );
+        this._actualizarElementoResultado(
+            `problema-dolor${i}`,
+            datos[`respuesta-puntos-dolor${i}`]
+        );
+        this._actualizarElementoResultado(
+            `servicio-producto${i}`,
+            datos[`respuesta-nombre-servicio${i}`]
+        );
+        this._actualizarElementoResultado(
+            `beneficio${i}`,
+            datos[`respuesta-beneficios${i}`]
+        );
+    }
+
+    // Fórmula B
+    for (let i = 1; i <= 3; i++) {
+        const j = i + 3; // Para los IDs servicio-producto4, servicio-producto5, etc.
+        
+        // Limpiar contenido anterior
+        const servicioElement = document.getElementById(`servicio-producto${j}`);
+        const clienteElement = document.getElementById(`cliente-potencial${j}`);
+        const valorElement = document.getElementById(`valor-diferencial${i}`);
+        
+        if (servicioElement) servicioElement.textContent = '';
+        if (clienteElement) clienteElement.textContent = '';
+        if (valorElement) valorElement.textContent = '';
+        
+        // Actualizar con nuevos valores
+        this._actualizarElementoResultado(
+            `servicio-producto${j}`,
+            datos[`respuesta-nombre-servicio${i}`]
+        );
+        this._actualizarElementoResultado(
+            `cliente-potencial${j}`,
+            datos[`respuesta-cliente-potencial${i}`]
+        );
+        this._actualizarElementoResultado(
+            `valor-diferencial${i}`,
+            datos[`respuesta-diferencial${i}`]
+        );
+    }
+    
+    // Forzar un reflow para asegurar que los cambios se apliquen visualmente
+    if (DOM.resultadoSection) {
+        DOM.resultadoSection.offsetHeight;
+    }
+}
+
+        /**
+         * Actualiza un elemento de resultado específico
+         * @param {string} id - ID del elemento a actualizar
+         * @param {string} valor - Valor a mostrar
+         */
+         _actualizarElementoResultado(id, valor) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        // Limpiar y actualizar completamente
+        elemento.innerHTML = '';
+        elemento.textContent = valor || "_________";
+
+        // Añadir animación de entrada
+        elemento.classList.remove("fadeIn");
+        void elemento.offsetWidth; // Truco para reiniciar la animación
+        elemento.classList.add("fadeIn");
+    }
+}
+
+        /**
+         * Muestra la sección de resultados y oculta el formulario
+         */
+        _mostrarResultados() {
+            if (DOM.formulario && DOM.resultadoSection) {
+                // Aplicar animaciones
+                DOM.formulario.classList.add("fadeOut");
+
+                setTimeout(() => {
+                    DOM.formulario.style.display = "none";
+                    DOM.resultadoSection.style.display = "block";
+                    DOM.resultadoSection.classList.add("fadeIn");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 300);
+            }
+        }
+
+        /**
+         * Muestra el formulario y oculta la sección de resultados
+         */
+         _mostrarFormulario() {
+    // Ocultamos resultados y mostramos formulario
+    DOM.resultadoSection.style.display = "none";
+    DOM.formulario.style.display = "block";
+    
+    // Aseguramos que los datos actuales estén en el formulario
+    // Si hay datos guardados, los recuperamos
+    let datos = {};
+    
+    try {
+        const datosGuardados = localStorage.getItem("propuestaValorDatos");
+        if (datosGuardados) {
+            datos = JSON.parse(datosGuardados);
+        }
+    } catch (error) {
+        console.error("Error al recuperar datos:", error);
+    }
+    
+    // Rellenamos el formulario con los datos guardados
+    for (let campo in datos) {
+        const elemento = document.getElementById(campo);
+        if (elemento && datos[campo]) {
+            elemento.value = datos[campo];
+        }
+    }
+}
+
+
+        /**
+         * Descarga un archivo JSON con los datos actuales
+         */
+        descargarJSON() {
+            this._downloadJSONFile(this._datos);
+            this._mostrarModal(
+                "exito",
+                "Archivo descargado",
+                "El archivo JSON se ha descargado correctamente",
+            );
+        }
+
+        /**
+         * Guarda los datos actuales como JSON
+         */
+        guardarJSON() {
+            // Actualizar datos con valores actuales
+            const datos = this._recopilarDatosFormulario();
+            this._datos = datos;
+            this._guardarDatosLocalmente();
+
+            // Descargar archivo
+            this._downloadJSONFile(datos);
+            this._mostrarNotificacion(
+                "Archivo JSON guardado correctamente",
+                "success",
+            );
+        }
+
+        /**
+         * Función auxiliar para descargar un archivo JSON
+         * @param {Object} datos - Datos a convertir en JSON y descargar
+         */
+        _downloadJSONFile(datos) {
+            const datosJSON = JSON.stringify(datos, null, 2);
+            const blob = new Blob([datosJSON], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+
+            // Crear link para descargar
+            const a = document.createElement("a");
+            a.href = url;
+            a.download =
+                "propuesta-valor-" +
+                new Date().toISOString().slice(0, 10) +
+                ".json";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        /**
+         * Carga datos desde un archivo JSON
+         * @param {Event} event - Evento de cambio en el input file
+         */
+        _cargarDesdeArchivo(event) {
+            const archivo = event.target.files[0];
+
+            if (archivo) {
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    try {
+                        const datos = JSON.parse(e.target.result);
+
+                        // Rellenar formulario con datos del JSON
+                        for (let campo in datos) {
+                            const elemento = document.getElementById(campo);
+                            if (elemento) {
+                                elemento.value = datos[campo];
+                            }
+                        }
+
+                        // Guardar datos
+                        this._datos = datos;
+                        this._guardarDatosLocalmente();
+
+                        this._mostrarModal(
+                            "exito",
+                            "Archivo cargado",
+                            "El archivo JSON se ha cargado correctamente",
+                        );
+                    } catch (error) {
+                        this._mostrarModal(
+                            "error",
+                            "Error al cargar",
+                            "El archivo seleccionado no tiene un formato JSON válido",
+                        );
+                    }
+                };
+
+                reader.readAsText(archivo);
+            }
+        }
+
+        /**
+         * Imprime la sección de resultados
+         */
+        _imprimirResultados() {
+            const contenidoImprimir = document.querySelector(
+                ".contenido-imprimir",
+            ).innerHTML;
+            const ventanaImpresion = window.open("", "_blank");
+
+            ventanaImpresion.document.write(`
             <html>
                 <head>
                     <title>Propuesta de Valor - WebLocalMX</title>
@@ -1114,154 +1545,157 @@ class FormularioManager {
                 </body>
             </html>
         `);
-        
-        ventanaImpresion.document.close();
-        
-        // Imprimir después de cargar todo el contenido
-        ventanaImpresion.onload = function() {
-            ventanaImpresion.focus();
-            ventanaImpresion.print();
-        };
-    }
-    
-    /**
-     * Muestra una notificación temporal
-     * @param {string} mensaje - Mensaje a mostrar
-     * @param {string} tipo - Tipo de notificación (success, error, info)
-     * @param {number} duracion - Duración en ms (por defecto 2500)
-     */
-    _mostrarNotificacion(mensaje, tipo = 'success', duracion = 2500) {
-        // Crear elemento de notificación
-        const notificacion = document.createElement('div');
-        notificacion.className = `notificacion notificacion-${tipo}`;
-        
-        // Icono según tipo
-        let icono = 'check-circle';
-        if (tipo === 'error') icono = 'exclamation-circle';
-        if (tipo === 'info') icono = 'info-circle';
-        
-        notificacion.innerHTML = `
+
+            ventanaImpresion.document.close();
+
+            // Imprimir después de cargar todo el contenido
+            ventanaImpresion.onload = function () {
+                ventanaImpresion.focus();
+                ventanaImpresion.print();
+            };
+        }
+
+        /**
+         * Muestra una notificación temporal
+         * @param {string} mensaje - Mensaje a mostrar
+         * @param {string} tipo - Tipo de notificación (success, error, info)
+         * @param {number} duracion - Duración en ms (por defecto 2500)
+         */
+        _mostrarNotificacion(mensaje, tipo = "success", duracion = 2500) {
+            // Crear elemento de notificación
+            const notificacion = document.createElement("div");
+            notificacion.className = `notificacion notificacion-${tipo}`;
+
+            // Icono según tipo
+            let icono = "check-circle";
+            if (tipo === "error") icono = "exclamation-circle";
+            if (tipo === "info") icono = "info-circle";
+
+            notificacion.innerHTML = `
             <i class="fas fa-${icono}"></i>
             <span>${mensaje}</span>
         `;
-        
-        // Agregar al cuerpo del documento
-        document.body.appendChild(notificacion);
-        
-        // Mostrar con animación
-        setTimeout(() => {
-            notificacion.classList.add('visible');
-        }, 10);
-        
-        // Ocultar después de la duración
-        setTimeout(() => {
-            notificacion.classList.remove('visible');
+
+            // Agregar al cuerpo del documento
+            document.body.appendChild(notificacion);
+
+            // Mostrar con animación
             setTimeout(() => {
-                document.body.removeChild(notificacion);
-            }, 300);
-        }, duracion);
-    }
-    
-    /**
-     * Muestra un modal de éxito o error
-     * @param {string} tipo - Tipo de modal (exito, error)
-     * @param {string} titulo - Título del modal
-     * @param {string} mensaje - Mensaje del modal
-     */
-    _mostrarModal(tipo, titulo, mensaje) {
-        const modal = tipo === 'exito' ? DOM.modalExito : DOM.modalError;
-        
-        if (tipo === 'exito') {
-            DOM.modalTitulo.textContent = titulo;
-            DOM.modalMensaje.textContent = mensaje;
-        } else {
-            DOM.modalErrorMensaje.textContent = mensaje;
+                notificacion.classList.add("visible");
+            }, 10);
+
+            // Ocultar después de la duración
+            setTimeout(() => {
+                notificacion.classList.remove("visible");
+                setTimeout(() => {
+                    document.body.removeChild(notificacion);
+                }, 300);
+            }, duracion);
         }
-        
-        // Mostrar modal
-        modal.classList.add('visible');
-        
-        // Inicializar cierre del modal
-        const cerrarModal = () => {
-            modal.classList.remove('visible');
-        };
-        
-        // Cerrar al hacer clic en botones de cerrar
-        DOM.cerrarModalBtns.forEach(btn => {
-            btn.onclick = cerrarModal;
-        });
-        
-        // Cerrar al hacer clic fuera del modal
-        modal.onclick = (e) => {
-            if (e.target === modal) {
-                cerrarModal();
-            }
-        };
-        
-        // Cerrar con Escape
-        const escListener = (e) => {
-            if (e.key === 'Escape') {
-                cerrarModal();
-                document.removeEventListener('keydown', escListener);
-            }
-        };
-        
-        document.addEventListener('keydown', escListener);
-    }
-}
 
-/**
- * Clase principal de la aplicación
- */
-class App {
-    constructor() {
-        this.auth = new Auth();
-        this.formulario = new FormularioManager();
-        
-        // Iniciar animaciones cuando se cargue la página
-        this._initAnimations();
-    }
-    
-    /**
-     * Inicializa efectos visuales y animaciones
-     */
-    _initAnimations() {
-        // Añadir clase para animaciones después de cargar
-        document.addEventListener('DOMContentLoaded', () => {
-            document.body.classList.add('loaded');
-        });
-        
-        // Detectar cuando secciones entran en el viewport para animaciones
-        this._initScrollAnimations();
-    }
-    
-    /**
-     * Inicializa animaciones basadas en scroll
-     */
-    _initScrollAnimations() {
-        const sections = document.querySelectorAll('.form-section');
-        
-        // Crear un observador para las secciones
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+        /**
+         * Muestra un modal de éxito o error
+         * @param {string} tipo - Tipo de modal (exito, error)
+         * @param {string} titulo - Título del modal
+         * @param {string} mensaje - Mensaje del modal
+         */
+        _mostrarModal(tipo, titulo, mensaje) {
+            const modal = tipo === "exito" ? DOM.modalExito : DOM.modalError;
+
+            if (tipo === "exito") {
+                DOM.modalTitulo.textContent = titulo;
+                DOM.modalMensaje.textContent = mensaje;
+            } else {
+                DOM.modalErrorMensaje.textContent = mensaje;
+            }
+
+            // Mostrar modal
+            modal.classList.add("visible");
+
+            // Inicializar cierre del modal
+            const cerrarModal = () => {
+                modal.classList.remove("visible");
+            };
+
+            // Cerrar al hacer clic en botones de cerrar
+            DOM.cerrarModalBtns.forEach((btn) => {
+                btn.onclick = cerrarModal;
             });
-        }, { threshold: 0.1 });
-        
-        // Observar cada sección
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    }
-}
 
-// Inicializar la aplicación cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-    // Añadir estilos para animaciones
-    const style = document.createElement('style');
-    style.textContent = `
+            // Cerrar al hacer clic fuera del modal
+            modal.onclick = (e) => {
+                if (e.target === modal) {
+                    cerrarModal();
+                }
+            };
+
+            // Cerrar con Escape
+            const escListener = (e) => {
+                if (e.key === "Escape") {
+                    cerrarModal();
+                    document.removeEventListener("keydown", escListener);
+                }
+            };
+
+            document.addEventListener("keydown", escListener);
+        }
+    }
+
+    /**
+     * Clase principal de la aplicación
+     */
+    class App {
+        constructor() {
+            this.auth = new Auth();
+            this.formulario = new FormularioManager();
+
+            // Iniciar animaciones cuando se cargue la página
+            this._initAnimations();
+        }
+
+        /**
+         * Inicializa efectos visuales y animaciones
+         */
+        _initAnimations() {
+            // Añadir clase para animaciones después de cargar
+            document.addEventListener("DOMContentLoaded", () => {
+                document.body.classList.add("loaded");
+            });
+
+            // Detectar cuando secciones entran en el viewport para animaciones
+            this._initScrollAnimations();
+        }
+
+        /**
+         * Inicializa animaciones basadas en scroll
+         */
+        _initScrollAnimations() {
+            const sections = document.querySelectorAll(".form-section");
+
+            // Crear un observador para las secciones
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                        }
+                    });
+                },
+                { threshold: 0.1 },
+            );
+
+            // Observar cada sección
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+        }
+    }
+
+    // Inicializar la aplicación cuando el DOM esté listo
+    document.addEventListener("DOMContentLoaded", () => {
+        // Añadir estilos para animaciones
+        const style = document.createElement("style");
+        style.textContent = `
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -1328,982 +1762,1028 @@ document.addEventListener('DOMContentLoaded', () => {
             transform: translateY(0);
         }
     `;
-    document.head.appendChild(style);
-    
-    // Iniciar la aplicación
-    window.app = new App();
-});
+        document.head.appendChild(style);
+
+        // Iniciar la aplicación
+        window.app = new App();
+    });
 </script>
 
 <style>
-  
-/* ========== VARIABLES Y CONFIGURACIÓN GLOBAL ========== */
-:root {
-    /* Paleta de colores principal */
-    --primary-color: #0e9d8d;
-    --primary-dark: #0a7c6e;
-    --primary-light: #12b3a0;
-    --primary-bg: #e7f8f6;
-    
-    /* Colores secundarios */
-    --secondary-color: #162a30;
-    --secondary-light: #294954;
-    --secondary-lightest: #f0f5f7;
-    
-    /* Colores neutrales */
-    --neutral-darkest: #2c3e50;
-    --neutral-dark: #4a5568;
-    --neutral-medium: #718096;
-    --neutral-light: #a0aec0;
-    --neutral-lighter: #e2e8f0;
-    --neutral-lightest: #f7fafc;
-    
-    /* Colores de estado */
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --error-color: #ef4444;
-    --info-color: #3b82f6;
-    
-    /* Espaciado */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    --spacing-xxl: 3rem;
-    
-    /* Radios de borde */
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-    --border-radius-lg: 12px;
-    --border-radius-xl: 20px;
-    
-    /* Sombras */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    
-    /* Transiciones */
-    --transition-fast: 150ms ease-in-out;
-    --transition-normal: 300ms ease-in-out;
-    --transition-slow: 500ms ease-in-out;
-}
-
-/* ========== RESETEO ========== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: var(--neutral-darkest);
-    background-color: var(--neutral-lightest);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.contenedor {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
-}
-
-/* ========== UTILIDADES ========== */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-.hidden {
-    display: none !important;
-}
-
-/* ========== COMPONENTE: BOTONES ========== */
-button, 
-.btn-primary, 
-.btn-secondary, 
-.upload-label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    border: none;
-    font-weight: 500;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all var(--transition-normal);
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--border-radius-md);
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: white;
-    box-shadow: var(--shadow-sm);
-}
-
-.btn-primary:hover, 
-.btn-primary:focus {
-    background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
-}
-
-.btn-secondary {
-    background-color: var(--secondary-lightest);
-    color: var(--secondary-color);
-    border: 1px solid var(--neutral-lighter);
-}
-
-.btn-secondary:hover, 
-.btn-secondary:focus {
-    background-color: var(--neutral-lighter);
-    border-color: var(--neutral-light);
-}
-
-.upload-label {
-    position: relative;
-    overflow: hidden;
-}
-
-.upload-label input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    cursor: inherit;
-    display: block;
-}
-
-/* ========== COMPONENTE: BARRA SUPERIOR ========== */
-.barra {
-    background-color: var(--secondary-color);
-    height: 70px;
-    width: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    box-shadow: var(--shadow-md);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.barra-contenido {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.logo i {
-    color: var(--primary-light);
-}
-
-.acciones-barra {
-    display: flex;
-    align-items: center;
-}
-
-.cerrar-sesion {
-    background-color: transparent;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius-md);
-    font-size: 0.9rem;
-    transition: all var(--transition-normal);
-}
-
-.cerrar-sesion:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* ========== COMPONENTE: LOGIN ========== */
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 70px);
-    background-color: var(--neutral-lightest);
-    background-image: linear-gradient(120deg, var(--primary-bg), var(--secondary-lightest));
-}
-
-.login-card {
-    background-color: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-xl);
-    width: 100%;
-    max-width: 450px;
-    overflow: hidden;
-    animation: fadeIn 0.5s ease-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.login-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: var(--spacing-xl);
-    text-align: center;
-    position: relative;
-}
-
-.login-icon {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.login-header h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-.login-body {
-    padding: var(--spacing-xl);
-}
-
-.login-body p {
-    margin-bottom: var(--spacing-lg);
-    color: var(--neutral-dark);
-    text-align: center;
-}
-
-.password-input-wrapper {
-    position: relative;
-}
-
-.toggle-password {
-    position: absolute;
-    right: var(--spacing-md);
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: var(--neutral-medium);
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.toggle-password:hover {
-    color: var(--neutral-dark);
-}
-
-.btn-login {
-    width: 100%;
-    margin-top: var(--spacing-lg);
-}
-
-.error-message {
-    background-color: rgba(239, 68, 68, 0.1);
-    color: var(--error-color);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-md);
-    margin-top: var(--spacing-md);
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-sm);
-    display: none;
-}
-
-.error-message.visible {
-    display: flex;
-}
-
-/* ========== APP CONTAINER ========== */
-.app-container {
-    padding-top: var(--spacing-xl);
-    padding-bottom: var(--spacing-xxl);
-}
-
-.app-header {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-}
-
-.app-header h1 {
-    color: var(--secondary-color);
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-md);
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
-}
-
-.app-subtitle {
-    font-size: 1.1rem;
-    color: var(--neutral-medium);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-/* ========== INSTRUCCIONES ========== */
-.app-instructions {
-    margin-bottom: var(--spacing-xl);
-}
-
-.instruction-card {
-    background-color: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    overflow: hidden;
-}
-
-.instruction-header {
-    background-color: var(--secondary-lightest);
-    padding: var(--spacing-md) var(--spacing-lg);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-}
-
-.instruction-header i {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-}
-
-.instruction-header h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.instruction-body {
-    padding: var(--spacing-lg);
-}
-
-.steps-list {
-    list-style: none;
-    margin-left: 0;
-    margin-bottom: var(--spacing-lg);
-}
-
-.steps-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: var(--spacing-md);
-}
-
-.step-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    font-weight: 600;
-    margin-right: var(--spacing-md);
-    flex-shrink: 0;
-}
-
-.step-text {
-    padding-top: 3px;
-}
-
-.tip-box, .alert-box {
-    display: flex;
-    align-items: flex-start;
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-md);
-    margin-top: var(--spacing-md);
-}
-
-.tip-box {
-    background-color: rgba(16, 185, 129, 0.1);
-    border-left: 3px solid var(--success-color);
-}
-
-.alert-box {
-    background-color: rgba(245, 158, 11, 0.1);
-    border-left: 3px solid var(--warning-color);
-}
-
-.tip-box i, .alert-box i {
-    margin-right: var(--spacing-md);
-    font-size: 1.1rem;
-}
-
-.tip-box i {
-    color: var(--success-color);
-}
-
-.alert-box i {
-    color: var(--warning-color);
-}
-
-.tip-box p, .alert-box p {
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-/* ========== FORMULARIO ========== */
-.form-propuesta {
-    margin-bottom: var(--spacing-xl);
-}
-
-.form-section {
-    background-color: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    margin-bottom: var(--spacing-lg);
-    overflow: hidden;
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-}
-
-.form-section:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
-}
-
-.section-header {
-    background-color: var(--secondary-lightest);
-    padding: var(--spacing-md) var(--spacing-lg);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-}
-
-.section-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    font-weight: 600;
-    flex-shrink: 0;
-}
-
-.section-header h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.section-body {
-    padding: var(--spacing-lg);
-}
-
-.section-description {
-    color: var(--neutral-dark);
-    margin-bottom: var(--spacing-md);
-}
-
-.example-box {
-    background-color: var(--neutral-lightest);
-    border-radius: var(--border-radius-md);
-    padding: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-    display: flex;
-    align-items: flex-start;
-    border-left: 3px solid var(--primary-color);
-}
-
-.example-box i {
-    color: var(--primary-color);
-    margin-right: var(--spacing-md);
-    font-size: 1.1rem;
-    margin-top: 3px;
-}
-
-.example-box p {
-    margin: 0;
-    font-size: 0.95rem;
-}
-
-.input-row {
-    margin-bottom: var(--spacing-md);
-}
-
-.input-group {
-    margin-bottom: var(--spacing-md);
-}
-
-.input-group label {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
-    color: var(--neutral-dark);
-    font-weight: 500;
-}
-
-.input-group label i {
-    color: var(--primary-color);
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: var(--spacing-md);
-    border: 1px solid var(--neutral-lighter);
-    border-radius: var(--border-radius-md);
-    font-size: 1rem;
-    transition: all var(--transition-normal);
-    background-color: var(--neutral-lightest);
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-    border-color: var(--primary-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(14, 157, 141, 0.2);
-}
-
-input[type="text"]::placeholder,
-input[type="password"]::placeholder {
-    color: var(--neutral-light);
-}
-
-.form-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
-}
-
-.mensaje-carga {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-md);
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-top: var(--spacing-md);
-    display: none;
-}
-
-.mensaje-carga.visible {
-    display: flex;
-}
-
-.spinner {
-    width: 24px;
-    height: 24px;
-    border: 3px solid rgba(14, 157, 141, 0.3);
-    border-radius: 50%;
-    border-top-color: var(--primary-color);
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
-}
-
-/* ========== RESULTADOS ========== */
-.resultado-section {
-    background-color: white;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
-    padding: 0;
-    margin-top: var(--spacing-xl);
-    display: none;
-    overflow: hidden;
-}
-
-.resultado-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: var(--spacing-lg);
-    text-align: center;
-}
-
-.resultado-header i {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
-}
-
-.resultado-header h2 {
-    font-size: 1.8rem;
-    margin: 0;
-    margin-bottom: var(--spacing-sm);
-    color: white;
-}
-
-.resultado-subtitle {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
-}
-
-.contenido-imprimir {
-    padding: var(--spacing-xl);
-}
-
-.formula-seccion {
-    margin-bottom: var(--spacing-xl);
-    border-bottom: 1px solid var(--neutral-lighter);
-    padding-bottom: var(--spacing-xl);
-}
-
-.formula-seccion:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.formula-header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-md);
-}
-
-.formula-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    font-weight: 600;
-    font-size: 1.2rem;
-}
-
-.formula-header h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.formula-template {
-    background-color: var(--primary-bg);
-    border-radius: var(--border-radius-md);
-    padding: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    font-weight: 500;
-    border-left: 4px solid var(--primary-color);
-}
-
-.destacado {
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.resultados-wrapper {
-    display: flex;
-    flex-direction: column;  /* Cambiado de grid a flexbox en columna */
-    gap: var(--spacing-lg);
-}
-
-/* Tarjetas de resultado */
-.resultado-card {
-    background-color: var(--neutral-lightest);
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-    border-left: 4px solid var(--primary-color);
-    width: 100%;  /* Asegura que ocupe todo el ancho disponible */
-}
-
-.resultado-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.resultado-card-header {
-    background-color: var(--secondary-lightest);
-    padding: var(--spacing-md);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    border-bottom: 1px solid var(--neutral-lighter);
-}
-
-.variante-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    font-weight: 500;
-    font-size: 0.9rem;
-    flex-shrink: 0;
-}
-
-.resultado-card-header h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.resultado-card-body {
-    padding: var(--spacing-lg);
-}
-
-.resultado-formula {
-    line-height: 1.8;
-    font-size: 1.1rem;
-    margin: 0;
-    word-wrap: break-word;  /* Permite que las palabras largas se rompan */
-}
-
-.resultado-valor {
-    color: var(--primary-color);
-    font-weight: 600;
-    border-bottom: 1px dashed var(--primary-color);
-    padding: 0 var(--spacing-xs);
-    display: inline;  /* Cambiado de inline-block a inline para mejor flujo */
-}
-
-.resultado-actions {
-    background-color: var(--neutral-lightest);
-    padding: var(--spacing-lg);
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-md);
-    justify-content: center;
-    border-top: 1px solid var(--neutral-lighter);
-}
-
-/* ========== OPCIONES FLOTANTES ========== */
-.opciones-flotantes {
-    position: fixed;
-    bottom: var(--spacing-xl);
-    right: var(--spacing-xl);
-    z-index: 900;
-}
-
-.opciones-botones {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
-}
-
-/* ========== MODALES ========== */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1100;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 0.3s ease-out;
-}
-
-.modal.visible {
-    display: flex;
-}
-
-.modal-content {
-    background-color: white;
-    border-radius: var(--border-radius-lg);
-    width: 90%;
-    max-width: 500px;
-    box-shadow: var(--shadow-xl);
-    animation: slideUp 0.4s ease-out;
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.modal-header {
-    padding: var(--spacing-lg);
-    border-bottom: 1px solid var(--neutral-lighter);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    position: relative;
-}
-
-.modal-icon {
-    font-size: 1.8rem;
-}
-
-.modal-icon.success {
-    color: var(--success-color);
-}
-
-.modal-icon.error {
-    color: var(--error-color);
-}
-
-.modal-header h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: var(--secondary-color);
-    margin: 0;
-}
-
-.cerrar-modal {
-    position: absolute;
-    top: var(--spacing-md);
-    right: var(--spacing-md);
-    background: transparent;
-    border: none;
-    color: var(--neutral-medium);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--spacing-xs);
-}
-
-.cerrar-modal:hover {
-    color: var(--neutral-dark);
-}
-
-.modal-body {
-    padding: var(--spacing-lg);
-}
-
-.modal-footer {
-    padding: var(--spacing-md) var(--spacing-lg);
-    display: flex;
-    justify-content: flex-end;
-    border-top: 1px solid var(--neutral-lighter);
-}
-/* impresion */
-@media print {
-    .resultados-wrapper {
-        gap: 1rem;
-    }
-    
-    .resultado-card {
-        break-inside: avoid;  /* Evita que las tarjetas se corten al imprimir */
-        margin-bottom: 1rem;
-    }
-    
-    .resultado-formula {
-        font-size: 12pt;
-    }
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 768px) {
+    /* ========== VARIABLES Y CONFIGURACIÓN GLOBAL ========== */
     :root {
-        --spacing-md: 0.75rem;
-        --spacing-lg: 1rem;
-        --spacing-xl: 1.5rem;
-    }
-    
-    .app-header h1 {
-        font-size: 1.8rem;
-    }
-    
-    .app-subtitle {
-        font-size: 1rem;
-    }
-    
-    .resultados-wrapper {
-        grid-template-columns: 1fr;
-    }
-    
-    .resultado-actions {
-        flex-direction: column;
-    }
-    
-    .resultado-actions button {
-        width: 100%;
-    }
-    
-    .opciones-flotantes {
-        bottom: var(--spacing-md);
-        right: var(--spacing-md);
-    }
-    
-    .section-header h3 {
-        font-size: 1.1rem;
-    }
-    
-    .section-body {
-        padding: var(--spacing-md);
-    }
-    .formula-template {
-        padding: var(--spacing-md);
-        font-size: 0.95rem;
-    }
-    
-    .resultado-formula {
-        font-size: 1rem;
-    }
-}
+        /* Paleta de colores principal */
+        --primary-color: #0e9d8d;
+        --primary-dark: #0a7c6e;
+        --primary-light: #12b3a0;
+        --primary-bg: #e7f8f6;
 
-@media (max-width: 576px) {
-    .barra {
-        height: 60px;
+        /* Colores secundarios */
+        --secondary-color: #162a30;
+        --secondary-light: #294954;
+        --secondary-lightest: #f0f5f7;
+
+        /* Colores neutrales */
+        --neutral-darkest: #2c3e50;
+        --neutral-dark: #4a5568;
+        --neutral-medium: #718096;
+        --neutral-light: #a0aec0;
+        --neutral-lighter: #e2e8f0;
+        --neutral-lightest: #f7fafc;
+
+        /* Colores de estado */
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --error-color: #ef4444;
+        --info-color: #3b82f6;
+
+        /* Espaciado */
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-xxl: 3rem;
+
+        /* Radios de borde */
+        --border-radius-sm: 4px;
+        --border-radius-md: 8px;
+        --border-radius-lg: 12px;
+        --border-radius-xl: 20px;
+
+        /* Sombras */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md:
+            0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-lg:
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --shadow-xl:
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+        /* Transiciones */
+        --transition-fast: 150ms ease-in-out;
+        --transition-normal: 300ms ease-in-out;
+        --transition-slow: 500ms ease-in-out;
     }
-    
+
+    /* ========== RESETEO ========== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family:
+            "Poppins",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            sans-serif;
+        line-height: 1.6;
+        color: var(--neutral-darkest);
+        background-color: var(--neutral-lightest);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .contenedor {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+
+    /* ========== UTILIDADES ========== */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    /* ========== COMPONENTE: BOTONES ========== */
+    button,
+    .btn-primary,
+    .btn-secondary,
+    .upload-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        border: none;
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all var(--transition-normal);
+        font-family:
+            "Poppins",
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            sans-serif;
+        padding: var(--spacing-md) var(--spacing-lg);
+        border-radius: var(--border-radius-md);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:active {
+        transform: translateY(0);
+    }
+
+    .btn-secondary {
+        background-color: var(--secondary-lightest);
+        color: var(--secondary-color);
+        border: 1px solid var(--neutral-lighter);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+        background-color: var(--neutral-lighter);
+        border-color: var(--neutral-light);
+    }
+
+    .upload-label {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .upload-label input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        cursor: inherit;
+        display: block;
+    }
+
+    /* ========== COMPONENTE: BARRA SUPERIOR ========== */
+    .barra {
+        background-color: var(--secondary-color);
+        height: 70px;
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        box-shadow: var(--shadow-md);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .barra-contenido {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .logo i {
+        color: var(--primary-light);
+    }
+
+    .acciones-barra {
+        display: flex;
+        align-items: center;
+    }
+
+    .cerrar-sesion {
+        background-color: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: var(--spacing-sm) var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        font-size: 0.9rem;
+        transition: all var(--transition-normal);
+    }
+
+    .cerrar-sesion:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* ========== COMPONENTE: LOGIN ========== */
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 70px);
+        background-color: var(--neutral-lightest);
+        background-image: linear-gradient(
+            120deg,
+            var(--primary-bg),
+            var(--secondary-lightest)
+        );
+    }
+
+    .login-card {
+        background-color: white;
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-xl);
+        width: 100%;
+        max-width: 450px;
+        overflow: hidden;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .login-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: var(--spacing-xl);
+        text-align: center;
+        position: relative;
+    }
+
+    .login-icon {
+        font-size: 2.5rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .login-header h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .login-body {
+        padding: var(--spacing-xl);
+    }
+
+    .login-body p {
+        margin-bottom: var(--spacing-lg);
+        color: var(--neutral-dark);
+        text-align: center;
+    }
+
+    .password-input-wrapper {
+        position: relative;
+    }
+
+    .toggle-password {
+        position: absolute;
+        right: var(--spacing-md);
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        color: var(--neutral-medium);
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .toggle-password:hover {
+        color: var(--neutral-dark);
+    }
+
+    .btn-login {
+        width: 100%;
+        margin-top: var(--spacing-lg);
+    }
+
+    .error-message {
+        background-color: rgba(239, 68, 68, 0.1);
+        color: var(--error-color);
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        margin-top: var(--spacing-md);
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-sm);
+        display: none;
+    }
+
+    .error-message.visible {
+        display: flex;
+    }
+
+    /* ========== APP CONTAINER ========== */
+    .app-container {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-xxl);
+    }
+
+    .app-header {
+        text-align: center;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .app-header h1 {
+        color: var(--secondary-color);
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: var(--spacing-md);
+        background: linear-gradient(
+            45deg,
+            var(--primary-color),
+            var(--secondary-color)
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    .app-subtitle {
+        font-size: 1.1rem;
+        color: var(--neutral-medium);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* ========== INSTRUCCIONES ========== */
+    .app-instructions {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .instruction-card {
+        background-color: white;
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+    }
+
+    .instruction-header {
+        background-color: var(--secondary-lightest);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    .instruction-header i {
+        color: var(--primary-color);
         font-size: 1.2rem;
     }
-    
-    .login-header {
+
+    .instruction-header h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .instruction-body {
         padding: var(--spacing-lg);
     }
-    
-    .login-body {
+
+    .steps-list {
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .steps-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+        margin-right: var(--spacing-md);
+        flex-shrink: 0;
+    }
+
+    .step-text {
+        padding-top: 3px;
+    }
+
+    .tip-box,
+    .alert-box {
+        display: flex;
+        align-items: flex-start;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-md);
+        margin-top: var(--spacing-md);
+    }
+
+    .tip-box {
+        background-color: rgba(16, 185, 129, 0.1);
+        border-left: 3px solid var(--success-color);
+    }
+
+    .alert-box {
+        background-color: rgba(245, 158, 11, 0.1);
+        border-left: 3px solid var(--warning-color);
+    }
+
+    .tip-box i,
+    .alert-box i {
+        margin-right: var(--spacing-md);
+        font-size: 1.1rem;
+    }
+
+    .tip-box i {
+        color: var(--success-color);
+    }
+
+    .alert-box i {
+        color: var(--warning-color);
+    }
+
+    .tip-box p,
+    .alert-box p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    /* ========== FORMULARIO ========== */
+    .form-propuesta {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .form-section {
+        background-color: white;
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-md);
+        margin-bottom: var(--spacing-lg);
+        overflow: hidden;
+        transition:
+            transform var(--transition-normal),
+            box-shadow var(--transition-normal);
+    }
+
+    .form-section:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .section-header {
+        background-color: var(--secondary-lightest);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+    }
+
+    .section-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .section-header h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .section-body {
         padding: var(--spacing-lg);
     }
-    
-    .app-header h1 {
-        font-size: 1.5rem;
+
+    .section-description {
+        color: var(--neutral-dark);
+        margin-bottom: var(--spacing-md);
     }
-}
+
+    .example-box {
+        background-color: var(--neutral-lightest);
+        border-radius: var(--border-radius-md);
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-lg);
+        display: flex;
+        align-items: flex-start;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .example-box i {
+        color: var(--primary-color);
+        margin-right: var(--spacing-md);
+        font-size: 1.1rem;
+        margin-top: 3px;
+    }
+
+    .example-box p {
+        margin: 0;
+        font-size: 0.95rem;
+    }
+
+    .input-row {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .input-group {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .input-group label {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+        color: var(--neutral-dark);
+        font-weight: 500;
+    }
+
+    .input-group label i {
+        color: var(--primary-color);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: var(--spacing-md);
+        border: 1px solid var(--neutral-lighter);
+        border-radius: var(--border-radius-md);
+        font-size: 1rem;
+        transition: all var(--transition-normal);
+        background-color: var(--neutral-lightest);
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(14, 157, 141, 0.2);
+    }
+
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+        color: var(--neutral-light);
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-xl);
+    }
+
+    .mensaje-carga {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-md);
+        color: var(--primary-color);
+        font-weight: 500;
+        margin-top: var(--spacing-md);
+        display: none;
+    }
+
+    .mensaje-carga.visible {
+        display: flex;
+    }
+
+    .spinner {
+        width: 24px;
+        height: 24px;
+        border: 3px solid rgba(14, 157, 141, 0.3);
+        border-radius: 50%;
+        border-top-color: var(--primary-color);
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* ========== RESULTADOS ========== */
+    .resultado-section {
+        background-color: white;
+        border-radius: var(--border-radius-lg);
+        box-shadow: var(--shadow-lg);
+        padding: 0;
+        margin-top: var(--spacing-xl);
+        display: none;
+        overflow: hidden;
+    }
+
+    .resultado-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .resultado-header i {
+        font-size: 2rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .resultado-header h2 {
+        font-size: 1.8rem;
+        margin: 0;
+        margin-bottom: var(--spacing-sm);
+        color: white;
+    }
+
+    .resultado-subtitle {
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+    }
+
+    .contenido-imprimir {
+        padding: var(--spacing-xl);
+    }
+
+    .formula-seccion {
+        margin-bottom: var(--spacing-xl);
+        border-bottom: 1px solid var(--neutral-lighter);
+        padding-bottom: var(--spacing-xl);
+    }
+
+    .formula-seccion:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .formula-header {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .formula-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .formula-header h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .formula-template {
+        background-color: var(--primary-bg);
+        border-radius: var(--border-radius-md);
+        padding: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+        font-weight: 500;
+        border-left: 4px solid var(--primary-color);
+    }
+
+    .destacado {
+        color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .resultados-wrapper {
+        display: flex;
+        flex-direction: column; /* Cambiado de grid a flexbox en columna */
+        gap: var(--spacing-lg);
+    }
+
+    /* Tarjetas de resultado */
+    .resultado-card {
+        background-color: var(--neutral-lightest);
+        border-radius: var(--border-radius-md);
+        overflow: hidden;
+        transition:
+            transform var(--transition-normal),
+            box-shadow var(--transition-normal);
+        border-left: 4px solid var(--primary-color);
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .resultado-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .resultado-card-header {
+        background-color: var(--secondary-lightest);
+        padding: var(--spacing-md);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        border-bottom: 1px solid var(--neutral-lighter);
+    }
+
+    .variante-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        font-weight: 500;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+    }
+
+    .resultado-card-header h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .resultado-card-body {
+        padding: var(--spacing-lg);
+    }
+
+    .resultado-formula {
+        line-height: 1.8;
+        font-size: 1.1rem;
+        margin: 0;
+        word-wrap: break-word; /* Permite que las palabras largas se rompan */
+    }
+
+    .resultado-valor {
+        color: var(--primary-color);
+        font-weight: 600;
+        border-bottom: 1px dashed var(--primary-color);
+        padding: 0 var(--spacing-xs);
+        display: inline; /* Cambiado de inline-block a inline para mejor flujo */
+    }
+
+    .resultado-actions {
+        background-color: var(--neutral-lightest);
+        padding: var(--spacing-lg);
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+        justify-content: center;
+        border-top: 1px solid var(--neutral-lighter);
+    }
+
+    /* ========== OPCIONES FLOTANTES ========== */
+    .opciones-flotantes {
+        position: fixed;
+        bottom: var(--spacing-xl);
+        right: var(--spacing-xl);
+        z-index: 900;
+    }
+
+    .opciones-botones {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* ========== MODALES ========== */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1100;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .modal.visible {
+        display: flex;
+    }
+
+    .modal-content {
+        background-color: white;
+        border-radius: var(--border-radius-lg);
+        width: 90%;
+        max-width: 500px;
+        box-shadow: var(--shadow-xl);
+        animation: slideUp 0.4s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .modal-header {
+        padding: var(--spacing-lg);
+        border-bottom: 1px solid var(--neutral-lighter);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        position: relative;
+    }
+
+    .modal-icon {
+        font-size: 1.8rem;
+    }
+
+    .modal-icon.success {
+        color: var(--success-color);
+    }
+
+    .modal-icon.error {
+        color: var(--error-color);
+    }
+
+    .modal-header h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin: 0;
+    }
+
+    .cerrar-modal {
+        position: absolute;
+        top: var(--spacing-md);
+        right: var(--spacing-md);
+        background: transparent;
+        border: none;
+        color: var(--neutral-medium);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-xs);
+    }
+
+    .cerrar-modal:hover {
+        color: var(--neutral-dark);
+    }
+
+    .modal-body {
+        padding: var(--spacing-lg);
+    }
+
+    .modal-footer {
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: flex;
+        justify-content: flex-end;
+        border-top: 1px solid var(--neutral-lighter);
+    }
+    /* impresion */
+    @media print {
+        .resultados-wrapper {
+            gap: 1rem;
+        }
+
+        .resultado-card {
+            break-inside: avoid; /* Evita que las tarjetas se corten al imprimir */
+            margin-bottom: 1rem;
+        }
+
+        .resultado-formula {
+            font-size: 12pt;
+        }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+        :root {
+            --spacing-md: 0.75rem;
+            --spacing-lg: 1rem;
+            --spacing-xl: 1.5rem;
+        }
+
+        .app-header h1 {
+            font-size: 1.8rem;
+        }
+
+        .app-subtitle {
+            font-size: 1rem;
+        }
+
+        .resultados-wrapper {
+            grid-template-columns: 1fr;
+        }
+
+        .resultado-actions {
+            flex-direction: column;
+        }
+
+        .resultado-actions button {
+            width: 100%;
+        }
+
+        .opciones-flotantes {
+            bottom: var(--spacing-md);
+            right: var(--spacing-md);
+        }
+
+        .section-header h3 {
+            font-size: 1.1rem;
+        }
+
+        .section-body {
+            padding: var(--spacing-md);
+        }
+        .formula-template {
+            padding: var(--spacing-md);
+            font-size: 0.95rem;
+        }
+
+        .resultado-formula {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .barra {
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+        }
+
+        .login-header {
+            padding: var(--spacing-lg);
+        }
+
+        .login-body {
+            padding: var(--spacing-lg);
+        }
+
+        .app-header h1 {
+            font-size: 1.5rem;
+        }
+    }
 </style>
