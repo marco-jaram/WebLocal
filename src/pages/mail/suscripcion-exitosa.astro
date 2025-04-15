@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción Activada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            max-width: 500px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #38b16a;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        p {
+            margin-bottom: 2rem;
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .info-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+        
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #38b16a;
+            font-weight: bold;
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        
+        .check-circle {
+            display: inline-block;
+            margin-left: 5px;
+            color: #38b16a;
+        }
+        
+        .welcome-text {
+            font-weight: 500;
+            color: #38b16a;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Importando iconos de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h1>¡Genial! Tu suscripción está activada <span class="check-circle">✅</span></h1>
+        <p>Todo listo. Ya eres parte de nuestra comunidad y comenzarás a recibir lo prometido muy pronto.</p>
+        
+        <div class="info-box">
+            <h2><i class="fas fa-inbox fa-sm"></i> ¿Dónde encontrar nuestros mensajes?</h2>
+            <ul>
+                <li>Revisa tu bandeja principal</li>
+                <li>También podemos aparecer en la pestaña "Social" o "Notificaciones"</li>
+                <li>A veces nuestros mensajes pueden tardar un poco en llegar (hasta 24 horas)</li>
+            </ul>
+        </div>
+        
+        <p class="help-text">Gracias por tu paciencia y por confiar. <span class="welcome-text">¡Bienvenido/a!</span></p>
+    </div>
+</body>
+</html>

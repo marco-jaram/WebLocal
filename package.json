@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/marco-jaram/WebLocal#readme",
   "dependencies": {
-    "astro": "^5.5.2"
+    "astro": "^5.6.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.5.9",

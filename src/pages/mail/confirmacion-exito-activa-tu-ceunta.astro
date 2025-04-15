@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activación de Cuenta</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            max-width: 500px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4a6cf7;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        p {
+            margin-bottom: 2rem;
+            color: #4a5568;
+        }
+        
+        .info-box {
+            background-color: #f3f4f6;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .info-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+        
+        li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #4a6cf7;
+            font-weight: bold;
+        }
+        
+        .help-text {
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+        
+        .help-link {
+            color: #4a6cf7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .help-link:hover {
+            color: #3755e6;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Importando iconos de Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fas fa-envelope-open-text"></i>
+        </div>
+        <h1>¡Ya casi está listo! ✨</h1>
+        <p>Activa tu cuenta para comenzar. Hemos enviado un email con un enlace de activación a tu correo. Un clic y estarás dentro.</p>
+        
+        <div class="info-box">
+            <h2><i class="fas fa-search fa-sm"></i> ¿No encuentras el email?</h2>
+            <p>No te preocupes:</p>
+            <ul>
+                <li>Échale un vistazo a tu carpeta de spam (a veces nos escondemos ahí)</li>
+                <li>Añádenos a tus contactos para que no nos perdamos la próxima vez</li>
+                <li>Confirma que tu dirección de email está bien escrita</li>
+            </ul>
+        </div>
+        
+        <p class="help-text">¿Necesitas ayuda? <a href="#" class="help-link">Estamos aquí para ti</a>.</p>
+    </div>
+</body>
+</html>
