@@ -138,12 +138,64 @@ import Contacto from "../components/secciones/Contacto.astro";
         </div>
     </section>
 
+<!-- Soluciones por especialidad -->
+<section class="seccion especialistas">
+    <div class="contenedor">
+        <h2 class="seccion-titulo">Soluciones adaptadas para especialistas</h2>
+        <p class="seccion-subtitulo">¿Ofreces servicios de consulta online? Tenemos soluciones diseñadas específicamente para tu sector.</p>
+        
+        <div class="especialistas-grid">
+            <!-- Especialista 1: Psicólogos -->
+            <div class="especialista-card">
+                <h3 class="especialista-titulo">
+                    <i class="fas fa-brain"></i>
+                    Para psicólogos
+                </h3>
+                <p class="especialista-descripcion">
+                    Sistemas de reserva con recordatorios automáticos y material para pacientes integrado.
+                </p>
+                <div class="botones">
+                    <a href="https://weblocalmx.com/sales/lp-psicologos/" class="boton-primario">Ver solución específica</a>
+                </div>
+            </div>
+            
+            <!-- Especialista 2: Yoga -->
+            <div class="especialista-card">
+                <h3 class="especialista-titulo">
+                    <i class="fas fa-om"></i>
+                    Para instructores de yoga
+                </h3>
+                <p class="especialista-descripcion">
+                    Plataforma de clases grupales con pagos integrados y seguimiento de asistencia.
+                </p>
+                <div class="botones">
+                    <a href="https://weblocalmx.com/sales/lp-yoga/" class="boton-primario">Ver solución específica</a>
+                </div>
+            </div>
+            
+            <!-- Especialista 3: Profesores -->
+            <div class="especialista-card">
+                <h3 class="especialista-titulo">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    Para profesores particulares
+                </h3>
+                <p class="especialista-descripcion">
+                    Gestión de alumnos, materiales educativos y seguimiento de progreso en un solo lugar.
+                </p>
+                <div class="botones">
+                    <a href="https://weblocalmx.com/sales/lp-profesores/" class="boton-primario">Ver solución específica</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- CTA final -->
     <section class="cta-final">
         <div class="contenedor">
             <h2>¿Tu web actual está espantando clientes?</h2>
             <p>Agenda una revisión gratuita (15 min) y te diré 1 cosa que puedes mejorar YA para aumentar tus conversiones.</p>
-            <a href="#" class="boton-primario">Agendar revisión gratuita</a>
+            <a href="https://weblocalmx.com/tidycal-reserva/" class="boton-primario">Agendar revisión gratuita</a>
         </div>
     </section>
 
@@ -465,6 +517,60 @@ import Contacto from "../components/secciones/Contacto.astro";
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Estilos para la sección de especialistas */
+.especialistas {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.especialistas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.especialista-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border-top: 3px solid var(--color-primario);
+}
+
+.especialista-card:hover {
+    transform: translateY(-5px);
+}
+
+.especialista-titulo {
+    font-size: 2.4rem;
+    color: var(--color-oscuro2);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.especialista-titulo i {
+    color: var(--color-primario);
+    margin-right: 10px;
+    font-size: 2.8rem;
+}
+
+.especialista-descripcion {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Media queries - reutilizando tu estructura existente */
+@media (min-width: 768px) {
+    .especialistas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
 
 /* Media queries */
 @media (min-width: 768px) {
