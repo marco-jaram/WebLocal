@@ -1,24 +1,33 @@
 ---
 // landing-servicios.astro - Ejemplo de uso del layout
-import ReservasPrecios from "../../components/secciones/ReservasPrecios.astro";
 import Layout from "../../layouts/LayoutLanding.astro";
+import ReservasPrecios from "../../components/secciones/ReservasPrecios.astro";
+
 ---
 
 <Layout
-title="Servicios Web | WeblocalMX"
-description="Desarrollo web, sistemas de reservas y copywrtiting que genera clientes"
-keywords="sistema reservas yoga, agenda online instructores yoga, plataforma videollamada yoga, citas virtuales yoga, reserva clases yoga online, programación sesiones yoga virtual, calendario digital instructores yoga, gestión citas yoga online, software reservas maestros yoga, plataforma yoga videollamadas, yoga remoto, agenda virtual clases yoga, sistema citas instructores yoga, reserva sesiones yoga online, videollamadas yoga, gestión horarios yoguis online, plataforma reservas yoga virtual, calendario automático instructores yoga, software gestión clases yoga online, sistema sesiones yoga por videollamada, reserva horarios maestros yoga, agenda digital yoga virtual, plataforma citas yoguis, programación automática clases yoga, videollamadas instructores yoga, gestión tiempo yoguis, sistema online yoga remoto, reserva yoga virtual, calendario clases yoga videollamada, software yoga reservas online, clases privadas yoga online, yoga personalizado videollamada, meditación guiada virtual, sistema reservas bienestar online"
+    title="Servicios Web | WeblocalMX"
+    description="Desarrollo web, sistemas de reservas y copywrtiting que genera clientes"
+    keywords="sistema reservas yoga, agenda online instructores yoga, plataforma videollamada yoga, citas virtuales yoga, reserva clases yoga online, programación sesiones yoga virtual, calendario digital instructores yoga, gestión citas yoga online, software reservas maestros yoga, plataforma yoga videollamadas, yoga remoto, agenda virtual clases yoga, sistema citas instructores yoga, reserva sesiones yoga online, videollamadas yoga, gestión horarios yoguis online, plataforma reservas yoga virtual, calendario automático instructores yoga, software gestión clases yoga online, sistema sesiones yoga por videollamada, reserva horarios maestros yoga, agenda digital yoga virtual, plataforma citas yoguis, programación automática clases yoga, videollamadas instructores yoga, gestión tiempo yoguis, sistema online yoga remoto, reserva yoga virtual, calendario clases yoga videollamada, software yoga reservas online, clases privadas yoga online, yoga personalizado videollamada, meditación guiada virtual, sistema reservas bienestar online"
 >
-<Fragment slot="meta">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://weblocalmx.com/">
-    <meta property="og:title" content="Sistema de reservas online por video llamada para instructor de yoga">
-    <meta property="og:description" content="Desarrollo web, sistemas de reservas y copywriting que genera clientes">
-    <meta property="og:image" content="https://weblocalmx.com/img/weblocal-redes.webp">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-</Fragment>
-
+    <Fragment slot="meta">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://weblocalmx.com/" />
+        <meta
+            property="og:title"
+            content="Sistema de reservas online por video llamada para instructor de yoga"
+        />
+        <meta
+            property="og:description"
+            content="Desarrollo web, sistemas de reservas y copywriting que genera clientes"
+        />
+        <meta
+            property="og:image"
+            content="https://weblocalmx.com/img/weblocal-redes.webp"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+    </Fragment>
 
     <!-- Aquí va todo el contenido de tu landing page existente -->
     <header>
@@ -32,39 +41,39 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Sistema de reservas en línea para tus clases de yoga por videollamada</h1>
+                <h1>
+                    Sistema de reservas en línea para tus clases de yoga por
+                    videollamada
+                </h1>
                 <p class="hero-highlight">
                     Incluye generación automática de enlaces para tus clases
                     online vía Zoom o Meet
                 </p>
                 <p>
-                    Olvídate de agendas, pagos y recordatorios. Con el
-                    sistema de reservas, podrás dedicar tu energía a lo que
-                    realmente importa: transformar vidas a través del yoga.
+                    Olvídate de agendas, pagos y recordatorios. Con el sistema
+                    de reservas, podrás dedicar tu energía a lo que realmente
+                    importa: transformar vidas a través del yoga.
                 </p>
                 <div class="mt-4">
                     <a href="/tidycal-reserva" class="btn btn-lg btn-primary"
-                    >Comienza ahora</a
+                        >Comienza ahora</a
                     >
                     <a href="/tidycal-reserva" class="btn btn-lg btn-secondary"
-                    >Descubre cómo</a
+                        >Descubre cómo</a
                     >
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="steps">
         <div class="container">
-            <img src="/img/proceso-reserva.webp" alt="sitema de reservas">
+            <img src="/img/proceso-reserva.webp" alt="sitema de reservas" />
             <div class="text-center mb-5">
-                <h2 class="section-title">
-                    Implementación fácil en 4 pasos
-                </h2>
+                <h2 class="section-title">Implementación fácil en 4 pasos</h2>
                 <p class="section-subtitle">
-                    Te acompañamos en todo el proceso para que la
-                    transformación digital de tu estudio sea fluida y sin
-                    obstáculos.
+                    Te acompañamos en todo el proceso para que la transformación
+                    digital de tu estudio sea fluida y sin obstáculos.
                 </p>
             </div>
 
@@ -74,9 +83,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="step-content">
                         <h3>Configuramos tu plataforma</h3>
                         <p>
-                            Yo me encargo de toda la configuración
-                            técnica. Defino tus clases, horarios, precios
-                            y toda la información necesaria para tu estudio.
+                            Yo me encargo de toda la configuración técnica.
+                            Defino tus clases, horarios, precios y toda la
+                            información necesaria para tu estudio.
                         </p>
                     </div>
                 </div>
@@ -86,10 +95,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="step-content">
                         <h3>Personalizamos tu experiencia</h3>
                         <p>
-                            Adaptamos el sistema a tus necesidades
-                            específicas: clases presenciales, virtuales o
-                            híbridas, tipos de pases, opciones especiales
-                            para eventos o retiros.
+                            Adaptamos el sistema a tus necesidades específicas:
+                            clases presenciales, virtuales o híbridas, tipos de
+                            pases, opciones especiales para eventos o retiros.
                         </p>
                     </div>
                 </div>
@@ -100,8 +108,8 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                         <h3>Te capacitamos a ti y a tu equipo</h3>
                         <p>
                             Mediante sesiones personalizadas, te enseñamos a
-                            usar todas las funciones del sistema para que
-                            puedas aprovecharlo al máximo.
+                            usar todas las funciones del sistema para que puedas
+                            aprovecharlo al máximo.
                         </p>
                     </div>
                 </div>
@@ -111,10 +119,10 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="step-content">
                         <h3>Te brindamos soporte continuo</h3>
                         <p>
-                            No te dejamos solo. Durante 6 meses estaremos a
-                            tu disposición para resolver cualquier duda o
-                            ajuste que necesites mientras te familiarizas
-                            con el sistema.
+                            No te dejamos solo. Durante 6 meses estaremos a tu
+                            disposición para resolver cualquier duda o ajuste
+                            que necesites mientras te familiarizas con el
+                            sistema.
                         </p>
                     </div>
                 </div>
@@ -129,29 +137,26 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     La experiencia de otros instructores
                 </h2>
                 <p class="section-subtitle">
-                    Descubre cómo otros maestros de yoga han transformado
-                    sus estudios con el sistema de reservas.
+                    Descubre cómo otros maestros de yoga han transformado sus
+                    estudios con el sistema de reservas.
                 </p>
             </div>
 
             <div class="testimonial-cards">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
-                        "Antes pasaba horas cada semana respondiendo
-                        mensajes para confirmar asistencias y gestionando
-                        los pagos. Ahora todo es automático y puedo dedicar
-                        ese tiempo a preparar mejor mis clases y a mi propia
-                        práctica. La asistencia a mis clases ha aumentado
-                        significativamente porque a mis alumnos les resulta
-                        más fácil reservar."
+                        "Antes pasaba horas cada semana respondiendo mensajes
+                        para confirmar asistencias y gestionando los pagos.
+                        Ahora todo es automático y puedo dedicar ese tiempo a
+                        preparar mejor mis clases y a mi propia práctica. La
+                        asistencia a mis clases ha aumentado significativamente
+                        porque a mis alumnos les resulta más fácil reservar."
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">CR</div>
                         <div class="testimonial-info">
                             <h4>Claudia Rodríguez</h4>
-                            <p>
-                                Instructora de Vinyasa, Centro Urbano Yoga
-                            </p>
+                            <p>Instructora de Vinyasa, Centro Urbano Yoga</p>
                         </div>
                     </div>
                 </div>
@@ -160,12 +165,11 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="testimonial-content">
                         "Lo que más valoro es la flexibilidad para gestionar
                         diferentes tipos de clases y paquetes. Tengo clases
-                        regulares, workshops especiales y retiros, y el
-                        sistema maneja todo perfectamente. Además, mis
-                        alumnos aprecian poder ver el espacio disponible en
-                        cada clase y realizar sus pagos de forma segura. ¡Ha
-                        sido una inversión que realmente transformó mi
-                        negocio!"
+                        regulares, workshops especiales y retiros, y el sistema
+                        maneja todo perfectamente. Además, mis alumnos aprecian
+                        poder ver el espacio disponible en cada clase y realizar
+                        sus pagos de forma segura. ¡Ha sido una inversión que
+                        realmente transformó mi negocio!"
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">MG</div>
@@ -186,9 +190,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     Beneficios para tu estudio de yoga
                 </h2>
                 <p class="section-subtitle">
-                    Más allá de la simple gestión de reservas, el
-                    sistema transforma completamente la manera en que
-                    administras tu estudio.
+                    Más allá de la simple gestión de reservas, el sistema
+                    transforma completamente la manera en que administras tu
+                    estudio.
                 </p>
             </div>
 
@@ -199,9 +203,8 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                         <h3>Clases virtuales simplificadas</h3>
                         <p>
                             Elige tu plataforma preferida (Zoom o Meet) y el
-                            sistema genera automáticamente enlaces únicos
-                            para cada clase online, enviándolos a ti y a tus
-                            alumnos.
+                            sistema genera automáticamente enlaces únicos para
+                            cada clase online, enviándolos a ti y a tus alumnos.
                         </p>
                     </div>
                 </div>
@@ -222,10 +225,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="benefit-content">
                         <h3>Aumenta la asistencia a tus clases</h3>
                         <p>
-                            Las reservas online y los recordatorios
-                            automáticos reducen significativamente las
-                            ausencias y aumentan el compromiso de tus
-                            alumnos.
+                            Las reservas online y los recordatorios automáticos
+                            reducen significativamente las ausencias y aumentan
+                            el compromiso de tus alumnos.
                         </p>
                     </div>
                 </div>
@@ -235,9 +237,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="benefit-content">
                         <h3>Análisis de asistencia y preferencias</h3>
                         <p>
-                            Datos valiosos sobre qué clases son más
-                            populares, horarios de mayor asistencia y
-                            patrones de consumo para optimizar tu oferta.
+                            Datos valiosos sobre qué clases son más populares,
+                            horarios de mayor asistencia y patrones de consumo
+                            para optimizar tu oferta.
                         </p>
                     </div>
                 </div>
@@ -247,9 +249,9 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="benefit-content">
                         <h3>Mejora tu flujo de efectivo</h3>
                         <p>
-                            Cobros anticipados por clases y paquetes,
-                            reducción de cancelaciones de última hora y
-                            menor dependencia de efectivo físico.
+                            Cobros anticipados por clases y paquetes, reducción
+                            de cancelaciones de última hora y menor dependencia
+                            de efectivo físico.
                         </p>
                     </div>
                 </div>
@@ -259,8 +261,8 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
                     <div class="benefit-content">
                         <h3>Reduce tu estrés y ansiedad</h3>
                         <p>
-                            Elimina la incertidumbre sobre la asistencia y
-                            los ingresos, permitiéndote estar más presente y
+                            Elimina la incertidumbre sobre la asistencia y los
+                            ingresos, permitiéndote estar más presente y
                             centrado en tus enseñanzas.
                         </p>
                     </div>
@@ -284,8 +286,8 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
             <h2>Energía enfocada en lo que importa</h2>
             <p>
                 Como instructor de yoga, tu energía debe destinarse a guiar,
-                inspirar y transformar. Deja que la tecnología se encargue
-                de lo administrativo mientras tú te enfocas en lo realmente
+                inspirar y transformar. Deja que la tecnología se encargue de lo
+                administrativo mientras tú te enfocas en lo realmente
                 importante.
             </p>
             <a href="/tidycal-reserva" class="btn btn-lg btn-dark"
@@ -293,16 +295,15 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
             >
         </div>
     </section>
-
 </Layout>
 <style>
     /* Variables y estilos generales */
     :root {
         --color-primario: #11b28e;
-    --color-claro1: #efefef;
-    --color-claro2: #f9f8ed;
-    --color-oscuro1: #5a5a5a;
-    --color-oscuro2: #1b1b1b;
+        --color-claro1: #efefef;
+        --color-claro2: #f9f8ed;
+        --color-oscuro1: #5a5a5a;
+        --color-oscuro2: #1b1b1b;
         --primary: #4c8d91;
         /* Verde-azulado serenidad */
         --primary-dark: #3a6b6f;
@@ -327,15 +328,16 @@ keywords="sistema reservas yoga, agenda online instructores yoga, plataforma vid
         /* Verde menta */
         --warning: #e2c88a;
         /* Amarillo cálido */
-        --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-            sans-serif;
-        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04),
-            0 1px 2px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05),
-            0 5px 15px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.08),
-            0 5px 12px rgba(0, 0, 0, 0.1);
-        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        --font-family:
+            "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --shadow-sm:
+            0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.08);
+        --shadow-md:
+            0 4px 6px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.1);
+        --shadow-lg:
+            0 10px 20px rgba(0, 0, 0, 0.08), 0 5px 12px rgba(0, 0, 0, 0.1);
+        --shadow-xl:
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
             0 10px 10px -5px rgba(0, 0, 0, 0.04);
         --radius-sm: 0.25rem;
         --radius-md: 0.5rem;

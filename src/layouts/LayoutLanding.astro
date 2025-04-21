@@ -1,8 +1,8 @@
 ---
-import GoogleAnalytics from '../components/analytics-scripts/GoogleAnalytics.astro';
-import PixelFaceBook from '../components/analytics-scripts/PixelFaceBook.astro';
-import TManager from '../components/analytics-scripts/TManager.astro';
-import TManagerBody from '../components/analytics-scripts/TManagerBody.astro';
+import GoogleAnalytics from "../components/analytics-scripts/GoogleAnalytics.astro";
+import PixelFaceBook from "../components/analytics-scripts/PixelFaceBook.astro";
+import TManager from "../components/analytics-scripts/TManager.astro";
+import TManagerBody from "../components/analytics-scripts/TManagerBody.astro";
 
 // Layout.astro - Layout limpio para landing pages
 interface Props {
@@ -11,93 +11,86 @@ interface Props {
     keywords?: string;
 }
 
-const { 
-    title, 
-    description = "", 
-    keywords = ""
-} = Astro.props;
+const { title, description = "", keywords = "" } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-<GoogleAnalytics />
-<PixelFaceBook />
-<TManager />
-
-
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
-        
+
         <!-- Meta tags para SEO -->
-        <meta name="description" content={description}>
-        <meta name="keywords" content={keywords}>
-        
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <GoogleAnalytics />
+        <PixelFaceBook />
+        <TManager />
         <!-- Slot para meta tags adicionales -->
         <slot name="meta" />
 
-
-      
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
     </head>
     <body>
         <TManagerBody />
         <!-- Contenido principal -->
         <slot />
-        
+
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-logo">
-                        <i class="fas fa-chart-pie"></i> 
+                        <i class="fas fa-chart-pie"></i>
                         <span>Weblocalmx</span>
                     </div>
                     <p>Creado por Marco Jaramillo | 2025</p>
                 </div>
-               
             </div>
         </footer>
     </body>
 </html>
 <style>
-/* Footer */
-.footer {
-    background-color: #111827;
-    color: #ffffff;
-    padding: 5rem 0 2rem;
-}
+    /* Footer */
+    .footer {
+        background-color: #111827;
+        color: #ffffff;
+        padding: 5rem 0 2rem;
+    }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 4rem;
-}
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--white);
-}
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--white);
+    }
 
-.footer-logo i {
-    margin-right: 1rem;
-    font-size: 2.6rem;
-    color: #93c5fd;
-}
+    .footer-logo i {
+        margin-right: 1rem;
+        font-size: 2.6rem;
+        color: #93c5fd;
+    }
 
-.footer-content p {
-    color: #9ca3af;
-}
-
-
+    .footer-content p {
+        color: #9ca3af;
+    }
 </style>
