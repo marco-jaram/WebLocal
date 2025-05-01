@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por suscribirte - Tu Consultorio Virtual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .thank-you-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        
+        .success-icon {
+            width: 70px;
+            height: 70px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .success-icon svg {
+            width: 35px;
+            height: 35px;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .info-box {
+            background-color: #f5f7fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .info-box h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-box svg {
+            margin-right: 10px;
+        }
+        
+        ul {
+            list-style-type: none;
+            text-align: left;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        li::before {
+            content: "•";
+            color: #4CAF50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .footer {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .thank-you-card {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                </svg>
+            </div>
+            
+            <h1>¡Genial! Tu guía ha sido enviada</h1>
+            
+            <p>Hemos enviado <strong>"TU CONSULTORIO VIRTUAL: Guía para psicólogas en el mundo online"</strong> a tu correo electrónico.</p>
+            
+            <p>Revisa tu bandeja de entrada para comenzar tu camino hacia un consultorio virtual exitoso.</p>
+            
+            <div class="info-box">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#4CAF50">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                    </svg>
+                    ¿No encuentras el correo?
+                </h2>
+                <ul>
+                    <li>Revisa tu bandeja principal o de entrada</li>
+                    <li>Busca en la carpeta de "Promociones" o "Spam"</li>
+                    <li>A veces puede tardar unos minutos u horas en llegar (hasta 24 horas)</li>
+                    <li>Asegúrate de revisar la cuenta de correo que proporcionaste</li>
+                </ul>
+            </div>
+            
+            <p class="footer">Gracias por tu paciencia y por tu confianza. <span class="highlight">¡Bienvenida/o!</span></p>
+        </div>
+    </div>
+</body>
+</html>
