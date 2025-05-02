@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-
+    <!-- Meta Pixel Code -->
+<script is:inline>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '508126970345684');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=508126970345684&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>Confirma tu suscripción - Tu Consultorio Virtual</title>
 </head>
 <body>
@@ -48,7 +64,15 @@
             <p class="footer">Gracias por tu paciencia y por tu confianza. <br> <span class="highlight">¡Bienvenida/o!</span></p>
         </div>
     </div>
-  
+    <script is:inline>
+        // Verifica que el pixel esté cargado
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', {
+            content_name: "Guía 5 pasos Consultorio Virtual Psicólogos"
+          });
+          console.log("Lead registrado en Meta Pixel");
+        }
+      </script>
 </body>
 </html>
 
