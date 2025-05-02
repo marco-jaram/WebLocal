@@ -206,9 +206,18 @@ import Layout from "../../layouts/LayoutLanding.astro";
                     <h3>Accede y arma tu plan de negocios canvas</h3>
                     <p>Completa el formulario para obtener acceso inmediato:</p>
                     
-                    <iframe data-skip-lazy="" src="https://espanolunoauno.ipzmarketing.com/f/8ui2dGMXgGA" frameborder="0" scrolling="no" width="100%" class="ipz-iframe"></iframe>
-<script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script>
-                </div>
+                    <form method="post" action="https://sendfox.com/form/10dleq/3qyq7l" class="sendfox-form" id="3qyq7l" data-async="true" data-recaptcha="true">
+                        <p><label for="sendfox_form_name"></label><input type="text" id="sendfox_form_name" placeholder="nombre" name="first_name" required /></p>
+                        <p><label for="sendfox_form_email"></label><input type="email" id="sendfox_form_email" placeholder="correo" name="email" required /></p>
+                        <!-- no botz please -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+                        <p><button type="submit">¡Dame acceso!</button></p>
+                        </form>
+                        <script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+                                    
+
+
+</div>
             </div>
         </div>
     </section>
@@ -1039,5 +1048,69 @@ cite {
     .hero h1 {
         font-size: 5.6rem;
     }
+}
+
+ /* Estilos para el formulario */
+ .sendfox-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sendfox-form p {
+  margin-bottom: 20px;
+}
+
+.sendfox-form label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.sendfox-form input[type="text"],
+.sendfox-form input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.sendfox-form input[type="text"]:focus,
+.sendfox-form input[type="email"]:focus {
+  border-color: #4285f4;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.sendfox-form button[type="submit"] {
+  width: 100%;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sendfox-form button[type="submit"]:hover {
+  background-color: #3367d6;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .sendfox-form {
+    padding: 15px;
+  }
 }
 </style>
