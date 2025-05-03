@@ -2,28 +2,104 @@
 <div class="formulario-blog">
     <p>¿Te ha resultado útil este artículo? <br> Suscríbete a nuestro newsletter para recibir más consejos sobre negocios digitales y estrategias para impulsarlo.
     </p>
-<iframe data-skip-lazy="" src="https://espanolunoauno.ipzmarketing.com/f/HCX1kUr32xY" frameborder="0" scrolling="no" width="100%" class="ipz-iframe"></iframe>
-<script data-cfasync="false" type="text/javascript" src="https://assets.ipzmarketing.com/assets/signup_form/iframe_v1.js"></script></div>
-
-
+    <form method="post" action="https://sendfox.com/form/10dleq/m4lwvl" class="sendfox-form" id="m4lwvl" data-async="true" data-recaptcha="true">
+        <p><label for="sendfox_form_name"></label><input type="text" id="sendfox_form_name" placeholder="nombre" name="first_name" required /></p>
+        <p><label for="sendfox_form_email"></label><input type="email" id="sendfox_form_email" placeholder="correo" name="email" required /></p>
+        <!-- no botz please -->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
+        <p><button type="submit">Suscribirme</button></p>
+        </form>
+        <script src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+                    
+                    
 <style>
-   .formulario-blog {
-    max-width: 800px;
-    margin: 0 auto;
-        background-color: #f9f8ed;
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 20px;
-        font-family: 'Arial', sans-serif;
-    }
-    
-    .formulario-blog p {
-        font-size: 1.8rem;
-        color: #292727;
-        margin-bottom: 10px;
-    }
-    
-    .ipz-iframe {
-        border-radius: 8px;
-    }
+   /* Estilos para formulario de blog */
+.formulario-blog {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(17, 178, 142, 0.15);
+  border-top: 4px solid #11b28e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formulario-blog p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Campos del formulario */
+.formulario-blog form p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.formulario-blog label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.formulario-blog input[type="text"],
+.formulario-blog input[type="email"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.formulario-blog input[type="text"]:focus,
+.formulario-blog input[type="email"]:focus {
+  border-color: #11b28e;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(17, 178, 142, 0.2);
+}
+
+.formulario-blog input::placeholder {
+  color: #aaaaaa;
+}
+
+/* Botón de suscripción */
+.formulario-blog button[type="submit"] {
+  background-color: #11b28e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formulario-blog button[type="submit"]:hover {
+  background-color: #0e9a7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(17, 178, 142, 0.25);
+}
+
+.formulario-blog button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+  .formulario-blog {
+    padding: 20px 15px;
+    margin: 20px 10px;
+  }
+}
 </style>
