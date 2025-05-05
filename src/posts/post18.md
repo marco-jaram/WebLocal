@@ -32,6 +32,8 @@ Como profesional del marketing digital, he desarrollado un sistema metódico y p
 
 ![Proceso de venta con anuncio](https://weblocalmx.com/img/proceso-venta.webp)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yZIcenf9ang?si=6f7VKY-Q7iWe7Ljg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Este gráfico ilustra el sistema ordenado y metódico que implemento para mis clientes. Muestra el recorrido completo que sigue un prospecto desde el anuncio inicial hasta la conversión final. A continuación, detallo cada paso para que entiendas la precisión con la que trabajo:
 
 ## 1. Configuración del lead y evento en Facebook
