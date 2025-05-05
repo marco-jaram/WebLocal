@@ -30,7 +30,7 @@ Como profesional del marketing digital, he desarrollado un sistema metódico y p
 
 ## El proceso completo: visualizado
 
-![Proceso de venta con anuncio](imagen-1.jpg)
+![Proceso de venta con anuncio](https://weblocalmx.com/img/proceso-venta.webp)
 
 Este gráfico ilustra el sistema ordenado y metódico que implemento para mis clientes. Muestra el recorrido completo que sigue un prospecto desde el anuncio inicial hasta la conversión final. A continuación, detallo cada paso para que entiendas la precisión con la que trabajo:
 
@@ -74,7 +74,7 @@ Una vez que el usuario envía sus datos, es dirigido a una página de confirmaci
 
 ## 4. Entrada al embudo de email marketing
 
-![Lead Magnet](imagen-2.jpg)
+![Lead Magnet](https://lluviadigital.com/wp-content/uploads/2023/12/1570643176110.png)
 
 Cuando el prospecto confirma su correo, mi sistema lo integra automáticamente en un embudo de email marketing meticulosamente diseñado. Aquí es donde mi metodología demuestra su valor. Como se visualiza en la imagen, trabajo con diferentes posiciones estratégicas de lead magnets:
 
