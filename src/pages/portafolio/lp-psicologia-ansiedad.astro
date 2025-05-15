@@ -4,44 +4,52 @@ import Layout from "../../layouts/LayoutLanding.astro";
 ---
 
 <Layout
-title="Landing page de psicolgogia"
-description="Landing page de psicologia."
-keywords="landing page"
+title="Ana Ramírez - Psicóloga especialista en ansiedad"
+description="Terapia online para superar la ansiedad y tomar mejores decisiones. Sesiones desde la comodidad de tu hogar con resultados comprobados."
+keywords="psicología online, terapia ansiedad, atención psicológica virtual, psicóloga especialista, ataques de pánico, pensamientos intrusivos, evitación social"
 >
-
-
-
-
-
-
+<Fragment slot="meta">
+    <meta name="robots" content="noindex, nofollow">
+</Fragment>
 
     <!-- Eliminado el botón flotante de WhatsApp -->
 
     <!-- Header / Navegación -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-brain logo-icon"></i>
-                <h2>Ana Ramírez</h2>
+    <div class="nihtml">
+        <header>
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-brain logo-icon"></i>
+                   
+                    <h2>Ana Ramírez</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre mí</a></li>
+                        <li><a href="#metodo">Mi método</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </nav>
+                <a
+                    href="https://calendario.anapsicologatijuana.com"
+                    class="btn-reservar"
+                    target="_blank">Reservar cita</a
+                >
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre mí</a></li>
-                    <li><a href="#metodo">Mi método</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                </ul>
-            </nav>
-            <a href="https://calendario.anapsicologatijuana.com" class="btn-reservar" target="_blank">Reservar cita</a>
-        </div>
-    </header>
+        </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Ana Ramírez</h1>
-            <p>Quiero ayudarte a superar tu ansiedad para que puedas tomar decisiones en los diferentes ámbitos de tu vida.</p>
-            <p style="font-size: 1.1rem; margin-bottom: 30px;">Terapia 100% online · Reserva y pago inmediato · Sesiones desde la comodidad de tu hogar</p>
+            <span class="hero-label">Terapia 100% online</span>
+<h1 class="hero-title">Ana <span class="highlight">Ramírez</span></h1>
+<p class="hero-subtitle">
+    Quiero ayudarte a superar tu ansiedad para que puedas tomar decisiones con claridad en todos los ámbitos de tu vida.
+</p>
+<p class="hero-features">
+    Reserva y pago inmediato · Sesiones desde la comodidad de tu hogar
+</p>
             <div class="btn-group">
                 <a href="https://calendario.anapsicologatijuana.com" class="btn-primary" target="_blank">Reserva Ahora</a>
                 <a href="#sobre-mi" class="btn-secondary">Sobre Mí</a>
@@ -49,200 +57,308 @@ keywords="landing page"
         </div>
     </section>
 
-    <!-- Sección de Identificación -->
-    <section class="identificacion">
-        <div class="container">
-            <h2>¿Te sientes identificado?</h2>
-            <div class="cards">
+        <!-- Sección de Identificación -->
+        <section class="identificacion">
+            <div class="container">
+                <h2>¿Te sientes identificado?</h2>
                 <div class="card">
                     <i class="fas fa-heartbeat card-icon"></i>
                     <div class="card-content">
                         <h3>Ataques de pánico</h3>
-                        <p>Sientes que tu corazón se acelera, te falta el aire y el miedo te paraliza cuando menos lo esperas. Yo estuve ahí y sé lo aterrador que es.</p>
+                        <p>
+                            Sientes que tu corazón se acelera, te falta el aire y el miedo te paraliza cuando menos lo esperas. He transitado ese camino y entiendo lo aterrador que se siente.
+                        </p>
                     </div>
                 </div>
                 <div class="card">
                     <i class="fas fa-brain card-icon"></i>
                     <div class="card-content">
                         <h3>Pensamientos intrusivos</h3>
-                        <p>Tu cabeza no para de dar vueltas con preocupaciones, incluso cuando sabes que son exageradas. Te he escuchado decirlo mil veces y se puede solucionar.</p>
+                        <p>
+                            Tu mente no deja de generar preocupaciones, incluso cuando reconoces que son excesivas. Es un patrón que he ayudado a muchas personas a transformar.
+                        </p>
                     </div>
                 </div>
                 <div class="card">
                     <i class="fas fa-door-closed card-icon"></i>
                     <div class="card-content">
                         <h3>Evitación social</h3>
-                        <p>Has dejado de ir a lugares o hacer cosas que te gustaban porque el miedo te lo impide. Te aseguro que puedes recuperar esa libertad.</p>
+                        <p>
+                            Has dejado de participar en actividades que te gustaban porque la ansiedad te lo impide. Puedo ayudarte a recuperar esa libertad gradualmente.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi">
-        <div class="container">
-            <div class="about">
-                <div class="about-img">
-                    <!-- Usamos solo la estructura para la imagen, asumiendo que se cargará desde Astro -->
-                    <img src="https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?q=80&w=2041&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ana Ramírez, Psicóloga">
-                </div>
-                <div class="about-content">
-                    <h2>Soy psicóloga experta</h2>
-                    <p>Hola, soy Ana. Lo que más me apasiona es <span class="highlight">ayudarte a desprogramar tu mapa mental y reprogramarlo</span> desde lo más profundo y básico.</p>
-                    <p>Yo también sufrí ansiedad durante 7 años. Probé de todo hasta que encontré un método que realmente funcionó. Ahora lo uso para ayudar a personas como tú, y los resultados hablan por sí solos.</p>
-                    <p>El pasado no es lo más importante pero debemos tenerlo claro para vivir un presente en plenitud. El presente primero y después el futuro son lo más importante para disfrutar todo lo maravilloso que la vida ofrece.</p>
-                    <p>En mi consultorio virtual, he acompañado a más de 200 personas a recuperar su tranquilidad. Te comparto que el 70% de quienes han trabajado conmigo reducen sus síntomas de ansiedad en un 65% en tan solo 8 sesiones online.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Mi Método -->
-    <section id="metodo" class="metodo">
-        <div class="container">
-            <h2>Así es como trabajo contigo</h2>
-            <div class="steps">
-                <div class="step">
-                    <h3>Te escucho de verdad, desde cualquier lugar</h3>
-                    <p>En nuestra primera sesión online, quiero conocer tu historia personal - qué te preocupa, cuándo comenzó y cómo afecta tu vida. La conexión virtual no impide una atención personalizada y cercana.</p>
-                </div>
-                <div class="step">
-                    <h3>Te enseño herramientas digitales que realmente funcionan</h3>
-                    <p>Aprenderás técnicas prácticas que puedes usar en el momento exacto en que la ansiedad aparece. Te proporcionaré recursos digitales y ejercicios que podrás aplicar inmediatamente en tu día a día.</p>
-                </div>
-                <div class="step">
-                    <h3>Te acompaño virtualmente en todo el proceso</h3>
-                    <p>No te dejo solo/a con ejercicios. Te acompaño en cada sesión online mientras aplicas lo aprendido en tu vida real, ajustando lo que sea necesario hasta que veas resultados, sin importar dónde te encuentres.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Testimonios -->
-    <section id="testimonios">
-        <div class="container">
-            <h2>Esto es lo que dicen las personas que han trabajado conmigo</h2>
-            <div class="testimonios-grid">
-                <div class="testimonio">
-                    <p>"Ana, no tengo palabras para agradecerte. Después de años sufriendo ataques de pánico, ahora puedo hacer videollamadas de trabajo sin ansiedad y hasta he viajado sola. Las sesiones online fueron más efectivas de lo que imaginé."</p>
-                    <div class="testimonio-autor">
-                        <div class="testimonio-autor-img">
-                            <img src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 50px;" alt="Marcela">
-                        </div>
-                        <div class="autor-info">
-                            <h4>Marcela</h4>
-                            <span>34 años, Ciudad de México</span>
-                        </div>
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi">
+            <div class="container">
+                <div class="about">
+                    <div class="about-img">
+                        <!-- Usamos solo la estructura para la imagen, asumiendo que se cargará desde Astro -->
+                        <img
+                            src="https://images.unsplash.com/photo-1607990283143-e81e7a2c9349?q=80&w=2041&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Ana Ramírez, Psicóloga"
+                        />
                     </div>
-                </div>
-                <div class="testimonio">
-                    <p>"Mi ansiedad estaba destruyendo mi trabajo remoto y mi relación con mis hijos. En solo 2 meses de terapias virtuales con Ana, he recuperado mi productividad y la conexión con mi familia. El formato online se adaptó perfectamente a mi agenda."</p>
-                    <div class="testimonio-autor">
-                        <div class="testimonio-autor-img">
-                            <img src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 50px;" alt="Marcela">
-                        </div>
-                        <div class="autor-info">
-                            <h4>Roberto</h4>
-                            <span>42 años, Barcelona</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonio">
-                    <p>"No podía dormir por las preocupaciones constantes. Las sesiones online con Ana fueron un salvavidas, especialmente porque no tenía que salir de casa cuando la ansiedad era intensa. Ahora puedo manejar mis pensamientos incluso en situaciones difíciles."</p>
-                    <div class="testimonio-autor">
-                        <div class="testimonio-autor-img">
-                            <img src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 50px;" alt="Marcela">
-                        </div>
-                        <div class="autor-info">
-                            <h4>Alejandra</h4>
-                            <span>27 años, Lima</span>
-                        </div>
+                    <div class="about-content">
+                        <h2>Soy psicóloga experta</h2>
+                        <p>
+                            Hola, soy Ana. Mi compromiso profesional es <span class="highlight">ayudarte a identificar patrones limitantes y desarrollar nuevas formas de pensar</span> que transformen tu bienestar emocional.
+                        </p>
+                        <p>
+                            Yo también sufrí ansiedad durante 7 años. Probé de todo hasta que encontré un método que realmente funcionó. Ahora lo uso para ayudar a personas como tú, y los resultados hablan por sí solos.
+                        </p>
+                        <p>
+                            El pasado no es lo más importante pero debemos tenerlo claro para vivir un presente en plenitud. El presente primero y después el futuro son lo más importante para disfrutar todo lo maravilloso que la vida ofrece.
+                        </p>
+                        <p>
+                            En mi consultorio virtual, he acompañado a más de 200 personas a recuperar su tranquilidad. Te comparto que el 70% de quienes han trabajado conmigo reducen sus síntomas de ansiedad en un 65% en tan solo 8 sesiones online.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección CTA / Reserva -->
-    <section id="reserva" class="cta">
-        <div class="container">
-            <h2>¿Estás list@ para dar el primer paso?</h2>
-            <p>Tu primera sesión es totalmente gratuita y sin compromiso. Solo tengo 5 espacios libres esta semana - las sesiones se llenan rápido.</p>
-            <a href="https://calendario.anapsicologatijuana.com" class="btn-primary" target="_blank">Reservar mi cita ahora</a>
-            
-                            <div class="calendario-box" id="calendario">
-                <h3>Tu terapia online comienza aquí</h3>
-                <p>Al hacer clic en el botón de reserva, accederás a mi sistema online donde podrás:</p>
-                <ul style="text-align: left; margin: 20px auto; max-width: 400px;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-calendar-check" style="color: #fff; margin-right: 10px;"></i> Elegir el día y hora de tu sesión virtual</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-credit-card" style="color: #fff; margin-right: 10px;"></i> Realizar tu pago de forma segura</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="color: #fff; margin-right: 10px;"></i> Recibir confirmación y enlace de acceso</li>
-                </ul>
-                <p>Todo desde la comodidad de tu hogar, sin desplazamientos ni esperas.</p>
-                
-                <a href="https://calendario.anapsicologatijuana.com" class="btn-primary" target="_blank" style="margin-top: 20px;">
-                    <i class="fas fa-calendar-alt"></i> Reservar mi terapia online
-                </a>
+        <!-- Sección Mi Método -->
+        <section id="metodo" class="metodo">
+            <div class="container">
+                <h2>Así es como trabajo contigo</h2>
+              
+                    <div class="step">
+                        <h3>Te escucho de verdad, desde cualquier lugar</h3>
+                        <p>
+                            En nuestra primera sesión online, quiero conocer tu
+                            historia personal - qué te preocupa, cuándo comenzó
+                            y cómo afecta tu vida. La conexión virtual no impide
+                            una atención personalizada y cercana.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>
+                            Te enseño herramientas digitales que realmente
+                            funcionan
+                        </h3>
+                        <p>
+                            Aprenderás técnicas prácticas que puedes usar en el
+                            momento exacto en que la ansiedad aparece. Te
+                            proporcionaré recursos digitales y ejercicios que
+                            podrás aplicar inmediatamente en tu día a día.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <h3>Te acompaño virtualmente en todo el proceso</h3>
+                        <p>
+                            No te dejo solo/a con ejercicios. Te acompaño en
+                            cada sesión online mientras aplicas lo aprendido en
+                            tu vida real, ajustando lo que sea necesario hasta
+                            que veas resultados, sin importar dónde te
+                            encuentres.
+                        </p>
+                    </div>
+               
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ana Ramírez</h3>
-                    <p>Psicóloga especializada en ansiedad y desarrollo personal con más de 10 años de experiencia ayudando a personas a superar sus limitaciones emocionales.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Sección Testimonios -->
+        <section id="testimonios">
+            <div class="container">
+                <h2>
+                    Esto es lo que dicen las personas que han trabajado conmigo
+                </h2>
+                <div class="testimonios-grid">
+                    <div class="testimonio">
+                        <p>
+                            "Ana, no tengo palabras para agradecerte. Después de
+                            años sufriendo ataques de pánico, ahora puedo hacer
+                            videollamadas de trabajo sin ansiedad y hasta he
+                            viajado sola. Las sesiones online fueron más
+                            efectivas de lo que imaginé."
+                        </p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-autor-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    style="width: 50px;"
+                                    alt="Marcela"
+                                />
+                            </div>
+                            <div class="autor-info">
+                                <h4>Marcela</h4>
+                                <span>34 años, Ciudad de México</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio">
+                        <p>
+                            "Mi ansiedad estaba destruyendo mi trabajo remoto y
+                            mi relación con mis hijos. En solo 2 meses de
+                            terapias virtuales con Ana, he recuperado mi
+                            productividad y la conexión con mi familia. El
+                            formato online se adaptó perfectamente a mi agenda."
+                        </p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-autor-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    style="width: 50px;"
+                                    alt="Marcela"
+                                />
+                            </div>
+                            <div class="autor-info">
+                                <h4>Roberto</h4>
+                                <span>42 años, Barcelona</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonio">
+                        <p>
+                            "No podía dormir por las preocupaciones constantes.
+                            Las sesiones online con Ana fueron un salvavidas,
+                            especialmente porque no tenía que salir de casa
+                            cuando la ansiedad era intensa. Ahora puedo manejar
+                            mis pensamientos incluso en situaciones difíciles."
+                        </p>
+                        <div class="testimonio-autor">
+                            <div class="testimonio-autor-img">
+                                <img
+                                    src="https://images.unsplash.com/photo-1736366285834-9be3c816db79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    style="width: 50px;"
+                                    alt="Marcela"
+                                />
+                            </div>
+                            <div class="autor-info">
+                                <h4>Alejandra</h4>
+                                <span>27 años, Lima</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#sobre-mi">Sobre mí</a></li>
-                        <li><a href="#metodo">Mi método</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#reserva">Reservar cita</a></li>
+            </div>
+        </section>
+
+        <!-- Sección CTA / Reserva -->
+        <section id="reserva" class="cta">
+            <div class="container">
+                <h2>¿Estás list@ para dar el primer paso?</h2>
+                <p>
+                    Tu primera sesión es totalmente gratuita y sin compromiso.
+                    Solo tengo 5 espacios libres esta semana - las sesiones se
+                    llenan rápido.
+                </p>
+                <a
+                    href="https://calendario.anapsicologatijuana.com"
+                    class="btn-primary"
+                    target="_blank">Reservar mi cita ahora</a
+                >
+
+                <div class="calendario-box" id="calendario">
+                    <h3>Tu terapia online comienza aquí</h3>
+                    <p>
+                        Al hacer clic en el botón de reserva, accederás a mi
+                        sistema online donde podrás:
+                    </p>
+                    <ul
+                        style="text-align: left; margin: 20px auto; max-width: 400px;"
+                    >
+                        <li style="margin-bottom: 10px;">
+                            <i
+                                class="fas fa-calendar-check"
+                                style="color: #fff; margin-right: 10px;"></i> Elegir
+                            el día y hora de tu sesión virtual
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <i
+                                class="fas fa-credit-card"
+                                style="color: #fff; margin-right: 10px;"></i> Realizar
+                            tu pago de forma segura
+                        </li>
+                        <li style="margin-bottom: 10px;">
+                            <i
+                                class="fas fa-envelope"
+                                style="color: #fff; margin-right: 10px;"></i> Recibir
+                            confirmación y enlace de acceso
+                        </li>
                     </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <div class="contact-info">
-                        <i class="fas fa-laptop"></i>
-                        <p>Consultas 100% online - Desde cualquier lugar</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-envelope"></i>
-                        <p>ana@ejemplo.com</p>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-globe"></i>
-                        <p>Atención internacional - Español e Inglés</p>
-                    </div>
+                    <p>
+                        Todo desde la comodidad de tu hogar, sin desplazamientos
+                        ni esperas.
+                    </p>
+
+                    <a
+                        href="https://calendario.anapsicologatijuana.com"
+                        class="btn-primary"
+                        target="_blank"
+                        style="margin-top: 20px;"
+                    >
+                        <i class="fas fa-calendar-alt"></i> Reservar mi terapia online
+                    </a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 Ana Ramírez | Psicóloga Online. Todos los derechos reservados.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Ana Ramírez</h3>
+                        <p>
+                            Psicóloga especializada en ansiedad y desarrollo
+                            personal con más de 10 años de experiencia ayudando
+                            a personas a superar sus limitaciones emocionales.
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Enlaces Rápidos</h3>
+                        <ul>
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#sobre-mi">Sobre mí</a></li>
+                            <li><a href="#metodo">Mi método</a></li>
+                            <li><a href="#testimonios">Testimonios</a></li>
+                            <li><a href="#reserva">Reservar cita</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contacto</h3>
+                        <div class="contact-info">
+                            <i class="fas fa-laptop"></i>
+                            <p>Consultas 100% online - Desde cualquier lugar</p>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <p>ana@ejemplo.com</p>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-globe"></i>
+                            <p>Atención internacional - Español e Inglés</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>
+                        &copy; 2025 Ana Ramírez | Psicóloga Online. Todos los
+                        derechos reservados.
+                    </p>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </Layout>
-    <!-- Script para inicializar componentes si es necesario -->
-    <script>
-        // Aquí puedes añadir cualquier script necesario
-        document.addEventListener('DOMContentLoaded', function() {
-            // Tu código de inicialización aquí
-        });
-    </script>
-
-
+<!-- Script para inicializar componentes si es necesario -->
+<script>
+    // Aquí puedes añadir cualquier script necesario
+    document.addEventListener("DOMContentLoaded", function () {
+        // Tu código de inicialización aquí
+    });
+</script>
 
 <style>
     /* Estilos base */
@@ -250,24 +366,24 @@ keywords="landing page"
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
     }
-    
+
     body {
         line-height: 1.6;
         color: #333;
         background-color: #fff;
     }
-    
+
     /* Navegación */
     header {
         background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         position: fixed;
         width: 100%;
         z-index: 1000;
     }
-    
+
     .nav-container {
         display: flex;
         justify-content: space-between;
@@ -276,43 +392,43 @@ keywords="landing page"
         margin: 0 auto;
         padding: 15px 20px;
     }
-    
+
     .logo {
         display: flex;
         align-items: center;
     }
-    
+
     .logo-icon {
         font-size: 28px;
         color: #8e44ad;
         margin-right: 10px;
     }
-    
+
     .logo h2 {
         color: #8e44ad;
         font-size: 1.5rem;
     }
-    
+
     nav ul {
         display: flex;
         list-style: none;
     }
-    
+
     nav ul li {
         margin-left: 25px;
     }
-    
+
     nav ul li a {
         text-decoration: none;
         color: #333;
         font-weight: 500;
         transition: color 0.3s;
     }
-    
+
     nav ul li a:hover {
         color: #8e44ad;
     }
-    
+
     .btn-reservar {
         background-color: #8e44ad;
         color: white;
@@ -322,223 +438,266 @@ keywords="landing page"
         font-weight: bold;
         transition: background-color 0.3s;
     }
-    
+
     .btn-reservar:hover {
         background-color: #7d3c98;
     }
-    
-    /* Hero Section */
-    .hero {
-        background-color: #8e44ad; /* Fondo de respaldo en caso de que la imagen no cargue */
-        background-image: url('https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ruta relativa para Astro */
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        color: white;
-        text-align: center;
-        padding-top: 70px;
-    }
-    
-    .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejorar legibilidad */
-    }
-    
-    .hero-content {
-        position: relative; /* Para estar por encima del overlay */
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 20px;
-        z-index: 1;
-    }
-    
-    .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    
-    .hero p {
-        font-size: 1.3rem;
-        margin-bottom: 30px;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-    }
-    
-    .btn-group {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .btn-primary {
-        background-color: #8e44ad;
-        color: white;
-        padding: 15px 30px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: all 0.3s;
-    }
-    
-    .btn-primary:hover {
-        background-color: #7d3c98;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
-    .btn-secondary {
-        background-color: transparent;
-        color: white;
-        padding: 15px 30px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: 2px solid white;
-        transition: all 0.3s;
-    }
-    
-    .btn-secondary:hover {
-        background-color: rgba(255,255,255,0.2);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-    
+
+  /* Hero Section Rediseñado */
+  .hero {
+            background-image: url("https://images.unsplash.com/photo-1604881988758-f76ad2f7aac1?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 0 5%;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .hero-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+            color: #e0b0ff;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-title .highlight {
+            color: #e0b0ff;
+            display: inline;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+        }
+
+        .hero-features {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background-color: #8e44ad;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #7d3c98;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid white;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+                max-width: 100%;
+            }
+            
+            .hero-features {
+                font-size: 1rem;
+            }
+        }
     /* Secciones */
     section {
         padding: 80px 0;
     }
-    
+
     .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
-    
+
     h2 {
         font-size: 2.2rem;
         margin-bottom: 40px;
         color: #333;
         text-align: center;
     }
-    
+
     h2:after {
-        content: '';
+        content: "";
         display: block;
         width: 70px;
         height: 3px;
         background-color: #8e44ad;
         margin: 20px auto 0;
     }
-    
+
     /* Identificación */
     .identificacion {
         background-color: #f9f9f9;
     }
-    
+
     .cards {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
     }
-    
+
     .card {
         background: white;
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         flex: 1;
         min-width: 300px;
-        transition: transform 0.3s, box-shadow 0.3s;
+        transition:
+            transform 0.3s,
+            box-shadow 0.3s;
         display: flex;
         align-items: flex-start;
     }
-    
+
     .card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    
+
     .card-icon {
         font-size: 2rem;
         color: #8e44ad;
         margin-right: 20px;
     }
-    
+
     .card-content h3 {
         font-size: 1.3rem;
         margin-bottom: 15px;
         color: #8e44ad;
     }
-    
+
     /* Sobre mí */
     .about {
         display: flex;
         align-items: center;
         gap: 50px;
     }
-    
+
     .about-img {
         flex: 1;
         max-width: 450px;
     }
-    
+
     .about-img img {
         width: 100%;
         border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    
+
     .about-content {
         flex: 1;
     }
-    
+
     .about-content h2 {
         text-align: left;
     }
-    
+
     .about-content h2:after {
         margin-left: 0;
     }
-    
+
     .about-content p {
         margin-bottom: 20px;
     }
-    
+
     .highlight {
         color: #8e44ad;
         font-weight: bold;
     }
-    
+
     /* Método */
     .metodo {
         background-color: #f9f9f9;
     }
-    
+
     .steps {
         counter-reset: step-counter;
     }
-    
+
     .step {
         counter-increment: step-counter;
         position: relative;
         padding: 30px 30px 30px 80px;
         background: white;
         border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         margin-bottom: 30px;
     }
-    
+
     .step:before {
         content: counter(step-counter);
         position: absolute;
@@ -556,49 +715,40 @@ keywords="landing page"
         font-weight: bold;
         font-size: 1.2rem;
     }
-    
+
     .step h3 {
         font-size: 1.3rem;
         margin-bottom: 10px;
         color: #333;
     }
-    
+
     /* Testimonios */
     .testimonios-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
     }
-    
+
     .testimonio {
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         background: white;
         position: relative;
     }
-    
-    .testimonio:before {
-        content: '\f10d';
-        font-family: 'Font Awesome 6 Free';
-        font-weight: 900;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        font-size: 1.5rem;
-        color: rgba(142, 68, 173, 0.2);
-    }
-    
+
+  
+
     .testimonio p {
         margin-bottom: 20px;
         font-style: italic;
     }
-    
+
     .testimonio-autor {
         display: flex;
         align-items: center;
     }
-    
+
     .testimonio-autor-img {
         width: 50px;
         height: 50px;
@@ -610,28 +760,28 @@ keywords="landing page"
         justify-content: center;
         overflow: hidden;
     }
-    
+
     .autor-info h4 {
         margin-bottom: 5px;
         color: #333;
     }
-    
+
     .autor-info span {
         font-size: 0.9rem;
         color: #666;
     }
-    
+
     /* CTA */
     .cta {
         background-color: #8e44ad; /* Color de respaldo */
-        background-image: url('https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Ruta relativa para Astro */
+        background-image: url("https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Ruta relativa para Astro */
         background-size: cover;
         background-position: center;
         position: relative;
         color: white;
         text-align: center;
     }
-    
+
     .cta::before {
         content: "";
         position: absolute;
@@ -639,28 +789,33 @@ keywords="landing page"
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(142, 68, 173, 0.9); /* Overlay con el color de la marca */
+        background-color: rgba(
+            142,
+            68,
+            173,
+            0.9
+        ); /* Overlay con el color de la marca */
     }
-    
+
     .cta .container {
         position: relative;
         z-index: 1;
     }
-    
+
     .cta h2 {
         color: white;
     }
-    
+
     .cta h2:after {
         background-color: white;
     }
-    
+
     .cta p {
         font-size: 1.2rem;
         max-width: 700px;
         margin: 0 auto 30px;
     }
-    
+
     .calendario-box {
         background-color: rgba(255, 255, 255, 0.1);
         padding: 30px;
@@ -668,72 +823,72 @@ keywords="landing page"
         max-width: 600px;
         margin: 40px auto 0;
     }
-    
+
     .calendario-box p {
         margin-bottom: 20px;
     }
-    
+
     /* Footer */
     footer {
         background-color: #222;
         color: white;
         padding: 50px 0 20px;
     }
-    
+
     .footer-content {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 40px;
     }
-    
+
     .footer-section {
         flex: 1;
         min-width: 250px;
         margin-bottom: 30px;
     }
-    
+
     .footer-section h3 {
         margin-bottom: 20px;
         font-size: 1.3rem;
     }
-    
+
     .footer-section ul {
         list-style: none;
     }
-    
+
     .footer-section ul li {
         margin-bottom: 10px;
     }
-    
+
     .footer-section ul li a {
         color: #ddd;
         text-decoration: none;
         transition: color 0.3s;
     }
-    
+
     .footer-section ul li a:hover {
         color: #8e44ad;
     }
-    
+
     .contact-info {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
     }
-    
+
     .contact-info i {
         margin-right: 15px;
         color: #8e44ad;
         font-size: 1.2rem;
     }
-    
+
     .social-icons {
         display: flex;
         gap: 15px;
         margin-top: 20px;
     }
-    
+
     .social-icons a {
         display: flex;
         align-items: center;
@@ -746,12 +901,12 @@ keywords="landing page"
         text-decoration: none;
         transition: all 0.3s;
     }
-    
+
     .social-icons a:hover {
         background-color: #8e44ad;
         transform: translateY(-3px);
     }
-    
+
     .copyright {
         text-align: center;
         padding-top: 20px;
@@ -759,42 +914,42 @@ keywords="landing page"
         font-size: 0.9rem;
         color: #888;
     }
-    
+
     /* Estilos para botón flotante eliminados */
-    
+
     /* Media Queries */
     @media (max-width: 992px) {
         nav ul {
             display: none;
         }
-        
+
         .about {
             flex-direction: column;
         }
-        
+
         .about-img {
             max-width: 100%;
             margin-bottom: 30px;
         }
     }
-    
+
     @media (max-width: 768px) {
         .hero h1 {
             font-size: 2.5rem;
         }
-        
+
         .hero p {
             font-size: 1.1rem;
         }
-        
+
         .btn-group {
             flex-direction: column;
         }
-        
+
         .cards {
             flex-direction: column;
         }
-        
+
         h2 {
             font-size: 1.8rem;
         }

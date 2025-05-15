@@ -3,6 +3,7 @@ import GoogleAnalytics from "../components/analytics-scripts/GoogleAnalytics.ast
 import PixelFaceBook from "../components/analytics-scripts/PixelFaceBook.astro";
 import TManager from "../components/analytics-scripts/TManager.astro";
 import TManagerBody from "../components/analytics-scripts/TManagerBody.astro";
+import Awesome from "../components/Awesome.astro";
 
 // Layout.astro - Layout limpio para landing pages
 interface Props {
@@ -11,7 +12,7 @@ interface Props {
     keywords?: string;
 }
 
-const { title, description = "", keywords = "" } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
@@ -29,17 +30,17 @@ const { title, description = "", keywords = "" } = Astro.props;
         <TManager />
         <!-- Slot para meta tags adicionales -->
         <slot name="meta" />
-
+        
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        />
+      <Awesome />
+        
+     
+       
     </head>
     <body>
         <TManagerBody />
