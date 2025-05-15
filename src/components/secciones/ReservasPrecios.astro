@@ -1,58 +1,30 @@
 <section class="section-light">
     <div class="container">
-        <h2 class="section-title">Sistema de reservas para emprendedores digitales</h2>
+        <h2 class="section-title">Sistema de reservas para profesionales independientes</h2>
         
         <div class="pricing-container">
-            <!-- Paquete completo -->
-            <div class="pricing-card">
-                <div class="package-name">Paquete Completo</div>
-                <div class="price">$500 USD</div>
-                <p class="price-description">El paquete integral para comenzar desde cero</p>
+            <!-- Paquete único -->
+            <div class="pricing-card featured">
+                <div class="package-name">Paquete Profesional</div>
+                <div class="price">$8,500 MXN</div>
+                <p class="price-description">Solución completa para profesionales que ofrecen servicios uno a uno</p>
                 
                 <ul class="feature-list">
-                    <li><strong>Sitio web completo</strong> personalizado para tu negocio</li>
-                    <li><strong>Página de reservas integrada</strong> con tu marca</li>
-                    <li><strong>Textos persuasivos (copywriting)</strong> enfocados a vender</li>
-                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
+                    <li><strong>Sitio web especializado</strong> con 2 páginas (Home + Servicios)</li>
+                    <li><strong>Sistema de reservas profesional</strong> con calendario integrado</li>
+                    <li><strong>Pagos automáticos</strong> directos a tu cuenta bancaria</li>
+                    <li><strong>Generación automática</strong> de enlaces para reuniones</li>
+                    <li><strong>Sincronización con Google Calendar</strong> para evitar superposiciones</li>
                     <li><strong>Recordatorios automáticos</strong> para reducir cancelaciones</li>
+                    <li><strong>Textos persuasivos</strong> enfocados a vender tus servicios</li>
+                    <li><strong>Dominio personalizado</strong> incluido primer año</li>
                     <li><strong>Implementación completa</strong> en 20 días</li>
-                    <li><strong>Soporte técnico</strong> por 6 meses</li>
+                    <li><strong>Renovación anual:</strong> $400 MXN (incluye dominio, soporte y mantenimiento)</li>
                 </ul>
                 
-                <a href="/tidycal-reserva" class="btn">Solicitar información</a>
-            </div>
-            
-            <!-- Paquete intermedio -->
-            <div class="pricing-card">
-                <div class="package-name">Paquete Intermedio</div>
-                <div class="price">$350 USD</div>
-                <p class="price-description">Para quienes ya tienen sitio web</p>
-                
-                <ul class="feature-list">
-                    <li><strong>Página de reservas</strong> integrada a tu sitio existente</li>
-                    <li><strong>Textos persuasivos (copywriting)</strong> optimizados para conversión</li>
-                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
-                    <li><strong>Recordatorios automáticos</strong> para reducir cancelaciones</li>
-                    <li><strong>Implementación</strong> en 14 días</li>
-                    <li><strong>Soporte técnico</strong> por 4 meses</li>
-                </ul>
-                
-                <a href="/tidycal-reserva" class="btn">Solicitar información</a>
-            </div>
-            
-            <!-- Paquete básico -->
-            <div class="pricing-card">
-                <div class="package-name">Paquete Básico</div>
-                <div class="price">$220 USD</div>
-                <p class="price-description">Solo sistema de reservas</p>
-                
-                <ul class="feature-list">
-                    <li><strong>Página de reservas</strong> integrada y configurada</li>
-                    <li><strong>Pagos automáticos</strong> directos a tu cuenta</li>
-                    <li><strong>Recordatorios básicos</strong> para clientes</li>
-                    <li><strong>Implementación</strong> en 7 días</li>
-                    <li><strong>Soporte técnico</strong> por 2 meses</li>
-                </ul>
+                <div class="ideal-for">
+                    <p>Ideal para: <strong>terapeutas, consultores, coaches, asesores</strong> y profesionales que ofrecen servicios personalizados</p>
+                </div>
                 
                 <a href="/tidycal-reserva" class="btn">Solicitar información</a>
             </div>
@@ -101,8 +73,8 @@
         background: white;
         border-radius: 8px;
         padding: 2.5rem;
-        
-        max-width: 350px;
+        width: 100%;
+        max-width: 550px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         text-align: center;
         transition: transform 0.3s ease;
@@ -110,6 +82,15 @@
     
     .pricing-card:hover {
         transform: translateY(-10px);
+    }
+    
+    .pricing-card.featured {
+        border: 2px solid var(--color-primario);
+        transform: scale(1.02);
+    }
+    
+    .pricing-card.featured:hover {
+        transform: scale(1.02) translateY(-10px);
     }
     
     .package-name {
@@ -129,10 +110,8 @@
     .price-description {
         color: var(--color-oscuro1);
         margin-bottom: 2rem;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: auto;
+        padding: 0 1rem;
     }
     
     /* Lists */
@@ -140,7 +119,6 @@
         list-style: none;
         padding: 0;
         text-align: left;
-        min-height: 320px;
     }
     
     .feature-list li {
@@ -155,6 +133,13 @@
         color: var(--color-primario);
         position: absolute;
         left: 0;
+    }
+    
+    .ideal-for {
+        background-color: var(--color-claro2);
+        border-radius: 8px;
+        padding: 1rem;
+        margin: 1.5rem 0;
     }
     
     /* Buttons */
@@ -175,22 +160,6 @@
     }
     
     /* Responsive */
-    @media (max-width: 1100px) {
-        .pricing-container {
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .pricing-card {
-            max-width: 500px;
-            margin-bottom: 20px;
-        }
-        
-        .feature-list {
-            min-height: auto;
-        }
-    }
-    
     @media (max-width: 768px) {
         .section-title {
             font-size: 1.5rem;
@@ -202,6 +171,14 @@
         
         .price {
             font-size: 2rem;
+        }
+        
+        .pricing-card.featured {
+            transform: none;
+        }
+        
+        .pricing-card.featured:hover {
+            transform: translateY(-10px);
         }
     }
 </style>
