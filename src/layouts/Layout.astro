@@ -308,20 +308,5 @@ const { title, description, keywords } = Astro.props;
         height: 100%;
     }
     
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-    
-    /* Este selector apunta al elemento que contiene tu contenido principal */
-    body > :nth-child(2) {
-        flex: 1;
-    }
-    
-    /* Asegura que el footer no se encoja */
-    footer, 
-    body > :nth-child(3) {
-        margin-top: auto;
-    }
+   
 </style>
