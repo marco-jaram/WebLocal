@@ -2,18 +2,18 @@
     <div class="contenedor">
         <div class="titulares">
             <h1>
-                <span class="highlight">Soluciones digitales </span> <span class="highlight-span" >que</span> 
+                <span class="highlight">¿Cansado de una web que no </span> <span class="highlight-span" >genera</span> 
 
                 <br />
                 <span id="tinytype" class="tinytype"></span><span class="dot"
-                    >.</span
+                    >?</span
                 >
             </h1>
-            <h2>
-                Desarrollo web, <br /> sistemas de reservas <br /> y copywriting que genera
-                clientes
-            </h2>
-        </div>
+            <h2 class="subtitle">
+  Desarrollo web,<br /> 
+  sistemas de reservas<br /> 
+  y copywriting que <span class="soft-blink">convierte visitantes.</span>
+</h2>        </div>
         <div class="circles">
             <div class="circle large"></div>
             <div class="circle small"></div>
@@ -22,6 +22,7 @@
 </div>
 
 <script src="../scripts/type.js"></script>
+
 <style>
     .hero {
         padding: 20px;
@@ -108,6 +109,15 @@
         opacity: 0.1;
         z-index: -1;
     }
+ .soft-blink {
+  animation: soft-blink 3s infinite;
+  font-weight: 600; /* Negrita para énfasis */
+}
+
+@keyframes soft-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; } /* Casi imperceptible */
+} 
     @media (min-width: 768px) {
         .hero {
             padding: 20px;
