@@ -154,7 +154,7 @@ Este método de dockerización ofrece varias ventajas:
 3. **Persistencia**: Gracias a los volúmenes, tus datos se mantienen incluso si reinicias los contenedores.
 4. **Facilidad de mantenimiento**: Si algo sale mal, puedes reconstruir todo el entorno rápidamente.
 
-## Conclusión
+
 
 Dockerizar WordPress para desarrollo local es una práctica que mejora significativamente tu flujo de trabajo. Te permite experimentar libremente, desarrollar más rápido y mantener tu entorno de producción limpio y estable.
 

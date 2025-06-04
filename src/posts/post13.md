@@ -101,7 +101,7 @@ La recomendación final es usar el sentido común:
 
 Recuerda que el propósito de tu sitio web es comunicar un mensaje a tus visitantes, no impresionar a los técnicos con puntuaciones perfectas. Si sacrificar algunos puntos de rendimiento te permite transmitir mejor tu mensaje, esa es la decisión correcta.
 
-## Conclusión
+
 
 La velocidad de carga es un factor importante para el éxito de tu sitio web, pero debe equilibrarse con las necesidades específicas de tu negocio. En lugar de obsesionarte con obtener 100 puntos en todas las métricas, enfócate en crear una experiencia que satisfaga a tus visitantes y transmita efectivamente tu mensaje.
 

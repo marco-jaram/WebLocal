@@ -67,7 +67,7 @@ Esta transparencia debe extenderse también a situaciones menos favorables. Cuan
 <br>
 <br>
 
-## Conclusión: La fidelización como inversión estratégica
+
 
 En un mercado donde adquirir nuevos clientes puede costar hasta cinco veces más que retener los existentes, la fidelización se presenta como una de las inversiones más rentables para cualquier negocio digital. Las estrategias mencionadas no son departamentos estancos sino elementos interconectados de un ecosistema centrado en el cliente.
 

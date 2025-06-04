@@ -114,7 +114,7 @@ Para crear una landing page efectiva, debes seguir estos pasos:
 4. **Establecer objetivos claros**: Definir el propósito específico de la página
 5. **Diseñar el seguimiento**: Planificar la secuencia de emails posterior
 
-## A modo de conclusión
+
 
 Una landing page es mucho más que una simple página web con un formulario. Es el inicio de un proceso estratégico que te permite construir una base de clientes potenciales genuinamente interesados en lo que ofreces.
 

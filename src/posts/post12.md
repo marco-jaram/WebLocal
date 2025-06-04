@@ -103,7 +103,7 @@ Comprender la separación entre dominio y hosting te proporciona varias ventajas
 - **Mejor gestión técnica**: Entender qué problemas corresponden a cada servicio facilita la resolución de incidencias.
 - **Estrategia de marca más sólida**: Puedes registrar múltiples dominios (con diferentes extensiones) que apunten a tu sitio principal.
 
-## Conclusión
+
 
 El dominio y el hosting son los dos pilares fundamentales para tener una presencia en línea completa. El dominio es tu identidad digital, tu nombre en internet, mientras que el hosting es donde vive realmente tu sitio web.
 
