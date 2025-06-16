@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import FormularioBlog from '../../components/FormularioBlog.astro';
+import LMPropuesta from '../../components/LMPropuesta.astro';
 export async function getStaticPaths() {
   const posts = await Astro.glob('../../posts/*.md');
   return posts.map(post => ({
@@ -23,6 +24,8 @@ keywords="redaccion de textos web, copywriter, creacion de sitios webs"
     </div>
   </article>
   <FormularioBlog /> 
+<LMPropuesta />
+  
 
 </Layout>
 
