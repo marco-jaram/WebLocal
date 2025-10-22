@@ -2,26 +2,18 @@
     <div class="contenedor">
         <div class="titulares">
             <h1>
-                <span class="highlight">¿Cansado de una web que no </span> <span class="highlight-span" >genera</span> 
-
-                <br />
-                <span id="tinytype" class="tinytype"></span><span class="dot"
-                    >?</span
-                >
+                Transforma tu conocimiento en un negocio digital automatizado<span class="blinking-cursor">|</span>
             </h1>
             <h2 class="subtitle">
-  Desarrollo web,<br /> 
-  sistemas de reservas<br /> 
-  y copywriting que <span class="soft-blink">convierte visitantes.</span>
-</h2>        </div>
+                Dedícate a tus clientes, no a la tecnología. Construyo el sistema completo para que vendas tus servicios online sin complicaciones.
+            </h2>
+        </div>
         <div class="circles">
             <div class="circle large"></div>
             <div class="circle small"></div>
         </div>
     </div>
 </div>
-
-<script src="../scripts/type.js"></script>
 
 <style>
     .hero {
@@ -36,38 +28,22 @@
     }
 
     h1 {
-        font-size: 3.2rem;
-        margin-bottom: 100px;
+        font-size: 4.2rem; /* Ajustado para el nuevo texto */
+        margin-bottom: 2rem; /* Espacio entre h1 y h2 */
         line-height: 1.2;
         position: relative;
         z-index: 2;
+        color: var(--color-primario);
+        max-width: 800px; /* Limita el ancho para mejor legibilidad */
     }
-    .titulares h2 {
-        line-height: 1.2;
+
+    .subtitle {
+        font-size: 2rem; /* Ajustado para el nuevo texto */
+        line-height: 1.5;
         position: relative;
         z-index: 2;
         color: rgb(58, 54, 54);
-    }
-    .highlight {
-        color: var(--color-primario);
-        font-weight: bold;
-    }
-    .highlight-span {
-        color: #000;
-    }
-    .tinytype{
-        color: #000;
-    }
-    .dot {
-        color: var(--color-primario);
-    }
-
-    .read-more {
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
-        position: relative;
-        z-index: 2;
+        max-width: 700px; /* Limita el ancho para mejor legibilidad */
     }
 
     .circles {
@@ -109,48 +85,39 @@
         opacity: 0.1;
         z-index: -1;
     }
- .soft-blink {
-  animation: soft-blink 3s infinite;
-  font-weight: 600; /* Negrita para énfasis */
-}
 
-@keyframes soft-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.85; } /* Casi imperceptible */
-} 
+    /* Animación del cursor */
+    .blinking-cursor {
+        font-weight: 400; /* Peso normal para el cursor */
+        animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+
     @media (min-width: 768px) {
         .hero {
-            padding: 20px;
-            min-height: calc(80vh - 60px); /* Restamos la altura del menú */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            margin-top: 60px; /* Añadimos un margen superior igual a la altura del menú */
+            min-height: calc(70vh - 60px);
         }
         .titulares {
-            margin-bottom: 300px;
+            margin-bottom: 0; /* Eliminado el margen inferior grande */
         }
         h1 {
-            font-size: 6.2rem;
-            /* margin-bottom: 300px; */
-            line-height: 1.2;
-            position: relative;
-            z-index: 2;
+            font-size: 5.8rem; /* Ajustado para el nuevo texto */
+        }
+        .subtitle {
+            font-size: 2.2rem; /* Ajustado para el nuevo texto */
         }
         .circle.large {
             width: 400px;
             height: 400px;
-            bottom: 0;
-            right: 0;
         }
-
         .circle.small {
             width: 400px;
             height: 400px;
-            bottom: 150px;
-            right: 150px;
         }
     }
 </style>

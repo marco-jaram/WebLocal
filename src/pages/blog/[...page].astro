@@ -1,13 +1,23 @@
 ---
-import Layout from "../layouts/LayoutBlog.astro";
-// Obtener todos los posts
-const allPosts = await Astro.glob("../posts/*.md");
-// Ordenar los posts por fecha, del más reciente al más antiguo
-const sortedPosts = allPosts.sort(
-    (a, b) =>
-        new Date(b.frontmatter.date).valueOf() -
-        new Date(a.frontmatter.date).valueOf()
-);
+import Layout from "../../layouts/LayoutBlog.astro";
+
+// Exporta una función getStaticPaths para generar una página por cada página de posts.
+export async function getStaticPaths({ paginate }) {
+    // Obtener todos los posts
+    const allPosts = await Astro.glob("../../posts/*.md");
+    // Ordenar los posts por fecha, del más reciente al más antiguo
+    const sortedPosts = allPosts.sort(
+        (a, b) =>
+            new Date(b.frontmatter.date).valueOf() -
+            new Date(a.frontmatter.date).valueOf()
+    );
+
+    // Devuelve una colección paginada de rutas para que Astro las construya.
+    return paginate(sortedPosts, { pageSize: 10 });
+}
+
+// Todos los datos paginados se pasan en la prop `page`
+const { page } = Astro.props;
 
 // Función tipada para extraer el slug
 function getSlug(file: string): string {
@@ -28,16 +38,16 @@ interface Post {
 ---
 
 <Layout 
-title="Blog de Desarrollo Web y Marketing Digital | [TuNombre/TuMarca]"
-description="Artículos prácticos para profesionales: desarrollo web con WordPress y Docker, copywriting persuasivo, creación de landing pages y estrategias de conversión para negocios en Tijuana."
-keywords="blog desarrollo web, blog marketing digital, WordPress Tijuana, copywriter profesional, crear landing pages, estrategias ventas online, Docker WordPress, optimización web"
+title={`Blog de Desarrollo Web y Marketing Digital - Página ${page.currentPage}`}
+description="Artículos prácticos para profesionales: desarrollo web, copywriting, landing pages y estrategias de conversión."
+keywords="blog desarrollo web, blog marketing digital, WordPress, copywriter, crear landing pages, estrategias ventas online"
 >
 
     <main class="main">
         <div class="contenedor">
             <h1>Todos las publicaciones</h1>
             <ul>
-                {sortedPosts.map((post: any) => {
+                {page.data.map((post: any) => {
                     const slug = getSlug(post.file);
                     return (
                         <li class="blog-list-item">
@@ -62,6 +72,13 @@ keywords="blog desarrollo web, blog marketing digital, WordPress Tijuana, copywr
                     );
                 })}
             </ul>
+
+            <!-- Paginación -->
+            <div class="pagination">
+                {page.url.prev && <a href={page.url.prev} class="prev">&laquo; Anteriores</a>}
+                <span class="page-indicator">Página {page.currentPage} de {page.lastPage}</span>
+                {page.url.next && <a href={page.url.next} class="next">Siguientes &raquo;</a>}
+            </div>
         </div>
     </main>
 </Layout>
@@ -126,5 +143,33 @@ keywords="blog desarrollo web, blog marketing digital, WordPress Tijuana, copywr
 
 .mb-4 {
     margin-bottom: 1rem;
+}
+
+/* Estilos de Paginación */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.pagination a {
+    color: #047857;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #047857;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #047857;
+    color: white;
+}
+
+.page-indicator {
+    color: #6b7280;
+    font-size: 1rem;
 }
 </style>

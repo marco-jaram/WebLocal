@@ -1,0 +1,630 @@
+---
+import Layout from "../../layouts/LayoutLanding.astro";
+---
+
+<Layout
+  title="Calculadora de Tarifas | WeblocalMX"
+  description="Calculadora interactiva para ayudar a profesionales online a definir sus tarifas por hora."
+  keywords="calculadora de tarifas, precio por hora, profesional online, freelancer, coaching, clases online"
+>
+  <div class="barra">
+    <div class="contenedor barra-contenido">
+      <div class="logo">
+        <i class="fas fa-chart-line"></i> Calculadora de tarifas de clase por videollamada
+      </div>
+      <div class="acciones-barra">
+       
+         <a href="https://weblocalmx.com">Visitar sitio web</a>
+      
+      </div>
+    </div>
+  </div>
+
+
+<main class="app-wrapper">
+  <div class="calculator-container">
+    <button id="reset-btn" class="btn-reset">Limpiar / Reiniciar</button>
+
+    <!-- PASO 1 -->
+    <div id="step-1" class="form-step active">
+      <h2>Paso 1: ¿Cuánto cuesta mantener tu negocio al mes?</h2>
+      <div class="form-group">
+        <label for="cost-video">Suscripción de videollamada (Zoom, etc.)</label>
+        <input type="number" id="cost-video" value="15" />
+      </div>
+      <div class="form-group">
+        <label for="cost-email">Email marketing (MailerLite, etc.)</label>
+        <input type="number" id="cost-email" value="10" />
+      </div>
+      <div class="form-group">
+        <label for="cost-hosting">Hosting y dominio</label>
+        <input type="number" id="cost-hosting" value="10" />
+      </div>
+      <div class="form-group">
+        <label for="cost-other">Otras suscripciones</label>
+        <input type="number" id="cost-other" value="5" />
+      </div>
+      <div class="form-group range-group">
+        <label for="tax-rate">Impuestos estimados (%):</label>
+        <input type="range" id="tax-rate" min="0" max="50" value="20" />
+        <output for="tax-rate">20%</output>
+      </div>
+      <div class="form-group range-group">
+        <label for="saving-rate">Ahorro / Colchón de seguridad (%):</label>
+        <input type="range" id="saving-rate" min="0" max="30" value="10" />
+        <output for="saving-rate">10%</output>
+      </div>
+      <div class="btn-group">
+        <span></span>
+        <!-- Placeholder for alignment -->
+        <button id="next-btn-1" class="btn btn-primary">Siguiente &rarr;</button
+        >
+      </div>
+    </div>
+
+    <!-- PASO 2 -->
+    <div id="step-2" class="form-step">
+      <h2>Paso 2: ¿Cuál es tu tiempo real de trabajo?</h2>
+      <div class="form-group">
+        <label for="work-hours-billable"
+          >Horas de clase/sesión a la semana (directo con clientes)</label
+        >
+        <input type="number" id="work-hours-billable" value="10" />
+      </div>
+      <div class="form-group">
+        <label for="work-hours-admin"
+          >Horas de preparación y administración a la semana (trabajo no
+          facturable)</label
+        >
+        <input type="number" id="work-hours-admin" value="5" />
+      </div>
+      <div class="btn-group">
+        <button id="prev-btn-2" class="btn btn-secondary"
+          >&larr; Anterior</button
+        >
+        <button id="next-btn-2" class="btn btn-primary">Siguiente &rarr;</button
+        >
+      </div>
+    </div>
+
+    <!-- PASO 3 -->
+    <div id="step-3" class="form-step">
+      <h2>Paso 3: ¿Qué te hace diferente?</h2>
+      <div class="form-group">
+        <label>Nivel de experiencia</label>
+        <div class="choice-group">
+          <label class="choice-item"
+            ><input type="radio" name="experience" value="0.1" checked /> Principiante
+            (0-2 años)</label
+          >
+          <label class="choice-item"
+            ><input type="radio" name="experience" value="0.3" /> Intermedio (2-5
+            años)</label
+          >
+          <label class="choice-item"
+            ><input type="radio" name="experience" value="0.5" /> Experto (+5 años)</label
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Nivel de especialización</label>
+        <div class="choice-group">
+          <label class="choice-item"
+            ><input type="radio" name="specialization" value="0.1" checked /> Generalista
+            (Ej: "Profesor de Inglés")</label
+          >
+          <label class="choice-item"
+            ><input type="radio" name="specialization" value="0.4" /> Especialista
+            de nicho (Ej: "Inglés para entrevistas")</label
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Servicios extra incluidos</label>
+        <div class="choice-group">
+          <label class="choice-item"
+            ><input type="checkbox" name="extras" value="0.1" /> Grabaciones de cada
+            clase</label
+          >
+          <label class="choice-item"
+            ><input type="checkbox" name="extras" value="0.1" /> Materiales personalizados</label
+          >
+          <label class="choice-item"
+            ><input type="checkbox" name="extras" value="0.1" /> Soporte entre clases</label
+          >
+          <label class="choice-item"
+            ><input type="checkbox" name="extras" value="0.05" /> Tareas y correcciones</label
+          >
+          <label class="choice-item"
+            ><input type="checkbox" name="extras" value="0.05" /> Acceso a una comunidad</label
+          >
+        </div>
+      </div>
+      <div class="btn-group">
+        <button id="prev-btn-3" class="btn btn-secondary"
+          >&larr; Anterior</button
+        >
+        <button id="next-btn-3" class="btn btn-primary">Siguiente &rarr;</button
+        >
+      </div>
+    </div>
+
+    <!-- PASO 4 -->
+    <div id="step-4" class="form-step">
+      <h2>Paso 4: Define tu meta</h2>
+      <div class="form-group">
+        <label for="income-goal">Ingreso mensual deseado</label>
+        <input type="number" id="income-goal" value="2000" />
+      </div>
+      <div class="btn-group">
+        <button id="prev-btn-4" class="btn btn-secondary"
+          >&larr; Anterior</button
+        >
+        <button id="calculate-btn" class="btn btn-primary"
+          >Calcular mi tarifa</button
+        >
+      </div>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div id="results-section" style="display: none;">
+      <h2>¡Aquí están tus tarifas sugeridas por hora!</h2>
+      <p>
+        Estas son una guía para ayudarte a valorar tu trabajo de forma justa y
+        rentable.
+      </p>
+      <div class="results-grid">
+        <div class="result-card">
+          <h3>Tarifa de supervivencia</h3>
+          <p class="price" id="rate-survival"></p>
+          <p>Cubre tus costos y un colchón básico.</p>
+        </div>
+        <div class="result-card">
+          <h3>Tarifa profesional</h3>
+          <p class="price" id="rate-professional"></p>
+          <p>Refleja tu experiencia y valor añadido.</p>
+        </div>
+        <div class="result-card">
+          <h3>Tarifa premium</h3>
+          <p class="price" id="rate-premium"></p>
+          <p>Basada en tu meta de ingresos deseada.</p>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <button id="recalculate-btn" class="btn btn-secondary"
+          >Calcular de nuevo</button
+        >
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+     <div class="barra">
+    <div class="contenedor barra-contenido">
+      <div class="logo">
+        <i class="fas fa-chart-line"></i> Weblocalmx
+      </div>
+      <div class="acciones-barra">
+       
+         <a href="https://weblocalmx.com">Visitar sitio web</a>
+      
+      </div>
+    </div>
+  </div>
+</footer>
+</Layout>
+<style>
+  :root {
+    --primary-color: #047857;
+    --secondary-color: #a7f3d0;
+    --background-color: #f0fdfa;
+    --card-bg-color: #ffffff;
+    --text-color: #0f172a;
+    --light-gray: #cbd5e1;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
+ 
+  .app-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: var(--background-color);
+  }
+  .calculator-container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    position: relative;
+  }
+  .form-step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .form-step.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  input[type="number"],
+  input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+  input[type="number"]:focus,
+  input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+  }
+  .range-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .range-group label {
+    flex-shrink: 0;
+  }
+  .range-group output {
+    font-weight: bold;
+    color: var(--primary-color);
+    min-width: 40px;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--light-gray);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .choice-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .choice-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--background-color);
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  .choice-item input {
+    cursor: pointer;
+  }
+  .btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 1.5rem;
+  }
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      transform 0.2s;
+  }
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: #065f46;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-secondary {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+  }
+  .btn-secondary:hover {
+    background-color: #94a3b8;
+  }
+  .btn-reset {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 0.8rem;
+    color: var(--text-color);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #results-section {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .result-card {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+  .result-card h3 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .result-card .price {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #email-form {
+    margin-top: 2rem;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+  }
+  #email-form p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  #email-form .form-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* --- ESTILOS DE LA BARRA SUPERIOR --- */
+  .barra {
+    background-color: var(--card-bg-color);
+    padding: 1rem 0;
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  .barra-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .acciones-barra .cerrar-sesion {
+      background: none;
+      border: none;
+      padding: 0;
+  }
+  .acciones-barra a {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  .acciones-barra a:hover {
+    background-color: #065f46;
+  }
+
+  @media (max-width: 600px) {
+    .barra-contenido {
+      padding: 0 15px;
+    }
+    .logo {
+      font-size: 1.2rem;
+    }
+    .acciones-barra a {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    .app-wrapper {
+      padding: 10px;
+    }
+    .calculator-container {
+      padding: 1rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+    #email-form .form-group {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<script is:inline>
+  let currentStep = 1;
+
+  function showStep(stepNumber) {
+    document.querySelectorAll(".form-step, #results-section").forEach((el) => {
+      el.style.display = "none";
+    });
+    const activeEl =
+      stepNumber > 4
+        ? document.getElementById("results-section")
+        : document.getElementById(`step-${stepNumber}`);
+    if (activeEl) {
+      activeEl.style.display = "block";
+    }
+  }
+
+  function nextStep() {
+    if (currentStep < 4) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  }
+
+  function prevStep() {
+    if (currentStep > 1) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  }
+
+  function calculateRates() {
+    const costVideo = parseFloat(document.getElementById("cost-video").value) || 0;
+    const costEmail = parseFloat(document.getElementById("cost-email").value) || 0;
+    const costHosting = parseFloat(document.getElementById("cost-hosting").value) || 0;
+    const costOther = parseFloat(document.getElementById("cost-other").value) || 0;
+    const taxRate = parseFloat(document.getElementById("tax-rate").value) || 0;
+    const savingRate = parseFloat(document.getElementById("saving-rate").value) || 0;
+    const billableHours = parseFloat(document.getElementById("work-hours-billable").value) || 0;
+    const experienceMultiplier = parseFloat(document.querySelector('input[name="experience"]:checked').value) || 0;
+    const specializationMultiplier = parseFloat(document.querySelector('input[name="specialization"]:checked').value) || 0;
+    let extrasMultiplier = 0;
+    document.querySelectorAll('input[name="extras"]:checked').forEach((checkbox) => {
+      extrasMultiplier += parseFloat(checkbox.value) || 0;
+    });
+    const incomeGoal = parseFloat(document.getElementById("income-goal").value) || 0;
+    const costoTotalMensual = costVideo + costEmail + costHosting + costOther;
+    const horasFacturablesMensuales = billableHours * 4;
+    if (horasFacturablesMensuales === 0) {
+      alert("Las 'Horas de clase/sesión a la semana' no pueden ser cero para realizar el cálculo.");
+      return;
+    }
+    const costoPorHoraBase = costoTotalMensual / horasFacturablesMensuales;
+    const multiplicadorValor = 1 + experienceMultiplier + specializationMultiplier + extrasMultiplier;
+    const tarifaSupervivencia = costoPorHoraBase * (1 + taxRate / 100 + savingRate / 100);
+    const tarifaProfesional = tarifaSupervivencia * multiplicadorValor;
+    const tarifaPremium = incomeGoal / horasFacturablesMensuales;
+    displayResults({
+      survival: tarifaSupervivencia,
+      professional: tarifaProfesional,
+      premium: tarifaPremium,
+    });
+  }
+
+  function displayResults(rates) {
+    showStep(5);
+    document.getElementById("rate-survival").textContent = `$${rates.survival.toFixed(2)}`;
+    document.getElementById("rate-professional").textContent = `$${rates.professional.toFixed(2)}`;
+    document.getElementById("rate-premium").textContent = `$${rates.premium.toFixed(2)}`;
+  }
+
+  function sendReport(event) {
+    event.preventDefault();
+    const email = document.getElementById("user-email").value;
+    const confirmationMsg = document.getElementById("confirmation-msg");
+    if (email) {
+      confirmationMsg.textContent = `¡Reporte enviado a ${email}! Revisa tu bandeja de entrada.`;
+      confirmationMsg.style.display = "block";
+      event.target.querySelector("button").disabled = true;
+    }
+  }
+
+  function resetCalculator() {
+    window.location.reload();
+  }
+
+  // Attach Event Listeners
+  document.getElementById("next-btn-1").addEventListener("click", nextStep);
+  document.getElementById("prev-btn-2").addEventListener("click", prevStep);
+  document.getElementById("next-btn-2").addEventListener("click", nextStep);
+  document.getElementById("prev-btn-3").addEventListener("click", prevStep);
+  document.getElementById("next-btn-3").addEventListener("click", nextStep);
+  document.getElementById("prev-btn-4").addEventListener("click", prevStep);
+  document.getElementById("calculate-btn").addEventListener("click", calculateRates);
+  document.getElementById("recalculate-btn").addEventListener("click", resetCalculator);
+  document.getElementById("reset-btn").addEventListener("click", () => {
+    if (confirm("¿Estás seguro de que quieres limpiar todos los campos y reiniciar la calculadora?")) {
+      resetCalculator();
+    }
+  });
+  
+  const emailForm = document.getElementById('email-form');
+  if(emailForm) {
+      const form = emailForm.querySelector('form');
+      if(form) {
+          form.addEventListener("submit", sendReport);
+      }
+  }
+
+  document.querySelectorAll('input[type="range"]').forEach((slider) => {
+    const output = document.querySelector(`output[for="${slider.id}"]`);
+    if (output) {
+      slider.addEventListener("input", (event) => {
+        output.textContent = `${event.target.value}%`;
+      });
+    }
+  });
+
+  // Initialize
+  showStep(currentStep);
+</script>
