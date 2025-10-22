@@ -16,34 +16,35 @@
 </div>
 
 <style>
+    /* Base (Mobile) Styles */
     .hero {
         padding: 20px;
-        min-height: 50vh; /* Restamos la altura del menú */
+        min-height: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
         overflow: hidden;
-        margin-top: 60px; /* Añadimos un margen superior igual a la altura del menú */
+        margin-top: 60px;
     }
 
     h1 {
-        font-size: 4.2rem; /* Ajustado para el nuevo texto */
-        margin-bottom: 2rem; /* Espacio entre h1 y h2 */
+        font-size: 4.2rem;
+        margin-bottom: 2rem;
         line-height: 1.2;
         position: relative;
         z-index: 2;
         color: var(--color-primario);
-        max-width: 800px; /* Limita el ancho para mejor legibilidad */
+        max-width: 800px;
     }
 
     .subtitle {
-        font-size: 2rem; /* Ajustado para el nuevo texto */
+        font-size: 2rem;
         line-height: 1.5;
         position: relative;
         z-index: 2;
         color: rgb(58, 54, 54);
-        max-width: 700px; /* Limita el ancho para mejor legibilidad */
+        max-width: 700px;
     }
 
     .circles {
@@ -75,8 +76,8 @@
 
     body::before {
         content: "";
-        position: fixed; /* Cambiado de absolute a fixed */
-        top: 60px; /* Comienza después del menú */
+        position: fixed;
+        top: 60px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -86,9 +87,8 @@
         z-index: -1;
     }
 
-    /* Animación del cursor */
     .blinking-cursor {
-        font-weight: 400; /* Peso normal para el cursor */
+        font-weight: 400;
         animation: blink 1s step-end infinite;
     }
 
@@ -98,18 +98,16 @@
         }
     }
 
+    /* Tablet & Desktop Overrides */
     @media (min-width: 768px) {
         .hero {
-            min-height: calc(70vh - 60px);
-        }
-        .titulares {
-            margin-bottom: 0; /* Eliminado el margen inferior grande */
+           margin-top: 0px;
         }
         h1 {
-            font-size: 5.8rem; /* Ajustado para el nuevo texto */
+            font-size: 5.8rem;
         }
         .subtitle {
-            font-size: 2.2rem; /* Ajustado para el nuevo texto */
+            font-size: 2.2rem;
         }
         .circle.large {
             width: 400px;

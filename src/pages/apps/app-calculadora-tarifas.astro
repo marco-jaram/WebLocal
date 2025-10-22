@@ -23,31 +23,34 @@ import Layout from "../../layouts/LayoutLanding.astro";
 
 <main class="app-wrapper">
   <div class="calculator-container">
+    <div class="intro-text">
+        <p><strong>Descubre tu tarifa justa en 4 pasos.</strong> Esta herramienta utiliza un método de cálculo estándar para profesionales de servicios. Analiza tus costos, tu tiempo y tu valor diferencial para darte una tarifa que te permita construir un negocio rentable y sostenible.</p>
+    </div>
     <button id="reset-btn" class="btn-reset">Limpiar / Reiniciar</button>
 
     <!-- PASO 1 -->
     <div id="step-1" class="form-step active">
       <h2>Paso 1: ¿Cuánto cuesta mantener tu negocio al mes?</h2>
       <div class="form-group">
-        <label for="cost-video">Suscripción de videollamada (Zoom, etc.)</label>
-        <input type="number" id="cost-video" value="15" />
+        <label for="cost-video">Costo mensual de herramientas (Zoom, Meet, etc.)</label>
+        <input type="number" id="cost-video" value="250" />
       </div>
       <div class="form-group">
-        <label for="cost-email">Email marketing (MailerLite, etc.)</label>
-        <input type="number" id="cost-email" value="10" />
+        <label for="cost-email">Email marketing (MailerLite, etc.) (pago mensual)</label>
+        <input type="number" id="cost-email" value="300" />
       </div>
       <div class="form-group">
-        <label for="cost-hosting">Hosting y dominio</label>
-        <input type="number" id="cost-hosting" value="10" />
+        <label for="cost-hosting">Hosting y dominio (pago mensual)</label>
+        <input type="number" id="cost-hosting" value="150" />
       </div>
       <div class="form-group">
-        <label for="cost-other">Otras suscripciones</label>
-        <input type="number" id="cost-other" value="5" />
+        <label for="cost-other">Otras suscripciones (pago mensual)</label>
+        <input type="number" id="cost-other" value="100" />
       </div>
       <div class="form-group range-group">
         <label for="tax-rate">Impuestos estimados (%):</label>
-        <input type="range" id="tax-rate" min="0" max="50" value="20" />
-        <output for="tax-rate">20%</output>
+        <input type="range" id="tax-rate" min="0" max="50" value="16" />
+        <output for="tax-rate">16%</output>
       </div>
       <div class="form-group range-group">
         <label for="saving-rate">Ahorro / Colchón de seguridad (%):</label>
@@ -153,8 +156,8 @@ import Layout from "../../layouts/LayoutLanding.astro";
     <div id="step-4" class="form-step">
       <h2>Paso 4: Define tu meta</h2>
       <div class="form-group">
-        <label for="income-goal">Ingreso mensual deseado</label>
-        <input type="number" id="income-goal" value="2000" />
+        <label for="income-goal">Ingreso mensual deseado (neto)</label>
+        <input type="number" id="income-goal" value="20000" />
       </div>
       <div class="btn-group">
         <button id="prev-btn-4" class="btn btn-secondary"
@@ -175,19 +178,19 @@ import Layout from "../../layouts/LayoutLanding.astro";
       </p>
       <div class="results-grid">
         <div class="result-card">
-          <h3>Tarifa de supervivencia</h3>
+          <h3>Tarifa de Supervivencia por Hora</h3>
           <p class="price" id="rate-survival"></p>
-          <p>Cubre tus costos y un colchón básico.</p>
+          <p>Para cubrir tus gastos mínimos y empezar a ser rentable.</p>
         </div>
         <div class="result-card">
-          <h3>Tarifa profesional</h3>
+          <h3>Tarifa Profesional por Hora</h3>
           <p class="price" id="rate-professional"></p>
-          <p>Refleja tu experiencia y valor añadido.</p>
+          <p>Una tarifa competitiva que refleja tu experiencia y valor en el mercado.</p>
         </div>
         <div class="result-card">
-          <h3>Tarifa premium</h3>
+          <h3>Tarifa Premium por Hora</h3>
           <p class="price" id="rate-premium"></p>
-          <p>Basada en tu meta de ingresos deseada.</p>
+          <p>La tarifa que necesitas para alcanzar tu meta de ingresos mensual.</p>
         </div>
       </div>
 
@@ -244,6 +247,17 @@ import Layout from "../../layouts/LayoutLanding.astro";
     box-shadow: var(--box-shadow);
     padding: 2rem;
     position: relative;
+  }
+  .intro-text {
+      background-color: var(--secondary-color);
+      padding: 1rem;
+      border-radius: var(--border-radius);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--primary-color);
+  }
+  .intro-text p {
+      margin: 0;
+      font-size: 0.95rem;
   }
   .form-step {
     display: none;
@@ -546,24 +560,46 @@ import Layout from "../../layouts/LayoutLanding.astro";
     const taxRate = parseFloat(document.getElementById("tax-rate").value) || 0;
     const savingRate = parseFloat(document.getElementById("saving-rate").value) || 0;
     const billableHours = parseFloat(document.getElementById("work-hours-billable").value) || 0;
+    const incomeGoal = parseFloat(document.getElementById("income-goal").value) || 0;
+    
     const experienceMultiplier = parseFloat(document.querySelector('input[name="experience"]:checked').value) || 0;
     const specializationMultiplier = parseFloat(document.querySelector('input[name="specialization"]:checked').value) || 0;
     let extrasMultiplier = 0;
     document.querySelectorAll('input[name="extras"]:checked').forEach((checkbox) => {
       extrasMultiplier += parseFloat(checkbox.value) || 0;
     });
-    const incomeGoal = parseFloat(document.getElementById("income-goal").value) || 0;
+
     const costoTotalMensual = costVideo + costEmail + costHosting + costOther;
     const horasFacturablesMensuales = billableHours * 4;
+
     if (horasFacturablesMensuales === 0) {
       alert("Las 'Horas de clase/sesión a la semana' no pueden ser cero para realizar el cálculo.");
       return;
     }
-    const costoPorHoraBase = costoTotalMensual / horasFacturablesMensuales;
+
+    const taxSavingFactor = 1 - (taxRate / 100) - (savingRate / 100);
+    if (taxSavingFactor <= 0) {
+        alert("La suma de impuestos y ahorro no puede ser 100% o más. Ajusta los porcentajes para continuar.");
+        return;
+    }
+
+    // Tarifa de Supervivencia: Cubre costos + 40% de la meta de ingresos (salario base).
+    const survivalIncomeGoal = incomeGoal * 0.40;
+    const requiredProfitForSurvival = survivalIncomeGoal / taxSavingFactor;
+    const requiredGrossForSurvival = requiredProfitForSurvival + costoTotalMensual;
+    const tarifaSupervivencia = requiredGrossForSurvival / horasFacturablesMensuales;
+
+    // Tarifa Profesional: Permite alcanzar la meta de ingresos netos después de costos e impuestos.
+    const requiredProfitForProfessional = incomeGoal / taxSavingFactor;
+    const requiredGrossForProfessional = requiredProfitForProfessional + costoTotalMensual;
+    const tarifaProfesional = requiredGrossForProfessional / horasFacturablesMensuales;
+
+    // Tarifa Premium: Añade un extra a la tarifa profesional basado en el valor diferencial.
+    const baseSalaryRate = requiredProfitForProfessional / horasFacturablesMensuales;
+    const baseCostRate = costoTotalMensual / horasFacturablesMensuales;
     const multiplicadorValor = 1 + experienceMultiplier + specializationMultiplier + extrasMultiplier;
-    const tarifaSupervivencia = costoPorHoraBase * (1 + taxRate / 100 + savingRate / 100);
-    const tarifaProfesional = tarifaSupervivencia * multiplicadorValor;
-    const tarifaPremium = incomeGoal / horasFacturablesMensuales;
+    const tarifaPremium = (baseSalaryRate * multiplicadorValor) + baseCostRate;
+
     displayResults({
       survival: tarifaSupervivencia,
       professional: tarifaProfesional,
