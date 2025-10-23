@@ -1,5 +1,5 @@
 ---
-// landing-servicios.astro - Ejemplo de uso del layout
+
 import Layout from "../../layouts/LayoutLanding.astro";
 ---
 
@@ -8,7 +8,10 @@ import Layout from "../../layouts/LayoutLanding.astro";
     description="aplicacion de propuesta de valor"
     keywords="aplicacion de propuesta de valor"
 >
-    <!-- Aquí va todo el contenido de tu landing page existente -->
+<Fragment slot="meta"> 
+    <meta name="robots" content="noindex, nofollow">
+  </Fragment>
+   
     <div class="mihtnl">
         <!-- Barra de navegación -->
         <div class="barra">
