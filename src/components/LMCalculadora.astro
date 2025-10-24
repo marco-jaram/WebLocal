@@ -7,105 +7,122 @@
   <div class="container">
     <div class="image-container">
       {/* IMAGEN: Aquí va tu nuevo GIF animado */}
-      <img src="https://i.postimg.cc/VNjkktnF/calc.gif" alt="Calculadora de Precios para Consultorías y Clases" />
-      
+      <img
+        src="https://i.postimg.cc/VNjkktnF/calc.gif"
+        alt="Calculadora de Precios para Consultorías y Clases"
+      />
     </div>
-    
+
     <div class="content-container">
       <div class="author">Herramienta Gratuita</div>
-      
+
       {/* TEXTO: Nuevo copy enfocado en la calculadora */}
       <h1>CALCULADORA DE TARIFAS PROFESIONALES</h1>
-      
-      <p class="subtitle">Descubre el precio justo por tus clases, asesorías o mentorías online.</p>
-      
-      <p class="subtitle">Deja de adivinar y define un valor que refleje tu experiencia. Nuestra herramienta gratuita te ayuda a calcular tu tarifa ideal en menos de 2 minutos.</p>
-      
+
+      <p class="subtitle">
+        Descubre el precio justo por tus clases, asesorías o mentorías online.
+      </p>
+
+      <p class="subtitle">
+        Deja de adivinar y define un valor que refleje tu experiencia. Nuestra
+        herramienta gratuita te ayuda a calcular tu tarifa ideal en menos de 2
+        minutos.
+      </p>
+
       <div class="benefits">
         <h3>¿Qué obtendrás al usar nuestra calculadora?</h3>
-        
+
         <div class="benefits-list">
           <div class="benefit-item">
             <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Eliminar la incertidumbre y fijar precios con total confianza.</div>
+            <div class="benefit-text">
+              Eliminar la incertidumbre y fijar precios con total confianza.
+            </div>
           </div>
-          
+
           <div class="benefit-item">
             <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Asegurar que tu tarifa refleje el verdadero valor de tu conocimiento.</div>
+            <div class="benefit-text">
+              Asegurar que tu tarifa refleje el verdadero valor de tu
+              conocimiento.
+            </div>
           </div>
-          
+
           <div class="benefit-item">
             <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Presentar tus precios de forma profesional y justificada a tus clientes.</div>
+            <div class="benefit-text">
+              Presentar tus precios de forma profesional y justificada a tus
+              clientes.
+            </div>
           </div>
-          
+
           <div class="benefit-item">
             <div class="benefit-icon">✓</div>
-            <div class="benefit-text">Ahorrar tiempo en cálculos y enfocarte en lo que amas: enseñar y ayudar.</div>
+            <div class="benefit-text">
+              Ahorrar tiempo en cálculos y enfocarte en lo que amas: enseñar y
+              ayudar.
+            </div>
           </div>
         </div>
       </div>
-      
-      {/* FORMULARIO: Actualizado con los datos de tu nuevo formulario SendFox */}
-      <form 
-        method="post" 
-        action="https://sendfox.com/form/10dleq/1w7qgw" 
-        class="sendfox-form" 
-        id="1w7qgw" 
-        data-async="true" 
+
+      <form
+        method="post"
+        action="https://sendfox.com/form/10dleq/1w7qgw"
+        class="sendfox-form"
+        id="1w7qgw"
+        data-async="true"
         data-recaptcha="true"
       >
-        {/* Este formulario solo pide el email, así que eliminamos el campo de nombre */}
         <p>
-          <label for="sendfox_form_email"></label>
-          <input 
-            type="email" 
-            id="sendfox_form_email" 
-            placeholder="Tu mejor correo electrónico" 
-            name="email" 
-            required 
+          <label for="sendfox_form_email">Email: </label><input
+            type="email"
+            id="sendfox_form_email"
+            placeholder="Tu correo favorito"
+            name="email"
+            required
           />
         </p>
-        
-        {/* no botz please */}
+        <!-- no botz please -->
         <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" />
+          <input
+            type="text"
+            name="a_password"
+            tabindex="-1"
+            value=""
+            autocomplete="off"
+          />
         </div>
-
         <p><button type="submit">¡Acceder a la Calculadora Gratis!</button></p>
       </form>
-      
-      <br>
-      <p class="legal">Este sitio está protegido por reCAPTCHA y la <a href="#">Política de Privacidad</a> y <a href="#">Términos de Servicio</a> de Google aplican.</p>
+      <script is:inline src="https://cdn.sendfox.com/js/form.js" charset="utf-8"></script>
+
+      <br />
+      <p class="legal">
+        Este sitio está protegido por reCAPTCHA y la <a href="#"
+          >Política de Privacidad</a
+        > y <a href="#">Términos de Servicio</a> de Google aplican.
+      </p>
     </div>
   </div>
 </div>
 
-<script>
-  // Cargar el script de SendFox solo si no está ya cargado en la página
-  if (!document.querySelector('script[src*="sendfox.com/js/form.js"]')) {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.sendfox.com/js/form.js';
-    script.charset = 'utf-8';
-    document.head.appendChild(script);
-  }
-</script>
-
-{/* ESTILOS: Se reutilizan los mismos estilos, cambiando solo el nombre de la clase principal */}
+{
+  /* ESTILOS: Se reutilizan los mismos estilos, cambiando solo el nombre de la clase principal */
+}
 <style>
   .calculadora-costo-component * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
-  
+
   .calculadora-costo-component {
     background-color: #f8f9fa;
     padding: 60px 20px;
   }
-  
+
   .calculadora-costo-component .container {
     display: flex;
     max-width: 1400px;
@@ -113,7 +130,7 @@
     min-height: 600px;
     align-items: center;
   }
-  
+
   .calculadora-costo-component .image-container {
     flex: 0.8;
     display: flex;
@@ -121,16 +138,16 @@
     justify-content: center;
     padding: 20px;
   }
-  
+
   /* Hacemos un pequeño ajuste para que el gif se vea bien */
   .calculadora-costo-component .image-container img {
     max-height: 500px;
     max-width: 100%;
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
-  
+
   .calculadora-costo-component .content-container {
     flex: 1.2;
     padding: 40px;
@@ -138,21 +155,21 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .calculadora-costo-component .author {
     color: #4285f4; /* Cambié el color para que combine mejor */
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
   }
-  
+
   .calculadora-costo-component h1 {
     font-size: 36px;
     color: #333;
     margin-bottom: 10px;
     line-height: 1.1;
   }
-  
+
   .calculadora-costo-component .subtitle {
     font-size: 15px;
     color: #666;
@@ -160,7 +177,7 @@
     line-height: 1.5;
     max-width: 90%;
   }
-  
+
   /* Estilos para el formulario */
   .calculadora-costo-component .sendfox-form {
     max-width: 100%;
@@ -219,109 +236,109 @@
     color: #999;
     margin-bottom: 15px;
   }
-  
+
   .calculadora-costo-component .legal a {
     color: #999;
     text-decoration: underline;
   }
-  
+
   .calculadora-costo-component .benefits {
     margin: 15px 0;
   }
-  
+
   .calculadora-costo-component .benefits h3 {
     font-size: 16px;
     color: #333;
     margin-bottom: 10px;
   }
-  
+
   .calculadora-costo-component .benefits-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
-  
+
   .calculadora-costo-component .benefit-item {
     display: flex;
     align-items: flex-start;
     gap: 8px;
   }
-  
+
   .calculadora-costo-component .benefit-icon {
     color: #4285f4; /* Cambié el color para que combine */
     font-size: 18px;
     flex-shrink: 0;
   }
-  
+
   .calculadora-costo-component .benefit-text {
     font-size: 14px;
     color: #666;
   }
-  
+
   @media screen and (min-width: 1400px) {
     .calculadora-costo-component .content-container {
       padding: 40px 60px;
     }
-    
+
     .calculadora-costo-component h1 {
       font-size: 42px;
     }
-    
+
     .calculadora-costo-component .subtitle {
       font-size: 17px;
     }
-    
+
     .calculadora-costo-component .benefit-text {
       font-size: 15px;
     }
   }
-  
+
   @media (max-width: 1024px) {
     .calculadora-costo-component .container {
       min-height: auto;
       flex-direction: column;
       padding: 40px 20px;
     }
-    
+
     .calculadora-costo-component .benefits-list {
       grid-template-columns: 1fr;
     }
-    
+
     .calculadora-costo-component .image-container {
       height: auto;
       padding: 20px 0;
       width: 100%;
     }
-    
+
     .calculadora-costo-component .image-container img {
       max-height: none;
       width: 100%;
     }
   }
-  
+
   @media (max-width: 768px) {
     .calculadora-costo-component {
       padding: 40px 15px;
     }
-    
+
     .calculadora-costo-component .container {
       flex-direction: column;
       min-height: auto;
       padding: 0;
     }
-    
+
     .calculadora-costo-component .image-container {
       padding: 0 0 30px 0;
       width: 100%;
     }
-    
+
     .calculadora-costo-component .image-container img {
       max-height: none;
       border-radius: 0;
       box-shadow: none;
       width: 100%;
     }
-    
+
     .calculadora-costo-component .content-container {
       padding: 0 15px;
     }
@@ -331,7 +348,7 @@
       flex-direction: column;
       width: 100%;
     }
-    
+
     .calculadora-costo-component .sendfox-form input[type="email"] {
       margin-bottom: 15px; /* Re-agregamos el margen para móvil */
     }
