@@ -1,4 +1,4 @@
---- 
+---
 import Layout from "../../layouts/LayoutLanding.astro";
 ---
 
@@ -7,1275 +7,1108 @@ import Layout from "../../layouts/LayoutLanding.astro";
   description="Calculadora interactiva para ayudar a profesionales online a definir sus tarifas por hora."
   keywords="calculadora de tarifas, precio por hora, profesional online, freelancer, coaching, clases online"
 >
-<Fragment slot="meta"> 
-  <meta name="robots" content="index, follow"> 
-</Fragment>
+  <Fragment slot="meta">
+    <meta name="robots" content="index, follow" />
+  </Fragment>
   <div class="barra">
     <div class="contenedor barra-contenido">
       <div class="logo">
         <i class="fas fa-chart-line"></i> Calculadora de tarifas de clase por videollamada
       </div>
       <div class="acciones-barra">
-         <a href="https://weblocalmx.com">Visitar sitio web</a>
+        <a href="https://weblocalmx.com">Visitar sitio web</a>
       </div>
     </div>
   </div>
 
-<main class="app-wrapper">
-  <div class="calculator-container">
-    <div class="intro-text">
-        <p><strong>Descubre tu tarifa justa en 4 pasos.</strong> Esta herramienta utiliza un método de cálculo estándar para profesionales de servicios. Analiza tus costos, tu tiempo y tu valor diferencial para darte una tarifa que te permita construir un negocio rentable y sostenible.</p>
+  <main class="app-wrapper">
+    <div class="calculator-container">
+      <div class="intro-text">
+        <p>
+          <strong>Descubre tu tarifa justa en 4 pasos.</strong> Esta herramienta
+          utiliza un método de cálculo estándar para profesionales de servicios.
+          Analiza tus costos, tu tiempo y tu valor diferencial para darte una tarifa
+          que te permita construir un negocio rentable y sostenible.
+        </p>
+      </div>
+      <button id="reset-btn" class="btn-reset">Limpiar / Reiniciar</button>
+
+      <!-- PASO 1 -->
+
+      <div id="step-1" class="form-step active">
+        <h2>Paso 1: ¿Cuánto cuesta mantener tu negocio al mes?</h2>
+
+        <div class="form-group">
+          <label for="cost-video"
+            >Costo mensual de herramientas (Zoom, Meet, etc.)</label
+          >
+
+          <input type="number" id="cost-video" value="250" />
+        </div>
+
+        <div class="form-group">
+          <label for="cost-email"
+            >Email marketing (MailerLite, etc.) (pago mensual)</label
+          >
+
+          <input type="number" id="cost-email" value="300" />
+        </div>
+
+        <div class="form-group">
+          <label for="cost-hosting">Hosting y dominio (pago mensual)</label>
+
+          <input type="number" id="cost-hosting" value="150" />
+        </div>
+
+        <div class="form-group">
+          <label for="cost-other">Otras suscripciones (pago mensual)</label>
+
+          <input type="number" id="cost-other" value="100" />
+        </div>
+
+        <div class="form-group range-group">
+          <label for="tax-rate">Impuestos estimados (%):</label>
+
+          <input type="range" id="tax-rate" min="0" max="50" value="16" />
+
+          <output for="tax-rate">16%</output>
+        </div>
+
+        <div class="form-group range-group">
+          <label for="saving-rate">Ahorro / Colchón de seguridad (%):</label>
+
+          <input type="range" id="saving-rate" min="0" max="30" value="10" />
+
+          <output for="saving-rate">10%</output>
+        </div>
+
+        <div class="btn-group">
+          <span></span>
+
+          <button id="next-btn-1" class="btn btn-primary"
+            >Siguiente &rarr;</button
+          >
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+
+      <div id="step-2" class="form-step">
+        <h2>Paso 2: ¿Cuál es tu tiempo real de trabajo?</h2>
+
+        <div class="form-group">
+          <label for="work-hours-billable"
+            >Horas de clase/sesión a la semana (directo con clientes)</label
+          >
+
+          <input type="number" id="work-hours-billable" value="10" />
+        </div>
+
+        <div class="form-group">
+          <label for="work-hours-admin"
+            >Horas de preparación y administración a la semana (trabajo no
+            facturable)</label
+          >
+
+          <input type="number" id="work-hours-admin" value="5" />
+        </div>
+
+        <div class="btn-group">
+          <button id="prev-btn-2" class="btn btn-secondary"
+            >&larr; Anterior</button
+          >
+
+          <button id="next-btn-2" class="btn btn-primary"
+            >Siguiente &rarr;</button
+          >
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+
+      <div id="step-3" class="form-step">
+        <h2>Paso 3: ¿Qué te hace diferente?</h2>
+
+        <div class="form-group">
+          <label>Nivel de experiencia</label>
+
+          <div class="choice-group">
+            <label class="choice-item"
+              ><input type="radio" name="experience" value="0.1" checked /> Principiante
+              (0-2 años)</label
+            >
+
+            <label class="choice-item"
+              ><input type="radio" name="experience" value="0.3" /> Intermedio (2-5
+              años)</label
+            >
+
+            <label class="choice-item"
+              ><input type="radio" name="experience" value="0.5" /> Experto (+5 años)</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Nivel de especialización</label>
+
+          <div class="choice-group">
+            <label class="choice-item"
+              ><input type="radio" name="specialization" value="0.1" checked /> Generalista
+              (Ej: "Profesor de Inglés")</label
+            >
+
+            <label class="choice-item"
+              ><input type="radio" name="specialization" value="0.4" /> Especialista
+              de nicho (Ej: "Inglés para entrevistas")</label
+            >
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Servicios extra incluidos</label>
+
+          <div class="choice-group">
+            <label class="choice-item"
+              ><input type="checkbox" name="extras" value="0.1" /> Grabaciones de
+              cada clase</label
+            >
+
+            <label class="choice-item"
+              ><input type="checkbox" name="extras" value="0.1" /> Materiales personalizados</label
+            >
+
+            <label class="choice-item"
+              ><input type="checkbox" name="extras" value="0.1" /> Soporte entre
+              clases</label
+            >
+
+            <label class="choice-item"
+              ><input type="checkbox" name="extras" value="0.05" /> Tareas y correcciones</label
+            >
+
+            <label class="choice-item"
+              ><input type="checkbox" name="extras" value="0.05" /> Acceso a una
+              comunidad</label
+            >
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button id="prev-btn-3" class="btn btn-secondary"
+            >&larr; Anterior</button
+          >
+
+          <button id="next-btn-3" class="btn btn-primary"
+            >Siguiente &rarr;</button
+          >
+        </div>
+      </div>
+
+      <!-- PASO 4 -->
+
+      <div id="step-4" class="form-step">
+        <h2>Paso 4: Define tu meta</h2>
+
+        <div class="form-group">
+          <label for="income-goal">Ingreso mensual deseado (neto)</label>
+
+          <input type="number" id="income-goal" value="20000" />
+        </div>
+
+        <div class="btn-group">
+          <button id="prev-btn-4" class="btn btn-secondary"
+            >&larr; Anterior</button
+          >
+
+          <button id="calculate-btn" class="btn btn-primary"
+            >Calcular mi tarifa</button
+          >
+        </div>
+      </div>
+
+      <!-- PASO 5: FORMULARIO LEAD MAGNET -->
+
+      <div id="step-5" class="form-step">
+        <h2>¡Ya casi lo tienes! Desbloquea tus resultados</h2>
+
+        <p>
+          ¡Estás a un paso de saber cuánto cobrar! Ingresa tus datos para ver un
+          avance de tus resultados y te enviaremos acceso a la versión completa
+          de uso ilimitado.
+        </p>
+
+        <div id="sendfox-form-container">
+          <form
+            method="post"
+            action="https://sendfox.com/form/10dleq/1w7qgw"
+            class="sendfox-form"
+            id="1w7qgw"
+            data-async="true"
+            data-recaptcha="true"
+          >
+            <label for="sendfox_form_email">Email: </label>
+            <input
+              type="email"
+              id="sendfox_form_email"
+              placeholder="Tu correo favorito"
+              name="email"
+              required
+            />
+            <!-- no botz please -->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input
+                type="text"
+                name="a_password"
+                tabindex="-1"
+                value=""
+                autocomplete="off"
+              />
+            </div>
+            <button type="submit">¡Acceder a la Calculadora Gratis!</button>
+          </form>
+          <script
+            is:inline
+            src="https://cdn.sendfox.com/js/form.js"
+            charset="utf-8"></script>
+        </div>
+      </div>
+
+      <!-- PASO 6: VISTA PREVIA Y GRACIAS -->
+
+      <div id="step-6" class="form-step" style="text-align: center;">
+        <h2>¡Aquí tienes un avance!</h2>
+
+        <p>Esta es una de las 3 tarifas que hemos calculado para ti.</p>
+
+        <div class="results-grid">
+          <div class="result-card locked">
+            <h3>Tarifa de Supervivencia por Hora</h3>
+
+            <p class="price"><i class="fas fa-lock"></i></p>
+
+            <p>Desbloquea para ver</p>
+          </div>
+
+          <div class="result-card">
+            <h3>Tarifa Profesional por Hora</h3>
+
+            <p class="price" id="rate-professional"></p>
+
+            <p>Una tarifa competitiva que refleja tu experiencia y valor.</p>
+          </div>
+
+          <div class="result-card locked">
+            <h3>Tarifa Premium por Hora</h3>
+
+            <p class="price"><i class="fas fa-lock"></i></p>
+
+            <p>Desbloquea para ver</p>
+          </div>
+        </div>
+
+        <div class="thank-you-message">
+          <h3>¡Gracias! Revisa tu correo</h3>
+
+          <p>
+            Te hemos enviado un email de confirmación. Una vez que lo confirmes,
+            tendrás acceso inmediato a la calculadora completa para ver todos
+            los resultados.
+          </p>
+
+          <p>
+            Asegúrate de revisar tu bandeja de spam si no lo ves en unos
+            minutos.
+          </p>
+        </div>
+      </div>
     </div>
-    <button id="reset-btn" class="btn-reset">Limpiar / Reiniciar</button>
+  </main>
 
-        <!-- PASO 1 -->
-
-        <div id="step-1" class="form-step active">
-
-          <h2>Paso 1: ¿Cuánto cuesta mantener tu negocio al mes?</h2>
-
-          <div class="form-group">
-
-            <label for="cost-video">Costo mensual de herramientas (Zoom, Meet, etc.)</label>
-
-            <input type="number" id="cost-video" value="250" />
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="cost-email">Email marketing (MailerLite, etc.) (pago mensual)</label>
-
-            <input type="number" id="cost-email" value="300" />
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="cost-hosting">Hosting y dominio (pago mensual)</label>
-
-            <input type="number" id="cost-hosting" value="150" />
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="cost-other">Otras suscripciones (pago mensual)</label>
-
-            <input type="number" id="cost-other" value="100" />
-
-          </div>
-
-          <div class="form-group range-group">
-
-            <label for="tax-rate">Impuestos estimados (%):</label>
-
-            <input type="range" id="tax-rate" min="0" max="50" value="16" />
-
-            <output for="tax-rate">16%</output>
-
-          </div>
-
-          <div class="form-group range-group">
-
-            <label for="saving-rate">Ahorro / Colchón de seguridad (%):</label>
-
-            <input type="range" id="saving-rate" min="0" max="30" value="10" />
-
-            <output for="saving-rate">10%</output>
-
-          </div>
-
-          <div class="btn-group">
-
-            <span></span>
-
-            <button id="next-btn-1" class="btn btn-primary">Siguiente &rarr;</button>
-
-          </div>
-
+  <footer>
+    <div class="barra">
+      <div class="contenedor barra-contenido">
+        <div class="logo">
+          <i class="fas fa-chart-line"></i> Weblocalmx
         </div>
 
-    
-
-        <!-- PASO 2 -->
-
-        <div id="step-2" class="form-step">
-
-          <h2>Paso 2: ¿Cuál es tu tiempo real de trabajo?</h2>
-
-          <div class="form-group">
-
-            <label for="work-hours-billable">Horas de clase/sesión a la semana (directo con clientes)</label>
-
-            <input type="number" id="work-hours-billable" value="10" />
-
-          </div>
-
-          <div class="form-group">
-
-            <label for="work-hours-admin">Horas de preparación y administración a la semana (trabajo no facturable)</label>
-
-            <input type="number" id="work-hours-admin" value="5" />
-
-          </div>
-
-          <div class="btn-group">
-
-            <button id="prev-btn-2" class="btn btn-secondary">&larr; Anterior</button>
-
-            <button id="next-btn-2" class="btn btn-primary">Siguiente &rarr;</button>
-
-          </div>
-
+        <div class="acciones-barra">
+          <a href="https://weblocalmx.com">Visitar sitio web</a>
         </div>
-
-    
-
-        <!-- PASO 3 -->
-
-        <div id="step-3" class="form-step">
-
-          <h2>Paso 3: ¿Qué te hace diferente?</h2>
-
-          <div class="form-group">
-
-            <label>Nivel de experiencia</label>
-
-            <div class="choice-group">
-
-              <label class="choice-item"><input type="radio" name="experience" value="0.1" checked /> Principiante (0-2 años)</label>
-
-              <label class="choice-item"><input type="radio" name="experience" value="0.3" /> Intermedio (2-5 años)</label>
-
-              <label class="choice-item"><input type="radio" name="experience" value="0.5" /> Experto (+5 años)</label>
-
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>Nivel de especialización</label>
-
-            <div class="choice-group">
-
-              <label class="choice-item"><input type="radio" name="specialization" value="0.1" checked /> Generalista (Ej: "Profesor de Inglés")</label>
-
-              <label class="choice-item"><input type="radio" name="specialization" value="0.4" /> Especialista de nicho (Ej: "Inglés para entrevistas")</label>
-
-            </div>
-
-          </div>
-
-          <div class="form-group">
-
-            <label>Servicios extra incluidos</label>
-
-            <div class="choice-group">
-
-              <label class="choice-item"><input type="checkbox" name="extras" value="0.1" /> Grabaciones de cada clase</label>
-
-              <label class="choice-item"><input type="checkbox" name="extras" value="0.1" /> Materiales personalizados</label>
-
-              <label class="choice-item"><input type="checkbox" name="extras" value="0.1" /> Soporte entre clases</label>
-
-              <label class="choice-item"><input type="checkbox" name="extras" value="0.05" /> Tareas y correcciones</label>
-
-              <label class="choice-item"><input type="checkbox" name="extras" value="0.05" /> Acceso a una comunidad</label>
-
-            </div>
-
-          </div>
-
-          <div class="btn-group">
-
-            <button id="prev-btn-3" class="btn btn-secondary">&larr; Anterior</button>
-
-            <button id="next-btn-3" class="btn btn-primary">Siguiente &rarr;</button>
-
-          </div>
-
-        </div>
-
-    
-
-        <!-- PASO 4 -->
-
-        <div id="step-4" class="form-step">
-
-          <h2>Paso 4: Define tu meta</h2>
-
-          <div class="form-group">
-
-            <label for="income-goal">Ingreso mensual deseado (neto)</label>
-
-            <input type="number" id="income-goal" value="20000" />
-
-          </div>
-
-          <div class="btn-group">
-
-            <button id="prev-btn-4" class="btn btn-secondary">&larr; Anterior</button>
-
-            <button id="calculate-btn" class="btn btn-primary">Calcular mi tarifa</button>
-
-          </div>
-
-        </div>
-
-    
-
-        <!-- PASO 5: FORMULARIO LEAD MAGNET -->
-
-        <div id="step-5" class="form-step">
-
-            <h2>¡Ya casi lo tienes! Desbloquea tus resultados</h2>
-
-            <p>¡Estás a un paso de saber cuánto cobrar! Ingresa tus datos para ver un avance de tus resultados y te enviaremos acceso a la versión completa de uso ilimitado.</p>
-
-            <div id="sendfox-form-container">
-
-                <form method="post" action="https://sendfox.com/form/10dleq/1w7qgw" class="sendfox-form" id="1w7qgw" data-async="true" data-recaptcha="true">
-
-                    <div class="form-group">
-
-                        <label for="sendfox_form_email">Email:</label>
-
-                        <input type="email" id="sendfox_form_email" placeholder="Tu email" name="email" required />
-
-                    </div>
-
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
-
-                    <div class="btn-group">
-
-                        <button id="prev-btn-5" type="button" class="btn btn-secondary">&larr; Anterior</button>
-
-                        <button type="submit" class="btn btn-primary">Desbloquear resultados</button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
-
-    
-
-        <!-- PASO 6: VISTA PREVIA Y GRACIAS -->
-
-        <div id="step-6" class="form-step" style="text-align: center;">
-
-            <h2>¡Aquí tienes un avance!</h2>
-
-            <p>Esta es una de las 3 tarifas que hemos calculado para ti.</p>
-
-            <div class="results-grid">
-
-                <div class="result-card locked">
-
-                  <h3>Tarifa de Supervivencia por Hora</h3>
-
-                  <p class="price"><i class="fas fa-lock"></i></p>
-
-                  <p>Desbloquea para ver</p>
-
-                </div>
-
-                <div class="result-card">
-
-                  <h3>Tarifa Profesional por Hora</h3>
-
-                  <p class="price" id="rate-professional"></p>
-
-                  <p>Una tarifa competitiva que refleja tu experiencia y valor.</p>
-
-                </div>
-
-                <div class="result-card locked">
-
-                  <h3>Tarifa Premium por Hora</h3>
-
-                  <p class="price"><i class="fas fa-lock"></i></p>
-
-                  <p>Desbloquea para ver</p>
-
-                </div>
-
-            </div>
-
-            <div class="thank-you-message">
-
-                <h3>¡Gracias! Revisa tu correo</h3>
-
-                <p>Te hemos enviado un email de confirmación. Una vez que lo confirmes, tendrás acceso inmediato a la calculadora completa para ver todos los resultados.</p>
-
-                <p>Asegúrate de revisar tu bandeja de spam si no lo ves en unos minutos.</p>
-
-            </div>
-
-        </div>
-
-    
-
       </div>
+    </div>
+  </footer>
+</Layout>
 
-    </main>
+<style>
+  :root {
+    --primary-color: #047857;
 
-    
+    --secondary-color: #a7f3d0;
 
-    <footer>
+    --background-color: #f0fdfa;
 
-         <div class="barra">
+    --card-bg-color: #ffffff;
 
-        <div class="contenedor barra-contenido">
+    --text-color: #0f172a;
 
-          <div class="logo">
+    --light-gray: #cbd5e1;
 
-            <i class="fas fa-chart-line"></i> Weblocalmx
+    --border-radius: 8px;
 
-          </div>
+    --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+  }
 
-          <div class="acciones-barra">
+  .app-wrapper {
+    display: flex;
 
-             <a href="https://weblocalmx.com">Visitar sitio web</a>
+    justify-content: center;
 
-          </div>
+    align-items: flex-start;
 
-        </div>
+    min-height: 80vh;
 
-      </div>
+    padding: 20px;
 
-    </footer>
+    background-color: var(--background-color);
+  }
 
-    </Layout>
+  .calculator-container {
+    width: 100%;
 
-    <style>
+    max-width: 700px;
 
-      :root {
+    background-color: var(--card-bg-color);
 
-        --primary-color: #047857;
+    border-radius: var(--border-radius);
 
-        --secondary-color: #a7f3d0;
+    box-shadow: var(--box-shadow);
 
-        --background-color: #f0fdfa;
+    padding: 2rem;
 
-        --card-bg-color: #ffffff;
+    position: relative;
+  }
 
-        --text-color: #0f172a;
+  .intro-text {
+    background-color: var(--secondary-color);
 
-        --light-gray: #cbd5e1;
+    padding: 1rem;
 
-        --border-radius: 8px;
+    border-radius: var(--border-radius);
 
-        --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    margin-bottom: 2rem;
 
-          0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-left: 5px solid var(--primary-color);
+  }
 
-      }
+  .intro-text p {
+    margin: 0;
 
-     
+    font-size: 0.95rem;
+  }
 
-      .app-wrapper {
+  .form-step {
+    display: none;
 
-        display: flex;
+    animation: fadeIn 0.5s ease-in-out;
+  }
 
-        justify-content: center;
+  .form-step.active {
+    display: block;
+  }
 
-        align-items: flex-start;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
 
-        min-height: 80vh;
+      transform: translateY(10px);
+    }
 
-        padding: 20px;
+    to {
+      opacity: 1;
 
-        background-color: var(--background-color);
+      transform: translateY(0);
+    }
+  }
 
-      }
+  h2 {
+    color: var(--primary-color);
 
-      .calculator-container {
+    margin-bottom: 1.5rem;
 
-        width: 100%;
+    text-align: center;
+  }
 
-        max-width: 700px;
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
 
-        background-color: var(--card-bg-color);
+  label {
+    display: block;
 
-        border-radius: var(--border-radius);
+    margin-bottom: 0.5rem;
 
-        box-shadow: var(--box-shadow);
+    font-weight: 500;
+  }
 
-        padding: 2rem;
+  input[type="number"],
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
 
-        position: relative;
+    padding: 0.75rem;
 
-      }
+    border: 1px solid var(--light-gray);
 
-      .intro-text {
+    border-radius: var(--border-radius);
 
-          background-color: var(--secondary-color);
+    font-size: 1rem;
 
-          padding: 1rem;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
 
-          border-radius: var(--border-radius);
+  input[type="number"]:focus,
+  input[type="text"]:focus,
+  input[type="email"]:focus {
+    outline: none;
 
-          margin-bottom: 2rem;
+    border-color: var(--primary-color);
 
-          border-left: 5px solid var(--primary-color);
+    box-shadow: 0 0 0 3px var(--secondary-color);
+  }
 
-      }
+  .range-group {
+    display: flex;
 
-      .intro-text p {
+    align-items: center;
 
-          margin: 0;
+    gap: 1rem;
+  }
 
-          font-size: 0.95rem;
+  .range-group label {
+    flex-shrink: 0;
+  }
 
-      }
+  .range-group output {
+    font-weight: bold;
 
-      .form-step {
+    color: var(--primary-color);
 
-        display: none;
+    min-width: 40px;
+  }
 
-        animation: fadeIn 0.5s ease-in-out;
+  input[type="range"] {
+    -webkit-appearance: none;
 
-      }
+    appearance: none;
 
-      .form-step.active {
+    width: 100%;
 
-        display: block;
+    height: 8px;
 
-      }
+    background: var(--light-gray);
 
-      @keyframes fadeIn {
+    border-radius: 5px;
 
-        from {
+    outline: none;
 
-          opacity: 0;
+    opacity: 0.7;
 
-          transform: translateY(10px);
+    transition: opacity 0.2s;
+  }
 
-        }
+  input[type="range"]:hover {
+    opacity: 1;
+  }
 
-        to {
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
 
-          opacity: 1;
+    appearance: none;
 
-          transform: translateY(0);
+    width: 20px;
 
-        }
+    height: 20px;
 
-      }
+    background: var(--primary-color);
 
-      h2 {
+    cursor: pointer;
 
-        color: var(--primary-color);
+    border-radius: 50%;
+  }
 
-        margin-bottom: 1.5rem;
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
 
-        text-align: center;
+    height: 20px;
 
-      }
+    background: var(--primary-color);
 
-      .form-group {
+    cursor: pointer;
 
-        margin-bottom: 1.5rem;
+    border-radius: 50%;
+  }
 
-      }
+  .choice-group {
+    display: flex;
 
-      label {
+    flex-direction: column;
 
-        display: block;
+    gap: 0.75rem;
+  }
 
-        margin-bottom: 0.5rem;
+  .choice-item {
+    display: flex;
 
-        font-weight: 500;
+    align-items: center;
 
-      }
+    gap: 0.5rem;
 
-      input[type="number"],
+    background-color: var(--background-color);
 
-      input[type="text"],
+    padding: 0.75rem;
 
-      input[type="email"] {
+    border-radius: var(--border-radius);
 
-        width: 100%;
+    cursor: pointer;
+  }
 
-        padding: 0.75rem;
+  .choice-item input {
+    cursor: pointer;
+  }
 
-        border: 1px solid var(--light-gray);
+  .btn-group {
+    display: flex;
 
-        border-radius: var(--border-radius);
+    justify-content: space-between;
 
-        font-size: 1rem;
+    margin-top: 2rem;
 
-        transition:
+    border-top: 1px solid var(--light-gray);
 
-          border-color 0.2s,
+    padding-top: 1.5rem;
+  }
 
-          box-shadow 0.2s;
+  .btn {
+    padding: 0.75rem 1.5rem;
 
-      }
+    border: none;
 
-      input[type="number"]:focus,
+    border-radius: var(--border-radius);
 
-      input[type="text"]:focus,
+    font-size: 1rem;
 
-      input[type="email"]:focus {
+    font-weight: bold;
 
-        outline: none;
+    cursor: pointer;
 
-        border-color: var(--primary-color);
+    transition:
+      background-color 0.3s,
+      transform 0.2s;
+  }
 
-        box-shadow: 0 0 0 3px var(--secondary-color);
+  .btn-primary {
+    background-color: var(--primary-color);
 
-      }
+    color: white;
+  }
 
-      .range-group {
+  .btn-primary:hover {
+    background-color: #065f46;
+  }
 
-        display: flex;
+  .btn:active {
+    transform: scale(0.98);
+  }
 
-        align-items: center;
+  .btn-secondary {
+    background-color: var(--light-gray);
 
-        gap: 1rem;
+    color: var(--text-color);
+  }
 
-      }
+  .btn-secondary:hover {
+    background-color: #94a3b8;
+  }
 
-      .range-group label {
+  .btn-reset {
+    position: absolute;
 
-        flex-shrink: 0;
+    top: 1rem;
 
-      }
+    right: 1rem;
 
-      .range-group output {
+    background: none;
 
-        font-weight: bold;
+    border: none;
 
-        color: var(--primary-color);
+    font-size: 0.8rem;
 
-        min-width: 40px;
+    color: var(--text-color);
 
-      }
+    cursor: pointer;
 
-      input[type="range"] {
+    text-decoration: underline;
+  }
 
-        -webkit-appearance: none;
+  .results-grid {
+    display: grid;
 
-        appearance: none;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
-        width: 100%;
+    gap: 1rem;
 
-        height: 8px;
+    margin: 2rem 0;
+  }
 
-        background: var(--light-gray);
+  .result-card {
+    background-color: var(--background-color);
 
-        border-radius: 5px;
+    padding: 1rem;
 
-        outline: none;
+    border-radius: var(--border-radius);
+  }
 
-        opacity: 0.7;
+  .result-card.locked {
+    filter: blur(4px);
 
-        transition: opacity 0.2s;
+    background-color: #e2e8f0;
 
-      }
+    position: relative;
 
-      input[type="range"]:hover {
+    pointer-events: none;
+  }
 
-        opacity: 1;
+  .result-card.locked .price {
+    font-size: 1.5rem;
+  }
 
-      }
+  .result-card.locked i {
+    font-size: 2rem;
 
-      input[type="range"]::-webkit-slider-thumb {
+    color: var(--primary-color);
+  }
 
-        -webkit-appearance: none;
+  .result-card h3 {
+    color: var(--primary-color);
 
-        appearance: none;
+    font-size: 1rem;
 
-        width: 20px;
+    margin-bottom: 0.5rem;
+  }
 
-        height: 20px;
+  .result-card .price {
+    font-size: 2rem;
 
-        background: var(--primary-color);
+    font-weight: bold;
+  }
 
-        cursor: pointer;
+  .thank-you-message {
+    margin-top: 2rem;
 
-        border-radius: 50%;
+    background-color: var(--secondary-color);
 
-      }
+    padding: 1.5rem;
 
-      input[type="range"]::-moz-range-thumb {
+    border-radius: var(--border-radius);
+  }
 
-        width: 20px;
+  /* --- ESTILOS DE LA BARRA SUPERIOR --- */
 
-        height: 20px;
+  .barra {
+    background-color: var(--card-bg-color);
 
-        background: var(--primary-color);
+    padding: 1rem 0;
 
-        cursor: pointer;
+    box-shadow: var(--box-shadow);
 
-        border-radius: 50%;
+    position: sticky;
 
-      }
+    top: 0;
 
-      .choice-group {
+    left: 0;
 
-        display: flex;
+    width: 100%;
 
-        flex-direction: column;
+    z-index: 10;
+  }
 
-        gap: 0.75rem;
+  .barra-contenido {
+    display: flex;
 
-      }
+    justify-content: space-between;
 
-      .choice-item {
+    align-items: center;
 
-        display: flex;
+    max-width: 1200px;
 
-        align-items: center;
+    margin: 0 auto;
 
-        gap: 0.5rem;
+    padding: 0 20px;
+  }
 
-        background-color: var(--background-color);
+  .logo {
+    font-size: 1.5rem;
 
-        padding: 0.75rem;
+    font-weight: bold;
 
-        border-radius: var(--border-radius);
+    color: var(--primary-color);
 
-        cursor: pointer;
+    display: flex;
 
-      }
+    align-items: center;
 
-      .choice-item input {
+    gap: 0.5rem;
+  }
 
-        cursor: pointer;
+  .acciones-barra .cerrar-sesion {
+    background: none;
 
-      }
+    border: none;
 
-      .btn-group {
+    padding: 0;
+  }
 
-        display: flex;
+  .acciones-barra a {
+    background-color: var(--primary-color);
 
-        justify-content: space-between;
+    color: white;
 
-        margin-top: 2rem;
+    padding: 0.5rem 1rem;
 
-        border-top: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
 
-        padding-top: 1.5rem;
+    text-decoration: none;
 
-      }
+    font-weight: 500;
 
-      .btn {
+    transition: background-color 0.3s;
+  }
 
-        padding: 0.75rem 1.5rem;
+  .acciones-barra a:hover {
+    background-color: #065f46;
+  }
 
-        border: none;
+  #sendfox-form-container form {
+    margin-top: 1.5rem;
+  }
 
-        border-radius: var(--border-radius);
+  #sendfox-form-container label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
 
-        font-size: 1rem;
+  #sendfox-form-container input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-        font-weight: bold;
+  #sendfox-form-container button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background-color: #2563eb; /* Azul */
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-        cursor: pointer;
+  #sendfox-form-container button:hover {
+    background-color: #1d4ed8; /* Azul más oscuro */
+  }
 
-        transition:
 
-          background-color 0.3s,
 
-          transform 0.2s;
 
-      }
+  @media (max-width: 600px) {
+    .barra-contenido {
+      padding: 0 15px;
+    }
 
-      .btn-primary {
+    .logo {
+      font-size: 1.2rem;
+    }
 
-        background-color: var(--primary-color);
+    .acciones-barra a {
+      padding: 0.4rem 0.8rem;
 
-        color: white;
+      font-size: 0.9rem;
+    }
 
-      }
+    .app-wrapper {
+      padding: 10px;
+    }
 
-      .btn-primary:hover {
+    .calculator-container {
+      padding: 1rem;
+    }
 
-        background-color: #065f46;
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+</style>
 
-      }
+<script is:inline>
+  let currentStep = 1;
 
-      .btn:active {
+  const maxSteps = 5; // Ahora hay 5 pasos antes del mensaje de gracias
 
-        transform: scale(0.98);
+  let calculatedRates = null;
 
-      }
+  function showStep(stepNumber) {
+    document.querySelectorAll(".form-step").forEach((el) => {
+      el.style.display = "none";
+    });
 
-      .btn-secondary {
+    const activeEl = document.getElementById(`step-${stepNumber}`);
 
-        background-color: var(--light-gray);
+    if (activeEl) {
+      activeEl.style.display = "block";
+    }
+  }
 
-        color: var(--text-color);
-
-      }
-
-      .btn-secondary:hover {
-
-        background-color: #94a3b8;
-
-      }
-
-      .btn-reset {
-
-        position: absolute;
-
-        top: 1rem;
-
-        right: 1rem;
-
-        background: none;
-
-        border: none;
-
-        font-size: 0.8rem;
-
-        color: var(--text-color);
-
-        cursor: pointer;
-
-        text-decoration: underline;
-
-      }
-
-      .results-grid {
-
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-        gap: 1rem;
-
-        margin: 2rem 0;
-
-      }
-
-      .result-card {
-
-        background-color: var(--background-color);
-
-        padding: 1rem;
-
-        border-radius: var(--border-radius);
-
-      }
-
-      .result-card.locked {
-
-        filter: blur(4px);
-
-        background-color: #e2e8f0;
-
-        position: relative;
-
-        pointer-events: none;
-
-      }
-
-      .result-card.locked .price {
-
-          font-size: 1.5rem;
-
-      }
-
-      .result-card.locked i {
-
-          font-size: 2rem;
-
-          color: var(--primary-color);
-
-      }
-
-      .result-card h3 {
-
-        color: var(--primary-color);
-
-        font-size: 1rem;
-
-        margin-bottom: 0.5rem;
-
-      }
-
-      .result-card .price {
-
-        font-size: 2rem;
-
-        font-weight: bold;
-
-      }
-
-      .thank-you-message {
-
-          margin-top: 2rem;
-
-          background-color: var(--secondary-color);
-
-          padding: 1.5rem;
-
-          border-radius: var(--border-radius);
-
-      }
-
-    
-
-      /* --- ESTILOS DE LA BARRA SUPERIOR --- */
-
-      .barra {
-
-        background-color: var(--card-bg-color);
-
-        padding: 1rem 0;
-
-        box-shadow: var(--box-shadow);
-
-        position: sticky;
-
-        top: 0;
-
-        left: 0;
-
-        width: 100%;
-
-        z-index: 10;
-
-      }
-
-      .barra-contenido {
-
-        display: flex;
-
-        justify-content: space-between;
-
-        align-items: center;
-
-        max-width: 1200px;
-
-        margin: 0 auto;
-
-        padding: 0 20px;
-
-      }
-
-      .logo {
-
-        font-size: 1.5rem;
-
-        font-weight: bold;
-
-        color: var(--primary-color);
-
-        display: flex;
-
-        align-items: center;
-
-        gap: 0.5rem;
-
-      }
-
-      .acciones-barra .cerrar-sesion {
-
-          background: none;
-
-          border: none;
-
-          padding: 0;
-
-      }
-
-      .acciones-barra a {
-
-        background-color: var(--primary-color);
-
-        color: white;
-
-        padding: 0.5rem 1rem;
-
-        border-radius: var(--border-radius);
-
-        text-decoration: none;
-
-        font-weight: 500;
-
-        transition: background-color 0.3s;
-
-      }
-
-      .acciones-barra a:hover {
-
-        background-color: #065f46;
-
-      }
-
-    
-
-      @media (max-width: 600px) {
-
-        .barra-contenido {
-
-          padding: 0 15px;
-
-        }
-
-        .logo {
-
-          font-size: 1.2rem;
-
-        }
-
-        .acciones-barra a {
-
-          padding: 0.4rem 0.8rem;
-
-          font-size: 0.9rem;
-
-        }
-
-        .app-wrapper {
-
-          padding: 10px;
-
-        }
-
-        .calculator-container {
-
-          padding: 1rem;
-
-        }
-
-        h2 {
-
-          font-size: 1.25rem;
-
-        }
-
-      }
-
-    </style>
-
-    
-
-    <script is:inline>
-
-      let currentStep = 1;
-
-      const maxSteps = 5; // Ahora hay 5 pasos antes del mensaje de gracias
-
-      let calculatedRates = null;
-
-    
-
-      function showStep(stepNumber) {
-
-        document.querySelectorAll(".form-step").forEach((el) => {
-
-          el.style.display = "none";
-
-        });
-
-        const activeEl = document.getElementById(`step-${stepNumber}`);
-
-        if (activeEl) {
-
-          activeEl.style.display = "block";
-
-        }
-
-      }
-
-    
-
-      function nextStep() {
-
-        if (currentStep < maxSteps) {
-
-          currentStep++;
-
-          showStep(currentStep);
-
-        }
-
-      }
-
-    
-
-      function prevStep() {
-
-        if (currentStep > 1) {
-
-          currentStep--;
-
-          showStep(currentStep);
-
-        }
-
-      }
-
-    
-
-      function calculateRates() {
-
-        const costVideo = parseFloat(document.getElementById("cost-video").value) || 0;
-
-        const costEmail = parseFloat(document.getElementById("cost-email").value) || 0;
-
-        const costHosting = parseFloat(document.getElementById("cost-hosting").value) || 0;
-
-        const costOther = parseFloat(document.getElementById("cost-other").value) || 0;
-
-        const taxRate = parseFloat(document.getElementById("tax-rate").value) || 0;
-
-        const savingRate = parseFloat(document.getElementById("saving-rate").value) || 0;
-
-        const billableHours = parseFloat(document.getElementById("work-hours-billable").value) || 0;
-
-        const incomeGoal = parseFloat(document.getElementById("income-goal").value) || 0;
-
-        
-
-        const experienceMultiplier = parseFloat(document.querySelector('input[name="experience"]:checked').value) || 0;
-
-        const specializationMultiplier = parseFloat(document.querySelector('input[name="specialization"]:checked').value) || 0;
-
-        let extrasMultiplier = 0;
-
-        document.querySelectorAll('input[name="extras"]:checked').forEach((checkbox) => {
-
-          extrasMultiplier += parseFloat(checkbox.value) || 0;
-
-        });
-
-    
-
-        const costoTotalMensual = costVideo + costEmail + costHosting + costOther;
-
-        const horasFacturablesMensuales = billableHours * 4;
-
-    
-
-        if (horasFacturablesMensuales === 0) {
-
-          alert("Las 'Horas de clase/sesión a la semana' no pueden ser cero para realizar el cálculo.");
-
-          return false;
-
-        }
-
-    
-
-        const taxSavingFactor = 1 - (taxRate / 100) - (savingRate / 100);
-
-        if (taxSavingFactor <= 0) {
-
-            alert("La suma de impuestos y ahorro no puede ser 100% o más. Ajusta los porcentajes para continuar.");
-
-            return false;
-
-        }
-
-    
-
-        // Tarifa de Supervivencia: Cubre costos + 40% de la meta de ingresos (salario base).
-
-        const survivalIncomeGoal = incomeGoal * 0.40;
-
-        const requiredProfitForSurvival = survivalIncomeGoal / taxSavingFactor;
-
-        const requiredGrossForSurvival = requiredProfitForSurvival + costoTotalMensual;
-
-        const tarifaSupervivencia = requiredGrossForSurvival / horasFacturablesMensuales;
-
-    
-
-        // Tarifa Profesional: Permite alcanzar la meta de ingresos netos después de costos e impuestos.
-
-        const requiredProfitForProfessional = incomeGoal / taxSavingFactor;
-
-        const requiredGrossForProfessional = requiredProfitForProfessional + costoTotalMensual;
-
-        const tarifaProfesional = requiredGrossForProfessional / horasFacturablesMensuales;
-
-    
-
-        // Tarifa Premium: Añade un extra a la tarifa profesional basado en el valor diferencial.
-
-        const baseSalaryRate = requiredProfitForProfessional / horasFacturablesMensuales;
-
-        const baseCostRate = costoTotalMensual / horasFacturablesMensuales;
-
-        const multiplicadorValor = 1 + experienceMultiplier + specializationMultiplier + extrasMultiplier;
-
-        const tarifaPremium = (baseSalaryRate * multiplicadorValor) + baseCostRate;
-
-        
-
-        calculatedRates = {
-
-          survival: tarifaSupervivencia,
-
-          professional: tarifaProfesional,
-
-          premium: tarifaPremium,
-
-        };
-
-        return true;
-
-      }
-
-    
-
-      function showPreview() {
-
-          if (calculatedRates) {
-
-            document.getElementById("rate-professional").textContent = `${calculatedRates.professional.toFixed(2)}`;
-
-          }
-
-          currentStep = maxSteps + 1;
-
-          showStep(currentStep);
-
-      }
-
-    
-
-      function resetCalculator() {
-
-        window.location.reload();
-
-      }
-
-    
-
-      // Attach Event Listeners
-
-      document.getElementById("next-btn-1").addEventListener("click", nextStep);
-
-      document.getElementById("prev-btn-2").addEventListener("click", prevStep);
-
-      document.getElementById("next-btn-2").addEventListener("click", nextStep);
-
-      document.getElementById("prev-btn-3").addEventListener("click", prevStep);
-
-      document.getElementById("next-btn-3").addEventListener("click", nextStep);
-
-      document.getElementById("prev-btn-4").addEventListener("click", prevStep);
-
-      document.getElementById("calculate-btn").addEventListener("click", () => {
-
-          if (calculateRates()) {
-
-              nextStep();
-
-          }
-
-      });
-
-      document.getElementById("prev-btn-5").addEventListener("click", prevStep);
-
-    
-
-      document.getElementById("reset-btn").addEventListener("click", () => {
-
-        if (confirm("¿Estás seguro de que quieres limpiar todos los campos y reiniciar la calculadora?")) {
-
-          resetCalculator();
-
-        }
-
-      });
-
-      
-
-      const sendfoxForm = document.getElementById('1w7qgw');
-
-      if(sendfoxForm) {
-
-          sendfoxForm.addEventListener("submit", function(e){
-
-              e.preventDefault();
-
-              // Pequeño delay para dar tiempo al script de SendFox a procesar
-
-              setTimeout(showPreview, 500);
-
-              // Forzamos el submit del form nativo de sendfox
-
-              const nativeSubmit = document.createElement('form');
-
-              nativeSubmit.method = 'post';
-
-              nativeSubmit.action = sendfoxForm.action;
-
-              nativeSubmit.target = 'sendfox_iframe'; // para que no recargue la pagina
-
-    
-
-              for (const element of sendfoxForm.elements) {
-
-                  if (element.name) {
-
-                      const input = document.createElement('input');
-
-                      input.type = 'hidden';
-
-                      input.name = element.name;
-
-                      input.value = element.value;
-
-                      nativeSubmit.appendChild(input);
-
-                  }
-
-              }
-
-              document.body.appendChild(nativeSubmit);
-
-              nativeSubmit.submit();
-
-              document.body.removeChild(nativeSubmit);
-
-          });
-
-      }
-
-    
-
-      document.querySelectorAll('input[type="range"]').forEach((slider) => {
-
-        const output = document.querySelector(`output[for="${slider.id}"]`);
-
-        if (output) {
-
-          slider.addEventListener("input", (event) => {
-
-            output.textContent = `${event.target.value}%`;
-
-          });
-
-        }
-
-      });
-
-    
-
-      // Initialize
+  function nextStep() {
+    if (currentStep < maxSteps) {
+      currentStep++;
 
       showStep(currentStep);
+    }
+  }
 
-    </script>
+  function prevStep() {
+    if (currentStep > 1) {
+      currentStep--;
 
-    <iframe name="sendfox_iframe" style="display:none;"></iframe>
+      showStep(currentStep);
+    }
+  }
 
-    <script src="https://cdn.sendfox.com/js/form.js" charset="utf-8" is:inline></script>
+  function calculateRates() {
+    const costVideo =
+      parseFloat(document.getElementById("cost-video").value) || 0;
 
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" is:inline></script>
+    const costEmail =
+      parseFloat(document.getElementById("cost-email").value) || 0;
 
-    
+    const costHosting =
+      parseFloat(document.getElementById("cost-hosting").value) || 0;
+
+    const costOther =
+      parseFloat(document.getElementById("cost-other").value) || 0;
+
+    const taxRate = parseFloat(document.getElementById("tax-rate").value) || 0;
+
+    const savingRate =
+      parseFloat(document.getElementById("saving-rate").value) || 0;
+
+    const billableHours =
+      parseFloat(document.getElementById("work-hours-billable").value) || 0;
+
+    const incomeGoal =
+      parseFloat(document.getElementById("income-goal").value) || 0;
+
+    const experienceMultiplier =
+      parseFloat(
+        document.querySelector('input[name="experience"]:checked').value
+      ) || 0;
+
+    const specializationMultiplier =
+      parseFloat(
+        document.querySelector('input[name="specialization"]:checked').value
+      ) || 0;
+
+    let extrasMultiplier = 0;
+
+    document
+      .querySelectorAll('input[name="extras"]:checked')
+      .forEach((checkbox) => {
+        extrasMultiplier += parseFloat(checkbox.value) || 0;
+      });
+
+    const costoTotalMensual = costVideo + costEmail + costHosting + costOther;
+
+    const horasFacturablesMensuales = billableHours * 4;
+
+    if (horasFacturablesMensuales === 0) {
+      alert(
+        "Las 'Horas de clase/sesión a la semana' no pueden ser cero para realizar el cálculo."
+      );
+
+      return false;
+    }
+
+    const taxSavingFactor = 1 - taxRate / 100 - savingRate / 100;
+
+    if (taxSavingFactor <= 0) {
+      alert(
+        "La suma de impuestos y ahorro no puede ser 100% o más. Ajusta los porcentajes para continuar."
+      );
+
+      return false;
+    }
+
+    // Tarifa de Supervivencia: Cubre costos + 40% de la meta de ingresos (salario base).
+
+    const survivalIncomeGoal = incomeGoal * 0.4;
+
+    const requiredProfitForSurvival = survivalIncomeGoal / taxSavingFactor;
+
+    const requiredGrossForSurvival =
+      requiredProfitForSurvival + costoTotalMensual;
+
+    const tarifaSupervivencia =
+      requiredGrossForSurvival / horasFacturablesMensuales;
+
+    // Tarifa Profesional: Permite alcanzar la meta de ingresos netos después de costos e impuestos.
+
+    const requiredProfitForProfessional = incomeGoal / taxSavingFactor;
+
+    const requiredGrossForProfessional =
+      requiredProfitForProfessional + costoTotalMensual;
+
+    const tarifaProfesional =
+      requiredGrossForProfessional / horasFacturablesMensuales;
+
+    // Tarifa Premium: Añade un extra a la tarifa profesional basado en el valor diferencial.
+
+    const baseSalaryRate =
+      requiredProfitForProfessional / horasFacturablesMensuales;
+
+    const baseCostRate = costoTotalMensual / horasFacturablesMensuales;
+
+    const multiplicadorValor =
+      1 + experienceMultiplier + specializationMultiplier + extrasMultiplier;
+
+    const tarifaPremium = baseSalaryRate * multiplicadorValor + baseCostRate;
+
+    calculatedRates = {
+      survival: tarifaSupervivencia,
+
+      professional: tarifaProfesional,
+
+      premium: tarifaPremium,
+    };
+
+    return true;
+  }
+
+  function showPreview() {
+    if (calculatedRates) {
+      document.getElementById("rate-professional").textContent =
+        `${calculatedRates.professional.toFixed(2)}`;
+    }
+
+    currentStep = maxSteps + 1;
+
+    showStep(currentStep);
+  }
+
+  function resetCalculator() {
+    window.location.reload();
+  }
+
+  // Attach Event Listeners
+
+  document.getElementById("next-btn-1").addEventListener("click", nextStep);
+
+  document.getElementById("prev-btn-2").addEventListener("click", prevStep);
+
+  document.getElementById("next-btn-2").addEventListener("click", nextStep);
+
+  document.getElementById("prev-btn-3").addEventListener("click", prevStep);
+
+  document.getElementById("next-btn-3").addEventListener("click", nextStep);
+
+  document.getElementById("prev-btn-4").addEventListener("click", prevStep);
+
+  document.getElementById("calculate-btn").addEventListener("click", () => {
+    if (calculateRates()) {
+      nextStep();
+    }
+  });
+
+  document.getElementById("prev-btn-5").addEventListener("click", prevStep);
+
+  document.getElementById("reset-btn").addEventListener("click", () => {
+    if (
+      confirm(
+        "¿Estás seguro de que quieres limpiar todos los campos y reiniciar la calculadora?"
+      )
+    ) {
+      resetCalculator();
+    }
+  });
+
+  const sendfoxForm = document.getElementById("1w7qgw");
+
+  if (sendfoxForm) {
+    sendfoxForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Pequeño delay para dar tiempo al script de SendFox a procesar
+
+      setTimeout(showPreview, 500);
+
+      // Forzamos el submit del form nativo de sendfox
+
+      const nativeSubmit = document.createElement("form");
+
+      nativeSubmit.method = "post";
+
+      nativeSubmit.action = sendfoxForm.action;
+
+      nativeSubmit.target = "sendfox_iframe"; // para que no recargue la pagina
+
+      for (const element of sendfoxForm.elements) {
+        if (element.name) {
+          const input = document.createElement("input");
+
+          input.type = "hidden";
+
+          input.name = element.name;
+
+          input.value = element.value;
+
+          nativeSubmit.appendChild(input);
+        }
+      }
+
+      document.body.appendChild(nativeSubmit);
+
+      nativeSubmit.submit();
+
+      document.body.removeChild(nativeSubmit);
+    });
+  }
+
+  document.querySelectorAll('input[type="range"]').forEach((slider) => {
+    const output = document.querySelector(`output[for="${slider.id}"]`);
+
+    if (output) {
+      slider.addEventListener("input", (event) => {
+        output.textContent = `${event.target.value}%`;
+      });
+    }
+  });
+
+  // Initialize
+
+  showStep(currentStep);
+</script>
+
+<script
+  src="https://kit.fontawesome.com/a076d05399.js"
+  crossorigin="anonymous"
+  is:inline></script>
